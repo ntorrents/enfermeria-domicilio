@@ -1,0 +1,122 @@
+{
+	"siteInfo": {
+		"title": "Enfermería a Domicilio - Atención Profesional en Casa",
+		"brandName": "Enfermería a Domicilio",
+		"phone": "+34 XXX XXX XXX",
+		"email": "info@enfermeriadomicilio.com",
+		"schedule": "Lunes a Domingo: 8:00 - 20:00",
+		"coverage": "Servicio disponible en toda la provincia"
+	},
+	"hero": {
+		"title": "Atención de Enfermería Profesional en la Comodidad de su Hogar",
+		"subtitle": "Servicios especializados para personas mayores y pacientes con movilidad reducida. Cuidado profesional sin salir de casa.",
+		"primaryButton": "Solicitar Consulta",
+		"secondaryButton": "Ver Servicios"
+	},
+	"aboutMe": {
+		"name": "Christine Cano",
+		"title": "Enfermera Profesional",
+		"collegiateNumber": "28/XXXXX",
+		"intro": "Soy enfermera titulada con experiencia en el sector sanitario. Mi pasión es ayudar a la gente, brindando una atención de calidad en la comodidad del hogar, especialmente a personas mayores y pacientes con movilidad reducida.",
+		"education": [
+			"Diplomada en Enfermería por la Universidad Autónoma de Barcelona EUIT"
+		],
+		"coverageZones": [
+			"Terrassa",
+			"Sabadell",
+			"Matadepera",
+			"Viladecavalls",
+			"Vacarisses",
+			"Sant Cugat del Vallès",
+			"Sant Quirze del Vallès",
+			"Rubí"
+		],
+		"coverageNote": "¿Tu localidad no aparece en la lista? <strong>Contáctame</strong> y consultaremos la disponibilidad en tu zona."
+	},
+	"features": [
+		{
+			"icon": "fas fa-home",
+			"title": "Comodidad en Casa",
+			"description": "Reciba atención profesional sin necesidad de desplazarse"
+		},
+		{
+			"icon": "fas fa-certificate",
+			"title": "Profesional Certificada",
+			"description": "Enfermera titulada con experiencia en atención domiciliaria"
+		},
+		{
+			"icon": "fas fa-clock",
+			"title": "Horarios Flexibles",
+			"description": "Adaptamos nuestros horarios a sus necesidades"
+		}
+	],
+	"services": [
+		{
+			"id": "inyectable",
+			"icon": "fas fa-syringe",
+			"title": "Administración de Inyectables",
+			"description": "Aplicación segura de medicamentos intramusculares, subcutáneos e intravenosos según prescripción médica.",
+			"price": 25
+		},
+		{
+			"id": "extraccion",
+			"icon": "fas fa-tint",
+			"title": "Extracción de Sangre",
+			"description": "Toma de muestras sanguíneas para análisis clínicos en la comodidad de su hogar.",
+			"price": 25
+		},
+		{
+			"id": "constantes",
+			"icon": "fas fa-heartbeat",
+			"title": "Control de Constantes Vitales",
+			"description": "Medición de presión arterial, temperatura, pulso y saturación de oxígeno.",
+			"price": 20
+		}
+	],
+	"packs": [
+		{
+			"id": "pack-basico",
+			"title": "Pack Básico",
+			"price": 35,
+			"originalPrice": 45,
+			"featured": false,
+			"services": [
+				"Control de constantes vitales",
+				"Administración de inyectable",
+				"Duración: 30 minutos",
+				"Informe detallado"
+			]
+		},
+		{
+			"id": "pack-completo",
+			"title": "Pack Completo",
+			"price": 60,
+			"originalPrice": 70,
+			"featured": true,
+			"services": [
+				"Control de constantes vitales",
+				"Administración de inyectable",
+				"Extracción de sangre",
+				"Duración: 45 minutos",
+				"Seguimiento personalizado"
+			]
+		},
+		{
+			"id": "pack-mensual",
+			"title": "Pack Mensual",
+			"price": 120,
+			"originalPrice": 140,
+			"featured": false,
+			"services": [
+				"4 visitas al mes",
+				"Servicios combinados flexibles",
+				"Seguimiento continuo",
+				"Prioridad en citas"
+			]
+		}
+	],
+	"footer": {
+		"description": "Atención profesional de enfermería en la comodidad de su hogar. Cuidamos de usted con la máxima profesionalidad y cariño.",
+		"copyright": "© 2025 Enfermería a Domicilio. Todos los derechos reservados."
+	}
+}

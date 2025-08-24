@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enfermería a Domicilio - Atención Profesional en Casa</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="components.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <i class="fas fa-heartbeat"></i>
+                <span>Enfermería a Domicilio</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#sobre-mi">Sobre Mí</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#precios">Packs</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Contenido dinámico cargado desde config.json -->
+    <main>
+        <!-- El contenido se carga dinámicamente aquí -->
+        <div class="loading" style="text-align: center; padding: 4rem; color: #4d839e;">
+            <i class="fas fa-spinner fa-spin" style="font-size: 2rem; margin-bottom: 1rem;"></i>
+            <p>Cargando contenido...</p>
+        </div>
+    </main>
+
+    <!-- Footer cargado dinámicamente -->
+    <footer class="footer">
+        <!-- El footer se carga dinámicamente aquí -->
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Cargar contenido dinámico cuando la página esté lista
+        document.addEventListener('DOMContentLoaded', () => {
+            loadAndRenderPage();
+        });
+    </script>
+</body>
+</html>
