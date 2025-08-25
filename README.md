@@ -1,6 +1,7 @@
 # Página Web de Enfermería a Domicilio
 
 ## 📋 Descripción
+
 Esta es una página web profesional para servicios de enfermería a domicilio, diseñada específicamente para personas mayores y pacientes con movilidad reducida.
 
 ## 🎯 Sistema Modular - Fácil Edición
@@ -11,9 +12,10 @@ La página ahora utiliza un **sistema modular** que separa el contenido del cód
 
 **¡Solo necesitas editar un archivo: `config.json`!**
 
-Este archivo contiene toda la información de la página:
+Este archivo contiene la información de la página web:
 
 #### 🏠 Información General
+
 ```json
 "siteInfo": {
   "title": "Título de la página",
@@ -26,6 +28,7 @@ Este archivo contiene toda la información de la página:
 ```
 
 #### 👩‍⚕️ Sección "Sobre Mí"
+
 ```json
 "aboutMe": {
   "name": "Tu nombre",
@@ -38,6 +41,7 @@ Este archivo contiene toda la información de la página:
 ```
 
 #### 💉 Servicios
+
 ```json
 "services": [
   {
@@ -51,6 +55,7 @@ Este archivo contiene toda la información de la página:
 ```
 
 #### 📦 Packs
+
 ```json
 "packs": [
   {
@@ -67,6 +72,7 @@ Este archivo contiene toda la información de la página:
 ### ✏️ Ejemplos de Edición Común
 
 #### Cambiar tu información personal:
+
 1. Abre `config.json`
 2. Busca la sección `"aboutMe"`
 3. Cambia `"name"` por tu nombre real
@@ -75,23 +81,26 @@ Este archivo contiene toda la información de la página:
 6. Guarda el archivo
 
 #### Añadir una nueva zona de cobertura:
+
 1. En `config.json`, busca `"coverageZones"`
 2. Añade la nueva zona: `"Nueva Localidad"`
 3. Guarda el archivo
 
 #### Cambiar precios:
+
 1. Para servicios individuales: busca `"services"` y cambia el `"price"`
 2. Para packs: busca `"packs"` y cambia `"price"` y `"originalPrice"`
 3. Guarda el archivo
 
 #### Añadir un nuevo servicio:
+
 ```json
 {
-  "id": "nuevo-servicio",
-  "icon": "fas fa-stethoscope",
-  "title": "Nuevo Servicio",
-  "description": "Descripción del nuevo servicio",
-  "price": 30
+	"id": "nuevo-servicio",
+	"icon": "fas fa-stethoscope",
+	"title": "Nuevo Servicio",
+	"description": "Descripción del nuevo servicio",
+	"price": 30
 }
 ```
 
@@ -116,11 +125,13 @@ Este archivo contiene toda la información de la página:
 ## 🚀 Cómo Usar
 
 ### Desarrollo Local
+
 1. Abre una terminal en la carpeta del proyecto
 2. Ejecuta: `python3 -m http.server 8000`
 3. Abre tu navegador en: `http://localhost:8000`
 
 ### Subir a Internet
+
 1. Sube todos los archivos a tu hosting
 2. Asegúrate de que `config.json` esté en la misma carpeta que `index.html`
 3. ¡Listo!
@@ -136,9 +147,11 @@ Este archivo contiene toda la información de la página:
 ## 🎨 Personalización Avanzada
 
 ### Cambiar Colores
+
 Si quieres cambiar el color principal (#4d839e), edita `styles.css` y busca todas las apariciones de este color.
 
 ### Añadir Nuevas Secciones
+
 1. Añade la nueva sección en `config.json`
 2. Crea el componente en `components.js`
 3. Añádelo al método `renderPage()`
@@ -146,11 +159,13 @@ Si quieres cambiar el color principal (#4d839e), edita `styles.css` y busca toda
 ## 🆘 Solución de Problemas
 
 ### La página no carga el contenido
+
 - Verifica que `config.json` esté en la misma carpeta
 - Comprueba que el JSON sea válido (usa un validador online)
 - Revisa la consola del navegador (F12) para errores
 
 ### Los cambios no se ven
+
 - Recarga la página con Ctrl+F5 (fuerza la recarga)
 - Verifica que guardaste `config.json`
 - Comprueba que no hay errores de sintaxis en el JSON
@@ -158,6 +173,7 @@ Si quieres cambiar el color principal (#4d839e), edita `styles.css` y busca toda
 ## 📞 Soporte
 
 Si necesitas ayuda:
+
 1. Revisa este README
 2. Verifica que el JSON sea válido
 3. Comprueba la consola del navegador
