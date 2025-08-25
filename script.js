@@ -99,7 +99,6 @@ function initializeContactForm() {
     e.preventDefault();
     
     // Obtener datos del formulario
-    const formData = new FormData(contactForm);
     const nombre = contactForm.querySelector('input[type="text"]').value;
     const telefono = contactForm.querySelector('input[type="tel"]').value;
     const email = contactForm.querySelector('input[type="email"]').value;
@@ -128,19 +127,43 @@ function initializeContactForm() {
         }
     }
     
-    // Simular envío del formulario
+    // Preparar datos para EmailJS
+    const formData = {
+        nombre: nombre,
+        telefono: telefono,
+        email: email,
+        servicio: servicio,
+        mensaje: mensaje
+    };
+    
+    // Enviar email con EmailJS
     const submitButton = contactForm.querySelector('button[type="submit"]');
     const originalText = submitButton.textContent;
     submitButton.textContent = 'Enviando...';
     submitButton.disabled = true;
     
-    // Simular delay de envío
-    setTimeout(() => {
-        showNotification('¡Gracias por su consulta! Nos pondremos en contacto con usted pronto.', 'success');
-        contactForm.reset();
+    // Verificar si EmailJS está configurado
+     if (typeof sendEmail === 'function' && EMAILJS_CONFIG.PUBLIC_KEY !== 'TU_PUBLIC_KEY_AQUI') {
+        // Enviar con EmailJS
+        sendEmail(formData)
+            .then(() => {
+                showNotification('¡Gracias por su consulta! Nos pondremos en contacto con usted pronto.', 'success');
+                contactForm.reset();
+            })
+            .catch((error) => {
+                console.error('Error enviando email:', error);
+                showNotification('Hubo un error al enviar su consulta. Por favor, inténtelo de nuevo o contáctenos directamente.', 'error');
+            })
+            .finally(() => {
+                submitButton.textContent = originalText;
+                submitButton.disabled = false;
+            });
+    } else {
+        // Fallback: mostrar información para configurar EmailJS
+        showNotification('EmailJS no está configurado. Por favor, configure las credenciales en emailjs-config.js', 'error');
         submitButton.textContent = originalText;
         submitButton.disabled = false;
-    }, 2000);
+    }
     });
 }
 
@@ -391,6 +414,11 @@ function initializeAllFeatures() {
     initializeFormValidation();
     initializeAnimations();
     updateActiveNavigation();
+    
+    // Inicializar EmailJS si está disponible
+    if (typeof initializeEmailJS === 'function') {
+        initializeEmailJS();
+    }
 }
 
 // Inicialización cuando el DOM esté listo

@@ -2,21 +2,21 @@
 	"siteInfo": {
 		"title": "Enfermería a Domicilio - Atención Profesional en Casa",
 		"brandName": "Enfermería a Domicilio",
-		"phone": "+34 XXX XXX XXX",
+		"phone": "+34 658 491 612",
 		"email": "info@enfermeriadomicilio.com",
 		"schedule": "Lunes a Domingo: 8:00 - 20:00",
-		"coverage": "Servicio disponible en toda la provincia"
+		"coverage": "Servicio disponible en Vallés Occidental"
 	},
 	"hero": {
 		"title": "Atención de Enfermería Profesional en la Comodidad de su Hogar",
-		"subtitle": "Servicios especializados para personas mayores y pacientes con movilidad reducida. Cuidado profesional sin salir de casa.",
+		"subtitle": "Tu bienestar, en tu espacio. Recibe la atención profesional que mereces con la calidez y cercanía de un trato personalizado, todo en la comodidad de tu hogar.Una solución ideal por conveniencia, por falta de tiempo o para personas mayores o con movilidad reducida.",
 		"primaryButton": "Solicitar Consulta",
 		"secondaryButton": "Ver Servicios"
 	},
 	"aboutMe": {
 		"name": "Christine Cano",
-		"title": "Enfermera Profesional",
-		"collegiateNumber": "28/XXXXX",
+		"title": "Enfermera",
+		"collegiateNumber": "075396",
 		"intro": "",
 		"education": [
 			"Diplomada en Enfermería por la Universidad Autónoma de Barcelona EUIT"
@@ -63,14 +63,14 @@
 			"icon": "fas fa-tint",
 			"title": "Extracción de Sangre",
 			"description": "Toma de muestras sanguíneas para análisis clínicos en la comodidad de su hogar.",
-			"price": 25
+			"price": 30
 		},
 		{
 			"id": "constantes",
 			"icon": "fas fa-heartbeat",
 			"title": "Control de Constantes Vitales",
 			"description": "Medición de presión arterial, temperatura, pulso y saturación de oxígeno.",
-			"price": 20
+			"price": 25
 		}
 	],
 	"packs": [
@@ -78,12 +78,11 @@
 			"id": "pack-basico",
 			"title": "Pack Básico",
 			"price": 35,
-			"originalPrice": 45,
+			"originalPrice": 50,
 			"featured": false,
 			"services": [
 				"Control de constantes vitales",
 				"Administración de inyectable",
-				"Duración: 30 minutos",
 				"Informe detallado"
 			]
 		},
@@ -91,21 +90,33 @@
 			"id": "pack-completo",
 			"title": "Pack Completo",
 			"price": 60,
-			"originalPrice": 70,
-			"featured": true,
+			"originalPrice": 80,
+			"featured": false,
 			"services": [
 				"Control de constantes vitales",
 				"Administración de inyectable",
 				"Extracción de sangre",
-				"Duración: 45 minutos",
 				"Seguimiento personalizado"
 			]
 		},
 		{
 			"id": "pack-mensual",
-			"title": "Pack Mensual",
+			"title": "Pack Mensual Básico",
+			"price": 85,
+			"originalPrice": 100,
+			"featured": true,
+			"services": [
+				"4 visitas al mes",
+				"Control de constantes vitales",
+				"Seguimiento continuo",
+				"Prioridad en citas"
+			]
+		},
+		{
+			"id": "pack-mensual",
+			"title": "Pack Mensual Completo",
 			"price": 120,
-			"originalPrice": 140,
+			"originalPrice": 320,
 			"featured": false,
 			"services": [
 				"4 visitas al mes",
