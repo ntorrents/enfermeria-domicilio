@@ -3,21 +3,65 @@ function initializeMobileNavigation() {
     const navToggle = document.querySelector('.nav-toggle');
     const navMenu = document.querySelector('.nav-menu');
     
+    console.log('Inicializando menú móvil...');
+    console.log('navToggle encontrado:', !!navToggle);
+    console.log('navMenu encontrado:', !!navMenu);
+    
     if (navToggle && navMenu) {
-        navToggle.addEventListener('click', () => {
+        // Método directo como backup
+        navToggle.onclick = function(e) {
+            e.preventDefault();
+            console.log('Click directo en hamburguesa detectado');
             navMenu.classList.toggle('active');
             navToggle.classList.toggle('active');
+            console.log('Menú activo:', navMenu.classList.contains('active'));
+        };
+        
+        // También añadir event listener normal
+        navToggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            console.log('Event listener click detectado');
+            navMenu.classList.toggle('active');
+            navToggle.classList.toggle('active');
+        });
+        
+        console.log('Event listeners añadidos al botón hamburguesa');
+    } else {
+        console.error('No se encontraron elementos del menú móvil');
+        console.log('Elementos disponibles:', {
+            navToggle: document.querySelector('.nav-toggle'),
+            navMenu: document.querySelector('.nav-menu'),
+            allNavToggles: document.querySelectorAll('.nav-toggle').length,
+            allNavMenus: document.querySelectorAll('.nav-menu').length
         });
     }
 
     // Cerrar menú móvil al hacer click en un enlace
     const navLinks = document.querySelectorAll('.nav-menu a');
+    console.log('Enlaces de navegación encontrados:', navLinks.length);
+    
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
             if (navMenu) navMenu.classList.remove('active');
             if (navToggle) navToggle.classList.remove('active');
+            console.log('Menú cerrado por click en enlace');
         });
     });
+}
+
+// Función separada para toggle del menú
+function toggleMobileMenu() {
+    const navToggle = document.querySelector('.nav-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+    
+    console.log('Toggle del menú móvil activado');
+    
+    if (navMenu && navToggle) {
+        navMenu.classList.toggle('active');
+        navToggle.classList.toggle('active');
+        
+        console.log('Menú activo:', navMenu.classList.contains('active'));
+    }
 }
 
 // Función para inicializar scroll suave
@@ -408,6 +452,7 @@ function selectService(serviceValue) {
 
 // Función para inicializar todas las funcionalidades
 function initializeAllFeatures() {
+    // Reinicializar navegación móvil después del contenido dinámico
     initializeMobileNavigation();
     initializeSmoothScroll();
     initializeContactForm();
@@ -419,6 +464,8 @@ function initializeAllFeatures() {
     if (typeof initializeEmailJS === 'function') {
         initializeEmailJS();
     }
+    
+    console.log('Todas las funcionalidades inicializadas correctamente');
 }
 
 // Inicialización cuando el DOM esté listo

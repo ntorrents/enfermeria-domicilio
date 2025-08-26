@@ -45,30 +45,59 @@ class EnfermeriaComponents {
 	renderAboutMe() {
 		const { aboutMe } = this.config;
 		const educationList = aboutMe.education
-			.map((item) => `<li>${item}</li>`)
+			.map((item) => `<li><i class="fas fa-graduation-cap"></i>${item}</li>`)
 			.join("");
 		const zonesList = aboutMe.coverageZones
-			.map((zone) => `<span class="zone">${zone}</span>`)
+			.map((zone) => `<span class="zone"><i class="fas fa-map-marker-alt"></i>${zone}</span>`)
 			.join("");
 
 		return `
             <section id="sobre-mi" class="about-me">
                 <div class="container">
+                    <h2>Sobre Mí</h2>
                     <div class="about-me-content">
-                        <div class="about-me-text">
-                            <h2>Sobre Mí</h2>
-                            <h3>${aboutMe.name} - ${aboutMe.title}</h3>
-                            <p class="intro">${aboutMe.intro}</p>
-                            
-                            <div class="experience">
-                                <h4><i class="fas fa-graduation-cap"></i> Formación y Experiencia</h4>
-                                <ul>${educationList}</ul>
+                        <div class="about-content">
+                            <div class="intro-card">
+                                <div class="intro-header">
+                                    <i class="fas fa-user-nurse intro-icon"></i>
+                                    <div>
+                                        <h3>¡Hola! Soy ${aboutMe.name}</h3>
+                                        <p class="intro-subtitle">Enfermera Profesional a Domicilio</p>
+                                    </div>
+                                </div>
+                                <p class="intro-text">${aboutMe.intro}</p>
                             </div>
                             
-                            <div class="coverage-area">
-                                <h4><i class="fas fa-map-marker-alt"></i> Zonas de Cobertura</h4>
+                            <div class="info-grid">
+                                <div class="info-card experience-card">
+                                    <div class="card-header">
+                                        <i class="fas fa-briefcase"></i>
+                                        <h3>Mi Experiencia</h3>
+                                    </div>
+                                    <p>Formación y experiencia profesional en el ámbito sanitario</p>
+                                    <ul class="education-list">
+                                        ${educationList}
+                                    </ul>
+                                </div>
+                                
+                                <div class="info-card specialization-card">
+                                    <div class="card-header">
+                                        <i class="fas fa-stethoscope"></i>
+                                        <h3>Especialización</h3>
+                                    </div>
+                                    <p>Atención sanitaria domiciliaria personalizada y de calidad</p>
+                                </div>
+                            </div>
+                            
+                            <div class="coverage-card">
+                                <div class="card-header">
+                                    <i class="fas fa-map-marked-alt"></i>
+                                    <h3>Zonas de Cobertura</h3>
+                                </div>
                                 <p>Ofrezco mis servicios en las siguientes localidades y alrededores:</p>
-                                <div class="zones">${zonesList}</div>
+                                <div class="zones">
+                                    ${zonesList}
+                                </div>
                                 <p class="coverage-note">${aboutMe.coverageNote}</p>
                             </div>
                         </div>

@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Enfermería a Domicilio - Atención Profesional en Casa</title>
-    <link rel="stylesheet" href="styles.css?v=2.0">
+    <link rel="stylesheet" href="styles.css?v=2.1">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <script src="emailjs-config.js?v=2.0"></script>
-    <script src="components.js?v=2.0"></script>
+    <script src="emailjs-config.js?v=2.1"></script>
+    <script src="components.js?v=2.1"></script>
 </head>
 <body>
     <!-- Header -->
@@ -48,11 +48,64 @@
         <!-- El footer se carga dinámicamente aquí -->
     </footer>
 
-    <script src="script.js?v=2.0"></script>
+    <script src="script.js?v=2.1"></script>
     <script>
+        // JavaScript directo para el menú móvil (sin dependencias)
+        function setupMobileMenu() {
+            const navToggle = document.querySelector('.nav-toggle');
+            const navMenu = document.querySelector('.nav-menu');
+            
+            console.log('Setup menú móvil directo...');
+            console.log('Toggle encontrado:', !!navToggle);
+            console.log('Menu encontrado:', !!navMenu);
+            
+            if (navToggle && navMenu) {
+                navToggle.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    console.log('CLICK EN HAMBURGUESA DETECTADO!');
+                    
+                    const isActive = navMenu.classList.contains('active');
+                    
+                    if (isActive) {
+                        navMenu.classList.remove('active');
+                        navToggle.classList.remove('active');
+                        console.log('Menú cerrado');
+                    } else {
+                        navMenu.classList.add('active');
+                        navToggle.classList.add('active');
+                        console.log('Menú abierto');
+                    }
+                });
+                
+                // Cerrar menú al hacer click en enlaces
+                const links = navMenu.querySelectorAll('a');
+                links.forEach(link => {
+                    link.addEventListener('click', () => {
+                        navMenu.classList.remove('active');
+                        navToggle.classList.remove('active');
+                        console.log('Menú cerrado por enlace');
+                    });
+                });
+                
+                console.log('Menú móvil configurado exitosamente');
+            } else {
+                console.error('ERROR: No se encontraron elementos del menú');
+            }
+        }
+        
         // Cargar contenido dinámico cuando la página esté lista
         document.addEventListener('DOMContentLoaded', () => {
+            console.log('DOM cargado, configurando menú...');
+            setupMobileMenu();
+            
             loadAndRenderPage();
+            
+            // Backup: reinicializar después del contenido dinámico
+            setTimeout(() => {
+                console.log('Backup: reinicializando menú...');
+                setupMobileMenu();
+            }, 1000);
         });
     </script>
 </body>
