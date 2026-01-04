@@ -1,133 +1,133 @@
 {
 	"siteInfo": {
-		"title": "Enfermería a Domicilio - Atención Profesional en Casa",
-		"brandName": "Enfermería a Domicilio",
+		"title": "Christine Cano - Dermoestética Avanzada",
+		"brandName": "Enfermera Dermoestética - Christine Cano",
 		"phone": "+34 658 491 612",
-		"email": "info@enfermeriadomicilio.com",
-		"schedule": "Lunes a Domingo: 8:00 - 20:00",
-		"coverage": "Servicio disponible en Vallés Occidental"
+		"email": "info@christinecano.com",
+		"schedule": "Cita Previa: Lunes a Viernes",
+		"coverage": "Terrassa, Barcelona"
 	},
 	"hero": {
-		"title": "Piel Saludable",
-		"subtitle": "Descubre la belleza de tu piel con nuestros servicios especializados en estética y cuidado personal.",
-		"primaryButton": "Solicitar Consulta",
-		"secondaryButton": "Ver Servicios"
+		"title": "Realza tu Belleza Natural",
+		"subtitle": "Tratamientos dermoestéticos profesionales para cuidar la salud y luminosidad de tu piel.",
+		"primaryButton": "Reservar Cita",
+		"secondaryButton": "Tratamientos"
 	},
 	"aboutMe": {
 		"name": "Christine Cano",
-		"title": "Enfermera",
+		"title": "Enfermera Dermoestética",
 		"collegiateNumber": "075396",
-		"intro": "",
+		"intro": "Como profesional de la salud mi enfoque va más allá de la estética. Entiendo que la piel es un reflejo de nuestro bienestar interno, por lo que trato cada tratamiento con una visión holística. Mi misión es ofrecer soluciones personalizadas que no solo mejoren la apariencia de la piel, sino que contribuyan al equilibrio físico y emocional de mis pacientes.",
 		"education": [
-			"Diplomada en Enfermería por la Universidad Autónoma de Barcelona EUIT"
+			"Diplomada en Enfermería (UAB)",
+			"Máster en Dermoestética e Imagen Corporal (NUS Agency, Barcelona)"
 		],
-		"coverageZones": [
-			"Terrassa",
-			"Sabadell",
-			"Matadepera",
-			"Viladecavalls",
-			"Vacarisses",
-			"Sant Cugat del Vallès",
-			"Sant Quirze del Vallès",
-			"Rubí"
-		],
-		"coverageNote": "¿Tu localidad no aparece en la lista? <strong>Contáctame</strong> y consultaremos la disponibilidad en tu zona."
+		"clinicAddress": "Carrer de l'Exemple, 123, 08221 Terrassa, Barcelona",
+		"clinicNote": "Consulta privada equipada con la última tecnología para tu confort y seguridad."
 	},
 	"features": [
 		{
-			"icon": "fas fa-home",
-			"title": "Comodidad en Casa",
-			"description": "Reciba atención profesional sin necesidad de desplazarse"
+			"icon": "fas fa-stopwatch",
+			"title": "30 Minutos",
+			"description": "Sesiones ágiles"
 		},
 		{
-			"icon": "fas fa-certificate",
-			"title": "Profesional Certificada",
-			"description": "Enfermera titulada con experiencia en atención domiciliaria"
+			"icon": "fas fa-magic",
+			"title": "Efecto Inmediato",
+			"description": "Resultados visibles"
 		},
 		{
-			"icon": "fas fa-clock",
-			"title": "Horarios Flexibles",
-			"description": "Adaptamos nuestros horarios a sus necesidades"
+			"icon": "fas fa-walking",
+			"title": "Sin Reposo",
+			"description": "Vida normal al salir"
+		},
+		{
+			"icon": "fas fa-spa",
+			"title": "Resultados Temporales",
+			"description": "Estética responsable"
+		},
+		{
+			"icon": "fas fa-heartbeat",
+			"title": "Recuperación Rápida",
+			"description": "Mínima inflamación"
 		}
 	],
 	"services": [
 		{
-			"id": "inyectable",
-			"icon": "fas fa-syringe",
-			"title": "Administración de Inyectables",
-			"description": "Aplicación segura de medicamentos intramusculares, subcutáneos e intravenosos según prescripción médica.",
+			"id": "microneedling",
+			"icon": "fas fa-bullseye",
+			"title": "Microneedling Facial",
+			"description": "Tratamiento de inducción de colágeno. Mejora textura, reduce marcas de acné y líneas de expresión.",
+			"price": 80
+		},
+		{
+			"id": "rutinafacial",
+			"icon": "fas fa-leaf",
+			"title": "Rutina Facial Personalizada",
+			"description": "Tu piel es única; Tu rutina también debería de serlo. Analizo tu piel y hábitos para lograr resultados visibles y sostenibles.",
 			"price": 25
 		},
 		{
-			"id": "extraccion",
-			"icon": "fas fa-tint",
-			"title": "Extracción de Sangre",
-			"description": "Toma de muestras sanguíneas para análisis clínicos en la comodidad de su hogar.",
-			"price": 30
-		},
-		{
-			"id": "constantes",
-			"icon": "fas fa-heartbeat",
-			"title": "Control de Constantes Vitales",
-			"description": "Medición de presión arterial, temperatura, pulso y saturación de oxígeno.",
-			"price": 25
+			"id": "proximamente1",
+			"icon": "fas fa-star",
+			"title": "Próximamente",
+			"description": "Nuevas técnicas de rejuvenecimiento facial en camino.",
+			"price": 0,
+			"disabled": true
 		}
 	],
 	"packs": [
 		{
-			"id": "pack-basico",
-			"title": "Pack Básico",
-			"price": 35,
-			"originalPrice": 50,
+			"id": "pack-unica-mn",
+			"title": "Visita Única Microneedling",
+			"price": 80,
+			"originalPrice": null,
 			"featured": false,
 			"services": [
-				"Control de constantes vitales",
-				"Administración de inyectable",
-				"Informe detallado"
+				"1 Sesión de Microneedling",
+				"Valoración facial previa",
+				"Pautas post-tratamiento"
 			]
 		},
 		{
-			"id": "pack-completo",
-			"title": "Pack Completo",
-			"price": 60,
-			"originalPrice": 80,
-			"featured": false,
+			"id": "pack-mensual-mn",
+			"title": "Tratamiento Mensual Microneedling",
+			"price": 400,
+			"originalPrice": 480,
+			"featured": true,
 			"services": [
-				"Control de constantes vitales",
-				"Administración de inyectable",
-				"Extracción de sangre",
-				"Seguimiento personalizado"
+				"6 Sesiones (1 al mes)",
+				"Seguimiento fotográfico",
+				"Kit de cuidado básico"
 			]
 		},
 		{
-			"id": "pack-mensual",
-			"title": "Pack Mensual Básico",
-			"price": 85,
+			"id": "pack-unica-rf",
+			"title": "Visita Única Rutina Facial",
+			"price": 25,
+			"originalPrice": null,
+			"featured": false,
+			"services": [
+				"1 Sesión de diseño personalizado",
+				"Análisis de neceser y hábitos",
+				"Entrega de rutina por escrito"
+			]
+		},
+		{
+			"id": "pack-mensual-rf",
+			"title": "Tratamiento Seguimiento Rutina Facial",
+			"price": 50,
 			"originalPrice": 100,
 			"featured": true,
 			"services": [
-				"4 visitas al mes",
-				"Control de constantes vitales",
-				"Seguimiento continuo",
-				"Prioridad en citas"
-			]
-		},
-		{
-			"id": "pack-mensual",
-			"title": "Pack Mensual Completo",
-			"price": 120,
-			"originalPrice": 320,
-			"featured": false,
-			"services": [
-				"4 visitas al mes",
-				"Servicios combinados flexibles",
-				"Seguimiento continuo",
-				"Prioridad en citas"
+				"4 sesiones de seguimiento",
+				"Ajustes por evolución y clima",
+				"Resolución de dudas continua"
 			]
 		}
 	],
 	"footer": {
-		"description": "Atención profesional de enfermería en la comodidad de su hogar. Cuidamos de usted con la máxima profesionalidad y cariño.",
-		"copyright": "© 2025 Enfermería a Domicilio. Todos los derechos reservados."
+		"description": "Clínica de enfermería dermoestética en Terrassa. Cuidamos tu piel con rigor científico y trato cercano.",
+		"copyright": "© 2025 Christine Cano Dermoestética. Todos los derechos reservados."
 	}
 }

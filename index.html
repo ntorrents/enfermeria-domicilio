@@ -1,112 +1,121 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enfermería a Domicilio - Atención Profesional en Casa</title>
-    <link rel="stylesheet" href="styles.css?v=2.1">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <script src="emailjs-config.js?v=2.1"></script>
-    <script src="components.js?v=2.1"></script>
-</head>
-<body>
-    <!-- Header -->
-    <header class="header">
-        <nav class="nav">
-            <div class="nav-brand">
-                <i class="fas fa-heartbeat"></i>
-                <span>Enfermería a Domicilio</span>
-            </div>
-            <ul class="nav-menu">
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#sobre-mi">Sobre Mí</a></li>
-                <li><a href="#servicios">Servicios</a></li>
-                <li><a href="#precios">Packs</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-            <div class="nav-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </nav>
-    </header>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Christine Cano - Dermoestética en Terrassa</title>
+		<!-- Favicon básico -->
+		<link
+			rel="icon"
+			type="image/png"
+			href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==" />
 
-    <!-- Contenido dinámico cargado desde config.json -->
-    <main>
-        <!-- El contenido se carga dinámicamente aquí -->
-        <div class="loading" style="text-align: center; padding: 4rem; color: #4d839e;">
-            <i class="fas fa-spinner fa-spin" style="font-size: 2rem; margin-bottom: 1rem;"></i>
-            <p>Cargando contenido...</p>
-        </div>
-    </main>
+		<!-- CSS Principal -->
+		<link rel="stylesheet" href="styles.css?v=3.1" />
 
-    <!-- Footer cargado dinámicamente -->
-    <footer class="footer">
-        <!-- El footer se carga dinámicamente aquí -->
-    </footer>
+		<!-- Fuentes: Playfair Display (Elegante) + Inter (Leible) -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+			rel="stylesheet" />
 
-    <script src="script.js?v=2.1"></script>
-    <script>
-        // JavaScript directo para el menú móvil (sin dependencias)
-        function setupMobileMenu() {
-            const navToggle = document.querySelector('.nav-toggle');
-            const navMenu = document.querySelector('.nav-menu');
-            
-            console.log('Setup menú móvil directo...');
-            console.log('Toggle encontrado:', !!navToggle);
-            console.log('Menu encontrado:', !!navMenu);
-            
-            if (navToggle && navMenu) {
-                navToggle.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    console.log('CLICK EN HAMBURGUESA DETECTADO!');
-                    
-                    const isActive = navMenu.classList.contains('active');
-                    
-                    if (isActive) {
-                        navMenu.classList.remove('active');
-                        navToggle.classList.remove('active');
-                        console.log('Menú cerrado');
-                    } else {
-                        navMenu.classList.add('active');
-                        navToggle.classList.add('active');
-                        console.log('Menú abierto');
-                    }
-                });
-                
-                // Cerrar menú al hacer click en enlaces
-                const links = navMenu.querySelectorAll('a');
-                links.forEach(link => {
-                    link.addEventListener('click', () => {
-                        navMenu.classList.remove('active');
-                        navToggle.classList.remove('active');
-                        console.log('Menú cerrado por enlace');
-                    });
-                });
-                
-                console.log('Menú móvil configurado exitosamente');
-            } else {
-                console.error('ERROR: No se encontraron elementos del menú');
-            }
-        }
-        
-        // Cargar contenido dinámico cuando la página esté lista
-        document.addEventListener('DOMContentLoaded', () => {
-            console.log('DOM cargado, configurando menú...');
-            setupMobileMenu();
-            
-            loadAndRenderPage();
-            
-            // Backup: reinicializar después del contenido dinámico
-            setTimeout(() => {
-                console.log('Backup: reinicializando menú...');
-                setupMobileMenu();
-            }, 1000);
-        });
-    </script>
-</body>
+		<!-- Iconos -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+		<!-- EmailJS -->
+		<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+		<script src="emailjs-config.js?v=3.0"></script>
+		<script src="components.js?v=3.1"></script>
+	</head>
+	<body>
+		<!-- Header / Navegación -->
+		<header class="header">
+			<nav class="nav container">
+				<div class="nav-brand">
+					<div class="brand-icon">
+						<i class="fas fa-spa"></i>
+					</div>
+					<span>Dermoestética Christine</span>
+				</div>
+
+				<ul class="nav-menu">
+					<li><a href="#inicio">Inicio</a></li>
+					<li><a href="#sobre-mi">Sobre Mi</a></li>
+					<li><a href="#servicios">Servicios</a></li>
+					<li><a href="#precios">Tarifas</a></li>
+					<li><a href="#contacto" class="btn-nav">Cita Previa</a></li>
+				</ul>
+
+				<div class="nav-toggle">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</nav>
+		</header>
+
+		<!-- Contenido Principal -->
+		<main>
+			<!-- Loader elegante -->
+			<div class="loading-screen">
+				<div class="loader-content">
+					<i
+						class="fas fa-spa fa-bounce"
+						style="--fa-animation-duration: 2s"></i>
+					<p>Preparando su belleza...</p>
+				</div>
+			</div>
+		</main>
+
+		<!-- Footer -->
+		<footer class="footer">
+			<!-- Se carga dinámicamente -->
+		</footer>
+
+		<!-- Scripts -->
+		<script src="script.js?v=3.0"></script>
+
+		<script>
+			// Inicialización segura
+			document.addEventListener("DOMContentLoaded", () => {
+				console.log("Iniciando sitio Dermoestética...");
+
+				// Cargar contenido
+				if (typeof loadAndRenderPage === "function") {
+					loadAndRenderPage();
+				}
+
+				// Mobile Menu Logic
+				const navToggle = document.querySelector(".nav-toggle");
+				const navMenu = document.querySelector(".nav-menu");
+
+				if (navToggle && navMenu) {
+					navToggle.addEventListener("click", (e) => {
+						e.stopPropagation();
+						navToggle.classList.toggle("active");
+						navMenu.classList.toggle("active");
+					});
+
+					// Cerrar al hacer click fuera
+					document.addEventListener("click", (e) => {
+						if (!navMenu.contains(e.target) && !navToggle.contains(e.target)) {
+							navToggle.classList.remove("active");
+							navMenu.classList.remove("active");
+						}
+					});
+
+					// Cerrar al hacer click en enlace
+					navMenu.querySelectorAll("a").forEach((link) => {
+						link.addEventListener("click", () => {
+							navToggle.classList.remove("active");
+							navMenu.classList.remove("active");
+						});
+					});
+				}
+			});
+		</script>
+	</body>
 </html>
