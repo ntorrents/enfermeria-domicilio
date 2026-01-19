@@ -561,6 +561,44 @@ section {
     font-size: 0.9rem;
 }
 
+/* --- TREATMENT DETAIL PAGE --- */
+#treatment-detail {
+    padding-top: 120px; /* Space for header */
+}
+
+.treatment-detail-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+    background: white;
+    padding: 3rem;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+}
+
+.treatment-detail-info {
+    background-color: var(--secondary);
+    padding: 2rem;
+    border-radius: var(--radius-md);
+}
+
+.treatment-detail-info h3 {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-size: 1.2rem;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+}
+
+.treatment-actions {
+    text-align: center;
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
 
 /* --- CONTACTO --- */
 .contact-container {
@@ -718,6 +756,10 @@ section {
 	.contact-form-wrapper {
 		padding: 2rem;
 	}
+    .treatment-detail-content {
+        grid-template-columns: 1fr;
+        padding: 2rem;
+    }
 }
 
 @media (max-width: 768px) {

@@ -52,7 +52,7 @@ class EnfermeriaComponents {
         `;
 	}
 
-	// 2. SOBRE MÍ (Ajustado para Clínica)
+	// 2. SOBRE MÍ
 	renderAboutMe() {
 		const { aboutMe } = this.config;
 		const educationHTML = aboutMe.education
@@ -105,37 +105,7 @@ class EnfermeriaComponents {
         `;
 	}
 
-	// 3. FEATURES (Iconos Bonitos Solicitados)
-	renderFeatures() {
-		const { features } = this.config;
-		const featuresHTML = features
-			.map(
-				(feature) => `
-            <div class="feature-card text-center" style="padding: 1.5rem;">
-                <div class="feature-icon" style="margin: 0 auto 1rem auto;"><i class="${feature.icon}"></i></div>
-                <h4 style="font-size: 1rem; margin-bottom: 0.5rem;">${feature.title}</h4>
-                <p style="font-size: 0.85rem; margin-bottom: 0;">${feature.description}</p>
-            </div>
-        `
-			)
-			.join("");
-
-		return `
-            <section class="features-section" style="background-color: white; padding: 4rem 0;">
-                <div class="container">
-                     <div class="section-title" style="margin-bottom: 2rem;">
-                        <span>Información Clave</span>
-                        <h2>Detalles del Tratamiento</h2>
-                    </div>
-                    <div class="features-grid" style="grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));">
-                        ${featuresHTML}
-                    </div>
-                </div>
-            </section>
-        `;
-	}
-
-    // 4. SERVICIOS (Nuevo Diseño de Acordeón)
+    // 3. SERVICIOS 
     renderServices() {
         const { services } = this.config;
         const accordionHTML = services.map((category, index) => {
@@ -147,9 +117,12 @@ class EnfermeriaComponents {
                         <p>${treatment.description}</p>
                     </div>
                     <div class="treatment-action">
-                        <button class="btn btn-secondary btn-small" onclick="selectService('${treatment.id}')">
+                        <button class="btn btn-primary btn-small" onclick="selectService('${treatment.id}')">
                             Me Interesa
                         </button>
+                        <a href="treatment-detail.html?id=${treatment.id}" class="btn btn-secondary btn-small">
+                            Más Info
+                        </a>
                     </div>
                 </div>
             `).join('');
@@ -174,7 +147,7 @@ class EnfermeriaComponents {
                 <div class="container">
                     <div class="section-title">
                         <span>Catálogo</span>
-                        <h2>Nuestros Tratamientos</h2>
+                        <h2>Nuestros Servicios</h2>
                         <p>Descubre nuestras especialidades para realzar tu belleza de forma segura y profesional.</p>
                     </div>
                     <div class="accordion-container">
@@ -185,12 +158,12 @@ class EnfermeriaComponents {
         `;
     }
 
-	// 5. PACKS (Eliminado)
+	// 4. PACKS (Eliminado)
 	renderPacks() {
 		return '';
 	}
 
-	// 6. CONTACTO
+	// 5. CONTACTO
 	renderContact() {
 		const { siteInfo, services } = this.config;
 
@@ -258,7 +231,7 @@ class EnfermeriaComponents {
                                 <div class="form-group">
                                     <label>Servicio de interés</label>
                                     <select class="form-control" required>
-                                        <option value="">Seleccione un tratamiento...</option>
+                                        <option value="">Seleccione un servicio...</option>
                                         ${serviceOptions}
                                         <option value="consulta">Duda / Otra consulta</option>
                                     </select>
@@ -280,7 +253,7 @@ class EnfermeriaComponents {
         `;
 	}
 
-	// 7. FOOTER
+	// 6. FOOTER
 	renderFooter() {
 		const { siteInfo, footer } = this.config;
 		return `
@@ -311,7 +284,6 @@ class EnfermeriaComponents {
 
 		contentContainer.innerHTML = `
             ${this.renderHero()}
-            ${this.renderFeatures()}
             ${this.renderAboutMe()}
             ${this.renderServices()}
             ${this.renderContact()}
