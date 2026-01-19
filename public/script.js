@@ -55,16 +55,7 @@ function initializeAccordion() {
         });
     });
     
-    // Abrir el primer item por defecto si existe
-    if (accordionHeaders.length > 0) {
-        const firstHeader = accordionHeaders[0];
-        const firstContent = firstHeader.nextElementSibling;
-        firstHeader.setAttribute('aria-expanded', 'true');
-        // Usar setTimeout para asegurar que el DOM ha pintado y scrollHeight tiene el valor correcto
-        setTimeout(() => {
-             firstContent.style.maxHeight = firstContent.scrollHeight + 'px';
-        }, 100);
-    }
+    // No abrir por defecto, esperar al manejo de ancla
 }
 
 
@@ -131,6 +122,16 @@ function initializeContactForm() {
     const contactForm = document.querySelector('.contact-form');
     if (!contactForm) return;
 
+    // Pre-seleccionar servicio si viene en la URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const serviceId = urlParams.get('service');
+    if (serviceId) {
+        const selectElement = contactForm.querySelector('select');
+        if (selectElement) {
+            selectElement.value = serviceId;
+        }
+    }
+
     contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
         const nombre = contactForm.querySelector('input[type="text"]').value;
@@ -159,35 +160,46 @@ function showNotification(message, type = 'info') {
     setTimeout(() => notification.remove(), 5000);
 }
 
-// Función para seleccionar servicio y ir al formulario
-function selectService(serviceValue) {
-    const contactSection = document.querySelector('#contacto');
-    if (!contactSection) return;
-
-    const headerHeight = document.querySelector('.header').offsetHeight;
-    const targetPosition = contactSection.offsetTop - headerHeight;
-
-    window.scrollTo({
-        top: targetPosition,
-        behavior: 'smooth'
-    });
-
+// Función para manejar el ancla en la URL al cargar la página
+function handleAnchorLinkOnLoad() {
+    const hash = window.location.hash;
+    // Se usa un timeout para dar tiempo a que el contenido dinámico se renderice
     setTimeout(() => {
-        const selectElement = contactSection.querySelector('select');
-        if (selectElement) {
-            selectElement.value = serviceValue;
-            selectElement.focus();
+        if (hash) {
+            const targetSection = document.querySelector(hash);
+            if (targetSection) {
+                const headerHeight = document.querySelector('.header').offsetHeight;
+                const targetPosition = targetSection.offsetTop - headerHeight;
+
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            }
         }
-    }, 500); // Esperar a que termine el scroll
+
+        // Abrir el primer acordeón por defecto si no hay ancla o el ancla es de servicios
+        const accordionHeader = document.querySelector('.accordion-header');
+        if (accordionHeader && (!hash || hash === '#servicios')) {
+             if (accordionHeader.getAttribute('aria-expanded') !== 'true') {
+                const firstContent = accordionHeader.nextElementSibling;
+                accordionHeader.setAttribute('aria-expanded', 'true');
+                firstContent.style.maxHeight = firstContent.scrollHeight + 'px';
+             }
+        }
+
+    }, 300); // 300ms es un retraso prudencial
 }
+
 
 // Función para inicializar todas las funcionalidades
 function initializeAllFeatures() {
     initializeMobileNavigation();
     initializeSmoothScroll();
     initializeContactForm();
-    initializeAccordion(); // <-- AÑADIDO
+    initializeAccordion();
     updateActiveNavigation();
+    handleAnchorLinkOnLoad(); // <-- AÑADIDO
 
     if (typeof initializeEmailJS === 'function') {
         initializeEmailJS();

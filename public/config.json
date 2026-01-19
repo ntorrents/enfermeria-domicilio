@@ -9,15 +9,15 @@
 	},
 	"hero": {
 		"title": "Realza tu Belleza Natural",
-		"subtitle": "Tratamientos dermoestéticos profesionales para cuidar la salud y luminosidad de tu piel.",
+		"subtitle": "Servicios dermoestéticos profesionales para cuidar la salud y luminosidad de tu piel.",
 		"primaryButton": "Reservar Cita",
-		"secondaryButton": "Tratamientos"
+		"secondaryButton": "Servicios"
 	},
 	"aboutMe": {
 		"name": "Christine Cano",
 		"title": "Enfermera Dermoestética",
 		"collegiateNumber": "075396",
-		"intro": "Como profesional de la salud mi enfoque va más allá de la estética. Entiendo que la piel es un reflejo de nuestro bienestar interno, por lo que trato cada tratamiento con una visión holística. Mi misión es ofrecer soluciones personalizadas que no solo mejoren la apariencia de la piel, sino que contribuyan al equilibrio físico y emocional de mis pacientes.",
+		"intro": "Como profesional de la salud mi enfoque va más allá de la estética. Entiendo que la piel es un reflejo de nuestro bienestar interno, por lo que trato cada servicio con una visión holística. Mi misión es ofrecer soluciones personalizadas que no solo mejoren la apariencia de la piel, sino que contribuyan al equilibrio físico y emocional de mis pacientes.",
 		"education": [
 			"Diplomada en Enfermería (UAB)",
 			"Máster en Dermoestética e Imagen Corporal (NUS Agency, Barcelona)"
@@ -25,33 +25,6 @@
 		"clinicAddress": "Carrer de l'Exemple, 123, 08221 Terrassa, Barcelona",
 		"clinicNote": "Consulta privada equipada con la última tecnología para tu confort y seguridad."
 	},
-	"features": [
-		{
-			"icon": "fas fa-stopwatch",
-			"title": "30 Minutos",
-			"description": "Sesiones ágiles"
-		},
-		{
-			"icon": "fas fa-magic",
-			"title": "Efecto Inmediato",
-			"description": "Resultados visibles"
-		},
-		{
-			"icon": "fas fa-walking",
-			"title": "Sin Reposo",
-			"description": "Vida normal al salir"
-		},
-		{
-			"icon": "fas fa-spa",
-			"title": "Resultados Temporales",
-			"description": "Estética responsable"
-		},
-		{
-			"icon": "fas fa-heartbeat",
-			"title": "Recuperación Rápida",
-			"description": "Mínima inflamación"
-		}
-	],
     "services": [
     {
         "category": "Microneedling",
@@ -60,13 +33,23 @@
                 "id": "microneedling-facial",
                 "icon": "fas fa-bullseye",
                 "title": "Microneedling Facial (Dermapen)",
-                "description": "Tratamiento de inducción de colágeno. Mejora textura, reduce marcas de acné y líneas de expresión."
+                "description": "Servicio de inducción de colágeno. Mejora textura, reduce marcas de acné y líneas de expresión.",
+                "detail": {
+                    "description": "El Microneedling, también conocido como Dermapen, es un servicio de inducción de colágeno que utiliza microagujas para crear punciones controladas en la piel. Esto estimula la producción natural de colágeno y elastina, mejorando la textura de la piel, reduciendo la apariencia de cicatrices de acné, líneas de expresión y arrugas. Es un procedimiento seguro y eficaz para rejuvenecer la piel y restaurar su luminosidad.",
+                    "duration": "La sesión dura aproximadamente 60 minutos.",
+                    "recovery": "La piel puede presentar enrojecimiento e inflamación leve durante las primeras 24-48 horas. Se recomienda evitar la exposición solar directa y utilizar protector solar. Los resultados son visibles después de la primera sesión, pero se recomienda un ciclo de 3 a 6 sesiones para obtener resultados óptimos."
+                }
             },
             {
                 "id": "microneedling-corporal",
                 "icon": "fas fa-bullseye",
                 "title": "Microneedling Corporal (Dermapen)",
-                "description": "Tratamiento de inducción de colágeno para el cuerpo."
+                "description": "Servicio de inducción de colágeno para el cuerpo.",
+                "detail": {
+                    "description": "El Microneedling corporal es una excelente opción para tratar estrías, cicatrices y flacidez en diversas áreas del cuerpo como abdomen, muslos y glúteos. Al igual que en el servicio facial, se utilizan microagujas para estimular la producción de colágeno y elastina, mejorando la firmeza y textura de la piel.",
+                    "duration": "La duración de la sesión varía según el área a tratar, generalmente entre 60 y 90 minutos.",
+                    "recovery": "Puede haber enrojecimiento e hinchazón en la zona tratada durante unos días. Se aconseja mantener la piel hidratada y protegida del sol. Los resultados se aprecian progresivamente y se consolidan tras varias sesiones."
+                }
             }
         ]
     },
@@ -77,19 +60,34 @@
                 "id": "mesoterapia-capilar",
                 "icon": "fas fa-hair",
                 "title": "Mesoterapia capilar",
-                "description": "Tratamiento avanzado para la caída capilar con acción fortalecedora y estimulante. Refuerza la fibra capilar, estimula el crecimiento, incrementa el grosor y volumen del cabello."
+                "description": "Servicio avanzado para la caída capilar con acción fortalecedora y estimulante. Refuerza la fibra capilar, estimula el crecimiento, incrementa el grosor y volumen del cabello.",
+                "detail": {
+                    "description": "La mesoterapia capilar consiste en la aplicación de microinyecciones en el cuero cabelludo con un cóctel de vitaminas, minerales y aminoácidos que nutren y fortalecen el folículo piloso. Es un servicio muy efectivo para frenar la caída del cabello, mejorar su calidad y densidad, y estimular el crecimiento de nuevo cabello.",
+                    "duration": "Cada sesión dura unos 30 minutos.",
+                    "recovery": "No requiere tiempo de recuperación. El paciente puede reanudar sus actividades cotidianas de inmediato. Se recomienda un servicio de choque inicial seguido de sesiones de mantenimiento para conservar los resultados."
+                }
             },
             {
                 "id": "mesoterapia-facial",
                 "icon": "fas fa-face-smile",
                 "title": "Mesoterapia facial",
-                "description": "Estimula y renueva la piel con la fuerza del ácido hialurónico."
+                "description": "Estimula y renueva la piel con la fuerza del ácido hialurónico.",
+                "detail": {
+                    "description": "La mesoterapia facial con ácido hialurónico y vitaminas es un servicio de rejuvenecimiento que hidrata la piel en profundidad, mejora su elasticidad y luminosidad, y suaviza las arrugas finas. El resultado es una piel visiblemente más joven, tersa y radiante.",
+                    "duration": "La sesión dura alrededor de 45 minutos.",
+                    "recovery": "Pueden aparecer pequeños hematomas o enrojecimiento en los puntos de inyección, que desaparecen en pocos días. Se aconseja no maquillarse en las 24 horas posteriores al servicio."
+                }
             },
             {
                 "id": "mesoterapia-corporal",
                 "icon": "fas fa-person-running",
                 "title": "Mesoterapia corporal Anticelulítico",
-                "description": "Tratamiento multietapa para la celulitis: compacta, edematosa, blanda, y liporeductor. Favorece la emulsión y movilización de grasas, disminuyendo el tamaño de los adipocitos y mejorando el contorno corporal."
+                "description": "Servicio multietapa para la celulitis: compacta, edematosa, blanda, y liporeductor. Favorece la emulsión y movilización de grasas, disminuyendo el tamaño de los adipocitos y mejorando el contorno corporal.",
+                "detail": {
+                    "description": "Este servicio combate la celulitis y la grasa localizada mediante microinyecciones de sustancias lipolíticas y drenantes. Actúa sobre los adipocitos, facilitando la eliminación de grasa y mejorando la circulación y el aspecto de la piel de naranja. Es ideal para tratar abdomen, flancos, muslos y cartucheras.",
+                    "duration": "Una sesión suele durar entre 30 y 60 minutos, dependiendo de la extensión de la zona a tratar.",
+                    "recovery": "Es un procedimiento ambulatorio que no interrumpe la vida social ni laboral. Pueden aparecer hematomas leves. Se recomienda combinarlo con un estilo de vida saludable para potenciar los resultados."
+                }
             }
         ]
     },
@@ -100,13 +98,23 @@
                 "id": "relleno-labios",
                 "icon": "fas fa-lips",
                 "title": "Relleno de labios",
-                "description": "Aumenta el volumen y define la forma de tus labios."
+                "description": "Aumenta el volumen y define la forma de tus labios.",
+                "detail": {
+                    "description": "El relleno de labios con ácido hialurónico permite aumentar su volumen, perfilarlos, corregir asimetrías e hidratarlos. El resultado es natural y armonioso, respetando siempre la fisonomía del paciente para lograr unos labios más definidos y sensuales.",
+                    "duration": "El procedimiento se realiza en unos 30-45 minutos.",
+                    "recovery": "Es normal una ligera inflamación en la zona durante las primeras 24-48 horas. Se recomienda evitar el calor y la exposición solar intensa los primeros días. Los resultados son inmediatos y duran entre 6 y 12 meses."
+                }
             },
             {
                 "id": "relleno-menton-mandibula",
                 "icon": "fas fa-face-relieved",
                 "title": "Rellenos de mentón y mandíbula",
-                "description": "Define y armoniza el contorno facial."
+                "description": "Define y armoniza el contorno facial.",
+                "detail": {
+                    "description": "La marcación mandibular y el relleno de mentón con ácido hialurónico son procedimientos que buscan definir el óvalo facial, mejorar la proyección del mentón y masculinizar o feminizar los rasgos según se desee. Es una técnica no quirúrgica que ofrece resultados inmediatos y contribuye a un rostro más equilibrado y armónico.",
+                    "duration": "La sesión dura aproximadamente 60 minutos.",
+                    "recovery": "Puede haber una leve inflamación o sensibilidad en la zona tratada. Se puede volver a la rutina habitual de inmediato. La duración de los resultados varía entre 12 y 18 meses."
+                }
             }
         ]
     },
@@ -117,13 +125,23 @@
                 "id": "bioestimulacion-exosomas",
                 "icon": "fas fa-atom",
                 "title": "Bioestimulación con Exosomas vegetales",
-                "description": "Revolución regenerativa que supera al PRP. Reprograma las células para estimular la curación, reducir la inflamación y potenciar la renovación celular. Mejora manchas, tono, hidratación, arrugas y firmeza."
+                "description": "Revolución regenerativa que supera al PRP. Reprograma las células para estimular la curación, reducir la inflamación y potenciar la renovación celular. Mejora manchas, tono, hidratación, arrugas y firmeza.",
+                "detail": {
+                    "description": "Los exosomas son vesículas extracelulares que actúan como mensajeros entre las células, promoviendo la regeneración de los tejidos. Este servicio innovador utiliza exosomas de origen vegetal para rejuvenecer la piel desde el interior, mejorando su calidad, textura y luminosidad de forma natural y duradera.",
+                    "duration": "La sesión dura unos 60 minutos.",
+                    "recovery": "No requiere tiempo de inactividad. La piel puede mostrar un ligero enrojecimiento que se resuelve en pocas horas. Los efectos son progresivos y se hacen más evidentes con el paso de las semanas."
+                }
             },
             {
                 "id": "bioestimulacion-total",
                 "icon": "fas fa-wand-magic-sparkles",
                 "title": "Bioestimulación total",
-                "description": "Tratamiento rejuvenecedor que estimula biológicamente el tejido para restaurar la estructura bioquímica de la piel, aumentando la firmeza, elasticidad, revitalización e hidratación."
+                "description": "Servicio rejuvenecedor que estimula biológicamente el tejido para restaurar la estructura bioquímica de la piel, aumentando la firmeza, elasticidad, revitalización e hidratación.",
+                "detail": {
+                    "description": "La bioestimulación total es un servicio integral que combina diferentes técnicas para activar los mecanismos de regeneración de la piel. Mediante la aplicación de factores de crecimiento, vitaminas y otros principios activos, se estimula la producción de colágeno y elastina, devolviendo a la piel su firmeza, elasticidad y vitalidad.",
+                    "duration": "Suele durar entre 60 y 90 minutos.",
+                    "recovery": "La recuperación es rápida, permitiendo retomar las actividades diarias de forma inmediata. Se puede observar una mejora inmediata en la hidratación y luminosidad, mientras que los efectos sobre la firmeza son más graduales."
+                }
             }
         ]
     },
@@ -134,30 +152,50 @@
                 "id": "peeling-estrias-cicatrices",
                 "icon": "fas fa-wand-sparkles",
                 "title": "Peeling químico para estrías y cicatrices",
-                "description": "Exfolia, bio-revitaliza y provoca un efecto lifting. Resultados: Piel con textura más lisa, tono unificado, limpia, oxigenada y luminosa."
+                "description": "Exfolia, bio-revitaliza y provoca un efecto lifting. Resultados: Piel con textura más lisa, tono unificado, limpia, oxigenada y luminosa.",
+                "detail": {
+                    "description": "Este peeling químico está específicamente formulado para tratar estrías y cicatrices, tanto recientes como antiguas. Actúa exfoliando las capas superficiales de la piel, promoviendo la renovación celular y la formación de nuevo colágeno. El resultado es una mejora significativa en la textura y el color de las marcas.",
+                    "duration": "La duración depende del área a tratar, pero suele ser de unos 45-60 minutos.",
+                    "recovery": "Después del servicio, la piel pasará por un proceso de descamación que puede durar varios días. Es fundamental seguir las pautas de cuidado post-peeling y proteger la piel del sol para garantizar una correcta cicatrización y óptimos resultados."
+                }
             },
             {
                 "id": "peeling-exfoliante-lifting",
                 "icon": "fas fa-wand-magic",
                 "title": "Peeling exfoliante y lifting",
-                "description": "Fórmula innovadora que añade un efecto lifting iluminador a la acción exfoliante profunda. Resultados: Piel renovada, tono unificado, textura lisa y luminosidad."
+                "description": "Fórmula innovadora que añade un efecto lifting iluminador a la acción exfoliante profunda. Resultados: Piel renovada, tono unificado, textura lisa y luminosidad.",
+                "detail": {
+                    "description": "Este peeling combina una potente acción exfoliante con un efecto tensor inmediato. Elimina las células muertas, atenúa manchas y arrugas finas, y al mismo tiempo, proporciona un efecto lifting que redefine el óvalo facial. La piel luce más luminosa, uniforme y rejuvenecida al instante.",
+                    "duration": "La sesión dura aproximadamente 60 minutos.",
+                    "recovery": "Puede producirse un ligero enrojecimiento y descamación en los días posteriores. Es imprescindible una correcta protección solar. Los resultados son visibles desde la primera sesión."
+                }
             }
         ]
     },
     {
-        "category": "Otros tratamientos",
+        "category": "Otros Servicios",
         "treatments": [
             {
                 "id": "eliminar-verrugas",
                 "icon": "fas fa-star-of-life",
                 "title": "Eliminar verrugas y rubíes",
-                "description": "Eliminación segura y eficaz de lesiones cutáneas benignas."
+                "description": "Eliminación segura y eficaz de lesiones cutáneas benignas.",
+                "detail": {
+                    "description": "Mediante técnicas como la electrocoagulación o el láser, se eliminan de forma rápida y segura lesiones cutáneas benignas como verrugas, puntos rubí, fibromas o queratosis seborreicas. Es un procedimiento preciso que no deja cicatriz.",
+                    "duration": "Suele ser un procedimiento muy rápido, de 15 a 30 minutos.",
+                    "recovery": "Se forma una pequeña costra que cae en pocos días. Es importante no arrancarla y mantener la zona limpia y protegida del sol."
+                }
             },
             {
                 "id": "rutina-personalizada",
                 "icon": "fas fa-leaf",
                 "title": "Rutina personalizada a domicilio",
-                "description": "Tu piel es única; tu rutina también debería serlo. Analizo tu piel y hábitos para lograr resultados visibles y sostenibles."
+                "description": "Tu piel es única; tu rutina también debería serlo. Analizo tu piel y hábitos para lograr resultados visibles y sostenibles.",
+                "detail": {
+                    "description": "Una buena rutina de cuidado en casa es fundamental para mantener la salud y belleza de la piel. Realizo un diagnóstico exhaustivo de tu tipo de piel, tus preocupaciones y tu estilo de vida para diseñar una rutina cosmética personalizada con los productos más adecuados para ti. El objetivo es que aprendas a cuidar tu piel de forma efectiva y consigas resultados a largo plazo.",
+                    "duration": "La consulta inicial dura unos 60 minutos.",
+                    "recovery": "No aplica."
+                }
             }
         ]
     }

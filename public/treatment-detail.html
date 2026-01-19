@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle del Servicio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="nav container">
+                <div class="nav-brand">
+                    <a href="index.html">
+                        <i class="fas fa-spa"></i>
+                        <span>Christine Cano Dermoestética</span>
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="treatment-detail" class="section">
+            <div class="container">
+                <div id="treatment-content"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const treatmentId = urlParams.get('id');
+
+            fetch('config.json')
+                .then(response => response.json())
+                .then(config => {
+                    const services = config.services;
+                    let treatment = null;
+                    for (const category of services) {
+                        const foundTreatment = category.treatments.find(t => t.id === treatmentId);
+                        if (foundTreatment) {
+                            treatment = foundTreatment;
+                            break;
+                        }
+                    }
+
+                    if (treatment) {
+                        const treatmentContent = document.getElementById('treatment-content');
+                        const reserveHref = `index.html?service=${treatmentId}#contacto`;
+                        
+                        treatmentContent.innerHTML = `
+                            <div class="section-title">
+                                <span>Servicio</span>
+                                <h2>${treatment.title}</h2>
+                            </div>
+                            <div class="treatment-detail-content">
+                                <div class="treatment-detail-description">
+                                    <h3>Descripción</h3>
+                                    <p>${treatment.detail.description}</p>
+                                </div>
+                                <div class="treatment-detail-info">
+                                    <h3><i class="fas fa-clock"></i> Duración</h3>
+                                    <p>${treatment.detail.duration}</p>
+                                    <h3><i class="fas fa-user-clock"></i> Tiempo de Recuperación</h3>
+                                    <p>${treatment.detail.recovery}</p>
+                                </div>
+                            </div>
+                            <div class="treatment-actions">
+                                <a href="${reserveHref}" class="btn btn-primary">Reservar Cita</a>
+                                <a href="index.html#servicios" class="btn btn-secondary">Ver otros servicios</a>
+                            </div>
+                        `;
+                    }
+                });
+        });
+    </script>
+</body>
+</html>
