@@ -459,169 +459,108 @@ section {
 	color: white;
 }
 
-/* --- SERVICIOS --- */
+/* --- SERVICIOS (Acordeón) --- */
 .services-section {
-	background-color: var(--secondary);
+    background-color: var(--secondary);
 }
 
-.services-grid {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-	gap: 2rem;
+.accordion-container {
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
 }
 
-.service-item {
-	background: white;
-	border-radius: var(--radius-md);
-	overflow: hidden;
-	box-shadow: var(--shadow-sm);
-	transition: 0.3s;
-	display: flex;
-	flex-direction: column;
+.accordion-item {
+    background: white;
+    border-bottom: 1px solid var(--secondary);
 }
 
-.service-item:hover {
-	transform: translateY(-5px);
-	box-shadow: var(--shadow-md);
+.accordion-item:last-child {
+    border-bottom: none;
 }
 
-.service-item.disabled {
-	cursor: default;
-	pointer-events: none;
+.accordion-header {
+    width: 100%;
+    background: white;
+    border: none;
+    padding: 1.5rem 2rem;
+    font-family: "Playfair Display", serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--primary);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    text-align: left;
+    transition: background-color 0.3s;
 }
 
-.service-item.disabled:hover {
-	transform: none;
+.accordion-header:hover {
+    background-color: #f9f9f9;
 }
 
-.service-body {
-	padding: 2rem;
-	flex: 1;
-	display: flex;
-	flex-direction: column;
+.accordion-icon {
+    transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    font-size: 1.2rem;
+    color: var(--accent);
 }
 
-.service-header {
-	display: flex;
-	justify-content: space-between;
-	align-items: flex-start;
-	margin-bottom: 1rem;
+.accordion-header[aria-expanded="true"] .accordion-icon {
+    transform: rotate(180deg);
 }
 
-.service-icon {
-	color: var(--accent);
-	font-size: 2rem;
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
-.service-price {
-	font-family: "Playfair Display", serif;
-	font-size: 1.5rem;
-	font-weight: 700;
-	color: var(--primary);
+.treatments-list {
+    padding: 0 2rem 1rem;
 }
 
-.service-footer {
-	margin-top: auto;
-	padding-top: 1.5rem;
+.treatment-item {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 1.5rem;
+    align-items: center;
+    padding: 1.5rem 0;
+    border-top: 1px solid var(--secondary);
 }
 
-.btn-link {
-	color: var(--accent);
-	font-weight: 600;
-	font-size: 0.95rem;
-	display: flex;
-	align-items: center;
-	gap: 0.5rem;
-	background: none;
-	border: none;
-	cursor: pointer;
-	padding: 0;
+.treatment-icon {
+    font-size: 1.8rem;
+    color: var(--accent);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--secondary);
+    border-radius: var(--radius-md);
 }
 
-.btn-link:hover {
-	color: var(--primary);
-	gap: 0.8rem;
+.treatment-content h4 {
+    font-family: "Inter", sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-main);
+    margin-bottom: 0.25rem;
 }
 
-/* --- PACKS / PRECIOS --- */
-.pricing-grid {
-	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	/* grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); */
-	gap: 2rem;
-	align-items: center;
-	width: 100%;
-	max-width: 1400px;
-	margin: 0 auto;
+.treatment-content p {
+    font-size: 0.95rem;
+    margin-bottom: 0;
 }
 
-.price-card {
-	background: white;
-	border-radius: var(--radius-lg);
-	padding: 2.5rem;
-	box-shadow: var(--shadow-sm);
-	border: 1px solid rgba(0, 0, 0, 0.05);
-	position: relative;
-	transition: 0.3s;
-	/* min-height: 5; */
+.btn-small {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
 }
 
-.price-card.featured {
-	background: var(--primary);
-	color: white;
-	transform: scale(1.05);
-	box-shadow: var(--shadow-lg);
-	z-index: 10;
-}
-
-.price-card.featured h3,
-.price-card.featured p,
-.price-card.featured li,
-.price-card.featured i {
-	color: rgba(255, 255, 255, 0.9);
-}
-
-.price-card.featured .price-amount {
-	color: white;
-}
-
-.price-header {
-	text-align: center;
-	margin-bottom: 2rem;
-}
-
-.price-amount {
-	font-size: 3rem;
-	font-weight: 700;
-	color: var(--primary);
-	font-family: "Playfair Display", serif;
-}
-
-.price-period {
-	font-size: 0.9rem;
-	color: var(--text-light);
-}
-
-.price-features li {
-	margin-bottom: 1rem;
-	display: flex;
-	align-items: center;
-	gap: 0.8rem;
-	font-size: 0.95rem;
-}
-
-.price-features i {
-	color: var(--accent);
-}
-
-.price-card.featured .btn {
-	background: white;
-	color: var(--primary);
-}
-
-.price-card.featured .btn:hover {
-	background: var(--secondary);
-}
 
 /* --- CONTACTO --- */
 .contact-container {

@@ -135,134 +135,71 @@ class EnfermeriaComponents {
         `;
 	}
 
-	// 4. SERVICIOS (Con Placeholders)
-	renderServices() {
-		const { services } = this.config;
-		const servicesHTML = services
-			.map((service) => {
-				// Lógica para servicios deshabilitados/próximamente
-				if (service.disabled) {
-					return `
-                    <div class="service-item disabled" style="opacity: 0.7; background: #fcfcfc;">
-                        <div class="service-body">
-                            <div class="service-header">
-                                <div class="service-icon" style="color: #ccc;">
-                                    <i class="${service.icon}"></i>
-                                </div>
-                                <div class="service-price" style="color: #ccc; font-size: 0.9rem;">Pronto</div>
-                            </div>
-                            <h3 style="color: #999;">${service.title}</h3>
-                            <p style="color: #aaa;">${service.description}</p>
-                        </div>
+    // 4. SERVICIOS (Nuevo Diseño de Acordeón)
+    renderServices() {
+        const { services } = this.config;
+        const accordionHTML = services.map((category, index) => {
+            const treatmentsHTML = category.treatments.map(treatment => `
+                <div class="treatment-item">
+                    <div class="treatment-icon"><i class="${treatment.icon}"></i></div>
+                    <div class="treatment-content">
+                        <h4>${treatment.title}</h4>
+                        <p>${treatment.description}</p>
                     </div>
-                    `;
-				}
-
-				return `
-                <div class="service-item">
-                    <div class="service-body">
-                        <div class="service-header">
-                            <div class="service-icon">
-                                <i class="${service.icon}"></i>
-                            </div>
-                            <div class="service-price">€${service.price}</div>
-                        </div>
-                        <h3>${service.title}</h3>
-                        <p>${service.description}</p>
-                        
-                        <div class="service-footer">
-                            <button class="btn-link" onclick="selectService('${service.id}')">
-                                Más Información <i class="fas fa-chevron-right"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            `;
-			})
-			.join("");
-
-		return `
-            <section id="servicios" class="services-section">
-                <div class="container">
-                    <div class="section-title">
-                        <span>Tratamientos</span>
-                        <h2>Carta de Servicios</h2>
-                        <p>Especialización en técnicas mínimamente invasivas</p>
-                    </div>
-                    <div class="services-grid">
-                        ${servicesHTML}
-                    </div>
-                </div>
-            </section>
-        `;
-	}
-
-	// 5. PACKS (Visita Única vs Mensual)
-	renderPacks() {
-		const { packs } = this.config;
-		const packsHTML = packs
-			.map((pack) => {
-				const isFeatured = pack.featured ? "featured" : "";
-				const featuresHTML = pack.services
-					.map((s) => `<li><i class="fas fa-check-circle"></i> ${s}</li>`)
-					.join("");
-
-				return `
-                <div class="price-card ${isFeatured}">
-                    <div class="price-header">
-                        <h3>${pack.title}</h3>
-                        <div class="price-amount">€${pack.price}</div>
-                        ${
-													pack.originalPrice
-														? `<div style="text-decoration: line-through; opacity: 0.6; font-size: 0.9rem;">Antes €${pack.originalPrice}</div>`
-														: ""
-												}
-                    </div>
-                    <ul class="price-features">
-                        ${featuresHTML}
-                    </ul>
-                    <div style="text-align: center; margin-top: 2rem;">
-                        <button class="btn ${
-													pack.featured ? "btn-primary" : "btn-secondary"
-												}" style="width: 100%;" onclick="selectService('${
-					pack.id
-				}')">
-                            Seleccionar
+                    <div class="treatment-action">
+                        <button class="btn btn-secondary btn-small" onclick="selectService('${treatment.id}')">
+                            Me Interesa
                         </button>
                     </div>
                 </div>
-            `;
-			})
-			.join("");
+            `).join('');
 
-		return `
-            <section id="precios">
+            return `
+                <div class="accordion-item">
+                    <button class="accordion-header" aria-expanded="${index === 0 ? 'true' : 'false'}">
+                        ${category.category}
+                        <i class="fas fa-chevron-down accordion-icon"></i>
+                    </button>
+                    <div class="accordion-content" ${index === 0 ? '' : 'style="max-height: 0;"'}>
+                        <div class="treatments-list">
+                            ${treatmentsHTML}
+                        </div>
+                    </div>
+                </div>
+            `;
+        }).join('');
+
+        return `
+            <section id="servicios" class="services-section">
                 <div class="container">
                     <div class="section-title">
-                        <span>Tarifas</span>
-                        <h2>Opciones de Visita</h2>
+                        <span>Catálogo</span>
+                        <h2>Nuestros Tratamientos</h2>
+                        <p>Descubre nuestras especialidades para realzar tu belleza de forma segura y profesional.</p>
                     </div>
-                    <div class="pricing-grid" style="justify-content: center; max-width: 800px; margin: 0 auto;">
-                        ${packsHTML}
+                    <div class="accordion-container">
+                        ${accordionHTML}
                     </div>
                 </div>
             </section>
         `;
+    }
+
+	// 5. PACKS (Eliminado)
+	renderPacks() {
+		return '';
 	}
 
 	// 6. CONTACTO
 	renderContact() {
-		const { siteInfo, services, packs } = this.config;
+		const { siteInfo, services } = this.config;
 
-		// Filtrar solo servicios activos para el select
-		const serviceOptions = services
-			.filter((s) => !s.disabled)
-			.map((s) => `<option value="${s.id}">${s.title} (€${s.price})</option>`)
-			.join("");
-
-		const packOptions = packs
-			.map((p) => `<option value="${p.id}">${p.title} (€${p.price})</option>`)
-			.join("");
+		const serviceOptions = services.map(category => {
+			const options = category.treatments
+				.map(t => `<option value="${t.id}">${t.title}</option>`)
+				.join('');
+			return `<optgroup label="${category.category}">${options}</optgroup>`;
+		}).join('');
 
 		return `
             <section id="contacto">
@@ -321,9 +258,8 @@ class EnfermeriaComponents {
                                 <div class="form-group">
                                     <label>Servicio de interés</label>
                                     <select class="form-control" required>
-                                        <option value="">Seleccione...</option>
-                                        <optgroup label="Tratamientos">${serviceOptions}</optgroup>
-                                        <optgroup label="Packs">${packOptions}</optgroup>
+                                        <option value="">Seleccione un tratamiento...</option>
+                                        ${serviceOptions}
                                         <option value="consulta">Duda / Otra consulta</option>
                                     </select>
                                 </div>
@@ -375,10 +311,9 @@ class EnfermeriaComponents {
 
 		contentContainer.innerHTML = `
             ${this.renderHero()}
-            ${this.renderFeatures()} <!-- Nueva sección insertada aquí -->
+            ${this.renderFeatures()}
             ${this.renderAboutMe()}
             ${this.renderServices()}
-            ${this.renderPacks()}
             ${this.renderContact()}
         `;
 

@@ -1,0 +1,169 @@
+{
+	"siteInfo": {
+		"title": "Christine Cano - Dermoestética Avanzada",
+		"brandName": "Enfermera Dermoestética - Christine Cano",
+		"phone": "+34 658 491 612",
+		"email": "info@christinecano.com",
+		"schedule": "Cita Previa: Lunes a Viernes",
+		"coverage": "Terrassa, Barcelona"
+	},
+	"hero": {
+		"title": "Realza tu Belleza Natural",
+		"subtitle": "Tratamientos dermoestéticos profesionales para cuidar la salud y luminosidad de tu piel.",
+		"primaryButton": "Reservar Cita",
+		"secondaryButton": "Tratamientos"
+	},
+	"aboutMe": {
+		"name": "Christine Cano",
+		"title": "Enfermera Dermoestética",
+		"collegiateNumber": "075396",
+		"intro": "Como profesional de la salud mi enfoque va más allá de la estética. Entiendo que la piel es un reflejo de nuestro bienestar interno, por lo que trato cada tratamiento con una visión holística. Mi misión es ofrecer soluciones personalizadas que no solo mejoren la apariencia de la piel, sino que contribuyan al equilibrio físico y emocional de mis pacientes.",
+		"education": [
+			"Diplomada en Enfermería (UAB)",
+			"Máster en Dermoestética e Imagen Corporal (NUS Agency, Barcelona)"
+		],
+		"clinicAddress": "Carrer de l'Exemple, 123, 08221 Terrassa, Barcelona",
+		"clinicNote": "Consulta privada equipada con la última tecnología para tu confort y seguridad."
+	},
+	"features": [
+		{
+			"icon": "fas fa-stopwatch",
+			"title": "30 Minutos",
+			"description": "Sesiones ágiles"
+		},
+		{
+			"icon": "fas fa-magic",
+			"title": "Efecto Inmediato",
+			"description": "Resultados visibles"
+		},
+		{
+			"icon": "fas fa-walking",
+			"title": "Sin Reposo",
+			"description": "Vida normal al salir"
+		},
+		{
+			"icon": "fas fa-spa",
+			"title": "Resultados Temporales",
+			"description": "Estética responsable"
+		},
+		{
+			"icon": "fas fa-heartbeat",
+			"title": "Recuperación Rápida",
+			"description": "Mínima inflamación"
+		}
+	],
+    "services": [
+    {
+        "category": "Microneedling",
+        "treatments": [
+            {
+                "id": "microneedling-facial",
+                "icon": "fas fa-bullseye",
+                "title": "Microneedling Facial (Dermapen)",
+                "description": "Tratamiento de inducción de colágeno. Mejora textura, reduce marcas de acné y líneas de expresión."
+            },
+            {
+                "id": "microneedling-corporal",
+                "icon": "fas fa-bullseye",
+                "title": "Microneedling Corporal (Dermapen)",
+                "description": "Tratamiento de inducción de colágeno para el cuerpo."
+            }
+        ]
+    },
+    {
+        "category": "Mesoterapia",
+        "treatments": [
+            {
+                "id": "mesoterapia-capilar",
+                "icon": "fas fa-hair",
+                "title": "Mesoterapia capilar",
+                "description": "Tratamiento avanzado para la caída capilar con acción fortalecedora y estimulante. Refuerza la fibra capilar, estimula el crecimiento, incrementa el grosor y volumen del cabello."
+            },
+            {
+                "id": "mesoterapia-facial",
+                "icon": "fas fa-face-smile",
+                "title": "Mesoterapia facial",
+                "description": "Estimula y renueva la piel con la fuerza del ácido hialurónico."
+            },
+            {
+                "id": "mesoterapia-corporal",
+                "icon": "fas fa-person-running",
+                "title": "Mesoterapia corporal Anticelulítico",
+                "description": "Tratamiento multietapa para la celulitis: compacta, edematosa, blanda, y liporeductor. Favorece la emulsión y movilización de grasas, disminuyendo el tamaño de los adipocitos y mejorando el contorno corporal."
+            }
+        ]
+    },
+    {
+        "category": "Rellenos Dérmicos",
+        "treatments": [
+            {
+                "id": "relleno-labios",
+                "icon": "fas fa-lips",
+                "title": "Relleno de labios",
+                "description": "Aumenta el volumen y define la forma de tus labios."
+            },
+            {
+                "id": "relleno-menton-mandibula",
+                "icon": "fas fa-face-relieved",
+                "title": "Rellenos de mentón y mandíbula",
+                "description": "Define y armoniza el contorno facial."
+            }
+        ]
+    },
+    {
+        "category": "Bioestimulación",
+        "treatments": [
+            {
+                "id": "bioestimulacion-exosomas",
+                "icon": "fas fa-atom",
+                "title": "Bioestimulación con Exosomas vegetales",
+                "description": "Revolución regenerativa que supera al PRP. Reprograma las células para estimular la curación, reducir la inflamación y potenciar la renovación celular. Mejora manchas, tono, hidratación, arrugas y firmeza."
+            },
+            {
+                "id": "bioestimulacion-total",
+                "icon": "fas fa-wand-magic-sparkles",
+                "title": "Bioestimulación total",
+                "description": "Tratamiento rejuvenecedor que estimula biológicamente el tejido para restaurar la estructura bioquímica de la piel, aumentando la firmeza, elasticidad, revitalización e hidratación."
+            }
+        ]
+    },
+    {
+        "category": "Peelings",
+        "treatments": [
+            {
+                "id": "peeling-estrias-cicatrices",
+                "icon": "fas fa-wand-sparkles",
+                "title": "Peeling químico para estrías y cicatrices",
+                "description": "Exfolia, bio-revitaliza y provoca un efecto lifting. Resultados: Piel con textura más lisa, tono unificado, limpia, oxigenada y luminosa."
+            },
+            {
+                "id": "peeling-exfoliante-lifting",
+                "icon": "fas fa-wand-magic",
+                "title": "Peeling exfoliante y lifting",
+                "description": "Fórmula innovadora que añade un efecto lifting iluminador a la acción exfoliante profunda. Resultados: Piel renovada, tono unificado, textura lisa y luminosidad."
+            }
+        ]
+    },
+    {
+        "category": "Otros tratamientos",
+        "treatments": [
+            {
+                "id": "eliminar-verrugas",
+                "icon": "fas fa-star-of-life",
+                "title": "Eliminar verrugas y rubíes",
+                "description": "Eliminación segura y eficaz de lesiones cutáneas benignas."
+            },
+            {
+                "id": "rutina-personalizada",
+                "icon": "fas fa-leaf",
+                "title": "Rutina personalizada a domicilio",
+                "description": "Tu piel es única; tu rutina también debería serlo. Analizo tu piel y hábitos para lograr resultados visibles y sostenibles."
+            }
+        ]
+    }
+],
+	"footer": {
+		"description": "Clínica de enfermería dermoestética en Terrassa. Cuidamos tu piel con rigor científico y trato cercano.",
+		"copyright": "© 2025 Christine Cano Dermoestética. Todos los derechos reservados."
+	}
+}
