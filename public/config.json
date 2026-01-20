@@ -34,6 +34,8 @@
                 "icon": "fas fa-bullseye",
                 "title": "Microneedling Facial (Dermapen)",
                 "description": "Servicio de inducción de colágeno. Mejora textura, reduce marcas de acné y líneas de expresión.",
+                "price": 95,
+                "duration": "60 min",
                 "detail": {
                     "description": "El Microneedling, también conocido como Dermapen, es un servicio de inducción de colágeno que utiliza microagujas para crear punciones controladas en la piel. Esto estimula la producción natural de colágeno y elastina, mejorando la textura de la piel, reduciendo la apariencia de cicatrices de acné, líneas de expresión y arrugas. Es un procedimiento seguro y eficaz para rejuvenecer la piel y restaurar su luminosidad.",
                     "duration": "La sesión dura aproximadamente 60 minutos.",
@@ -45,6 +47,8 @@
                 "icon": "fas fa-bullseye",
                 "title": "Microneedling Corporal (Dermapen)",
                 "description": "Servicio de inducción de colágeno para el cuerpo.",
+                "price": 130,
+                "duration": "75 min",
                 "detail": {
                     "description": "El Microneedling corporal es una excelente opción para tratar estrías, cicatrices y flacidez en diversas áreas del cuerpo como abdomen, muslos y glúteos. Al igual que en el servicio facial, se utilizan microagujas para estimular la producción de colágeno y elastina, mejorando la firmeza y textura de la piel.",
                     "duration": "La duración de la sesión varía según el área a tratar, generalmente entre 60 y 90 minutos.",
@@ -61,6 +65,8 @@
                 "icon": "fas fa-hair",
                 "title": "Mesoterapia capilar",
                 "description": "Servicio avanzado para la caída capilar con acción fortalecedora y estimulante. Refuerza la fibra capilar, estimula el crecimiento, incrementa el grosor y volumen del cabello.",
+                "price": 160,
+                "duration": "30 min",
                 "detail": {
                     "description": "La mesoterapia capilar consiste en la aplicación de microinyecciones en el cuero cabelludo con un cóctel de vitaminas, minerales y aminoácidos que nutren y fortalecen el folículo piloso. Es un servicio muy efectivo para frenar la caída del cabello, mejorar su calidad y densidad, y estimular el crecimiento de nuevo cabello.",
                     "duration": "Cada sesión dura unos 30 minutos.",
@@ -72,6 +78,8 @@
                 "icon": "fas fa-face-smile",
                 "title": "Mesoterapia facial",
                 "description": "Estimula y renueva la piel con la fuerza del ácido hialurónico.",
+                "price": 140,
+                "duration": "45 min",
                 "detail": {
                     "description": "La mesoterapia facial con ácido hialurónico y vitaminas es un servicio de rejuvenecimiento que hidrata la piel en profundidad, mejora su elasticidad y luminosidad, y suaviza las arrugas finas. El resultado es una piel visiblemente más joven, tersa y radiante.",
                     "duration": "La sesión dura alrededor de 45 minutos.",
@@ -83,6 +91,8 @@
                 "icon": "fas fa-person-running",
                 "title": "Mesoterapia corporal Anticelulítico",
                 "description": "Servicio multietapa para la celulitis: compacta, edematosa, blanda, y liporeductor. Favorece la emulsión y movilización de grasas, disminuyendo el tamaño de los adipocitos y mejorando el contorno corporal.",
+                "price": 100,
+                "duration": "45 min",
                 "detail": {
                     "description": "Este servicio combate la celulitis y la grasa localizada mediante microinyecciones de sustancias lipolíticas y drenantes. Actúa sobre los adipocitos, facilitando la eliminación de grasa y mejorando la circulación y el aspecto de la piel de naranja. Es ideal para tratar abdomen, flancos, muslos y cartucheras.",
                     "duration": "Una sesión suele durar entre 30 y 60 minutos, dependiendo de la extensión de la zona a tratar.",
@@ -99,6 +109,8 @@
                 "icon": "fas fa-lips",
                 "title": "Relleno de labios",
                 "description": "Aumenta el volumen y define la forma de tus labios.",
+                "price": 320,
+                "duration": "30 min",
                 "detail": {
                     "description": "El relleno de labios con ácido hialurónico permite aumentar su volumen, perfilarlos, corregir asimetrías e hidratarlos. El resultado es natural y armonioso, respetando siempre la fisonomía del paciente para lograr unos labios más definidos y sensuales.",
                     "duration": "El procedimiento se realiza en unos 30-45 minutos.",
@@ -110,6 +122,8 @@
                 "icon": "fas fa-face-relieved",
                 "title": "Rellenos de mentón y mandíbula",
                 "description": "Define y armoniza el contorno facial.",
+                "price": 350,
+                "duration": "60 min",
                 "detail": {
                     "description": "La marcación mandibular y el relleno de mentón con ácido hialurónico son procedimientos que buscan definir el óvalo facial, mejorar la proyección del mentón y masculinizar o feminizar los rasgos según se desee. Es una técnica no quirúrgica que ofrece resultados inmediatos y contribuye a un rostro más equilibrado y armónico.",
                     "duration": "La sesión dura aproximadamente 60 minutos.",
@@ -126,6 +140,8 @@
                 "icon": "fas fa-atom",
                 "title": "Bioestimulación con Exosomas vegetales",
                 "description": "Revolución regenerativa que supera al PRP. Reprograma las células para estimular la curación, reducir la inflamación y potenciar la renovación celular. Mejora manchas, tono, hidratación, arrugas y firmeza.",
+                "price": 300,
+                "duration": "60 min",
                 "detail": {
                     "description": "Los exosomas son vesículas extracelulares que actúan como mensajeros entre las células, promoviendo la regeneración de los tejidos. Este servicio innovador utiliza exosomas de origen vegetal para rejuvenecer la piel desde el interior, mejorando su calidad, textura y luminosidad de forma natural y duradera.",
                     "duration": "La sesión dura unos 60 minutos.",
@@ -137,6 +153,8 @@
                 "icon": "fas fa-wand-magic-sparkles",
                 "title": "Bioestimulación total",
                 "description": "Servicio rejuvenecedor que estimula biológicamente el tejido para restaurar la estructura bioquímica de la piel, aumentando la firmeza, elasticidad, revitalización e hidratación.",
+                "price": 250,
+                "duration": "60 min",
                 "detail": {
                     "description": "La bioestimulación total es un servicio integral que combina diferentes técnicas para activar los mecanismos de regeneración de la piel. Mediante la aplicación de factores de crecimiento, vitaminas y otros principios activos, se estimula la producción de colágeno y elastina, devolviendo a la piel su firmeza, elasticidad y vitalidad.",
                     "duration": "Suele durar entre 60 y 90 minutos.",
@@ -153,6 +171,8 @@
                 "icon": "fas fa-wand-sparkles",
                 "title": "Peeling químico para estrías y cicatrices",
                 "description": "Exfolia, bio-revitaliza y provoca un efecto lifting. Resultados: Piel con textura más lisa, tono unificado, limpia, oxigenada y luminosa.",
+                "price": 120,
+                "duration": "45 min",
                 "detail": {
                     "description": "Este peeling químico está específicamente formulado para tratar estrías y cicatrices, tanto recientes como antiguas. Actúa exfoliando las capas superficiales de la piel, promoviendo la renovación celular y la formación de nuevo colágeno. El resultado es una mejora significativa en la textura y el color de las marcas.",
                     "duration": "La duración depende del área a tratar, pero suele ser de unos 45-60 minutos.",
@@ -164,6 +184,8 @@
                 "icon": "fas fa-wand-magic",
                 "title": "Peeling exfoliante y lifting",
                 "description": "Fórmula innovadora que añade un efecto lifting iluminador a la acción exfoliante profunda. Resultados: Piel renovada, tono unificado, textura lisa y luminosidad.",
+                "price": 100,
+                "duration": "60 min",
                 "detail": {
                     "description": "Este peeling combina una potente acción exfoliante con un efecto tensor inmediato. Elimina las células muertas, atenúa manchas y arrugas finas, y al mismo tiempo, proporciona un efecto lifting que redefine el óvalo facial. La piel luce más luminosa, uniforme y rejuvenecida al instante.",
                     "duration": "La sesión dura aproximadamente 60 minutos.",
@@ -180,6 +202,8 @@
                 "icon": "fas fa-star-of-life",
                 "title": "Eliminar verrugas y rubíes",
                 "description": "Eliminación segura y eficaz de lesiones cutáneas benignas.",
+                "price": 90,
+                "duration": "20 min",
                 "detail": {
                     "description": "Mediante técnicas como la electrocoagulación o el láser, se eliminan de forma rápida y segura lesiones cutáneas benignas como verrugas, puntos rubí, fibromas o queratosis seborreicas. Es un procedimiento preciso que no deja cicatriz.",
                     "duration": "Suele ser un procedimiento muy rápido, de 15 a 30 minutos.",
@@ -191,6 +215,8 @@
                 "icon": "fas fa-leaf",
                 "title": "Rutina personalizada a domicilio",
                 "description": "Tu piel es única; tu rutina también debería serlo. Analizo tu piel y hábitos para lograr resultados visibles y sostenibles.",
+                "price": 45,
+                "duration": "60 min",
                 "detail": {
                     "description": "Una buena rutina de cuidado en casa es fundamental para mantener la salud y belleza de la piel. Realizo un diagnóstico exhaustivo de tu tipo de piel, tus preocupaciones y tu estilo de vida para diseñar una rutina cosmética personalizada con los productos más adecuados para ti. El objetivo es que aprendas a cuidar tu piel de forma efectiva y consigas resultados a largo plazo.",
                     "duration": "La consulta inicial dura unos 60 minutos.",

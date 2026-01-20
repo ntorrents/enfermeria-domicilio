@@ -181,11 +181,9 @@ function handleAnchorLinkOnLoad() {
         // Abrir el primer acordeón por defecto si no hay ancla o el ancla es de servicios
         const accordionHeader = document.querySelector('.accordion-header');
         if (accordionHeader && (!hash || hash === '#servicios')) {
-             if (accordionHeader.getAttribute('aria-expanded') !== 'true') {
-                const firstContent = accordionHeader.nextElementSibling;
-                accordionHeader.setAttribute('aria-expanded', 'true');
-                firstContent.style.maxHeight = firstContent.scrollHeight + 'px';
-             }
+           const firstContent = accordionHeader.nextElementSibling;
+           accordionHeader.setAttribute('aria-expanded', 'true');
+           firstContent.style.maxHeight = firstContent.scrollHeight + 'px';
         }
 
     }, 300); // 300ms es un retraso prudencial

@@ -590,9 +590,32 @@ section {
     margin-bottom: 0.25rem;
 }
 
+.treatment-duration {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    font-style: italic;
+    font-weight: 400;
+}
+
 .treatment-content p {
     font-size: 0.95rem;
     margin-bottom: 0;
+}
+
+.treatment-action {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.5rem;
+}
+
+.treatment-price {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--accent);
+    background-color: rgba(205, 126, 98, 0.1);
+    padding: 0.25rem 0.75rem;
+    border-radius: var(--radius-sm);
 }
 
 .btn-small {
@@ -658,6 +681,21 @@ section {
 	justify-content: space-between;
 }
 
+.contact-info-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.contact-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 1.5rem;
+    border: 4px solid white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
 .contact-info h3 {
 	color: white;
 	margin-bottom: 1.5rem;
@@ -706,7 +744,28 @@ section {
 	border: 1px solid #ddd;
 	border-radius: var(--radius-sm);
 	font-family: inherit;
+	padding-right: 2.5rem;
 	transition: 0.3s;
+	background-color: #fff;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.form-group-select {
+    position: relative;
+	width: 100%;
+}
+
+.form-group-select::after {
+    content: '\f078';
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    color: var(--accent);
+    pointer-events: none;
 }
 
 .form-control:focus {

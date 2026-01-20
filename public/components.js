@@ -27,7 +27,7 @@ class EnfermeriaComponents {
                     <div class="hero-visual">
                         <div class="hero-image-wrapper">
                             <!-- Nueva imagen para la portada -->
-                            <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80" alt="Dermoestética y cuidado de la piel" class="hero-img-main" onerror="this.src='https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80'">
+                            <img src="img/christinephoto2.jpeg" alt="Dermoestética y cuidado de la piel" class="hero-img-main" onerror="this.src='https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80'">
                         </div>
                     </div>
                 </div>
@@ -101,10 +101,11 @@ class EnfermeriaComponents {
                 <div class="treatment-item">
                     <div class="treatment-icon"><i class="${treatment.icon}"></i></div>
                     <div class="treatment-content">
-                        <h4>${treatment.title}</h4>
+                        <h4>${treatment.title} <span class="treatment-duration">(${treatment.duration})</span></h4>
                         <p>${treatment.description}</p>
                     </div>
                     <div class="treatment-action">
+                        <div class="treatment-price">${treatment.price}€</div>
                         <button class="btn btn-primary btn-small" onclick="selectService('${treatment.id}')">
                             Me Interesa
                         </button>
@@ -173,7 +174,8 @@ class EnfermeriaComponents {
                     <div class="contact-container">
                         <!-- Lado Izquierdo: Info -->
                         <div class="contact-info">
-                            <div>
+                            <div class="contact-info-header">
+                                <img src="img/christinephoto1.jpeg" alt="Christine Cano" class="contact-photo">
                                 <h3>¿Hablamos?</h3>
                                 <p style="color: rgba(255,255,255,0.8);">Reserva tu cita para una valoración personalizada en mi consulta de Terrassa.</p>
                             </div>
@@ -216,7 +218,7 @@ class EnfermeriaComponents {
                                     <input type="tel" class="form-control" required>
                                 </div>
                                 
-                                <div class="form-group">
+                                <div class="form-group form-group-select">
                                     <label>Servicio de interés</label>
                                     <select class="form-control" required>
                                         <option value="">Seleccione un servicio...</option>
