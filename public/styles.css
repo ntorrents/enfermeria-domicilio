@@ -610,7 +610,7 @@ section {
 }
 
 .treatment-price {
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: 600;
     color: var(--accent);
     background-color: rgba(205, 126, 98, 0.1);
@@ -744,7 +744,6 @@ section {
 	border: 1px solid #ddd;
 	border-radius: var(--radius-sm);
 	font-family: inherit;
-	padding-right: 2.5rem;
 	transition: 0.3s;
 	background-color: #fff;
     -webkit-appearance: none;
@@ -754,16 +753,17 @@ section {
 
 .form-group-select {
     position: relative;
-	width: 100%;
 }
 
+/* FIX: Flecha centrada en el desplegable */
 .form-group-select::after {
     content: '\f078';
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
     position: absolute;
-    right: 1rem;
+    right: 1.5rem;
     top: 50%;
+    transform: translateY(-50%);
     color: var(--accent);
     pointer-events: none;
 }
@@ -825,6 +825,9 @@ section {
 		grid-template-columns: 1fr;
 		gap: 2rem;
 	}
+    .about-layout {
+        gap: 3rem;
+    }
 
 	.hero {
 		text-align: center;
@@ -861,42 +864,84 @@ section {
 }
 
 @media (max-width: 768px) {
-	.nav-menu {
-		position: fixed;
-		top: 70px;
-		left: 0;
-		width: 100%;
-		background: white;
-		flex-direction: column;
-		padding: 2rem;
-		box-shadow: var(--shadow-md);
-		transform: translateY(-150%);
-		transition: 0.3s ease;
-		z-index: 900;
-	}
+    /* 1. Hacemos visible el botón en móvil */
+    .nav-toggle {
+        display: flex; 
+		z-index: 1002;
+    }
 
-	.nav-menu.active {
-		transform: translateY(0);
-	}
+    /* 2. Estilo del menú desplegable móvil */
+    .nav-menu {
+        position: fixed;
+        top: 0; /* O la altura de tu header si es sticky, ej: 70px */
+        left: 0;
+        width: 100%;
+        height: 100vh; /* Ocupa toda la pantalla */
+        background-color: #fff; /* Fondo blanco sólido */
+        flex-direction: column;
+        justify-content: center; /* Centra los enlaces verticalmente */
+        align-items: center;
+        gap: 2rem;
+        padding: 2rem;
+        
+        /* Animación de entrada */
+        transform: translateX(100%); /* Oculto a la derecha */
+        transition: transform 0.3s ease-in-out;
+        z-index: 1001;
+    }
 
-	.nav-toggle {
-		display: flex;
-	}
+    /* 3. Clase activa para mostrar el menú */
+    .nav-menu.active {
+        transform: translateX(0);
+    }
 
-	.nav-toggle.active span:nth-child(1) {
-		transform: rotate(45deg) translate(5px, 6px);
-	}
-	.nav-toggle.active span:nth-child(2) {
-		opacity: 0;
-	}
-	.nav-toggle.active span:nth-child(3) {
-		transform: rotate(-45deg) translate(5px, -6px);
-	}
+    /* 4. Animación de la X cuando está abierto */
+    .nav-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 6px);
+    }
+    .nav-toggle.active span:nth-child(2) {
+        opacity: 0; /* La línea del medio desaparece */
+    }
+    .nav-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -6px);
+    }
 
 	h1 {
 		font-size: 2.5rem !important;
 	}
+
+    /* FIX: Tarjetas de tratamiento en móvil */
+    .treatments-list {
+        padding: 0 1rem 1rem;
+    }
+
+    .treatment-item {
+        grid-template-columns: 1fr; /* Apilado en una columna */
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .treatment-icon {
+        margin: 0 auto;
+    }
+
+    .treatment-content p {
+        display: none; /* Ocultar descripción en móvil */
+    }
+
+    .treatment-action {
+        flex-direction: column;
+        align-items: stretch; /* Botones ocupan todo el ancho */
+        width: 100%;
+        gap: 0.8rem;
+    }
+
+    .btn-small {
+        padding: 0.8rem 1rem;
+        font-size: 1rem;
+    }
 }
+
 
 /* Loader */
 .loading-screen {
