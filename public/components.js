@@ -27,7 +27,7 @@ class EnfermeriaComponents {
                     <div class="hero-visual">
                         <div class="hero-image-wrapper">
                             <!-- Nueva imagen para la portada -->
-                            <img src="img/christinephoto2.jpeg" alt="Dermoestética y cuidado de la piel" class="hero-img-main" onerror="this.src='https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80'">
+                            <img src="img/christinephoto2.jpeg" alt="Dermoestética y cuidado de la piel" class="hero-img-main" onerror="this.src='''https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80'''">
                         </div>
                     </div>
                 </div>
@@ -106,7 +106,7 @@ class EnfermeriaComponents {
                     </div>
                     <div class="treatment-action">
                         <div class="treatment-price">${treatment.price}€</div>
-                        <button class="btn btn-primary btn-small" onclick="selectService('${treatment.id}')">
+                        <button class="btn btn-primary btn-small" onclick="selectService('''${treatment.id}''')">
                             Me Interesa
                         </button>
                         <a href="treatment-detail.html?id=${treatment.id}" class="btn btn-secondary btn-small">
@@ -225,6 +225,11 @@ class EnfermeriaComponents {
                                         ${serviceOptions}
                                         <option value="consulta">Duda / Otra consulta</option>
                                     </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Preferencia de fecha y hora (Opcional)</label>
+                                    <input type="text" class="form-control" placeholder="Ej: Lunes por la tarde">
                                 </div>
                                 
                                 <div class="form-group">
