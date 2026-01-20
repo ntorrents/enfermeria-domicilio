@@ -26,25 +26,8 @@ class EnfermeriaComponents {
                     
                     <div class="hero-visual">
                         <div class="hero-image-wrapper">
-                            <!-- Foto principal -->
-                            <img src="./myphoto.jpeg" alt="Christine Cano Dermoestética" class="hero-img-main" onerror="this.src='https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80'">
-                            
-                            <!-- Tarjetas flotantes decorativas -->
-                            <div class="hero-floating-card card-top">
-                                <div class="float-icon"><i class="fas fa-certificate"></i></div>
-                                <div>
-                                    <strong>Máster</strong>
-                                    <div style="font-size:0.8rem; color:#666">NUS Agency BCN</div>
-                                </div>
-                            </div>
-                            
-                            <div class="hero-floating-card card-bottom">
-                                <div class="float-icon"><i class="fas fa-map-marker-alt"></i></div>
-                                <div>
-                                    <strong>Terrassa</strong>
-                                    <div style="font-size:0.8rem; color:#666">Consulta Privada</div>
-                                </div>
-                            </div>
+                            <!-- Nueva imagen para la portada -->
+                            <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80" alt="Dermoestética y cuidado de la piel" class="hero-img-main" onerror="this.src='https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80'">
                         </div>
                     </div>
                 </div>
@@ -56,53 +39,58 @@ class EnfermeriaComponents {
 	renderAboutMe() {
 		const { aboutMe } = this.config;
 		const educationHTML = aboutMe.education
-			.map(
-				(edu) =>
-					`<div class="stat-item"><i class="fas fa-graduation-cap"></i><h3>${edu}</h3></div>`
-			)
+			.map(edu => `<li><i class="fas fa-check-circle"></i> ${edu}</li>`)
 			.join("");
-
+	
 		return `
-            <section id="sobre-mi" class="about-section">
-                <div class="container">
-                    <div class="section-title">
-                        <span>Tu Especialista</span>
-                        <h2>Sobre Mí</h2>
-                    </div>
-                    
-                    <div class="about-grid">
-                        <div class="about-text">
-                            <h3>Hola, soy ${aboutMe.name}</h3>
-                            <p style="font-size: 1.1rem; color: var(--primary); font-weight: 500; margin-bottom: 1.5rem;">
-                                ${aboutMe.title} - Colegiada Nº ${aboutMe.collegiateNumber}
-                            </p>
-                            
-                            <div class="highlight-box">
-                                <p>"${aboutMe.intro}"</p>
-                            </div>
-                            
-                            <div class="stats-grid">
-                                ${educationHTML}
-                            </div>
-                            
-                        </div>
-                        
-                        <!-- Tarjeta de Ubicación -->
-                        <div class="location-card-wrapper">
-                            <div class="feature-card location-card" style="border-left: 4px solid var(--accent);">
-                                <div class="feature-icon"><i class="fas fa-clinic-medical"></i></div>
-                                <h4>Mi Consulta</h4>
-                                <p style="margin-bottom: 0.5rem; color: var(--text-main); font-weight: 500;">
-                                    ${aboutMe.clinicAddress}
-                                </p>
-                                <p style="font-size: 0.9rem; margin-bottom: 1.5rem;">${aboutMe.clinicNote}</p>
-                                <a href="#contacto" class="btn btn-secondary" style="width: 100%; justify-content: center;">Pedir Cita</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        `;
+			<section id="sobre-mi" class="about-section">
+				<div class="container">
+					<div class="section-title">
+						<span>Tu Especialista de Confianza</span>
+						<h2>Conoce a Christine</h2>
+					</div>
+					
+					<div class="about-layout">
+						<div class="about-image-column">
+							<img src="./myphoto.jpeg" alt="${aboutMe.name}" class="about-photo"  onerror="this.style.display='none'">
+						</div>
+						
+						<div class="about-content-column">
+							<div class="about-header">
+								<h3>${aboutMe.name}</h3>
+								<p class="about-subtitle">
+									${aboutMe.title} (Colegiada Nº ${aboutMe.collegiateNumber})
+								</p>
+							</div>
+							
+							<div class="about-philosophy">
+								 <p>${aboutMe.intro}</p>
+							</div>
+							
+							<div class="about-credentials">
+								<h4>Mi Formación</h4>
+								<ul>
+									${educationHTML}
+								</ul>
+							</div>
+	
+							<div class="about-clinic-info">
+								 <div class="info-item">
+									<i class="fas fa-map-marker-alt"></i>
+									<span>${aboutMe.clinicAddress}</span>
+								 </div>
+								 <div class="info-item">
+									<i class="fas fa-info-circle"></i>
+									<span>${aboutMe.clinicNote}</span>
+								 </div>
+							</div>
+							
+							<a href="#contacto" class="btn btn-primary">Reservar una Cita</a>
+						</div>
+					</div>
+				</div>
+			</section>
+		`;
 	}
 
     // 3. SERVICIOS 
