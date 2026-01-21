@@ -624,42 +624,113 @@ section {
 }
 
 /* --- TREATMENT DETAIL PAGE --- */
-#treatment-detail {
-    padding-top: 120px; /* Space for header */
+/* --- NUEVA PÁGINA DE DETALLE DE TRATAMIENTO --- */
+
+#treatment-detail .section-title {
+    text-align: left;
+    margin-bottom: 2rem;
 }
 
-.treatment-detail-content {
+#treatment-detail .section-title h2 {
+    font-size: 2.8rem;
+}
+
+.breadcrumb {
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+
+.breadcrumb a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.breadcrumb span {
+    font-weight: 500;
+}
+
+.treatment-detail-layout {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1.5fr 1fr;
     gap: 3rem;
-    background: white;
-    padding: 3rem;
+    align-items: flex-start;
+}
+
+.treatment-detail-main .treatment-detail-description {
+    line-height: 1.8;
+    font-size: 1.1rem;
+    color: var(--text-light);
+}
+
+.treatment-detail-sidebar {
+    background-color: white;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    padding: 2rem;
+    position: sticky;
+    top: 120px; /* Espacio para el header fijo */
+}
+
+.details-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.detail-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.detail-item i {
+    font-size: 1.2rem;
+    color: var(--accent);
+    width: 30px;
+    padding-top: 5px;
+    text-align: center;
+}
+
+.detail-item-content h4 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--text-main);
+    margin-bottom: 0.1rem;
+}
+
+.detail-item-content p {
+    font-size: 0.95rem;
+    color: var(--text-light);
+    margin: 0;
+    line-height: 1.6;
+}
+
+.btn-block {
+    width: 100%;
+}
+
+.treatment-actions-footer {
+    margin-top: 3rem;
+    border-top: 1px solid var(--secondary);
+    padding-top: 2rem;
+}
+
+.treatment-detail-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
     border-radius: var(--radius-lg);
+    margin-bottom: 2rem;
     box-shadow: var(--shadow-md);
 }
 
-.treatment-detail-info {
-    background-color: var(--secondary);
-    padding: 2rem;
-    border-radius: var(--radius-md);
-}
-
-.treatment-detail-info h3 {
-    display: flex;
-    align-items: center;
-    gap: 0.8rem;
-    font-size: 1.2rem;
-    color: var(--primary);
-    margin-bottom: 0.5rem;
-}
-
-.treatment-actions {
-    text-align: center;
-    margin-top: 3rem;
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-}
 
 
 /* --- CONTACTO --- */
@@ -818,47 +889,68 @@ section {
 
 /* --- RESPONSIVE --- */
 @media (max-width: 968px) {
-	.hero-content,
-	.about-layout,
-	.contact-container {
-		grid-template-columns: 1fr;
-		gap: 2rem;
-	}
+    /* 1. Layout General: Pasamos a 1 columna */
+    .hero-content,
     .about-layout {
-        gap: 3rem;
+        grid-template-columns: 1fr;
+        gap: 3rem; /* Aumentado un poco el espacio vertical */
+        text-align: center; /* Centramos textos */
     }
 
-	.hero {
-		text-align: center;
-		padding-top: 120px;
-		padding-bottom: 4rem;
-	}
+    /* 2. Ajustes Hero */
+    .hero {
+        padding-top: 140px;
+        padding-bottom: 4rem;
+        text-align: center;
+    }
 
-	.hero-actions {
-		justify-content: center;
-	}
+    .hero-actions {
+        justify-content: center;
+    }
 
-	.hero-image-wrapper {
-		margin: 0 auto;
-		width: 100%;
-		max-width: 400px;
-		height: 400px;
-	}
+    /* FIX HERO: Hacemos la imagen más protagonista pero proporcional */
+    .hero-image-wrapper {
+        margin: 2rem auto 0; /* Un poco de aire arriba */
+        width: 100%;
+        max-width: 550px; /* AUMENTADO: Antes 400px (muy pequeño), ahora 550px */
+        height: auto;     /* IMPORTANTE: Quitamos height fijo para que no se deforme */
+        aspect-ratio: 4/5; /* Mantiene la proporción vertical bonita */
+    }
 
-	.hero-img-main {
-		border-radius: 20px;
-	}
+    .hero-img-main {
+        border-radius: 200px 200px 20px 20px; /* Mantenemos tu diseño de arco */
+    }
 
-	.contact-info {
-		padding: 2rem;
-	}
+    /* 3. FIX SOBRE MÍ: Controlamos el tamaño de la foto gigante */
+    .about-image-column {
+        width: 100%;
+        display: flex;
+        justify-content: center; /* Centramos la foto horizontalmente */
+    }
 
-	.contact-form-wrapper {
-		padding: 2rem;
-	}
-    .treatment-detail-content {
-        grid-template-columns: 1fr;
+    .about-image-column .about-photo {
+        width: 100%;
+        max-width: 450px; /* LIMITADO: Para que no ocupe toda la pantalla */
+        height: auto;
+        /* Opcional: Si quieres que mantenga el mismo estilo del hero */
+        /* aspect-ratio: 3/4; */ 
+    }
+
+    /* Ajustes generales de padding */
+    .contact-info,
+    .contact-form-wrapper {
         padding: 2rem;
+    }
+
+    /* Ajuste detalle tratamientos (Layout) */
+    .treatment-detail-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .treatment-detail-sidebar {
+        position: relative;
+        top: 0;
+        margin-top: 2rem;
     }
 }
 
@@ -867,6 +959,9 @@ section {
     .nav-toggle {
         display: flex; 
 		z-index: 1002;
+		width: 30px; 
+        height: 25px;
+        justify-content: space-between;
     }
 
     /* 2. Estilo del menú desplegable móvil */
@@ -882,11 +977,10 @@ section {
         align-items: center;
         gap: 2rem;
         padding: 2rem;
-        
-        /* Animación de entrada */
-        transform: translateX(100%); /* Oculto a la derecha */
-        transition: transform 0.3s ease-in-out;
+		transform: translateX(100%);
+        transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         z-index: 1001;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.1);
     }
 
     /* 3. Clase activa para mostrar el menú */
@@ -905,11 +999,41 @@ section {
         transform: rotate(-45deg) translate(5px, -6px);
     }
 
+	.hero{
+		padding-top: 100px; 
+        padding-bottom: 3rem;
+        min-height: auto;
+	}
+
+	.hero-content {
+        grid-template-columns: 1fr; 
+        gap: 3rem;
+        text-align: center;
+    }
+
+	.hero-actions {
+        flex-direction: column; 
+        width: 100%;
+        gap: 1rem;
+    }
+
+	.hero-actions .btn {
+        width: 100%; 
+        justify-content: center;
+    }
+
+    .hero-image-wrapper {
+        width: 100%;
+        max-width: 320px; 
+        height: auto;     
+        aspect-ratio: 4/5; 
+        margin: 0 auto;
+    }
+
 	h1 {
 		font-size: 2.5rem !important;
 	}
 
-    /* FIX: Tarjetas de tratamiento en móvil */
     .treatments-list {
         padding: 0 1rem 1rem;
     }
@@ -939,6 +1063,22 @@ section {
         padding: 0.8rem 1rem;
         font-size: 1rem;
     }
+
+	.treatment-detail-image {
+        height: 250px;
+    }
+
+	.contact-container {
+        grid-template-columns: 1fr;
+        width: 100%;
+        overflow: hidden; /* Cortafuegos por si algo sobresale */
+    }
+
+    .contact-info, 
+    .contact-form-wrapper {
+        padding: 2rem 1.5rem; /* Reducimos el padding lateral para ganar espacio */
+    }
+
 }
 
 

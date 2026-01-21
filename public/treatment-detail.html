@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
+
 <body>
     <header class="header">
         <div class="container">
@@ -24,12 +26,16 @@
     <main>
         <section id="treatment-detail" class="section">
             <div class="container">
-                <div id="treatment-content"></div>
+                <div id="treatment-content">
+                    <!-- El contenido se cargará aquí -->
+                    <div class="loading-spinner"></div>
+                </div>
             </div>
         </section>
     </main>
 
     <footer class="footer">
+        <!-- El footer se podría cargar dinámicamente si fuera necesario -->
     </footer>
 
     <script>
@@ -37,9 +43,30 @@
             const urlParams = new URLSearchParams(window.location.search);
             const treatmentId = urlParams.get('id');
 
+            const escapeHTML = (str) => {
+                if (!str) return '';
+                return str.replace(/`/g, '&#96;').replace(/\${/g, '&#36;{');
+            };
+
             fetch('config.json')
                 .then(response => response.json())
                 .then(config => {
+                    const footer = document.querySelector(".footer");
+                    if (footer && config.footer) {
+                        footer.innerHTML = `
+                <div class="container">
+                    <div class="footer-content">
+                        <i class="fas fa-spa footer-icon"></i>
+                        <h3>${config.siteInfo.brandName}</h3>
+                        <p class="footer-description">${config.footer.description}</p>
+                    </div>
+                    <div class="footer-bottom">
+                        <p>${config.footer.copyright}</p>
+                    </div>
+                </div>
+                `;
+                    }
+
                     const services = config.services;
                     let treatment = null;
                     for (const category of services) {
@@ -51,34 +78,75 @@
                     }
 
                     if (treatment) {
+                        document.title = `${treatment.title} - Christine Cano`;
                         const treatmentContent = document.getElementById('treatment-content');
                         const reserveHref = `index.html?service=${treatmentId}#contacto`;
-                        
+
+                        let detailsHtml = '';
+                        if (treatment.detail.details && treatment.detail.details.length > 0) {
+                            detailsHtml = treatment.detail.details.map(detailItem => `
+                        <div class="detail-item">
+                            <i class="${detailItem.icon}"></i>
+                            <div class="detail-item-content">
+                                <h4>${escapeHTML(detailItem.title)}</h4>
+                                <p>${escapeHTML(detailItem.text)}</p>
+                            </div>
+                        </div>
+                    `).join('');
+                        }
+
+                        // Generar HTML para la imagen (¡NUEVO!)
+                        let imageHtml = '';
+                        if (treatment.detail.image) {
+                            imageHtml = `<img src="${treatment.detail.image}" alt="${escapeHTML(treatment.title)}" class="treatment-detail-image">`;
+                        }
+
                         treatmentContent.innerHTML = `
-                            <div class="section-title">
-                                <span>Servicio</span>
-                                <h2>${treatment.title}</h2>
+                    <div class="breadcrumb">
+                        <a href="index.html">Inicio</a> / <a href="index.html#servicios">Servicios</a> / <span>${escapeHTML(treatment.title)}</span>
+                    </div>
+                    <div class="section-title">
+                        <h2>${escapeHTML(treatment.title)}</h2>
+                    </div>
+                    <div class="treatment-detail-layout">
+                        <div class="treatment-detail-main">
+                            ${imageHtml}
+                            <p class="treatment-detail-description">${escapeHTML(treatment.detail.description)}</p>
+                        </div>
+                        <div class="treatment-detail-sidebar">
+                            <div class="details-list">
+                                ${detailsHtml}
                             </div>
-                            <div class="treatment-detail-content">
-                                <div class="treatment-detail-description">
-                                    <h3>Descripción</h3>
-                                    <p>${treatment.detail.description}</p>
-                                </div>
-                                <div class="treatment-detail-info">
-                                    <h3><i class="fas fa-clock"></i> Duración</h3>
-                                    <p>${treatment.detail.duration}</p>
-                                    <h3><i class="fas fa-user-clock"></i> Tiempo de Recuperación</h3>
-                                    <p>${treatment.detail.recovery}</p>
-                                </div>
-                            </div>
-                            <div class="treatment-actions">
-                                <a href="${reserveHref}" class="btn btn-primary">Reservar Cita</a>
-                                <a href="index.html#servicios" class="btn btn-secondary">Ver otros servicios</a>
-                            </div>
-                        `;
+                            <a href="${reserveHref}" class="btn btn-primary btn-block">Reservar Este Tratamiento</a>
+                        </div>
+                    </div>
+                    <div class="treatment-actions-footer">
+                        <a href="index.html#servicios" class="btn btn-secondary">‹ Ver todos los servicios</a>
+                    </div>
+                `;
+                    } else {
+                        document.getElementById('treatment-content').innerHTML = `
+                    <div class="section-title">
+                        <h2>Servicio no encontrado</h2>
+                        <p>El servicio que buscas no existe. Por favor, vuelve a la página de inicio.</p>
+                        <a href="index.html" class="btn btn-primary">Volver al inicio</a>
+                    </div>
+                 `;
                     }
+                })
+                .catch(error => {
+                    console.error('Error al cargar la configuración:', error);
+                    document.getElementById('treatment-content').innerHTML = `
+                <div class="section-title">
+                    <h2>Error</h2>
+                    <p>No se pudo cargar la información del tratamiento. Por favor, inténtalo más tarde.</p>
+                    <a href="index.html" class="btn btn-primary">Volver al inicio</a>
+                </div>
+            `;
                 });
         });
+
     </script>
 </body>
+
 </html>
