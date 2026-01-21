@@ -52,7 +52,7 @@ class EnfermeriaComponents {
 					
 					<div class="about-layout">
 						<div class="about-image-column">
-							<img src="./myphoto.jpeg" alt="${aboutMe.name}" class="about-photo"  onerror="this.style.display='none'">
+							<img src="./myphoto.jpeg" alt="${aboutMe.name}" class="about-photo"  onerror="this.classList.add('img-error');">
 						</div>
 						
 						<div class="about-content-column">
@@ -122,7 +122,7 @@ class EnfermeriaComponents {
                         ${category.category}
                         <i class="fas fa-chevron-down accordion-icon"></i>
                     </button>
-                    <div class="accordion-content" ${index === 0 ? '' : 'style="max-height: 0;"'}>
+                    <div class="accordion-content">
                         <div class="treatments-list">
                             ${treatmentsHTML}
                         </div>
@@ -177,28 +177,28 @@ class EnfermeriaComponents {
                             <div class="contact-info-header">
                                 <img src="img/christinephoto1.jpeg" alt="Christine Cano" class="contact-photo">
                                 <h3>¿Hablamos?</h3>
-                                <p style="color: rgba(255,255,255,0.8);">Reserva tu cita para una valoración personalizada en mi consulta de Terrassa.</p>
+                                <p class="contact-info-description">Reserva tu cita para una valoración personalizada en mi consulta de Terrassa.</p>
                             </div>
                             
                             <div class="contact-details-list">
                                 <div class="contact-detail">
                                     <i class="fas fa-map-marker-alt"></i>
                                     <div>
-                                        <div style="font-size: 0.8rem; opacity: 0.7;">Dirección</div>
+                                        <div class="contact-detail-label">Dirección</div>
                                         <strong>${siteInfo.coverage}</strong>
                                     </div>
                                 </div>
                                 <div class="contact-detail">
                                     <i class="fas fa-phone-alt"></i>
                                     <div>
-                                        <div style="font-size: 0.8rem; opacity: 0.7;">Teléfono</div>
+                                        <div class="contact-detail-label">Teléfono</div>
                                         <strong>${siteInfo.phone}</strong>
                                     </div>
                                 </div>
                                 <div class="contact-detail">
                                     <i class="fas fa-envelope"></i>
                                     <div>
-                                        <div style="font-size: 0.8rem; opacity: 0.7;">Email</div>
+                                        <div class="contact-detail-label">Email</div>
                                         <strong>${siteInfo.email}</strong>
                                     </div>
                                 </div>
@@ -226,18 +226,13 @@ class EnfermeriaComponents {
                                         <option value="consulta">Duda / Otra consulta</option>
                                     </select>
                                 </div>
-
-                                <div class="form-group">
-                                    <label>Preferencia de fecha y hora (Opcional)</label>
-                                    <input type="text" class="form-control" placeholder="Ej: Lunes por la tarde">
-                                </div>
                                 
                                 <div class="form-group">
                                     <label>Mensaje (Opcional)</label>
                                     <textarea class="form-control" rows="3"></textarea>
                                 </div>
                                 
-                                <button type="submit" class="btn btn-primary" style="width: 100%;">
+                                <button type="submit" class="btn btn-primary contact-form-submit">
                                     Solicitar Cita
                                 </button>
                             </form>
@@ -255,9 +250,9 @@ class EnfermeriaComponents {
             <footer class="footer">
                 <div class="container">
                     <div class="footer-content">
-                        <i class="fas fa-spa" style="font-size: 2.5rem; color: rgba(255,255,255,0.2); margin-bottom: 1rem;"></i>
+                        <i class="fas fa-spa footer-icon"></i>
                         <h3>${siteInfo.brandName}</h3>
-                        <p style="max-width: 500px; margin: 0 auto; color: rgba(255,255,255,0.7);">${footer.description}</p>
+                        <p class="footer-description">${footer.description}</p>
                     </div>
                     <div class="footer-bottom">
                         <p>${footer.copyright}</p>

@@ -763,7 +763,6 @@ section {
     position: absolute;
     right: 1.5rem;
     top: 50%;
-    transform: translateY(-50%);
     color: var(--accent);
     pointer-events: none;
 }
@@ -940,6 +939,42 @@ section {
         padding: 0.8rem 1rem;
         font-size: 1rem;
     }
+}
+
+
+/* --- Estilos de componentes específicos --- */
+
+/* --- Contacto --- */
+.contact-info-description {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.contact-detail-label {
+    font-size: 0.8rem;
+    opacity: 0.7;
+}
+
+.contact-form-submit {
+    width: 100%;
+}
+
+/* --- Footer --- */
+.footer-icon {
+    font-size: 2.5rem;
+    color: rgba(255, 255, 255, 0.2);
+    margin-bottom: 1rem;
+}
+
+.footer-description {
+    max-width: 500px;
+    padding-bottom: 20px;
+    margin: 0 auto;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* --- Utilidades --- */
+.img-error {
+    display: none;
 }
 
 
