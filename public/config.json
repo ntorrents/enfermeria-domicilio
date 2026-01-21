@@ -33,7 +33,7 @@
                 "id": "microneedling-facial",
                 "icon": "fas fa-bullseye",
                 "title": "Microneedling Facial (Dermapen)",
-                "description": "Servicio de inducción de colágeno. Mejora textura, reduce marcas de acné y líneas de expresión.",
+                "description": "Técnica de inducción de colágeno que mejora la textura de la piel, reduce marcas de acné y suaviza líneas de expresión.",
                 "price": 95,
                 "duration": "60 min",
                 "detail": {
@@ -46,7 +46,7 @@
                 "id": "microneedling-corporal",
                 "icon": "fas fa-bullseye",
                 "title": "Microneedling Corporal (Dermapen)",
-                "description": "Servicio de inducción de colágeno para el cuerpo.",
+                "description": "Tratamiento corporal que estimula el colágeno para reducir estrías, cicatrices y flacidez en abdomen, muslos y glúteos.",
                 "price": 130,
                 "duration": "75 min",
                 "detail": {
@@ -64,7 +64,7 @@
                 "id": "mesoterapia-capilar",
                 "icon": "fas fa-hair",
                 "title": "Mesoterapia capilar",
-                "description": "Servicio avanzado para la caída capilar con acción fortalecedora y estimulante. Refuerza la fibra capilar, estimula el crecimiento, incrementa el grosor y volumen del cabello.",
+                "description": "Tratamiento avanzado para la caída del cabello. Fortalece la fibra capilar, estimula el crecimiento y aumenta el volumen.",
                 "price": 160,
                 "duration": "30 min",
                 "detail": {
@@ -77,7 +77,7 @@
                 "id": "mesoterapia-facial",
                 "icon": "fas fa-face-smile",
                 "title": "Mesoterapia facial",
-                "description": "Estimula y renueva la piel con la fuerza del ácido hialurónico.",
+                "description": "Renueva e hidrata la piel en profundidad con ácido hialurónico y vitaminas para un rostro más luminoso y rejuvenecido.",
                 "price": 140,
                 "duration": "45 min",
                 "detail": {
@@ -90,7 +90,7 @@
                 "id": "mesoterapia-corporal",
                 "icon": "fas fa-person-running",
                 "title": "Mesoterapia corporal Anticelulítico",
-                "description": "Servicio multietapa para la celulitis: compacta, edematosa, blanda, y liporeductor. Favorece la emulsión y movilización de grasas, disminuyendo el tamaño de los adipocitos y mejorando el contorno corporal.",
+                "description": "Combate la celulitis y la grasa localizada, mejorando el contorno corporal y el aspecto de la piel de naranja.",
                 "price": 100,
                 "duration": "45 min",
                 "detail": {
@@ -108,7 +108,7 @@
                 "id": "relleno-labios",
                 "icon": "fas fa-lips",
                 "title": "Relleno de labios",
-                "description": "Aumenta el volumen y define la forma de tus labios.",
+                "description": "Aumenta el volumen, define la forma y corrige asimetrías para unos labios más sensuales y de aspecto natural.",
                 "price": 320,
                 "duration": "30 min",
                 "detail": {
@@ -121,7 +121,7 @@
                 "id": "relleno-menton-mandibula",
                 "icon": "fas fa-face-relieved",
                 "title": "Rellenos de mentón y mandíbula",
-                "description": "Define y armoniza el contorno facial.",
+                "description": "Define el óvalo facial, mejora la proyección del mentón y armoniza los rasgos para un rostro más equilibrado.",
                 "price": 350,
                 "duration": "60 min",
                 "detail": {
@@ -139,7 +139,7 @@
                 "id": "bioestimulacion-exosomas",
                 "icon": "fas fa-atom",
                 "title": "Bioestimulación con Exosomas vegetales",
-                "description": "Revolución regenerativa que supera al PRP. Reprograma las células para estimular la curación, reducir la inflamación y potenciar la renovación celular. Mejora manchas, tono, hidratación, arrugas y firmeza.",
+                "description": "Revolucionaria técnica regenerativa que mejora manchas, tono, hidratación y firmeza, reprogramando las células de la piel.",
                 "price": 300,
                 "duration": "60 min",
                 "detail": {
@@ -152,7 +152,7 @@
                 "id": "bioestimulacion-total",
                 "icon": "fas fa-wand-magic-sparkles",
                 "title": "Bioestimulación total",
-                "description": "Servicio rejuvenecedor que estimula biológicamente el tejido para restaurar la estructura bioquímica de la piel, aumentando la firmeza, elasticidad, revitalización e hidratación.",
+                "description": "Tratamiento rejuvenecedor que estimula los tejidos para restaurar la firmeza, elasticidad e hidratación natural de la piel.",
                 "price": 250,
                 "duration": "60 min",
                 "detail": {
@@ -170,7 +170,7 @@
                 "id": "peeling-estrias-cicatrices",
                 "icon": "fas fa-wand-sparkles",
                 "title": "Peeling químico para estrías y cicatrices",
-                "description": "Exfolia, bio-revitaliza y provoca un efecto lifting. Resultados: Piel con textura más lisa, tono unificado, limpia, oxigenada y luminosa.",
+                "description": "Exfolia y revitaliza la piel para unificar el tono y mejorar la textura de estrías y cicatrices eficazmente.",
                 "price": 120,
                 "duration": "45 min",
                 "detail": {
@@ -183,7 +183,7 @@
                 "id": "peeling-exfoliante-lifting",
                 "icon": "fas fa-wand-magic",
                 "title": "Peeling exfoliante y lifting",
-                "description": "Fórmula innovadora que añade un efecto lifting iluminador a la acción exfoliante profunda. Resultados: Piel renovada, tono unificado, textura lisa y luminosidad.",
+                "description": "Fórmula innovadora con efecto lifting que exfolia la piel, unifica el tono y aporta una gran luminosidad.",
                 "price": 100,
                 "duration": "60 min",
                 "detail": {
@@ -201,7 +201,7 @@
                 "id": "eliminar-verrugas",
                 "icon": "fas fa-star-of-life",
                 "title": "Eliminar verrugas y rubíes",
-                "description": "Eliminación segura y eficaz de lesiones cutáneas benignas.",
+                "description": "Eliminación segura, rápida y precisa de lesiones cutáneas benignas como verrugas y puntos rubí, sin dejar cicatriz.",
                 "price": 90,
                 "duration": "20 min",
                 "detail": {
@@ -214,7 +214,7 @@
                 "id": "rutina-personalizada",
                 "icon": "fas fa-leaf",
                 "title": "Rutina personalizada a domicilio",
-                "description": "Tu piel es única; tu rutina también debería serlo. Analizo tu piel y hábitos para lograr resultados visibles y sostenibles.",
+                "description": "Análisis de piel y hábitos para diseñar una rutina de cuidado facial a medida y conseguir resultados visibles y duraderos.",
                 "price": 45,
                 "duration": "60 min",
                 "detail": {
