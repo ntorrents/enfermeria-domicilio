@@ -26,8 +26,7 @@ class EnfermeriaComponents {
                     
                     <div class="hero-visual">
                         <div class="hero-image-wrapper">
-                            <!-- Nueva imagen para la portada -->
-                            <img src="img/christinephoto2.jpeg" alt="Dermoestética y cuidado de la piel" class="hero-img-main" onerror="this.src='''https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80'''">
+                            <img src="img/christinephoto2.jpeg" alt="Dermoestética y cuidado de la piel" class="hero-img-main" onerror="this.src='https://via.placeholder.com/450x550'">
                         </div>
                     </div>
                 </div>
@@ -52,7 +51,7 @@ class EnfermeriaComponents {
 					
 					<div class="about-layout">
 						<div class="about-image-column">
-							<img src="./myphoto.jpeg" alt="${aboutMe.name}" class="about-photo"  onerror="this.classList.add('img-error');">
+							<img src="./myphoto.jpeg" alt="${aboutMe.name}" class="about-photo" onerror="this.classList.add('img-error');">
 						</div>
 						
 						<div class="about-content-column">
@@ -93,12 +92,11 @@ class EnfermeriaComponents {
 		`;
     }
 
-    // 3. SERVICIOS (Nuevo Diseño: Tarjetas Elegantes)
+    // 3. SERVICIOS (Tarjetas Grid)
     renderServices() {
         const { services } = this.config;
 
         const catalogHTML = services.map(category => {
-            // Generamos las tarjetas para cada tratamiento dentro de la categoría
             const cardsHTML = category.treatments.map(treatment => `
 				<article class="service-card">
 					<div class="card-header">
@@ -125,7 +123,6 @@ class EnfermeriaComponents {
 				</article>
 			`).join('');
 
-            // Devolvemos el bloque de la categoría completa
             return `
 				<div class="service-category-group">
 					<h3 class="category-title">${category.category}</h3>
@@ -153,12 +150,12 @@ class EnfermeriaComponents {
 		`;
     }
 
-    // 4. TESTIMONIOS (NUEVO)
-	renderTestimonials() {
-		const { testimonials } = this.config;
-		if (!testimonials) return '';
+    // 4. TESTIMONIOS
+    renderTestimonials() {
+        const { testimonials } = this.config;
+        if (!testimonials) return '';
 
-		const cardsHTML = testimonials.map(t => `
+        const cardsHTML = testimonials.map(t => `
 			<div class="testimonial-card">
 				<div class="testimonial-stars">
 					${'<i class="fas fa-star"></i>'.repeat(t.rating)}
@@ -171,7 +168,7 @@ class EnfermeriaComponents {
 			</div>
 		`).join('');
 
-		return `
+        return `
 			<section id="testimonios" class="testimonials-section">
 				<div class="container">
 					<div class="section-title">
@@ -184,20 +181,20 @@ class EnfermeriaComponents {
 				</div>
 			</section>
 		`;
-	}
+    }
 
-    // 5. CONTACTO (Actualizado con Mapa y Legal)
-	renderContact() {
-		const { siteInfo, services } = this.config;
+    // 5. CONTACTO (Email y Formulario completo)
+    renderContact() {
+        const { siteInfo, services } = this.config;
 
-		const serviceOptions = services.map(category => {
-			const options = category.treatments
-				.map(t => `<option value="${t.id}">${t.title}</option>`)
-				.join('');
-			return `<optgroup label="${category.category}">${options}</optgroup>`;
-		}).join('');
+        const serviceOptions = services.map(category => {
+            const options = category.treatments
+                .map(t => `<option value="${t.id}">${t.title}</option>`)
+                .join('');
+            return `<optgroup label="${category.category}">${options}</optgroup>`;
+        }).join('');
 
-		return `
+        return `
             <section id="contacto">
                 <div class="container">
                     <div class="section-title">
@@ -233,20 +230,25 @@ class EnfermeriaComponents {
                         </div>
                         
                         <div class="contact-form-wrapper">
-                            <form class="contact-form">
+                            <form id="contactForm" class="contact-form">
                                 <div class="form-group">
                                     <label>Nombre Completo</label>
-                                    <input type="text" class="form-control" required>
+                                    <input type="text" name="user_name" class="form-control" required>
                                 </div>
                                 
                                 <div class="form-group">
                                     <label>Teléfono</label>
-                                    <input type="tel" class="form-control" required>
+                                    <input type="tel" name="user_phone" class="form-control" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Email (Opcional)</label>
+                                    <input type="email" name="user_email" class="form-control" placeholder="nombre@ejemplo.com">
                                 </div>
                                 
                                 <div class="form-group form-group-select">
                                     <label>Servicio de interés</label>
-                                    <select class="form-control" required>
+                                    <select name="service_interest" class="form-control" required>
                                         <option value="">Seleccione un servicio...</option>
                                         ${serviceOptions}
                                         <option value="consulta">Duda / Otra consulta</option>
@@ -255,7 +257,7 @@ class EnfermeriaComponents {
                                 
                                 <div class="form-group">
                                     <label>Mensaje (Opcional)</label>
-                                    <textarea class="form-control" rows="3"></textarea>
+                                    <textarea name="message" class="form-control" rows="3"></textarea>
                                 </div>
 
                                 <div class="form-group form-checkbox">
@@ -274,12 +276,12 @@ class EnfermeriaComponents {
                 </div>
             </section>
         `;
-	}
+    }
 
-    // 6. FOOTER (Con enlaces legales)
-	renderFooter() {
-		const { siteInfo, footer } = this.config;
-		return `
+    // 6. FOOTER
+    renderFooter() {
+        const { siteInfo, footer } = this.config;
+        return `
             <footer class="footer">
                 <div class="container">
                     <div class="footer-content">
@@ -297,7 +299,7 @@ class EnfermeriaComponents {
                 </div>
             </footer>
         `;
-	}
+    }
 
     // RENDER MASTER
     renderPage() {

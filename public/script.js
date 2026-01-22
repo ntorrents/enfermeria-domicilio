@@ -1,65 +1,40 @@
-// Función para inicializar navegación móvil
+/* --- FUNCIONALIDADES GENERALES Y NAVEGACIÓN --- */
+
+// Inicializar navegación móvil
 function initializeMobileNavigation() {
     const navToggle = document.querySelector('.nav-toggle');
     const navMenu = document.querySelector('.nav-menu');
 
     if (navToggle && navMenu) {
-        navToggle.addEventListener('click', (e) => {
+        // Eliminar listeners antiguos por si acaso
+        const newToggle = navToggle.cloneNode(true);
+        navToggle.parentNode.replaceChild(newToggle, navToggle);
+
+        // Listener nuevo
+        newToggle.addEventListener('click', (e) => {
             e.stopPropagation();
             navMenu.classList.toggle('active');
-            navToggle.classList.toggle('active');
+            newToggle.classList.toggle('active');
         });
 
-        // Cerrar menú al hacer click en un enlace
         const navLinks = document.querySelectorAll('.nav-menu a');
         navLinks.forEach(link => {
             link.addEventListener('click', () => {
-                if (navMenu.classList.contains('active')) {
-                    navMenu.classList.remove('active');
-                    navToggle.classList.remove('active');
-                }
+                navMenu.classList.remove('active');
+                newToggle.classList.remove('active');
             });
         });
 
-        // Cerrar menú al hacer click fuera
         document.addEventListener('click', (e) => {
-            if (!navMenu.contains(e.target) && !navToggle.contains(e.target)) {
+            if (!navMenu.contains(e.target) && !newToggle.contains(e.target)) {
                 navMenu.classList.remove('active');
-                navToggle.classList.remove('active');
+                newToggle.classList.remove('active');
             }
         });
     }
 }
 
-// Función para inicializar el acordeón de servicios
-function initializeAccordion() {
-    const accordionHeaders = document.querySelectorAll('.accordion-header');
-
-    accordionHeaders.forEach(header => {
-        header.addEventListener('click', () => {
-            const accordionItem = header.parentElement;
-            const accordionContent = header.nextElementSibling;
-            const isExpanded = header.getAttribute('aria-expanded') === 'true';
-
-            // Cerrar todos los acordeones
-            document.querySelectorAll('.accordion-item').forEach(item => {
-                item.querySelector('.accordion-header').setAttribute('aria-expanded', 'false');
-                item.querySelector('.accordion-content').style.maxHeight = '0px';
-            });
-
-            // Abrir el que se ha clickado (si no estaba ya abierto)
-            if (!isExpanded) {
-                header.setAttribute('aria-expanded', 'true');
-                accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px';
-            }
-        });
-    });
-    
-    // No abrir por defecto, esperar al manejo de ancla
-}
-
-
-// Función para inicializar scroll suave
+// Scroll suave para anclas
 function initializeSmoothScroll() {
     const smoothScrollLinks = document.querySelectorAll('a[href^="#"]');
     smoothScrollLinks.forEach(link => {
@@ -69,7 +44,7 @@ function initializeSmoothScroll() {
             const targetSection = document.querySelector(targetId);
 
             if (targetSection) {
-                const headerHeight = document.querySelector('.header').offsetHeight;
+                const headerHeight = document.querySelector('.header')?.offsetHeight || 80;
                 const targetPosition = targetSection.offsetTop - headerHeight;
 
                 window.scrollTo({
@@ -81,24 +56,26 @@ function initializeSmoothScroll() {
     });
 }
 
-// Cambiar estilo del header al hacer scroll y navegación activa
+// Estilo header al hacer scroll
 window.addEventListener('scroll', () => {
     const header = document.querySelector('.header');
-    if (window.scrollY > 50) {
-        header.style.backgroundColor = 'rgba(253, 252, 250, 0.85)';
-        header.style.backdropFilter = 'blur(10px)';
-    } else {
-        header.style.backgroundColor = 'rgba(253, 252, 250, 0.95)';
-        header.style.backdropFilter = 'blur(10px)';
+    if (header) {
+        if (window.scrollY > 50) {
+            header.style.backgroundColor = 'rgba(253, 252, 250, 0.95)';
+            header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+        } else {
+            header.style.backgroundColor = 'rgba(253, 252, 250, 0.5)';
+            header.style.boxShadow = 'none';
+        }
     }
     updateActiveNavigation();
 });
 
-// Función para actualizar la navegación activa
+// Actualizar link activo en menú
 function updateActiveNavigation() {
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.nav-menu a[href^="#"]');
-    const headerHeight = document.querySelector('.header').offsetHeight;
+    const headerHeight = document.querySelector('.header')?.offsetHeight || 80;
 
     let currentSection = '';
 
@@ -117,99 +94,160 @@ function updateActiveNavigation() {
     });
 }
 
-// Función para inicializar el formulario de contacto
-function initializeContactForm() {
-    const contactForm = document.querySelector('.contact-form');
-    if (!contactForm) return;
+/* --- SISTEMA DE NOTIFICACIONES TOAST --- */
+function showToast(title, message, type = 'success') {
+    // 1. Crear contenedor si no existe
+    let container = document.querySelector('.toast-container');
+    if (!container) {
+        container = document.createElement('div');
+        container.className = 'toast-container';
+        document.body.appendChild(container);
+    }
 
-    // Pre-seleccionar servicio si viene en la URL
+    // 2. Crear el HTML de la notificación
+    const toast = document.createElement('div');
+    toast.className = `toast toast-${type}`;
+
+    // Icono según el tipo
+    let iconClass = 'fa-check-circle';
+    if (type === 'error') iconClass = 'fa-exclamation-circle';
+    if (type === 'info') iconClass = 'fa-info-circle';
+
+    toast.innerHTML = `
+        <i class="fas ${iconClass} fa-lg"></i>
+        <div class="toast-content">
+            <span class="toast-title">${title}</span>
+            <span class="toast-msg">${message}</span>
+        </div>
+    `;
+
+    // 3. Añadir al DOM
+    container.appendChild(toast);
+
+    // 4. Animación de entrada
+    requestAnimationFrame(() => {
+        toast.classList.add('show');
+    });
+
+    // 5. Autodestrucción
+    setTimeout(() => {
+        toast.classList.remove('show');
+        setTimeout(() => {
+            if (toast.parentElement) toast.remove();
+        }, 500);
+    }, 5000);
+}
+
+
+/* --- FORMULARIO DE CONTACTO (Fix Duplicados) --- */
+function initializeContactForm() {
+    // Buscamos el formulario (por ID preferiblemente)
+    const originalForm = document.getElementById('contactForm');
+
+    // Si no existe, no hacemos nada
+    if (!originalForm) return;
+
+    // --- SOLUCIÓN DOBLE ENVÍO: Clonar el nodo para borrar listeners viejos ---
+    const newForm = originalForm.cloneNode(true);
+    originalForm.parentNode.replaceChild(newForm, originalForm);
+
+    // Pre-seleccionar servicio desde URL
     const urlParams = new URLSearchParams(window.location.search);
     const serviceId = urlParams.get('service');
     if (serviceId) {
-        const selectElement = contactForm.querySelector('select');
-        if (selectElement) {
-            selectElement.value = serviceId;
-        }
+        const selectElement = newForm.querySelector('select');
+        if (selectElement) selectElement.value = serviceId;
     }
 
-    contactForm.addEventListener('submit', (e) => {
+    // Listener de envío único
+    newForm.addEventListener('submit', (e) => {
         e.preventDefault();
-        const nombre = contactForm.querySelector('input[type="text"]').value;
-        const telefono = contactForm.querySelector('input[type="tel"]').value;
-        const servicio = contactForm.querySelector('select').value;
 
-        if (!nombre || !telefono || !servicio) {
-            showNotification('Por favor, complete todos los campos obligatorios.', 'error');
+        // Recoger datos (usando name o fallback)
+        const nombreInput = newForm.querySelector('input[name="user_name"]');
+        const telefonoInput = newForm.querySelector('input[name="user_phone"]');
+        const emailInput = newForm.querySelector('input[name="user_email"]');
+        const servicioInput = newForm.querySelector('select');
+        const mensajeInput = newForm.querySelector('textarea');
+
+        const formData = {
+            nombre: nombreInput ? nombreInput.value : '',
+            telefono: telefonoInput ? telefonoInput.value : '',
+            email: emailInput ? emailInput.value : 'No indicado',
+            servicio: servicioInput ? servicioInput.value : '',
+            mensaje: mensajeInput ? mensajeInput.value : ''
+        };
+
+        // Validación
+        if (!formData.nombre || !formData.telefono) {
+            showToast('Faltan datos', 'Por favor, indica tu nombre y teléfono.', 'error');
             return;
         }
-        if (typeof sendEmail === 'function' && EMAILJS_CONFIG.PUBLIC_KEY !== 'TU_PUBLIC_KEY_AQUI') {
-            // Lógica de envío de EmailJS...
+
+        // Feedback visual en botón
+        const btnSubmit = newForm.querySelector('button[type="submit"]');
+        const originalText = btnSubmit.innerText;
+        btnSubmit.innerText = 'Enviando...';
+        btnSubmit.disabled = true;
+
+        // Enviar con EmailJS
+        if (typeof sendEmail === 'function') {
+            sendEmail(formData)
+                .then(() => {
+                    // ÉXITO (Aquí estaba el undefined, ahora corregido)
+                    showToast('¡Mensaje Enviado!', 'Gracias por contactar. Te responderemos muy pronto.', 'success');
+                    newForm.reset();
+                })
+                .catch((error) => {
+                    console.error('Error EmailJS:', error);
+                    showToast('Error de Envío', 'Hubo un problema. Por favor contáctanos por WhatsApp.', 'error');
+                })
+                .finally(() => {
+                    btnSubmit.innerText = originalText;
+                    btnSubmit.disabled = false;
+                });
         } else {
-            showNotification('Formulario enviado (simulación). EmailJS no configurado.', 'info');
+            // Modo simulación (si falla carga de emailjs)
+            console.warn('EmailJS no cargado. Simulando éxito.');
+            showToast('Modo Demo', 'El formulario funciona, pero EmailJS no está conectado.', 'info');
+            btnSubmit.innerText = originalText;
+            btnSubmit.disabled = false;
         }
     });
 }
 
-// Sistema de notificaciones (simplificado para el ejemplo)
-function showNotification(message, type = 'info') {
-    console.log(`[${type.toUpperCase()}] Notificación: ${message}`);
-    const notification = document.createElement('div');
-    notification.className = `notification notification-${type}`;
-    notification.textContent = message;
-    document.body.appendChild(notification);
-    setTimeout(() => notification.remove(), 5000);
-}
-
-// Función para manejar el ancla en la URL al cargar la página
+// Cargar ancla al inicio (si viene de otra página)
 function handleAnchorLinkOnLoad() {
     const hash = window.location.hash;
-    // Se usa un timeout para dar tiempo a que el contenido dinámico se renderice
     setTimeout(() => {
         if (hash) {
             const targetSection = document.querySelector(hash);
             if (targetSection) {
-                const headerHeight = document.querySelector('.header').offsetHeight;
+                const headerHeight = document.querySelector('.header')?.offsetHeight || 80;
                 const targetPosition = targetSection.offsetTop - headerHeight;
-
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: 'smooth'
-                });
+                window.scrollTo({ top: targetPosition, behavior: 'smooth' });
             }
         }
-
-        // Abrir el primer acordeón por defecto si no hay ancla o el ancla es de servicios
-        const accordionHeader = document.querySelector('.accordion-header');
-        if (accordionHeader && (!hash || hash === '#servicios')) {
-           const firstContent = accordionHeader.nextElementSibling;
-           accordionHeader.setAttribute('aria-expanded', 'true');
-           firstContent.style.maxHeight = firstContent.scrollHeight + 'px';
-        }
-
-    }, 300); // 300ms es un retraso prudencial
+    }, 300);
 }
 
-
-// Función para inicializar todas las funcionalidades
+// --- INICIALIZADOR MAESTRO ---
 function initializeAllFeatures() {
     initializeMobileNavigation();
     initializeSmoothScroll();
     initializeContactForm();
-    initializeAccordion();
     updateActiveNavigation();
-    handleAnchorLinkOnLoad(); // <-- AÑADIDO
+    handleAnchorLinkOnLoad();
 
     if (typeof initializeEmailJS === 'function') {
         initializeEmailJS();
     }
-    console.log('Todas las funcionalidades han sido inicializadas.');
+    console.log('✅ Todas las funcionalidades inicializadas.');
 }
 
-// Inicialización principal
+// Ejecutar al cargar el DOM (solo si no lo hace components.js)
 document.addEventListener('DOMContentLoaded', () => {
-    // El renderizado de la página llama a initializeAllFeatures
     if (typeof loadAndRenderPage !== 'function') {
-        // Fallback si components.js no carga
-         initializeAllFeatures();
+        initializeAllFeatures();
     }
 });
