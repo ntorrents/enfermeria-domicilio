@@ -1,0 +1,272 @@
+/* --- CATÁLOGO (Cards) --- */
+.services-section-cards {
+    background-color: var(--secondary);
+    padding-bottom: 6rem;
+}
+
+.catalog-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.service-category-group {
+    width: 100%;
+}
+
+.category-title {
+    font-family: "Playfair Display", serif;
+    font-size: 2rem;
+    color: var(--primary);
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(116, 84, 63, 0.1);
+    text-align: left;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+/* Tarjeta Individual */
+.service-card {
+    background-color: white;
+    border-radius: var(--radius-md);
+    padding: 2rem 2rem 1rem 2rem;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border: 1px solid transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+    border-color: rgba(205, 126, 98, 0.3);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    min-height: 60px;
+    margin-bottom: 1.5rem;
+}
+
+.service-icon-box {
+    width: 50px;
+    height: 50px;
+    background-color: var(--secondary);
+    color: var(--primary);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+}
+
+.service-price-tag {
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    color: var(--accent);
+    background-color: rgba(205, 126, 98, 0.1);
+    padding: 0.4rem 0.8rem;
+    border-radius: var(--radius-full);
+    font-size: 0.95rem;
+}
+
+.card-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-body h4 {
+    font-size: 1.25rem;
+    color: var(--text-main);
+    min-height: 3.5rem;
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+}
+
+.card-body p {
+    font-size: 0.95rem;
+    color: var(--text-light);
+    line-height: 1.6;
+    margin-bottom: auto;
+    padding-bottom: 1.5rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.card-meta {
+    display: flex;
+    gap: 1rem;
+    font-size: 0.9rem;
+    color: var(--primary);
+    font-weight: 500;
+    margin-bottom: 1rem;
+    height: 24px;
+    align-items: center;
+    margin-top: 0;
+}
+
+.card-meta i {
+    margin-right: 5px;
+    color: var(--accent);
+}
+
+.card-footer {
+    border-top: 1px solid var(--secondary);
+    padding-top: 0.7rem;
+    text-align: center;
+}
+
+.btn-card {
+    color: var(--primary);
+    font-weight: 600;
+    font-size: 0.95rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: gap 0.3s;
+}
+
+.btn-card:hover {
+    color: var(--accent);
+    gap: 0.8rem;
+}
+
+/* --- PÁGINA DETALLE TRATAMIENTO --- */
+#treatment-detail .section-title {
+    text-align: left;
+    margin-bottom: 2rem;
+}
+
+#treatment-detail .section-title h2 {
+    font-size: 2.8rem;
+}
+
+.breadcrumb {
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+
+.breadcrumb a {
+    color: var(--accent);
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.treatment-detail-layout {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 3rem;
+    align-items: flex-start;
+}
+
+.treatment-detail-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: var(--radius-lg);
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow-md);
+}
+
+.treatment-detail-description {
+    line-height: 1.8;
+    font-size: 1.1rem;
+    color: var(--text-light);
+}
+
+.treatment-detail-sidebar {
+    background-color: white;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    padding: 2rem;
+    position: sticky;
+    top: 120px;
+}
+
+.details-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.detail-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.detail-item i {
+    font-size: 1.2rem;
+    color: var(--accent);
+    width: 30px;
+    padding-top: 5px;
+    text-align: center;
+}
+
+.detail-item-content h4 {
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--text-main);
+    margin-bottom: 0.1rem;
+}
+
+.detail-item-content p {
+    font-size: 0.95rem;
+    color: var(--text-light);
+    margin: 0;
+    line-height: 1.6;
+}
+
+.treatment-actions-footer {
+    margin-top: 3rem;
+    border-top: 1px solid var(--secondary);
+    padding-top: 2rem;
+}
+
+/* RESPONSIVE SERVICES */
+@media (max-width: 968px) {
+    .treatment-detail-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .treatment-detail-sidebar {
+        position: relative;
+        top: 0;
+        margin-top: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .category-title {
+        font-size: 1.75rem;
+        text-align: center;
+    }
+
+    .treatment-detail-image {
+        height: 250px;
+    }
+}

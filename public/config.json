@@ -26,7 +26,7 @@
         "clinicAddress": "Carrer de l'Exemple, 123, 08221 Terrassa, Barcelona",
         "clinicNote": "Consulta privada equipada con la última tecnología para tu confort y seguridad."
     },
-    "testimonials": [
+    "testimonials_OFF": [
         {
             "name": "Marta G.",
             "text": "Christine es una profesional excelente. Me hizo sentir muy cómoda y los resultados del Dermapen fueron visibles desde la primera sesión.",
@@ -49,7 +49,7 @@
             "treatments": [
                 {
                     "id": "microneedling-facial",
-                    "icon": "fas fa-bullseye",
+                    "icon": "fas fa-droplet",
                     "title": "Microneedling Facial (Dermapen)",
                     "description": "Técnica de inducción de colágeno que mejora la textura de la piel, reduce marcas de acné y suaviza líneas de expresión.",
                     "price": 45,
@@ -91,7 +91,7 @@
                 },
                 {
                     "id": "microneedling-corporal",
-                    "icon": "fas fa-bullseye",
+                    "icon": "fas fa-person",
                     "title": "Microneedling Corporal (Dermapen)",
                     "description": "Tratamiento corporal que estimula el colágeno para reducir estrías, cicatrices y flacidez en abdomen, muslos y glúteos.",
                     "price": 65,
@@ -138,7 +138,7 @@
             "treatments": [
                 {
                     "id": "mesoterapia-capilar",
-                    "icon": "fas fa-hair",
+                    "icon": "fas fa-user",
                     "title": "Mesoterapia capilar",
                     "description": "Tratamiento avanzado para la caída del cabello. Fortalece la fibra capilar, estimula el crecimiento y aumenta el volumen.",
                     "price": 160,
@@ -269,7 +269,7 @@
             "treatments": [
                 {
                     "id": "relleno-labios",
-                    "icon": "fas fa-lips",
+                    "icon": "fas fa-syringe",
                     "title": "Relleno de labios",
                     "description": "Aumenta el volumen, define la forma y corrige asimetrías para unos labios más sensuales y de aspecto natural.",
                     "price": 320,
@@ -311,7 +311,7 @@
                 },
                 {
                     "id": "relleno-menton-mandibula",
-                    "icon": "fas fa-face-relieved",
+                    "icon": "fas fa-face-smile-beam",
                     "title": "Rellenos de mentón y mandíbula",
                     "description": "Define el óvalo facial, mejora la proyección del mentón y armoniza los rasgos para un rostro más equilibrado.",
                     "price": 350,

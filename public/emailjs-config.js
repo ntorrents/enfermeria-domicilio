@@ -6,10 +6,10 @@ const EMAILJS_CONFIG = {
 	PUBLIC_KEY: "AQv4s6RNNOxAXksBi",
 
 	// Tu Service ID (lo obtienes al configurar un servicio de email)
-	SERVICE_ID: "service_ldwy8nm",
+	SERVICE_ID: "service_x4htsjf",
 
 	// Tu Template ID (lo obtienes al crear una plantilla)
-	TEMPLATE_ID: "template_83h4coo",
+	TEMPLATE_ID: "template_fyzv8r7",
 };
 
 // Función para inicializar EmailJS
@@ -20,12 +20,13 @@ function initializeEmailJS() {
 
 // Función para enviar email
 function sendEmail(formData) {
+	// Mapeamos los datos para que coincidan con las variables de la plantilla {{variable}}
 	const templateParams = {
-		name: formData.nombre,
-		email: formData.email || "No proporcionado",
-		phone: formData.telefono,
-		service: formData.servicio,
-		message: formData.mensaje || "Sin mensaje adicional",
+		user_name: formData.user_name || formData.nombre,
+		user_email: formData.user_email || formData.email || "No proporcionado",
+		user_phone: formData.user_phone || formData.telefono,
+		service_interest: formData.service_interest || formData.servicio,
+		message: formData.message || formData.mensaje || "Sin mensaje adicional",
 		time: new Date().toLocaleString("es-ES", {
 			year: "numeric",
 			month: "long",
