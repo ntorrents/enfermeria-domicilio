@@ -153,23 +153,51 @@ class EnfermeriaComponents {
 		`;
     }
 
-    // 4. PACKS (Eliminado)
-    renderPacks() {
-        return '';
-    }
+    // 4. TESTIMONIOS (NUEVO)
+	renderTestimonials() {
+		const { testimonials } = this.config;
+		if (!testimonials) return '';
 
-    // 5. CONTACTO
-    renderContact() {
-        const { siteInfo, services } = this.config;
+		const cardsHTML = testimonials.map(t => `
+			<div class="testimonial-card">
+				<div class="testimonial-stars">
+					${'<i class="fas fa-star"></i>'.repeat(t.rating)}
+				</div>
+				<p class="testimonial-text">"${t.text}"</p>
+				<div class="testimonial-author">
+					<div class="author-avatar">${t.name.charAt(0)}</div>
+					<span>${t.name}</span>
+				</div>
+			</div>
+		`).join('');
 
-        const serviceOptions = services.map(category => {
-            const options = category.treatments
-                .map(t => `<option value="${t.id}">${t.title}</option>`)
-                .join('');
-            return `<optgroup label="${category.category}">${options}</optgroup>`;
-        }).join('');
+		return `
+			<section id="testimonios" class="testimonials-section">
+				<div class="container">
+					<div class="section-title">
+						<span>Lo que dicen mis pacientes</span>
+						<h2>Testimonios</h2>
+					</div>
+					<div class="testimonials-grid">
+						${cardsHTML}
+					</div>
+				</div>
+			</section>
+		`;
+	}
 
-        return `
+    // 5. CONTACTO (Actualizado con Mapa y Legal)
+	renderContact() {
+		const { siteInfo, services } = this.config;
+
+		const serviceOptions = services.map(category => {
+			const options = category.treatments
+				.map(t => `<option value="${t.id}">${t.title}</option>`)
+				.join('');
+			return `<optgroup label="${category.category}">${options}</optgroup>`;
+		}).join('');
+
+		return `
             <section id="contacto">
                 <div class="container">
                     <div class="section-title">
@@ -178,40 +206,32 @@ class EnfermeriaComponents {
                     </div>
                     
                     <div class="contact-container">
-                        <!-- Lado Izquierdo: Info -->
                         <div class="contact-info">
                             <div class="contact-info-header">
-                                <img src="img/christinephoto1.jpeg" alt="Christine Cano" class="contact-photo">
                                 <h3>¿Hablamos?</h3>
-                                <p class="contact-info-description">Reserva tu cita para una valoración personalizada en mi consulta de Terrassa.</p>
+                                <p class="contact-info-description">Reserva tu cita para una valoración personalizada.</p>
                             </div>
                             
                             <div class="contact-details-list">
                                 <div class="contact-detail">
                                     <i class="fas fa-map-marker-alt"></i>
-                                    <div>
-                                        <div class="contact-detail-label">Dirección</div>
-                                        <strong>${siteInfo.coverage}</strong>
-                                    </div>
+                                    <div><strong>${siteInfo.coverage}</strong></div>
                                 </div>
                                 <div class="contact-detail">
                                     <i class="fas fa-phone-alt"></i>
-                                    <div>
-                                        <div class="contact-detail-label">Teléfono</div>
-                                        <strong>${siteInfo.phone}</strong>
-                                    </div>
+                                    <div><strong>${siteInfo.phone}</strong></div>
                                 </div>
                                 <div class="contact-detail">
                                     <i class="fas fa-envelope"></i>
-                                    <div>
-                                        <div class="contact-detail-label">Email</div>
-                                        <strong>${siteInfo.email}</strong>
-                                    </div>
+                                    <div><strong>${siteInfo.email}</strong></div>
                                 </div>
+                            </div>
+
+                            <div class="contact-map">
+                                <iframe src="${siteInfo.mapUrl}" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                             </div>
                         </div>
                         
-                        <!-- Lado Derecho: Formulario -->
                         <div class="contact-form-wrapper">
                             <form class="contact-form">
                                 <div class="form-group">
@@ -237,6 +257,13 @@ class EnfermeriaComponents {
                                     <label>Mensaje (Opcional)</label>
                                     <textarea class="form-control" rows="3"></textarea>
                                 </div>
+
+                                <div class="form-group form-checkbox">
+                                    <label>
+                                        <input type="checkbox" required>
+                                        He leído y acepto la <a href="privacidad.html" target="_blank">Política de Privacidad</a>
+                                    </label>
+                                </div>
                                 
                                 <button type="submit" class="btn btn-primary contact-form-submit">
                                     Solicitar Cita
@@ -247,12 +274,12 @@ class EnfermeriaComponents {
                 </div>
             </section>
         `;
-    }
+	}
 
-    // 6. FOOTER
-    renderFooter() {
-        const { siteInfo, footer } = this.config;
-        return `
+    // 6. FOOTER (Con enlaces legales)
+	renderFooter() {
+		const { siteInfo, footer } = this.config;
+		return `
             <footer class="footer">
                 <div class="container">
                     <div class="footer-content">
@@ -260,13 +287,17 @@ class EnfermeriaComponents {
                         <h3>${siteInfo.brandName}</h3>
                         <p class="footer-description">${footer.description}</p>
                     </div>
+                    <div class="footer-links-legal">
+                        <a href="legal.html">Aviso Legal</a> | 
+                        <a href="privacidad.html">Política de Privacidad</a>
+                    </div>
                     <div class="footer-bottom">
                         <p>${footer.copyright}</p>
                     </div>
                 </div>
             </footer>
         `;
-    }
+	}
 
     // RENDER MASTER
     renderPage() {
@@ -282,6 +313,7 @@ class EnfermeriaComponents {
             ${this.renderHero()}
             ${this.renderAboutMe()}
             ${this.renderServices()}
+            ${this.renderTestimonials()}
             ${this.renderContact()}
         `;
 

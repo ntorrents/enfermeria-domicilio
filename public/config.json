@@ -5,7 +5,8 @@
         "phone": "+34 658 491 612",
         "email": "contacto@c3linic.com",
         "schedule": "Cita Previa: Lunes a Viernes",
-        "coverage": "Terrassa, Barcelona"
+        "coverage": "Terrassa, Barcelona",
+        "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2985.879796839356!2d2.0089!3d41.5632!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a492f4c3a3a3a3%3A0x123456789!2sCarrer+de+l'Exemple%2C+123%2C+Terrassa!5e0!3m2!1ses!2ses!4v1600000000000!5m2!1ses!2ses"
     },
     "hero": {
         "title": "Realza tu Belleza Natural",
@@ -25,6 +26,23 @@
         "clinicAddress": "Carrer de l'Exemple, 123, 08221 Terrassa, Barcelona",
         "clinicNote": "Consulta privada equipada con la última tecnología para tu confort y seguridad."
     },
+    "testimonials": [
+        {
+            "name": "Marta G.",
+            "text": "Christine es una profesional excelente. Me hizo sentir muy cómoda y los resultados del Dermapen fueron visibles desde la primera sesión.",
+            "rating": 5
+        },
+        {
+            "name": "Jordi P.",
+            "text": "Trato cercano y muy profesional. Se nota mucho su experiencia como enfermera, lo que da mucha seguridad.",
+            "rating": 5
+        },
+        {
+            "name": "Laura M.",
+            "text": "Me encantó la rutina personalizada que me diseñó. Por fin entiendo qué necesita mi piel y he dejado de gastar en productos que no me servían.",
+            "rating": 5
+        }
+    ],
     "services": [
         {
             "category": "Microneedling",
