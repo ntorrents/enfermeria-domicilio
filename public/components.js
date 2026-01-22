@@ -1,13 +1,13 @@
 // Sistema de Componentes Moderno y Renovado (Versión Dermoestética)
 class EnfermeriaComponents {
-	constructor(config) {
-		this.config = config;
-	}
+    constructor(config) {
+        this.config = config;
+    }
 
-	// 1. HERO MODERNO
-	renderHero() {
-		const { hero } = this.config;
-		return `
+    // 1. HERO MODERNO
+    renderHero() {
+        const { hero } = this.config;
+        return `
             <section id="inicio" class="hero">
                 <div class="container hero-content">
                     <div class="hero-text">
@@ -33,16 +33,16 @@ class EnfermeriaComponents {
                 </div>
             </section>
         `;
-	}
+    }
 
-	// 2. SOBRE MÍ
-	renderAboutMe() {
-		const { aboutMe } = this.config;
-		const educationHTML = aboutMe.education
-			.map(edu => `<li><i class="fas fa-check-circle"></i> ${edu}</li>`)
-			.join("");
-	
-		return `
+    // 2. SOBRE MÍ
+    renderAboutMe() {
+        const { aboutMe } = this.config;
+        const educationHTML = aboutMe.education
+            .map(edu => `<li><i class="fas fa-check-circle"></i> ${edu}</li>`)
+            .join("");
+
+        return `
 			<section id="sobre-mi" class="about-section">
 				<div class="container">
 					<div class="section-title">
@@ -91,79 +91,85 @@ class EnfermeriaComponents {
 				</div>
 			</section>
 		`;
-	}
+    }
 
-    // 3. SERVICIOS 
+    // 3. SERVICIOS (Nuevo Diseño: Tarjetas Elegantes)
     renderServices() {
         const { services } = this.config;
-        const accordionHTML = services.map((category, index) => {
-            const treatmentsHTML = category.treatments.map(treatment => `
-                <div class="treatment-item">
-                    <div class="treatment-icon"><i class="${treatment.icon}"></i></div>
-                    <div class="treatment-content">
-                        <h4>${treatment.title} <span class="treatment-duration">(${treatment.duration})</span></h4>
-                        <p>${treatment.description}</p>
-                    </div>
-                    <div class="treatment-action">
-                        <div class="treatment-price">${treatment.price}€</div>
-                        <button class="btn btn-primary btn-small" onclick="selectService('''${treatment.id}''')">
-                            Me Interesa
-                        </button>
-                        <a href="treatment-detail.html?id=${treatment.id}" class="btn btn-secondary btn-small">
-                            Más Info
-                        </a>
-                    </div>
-                </div>
-            `).join('');
 
+        const catalogHTML = services.map(category => {
+            // Generamos las tarjetas para cada tratamiento dentro de la categoría
+            const cardsHTML = category.treatments.map(treatment => `
+				<article class="service-card">
+					<div class="card-header">
+						<div class="service-icon-box">
+							<i class="${treatment.icon}"></i>
+						</div>
+						<span class="service-price-tag">${treatment.price}€</span>
+					</div>
+					
+					<div class="card-body">
+						<h4>${treatment.title}</h4>
+						<p>${treatment.description}</p>
+						
+						<div class="card-meta">
+							<span><i class="far fa-clock"></i> ${treatment.duration}</span>
+						</div>
+					</div>
+					
+					<div class="card-footer">
+						<a href="treatment-detail.html?id=${treatment.id}" class="btn btn-card">
+							Ver Detalles <i class="fas fa-arrow-right"></i>
+						</a>
+					</div>
+				</article>
+			`).join('');
+
+            // Devolvemos el bloque de la categoría completa
             return `
-                <div class="accordion-item">
-                    <button class="accordion-header" aria-expanded="${index === 0 ? 'true' : 'false'}">
-                        ${category.category}
-                        <i class="fas fa-chevron-down accordion-icon"></i>
-                    </button>
-                    <div class="accordion-content">
-                        <div class="treatments-list">
-                            ${treatmentsHTML}
-                        </div>
-                    </div>
-                </div>
-            `;
+				<div class="service-category-group">
+					<h3 class="category-title">${category.category}</h3>
+					<div class="services-grid">
+						${cardsHTML}
+					</div>
+				</div>
+			`;
         }).join('');
 
         return `
-            <section id="servicios" class="services-section">
-                <div class="container">
-                    <div class="section-title">
-                        <span>Catálogo</span>
-                        <h2>Nuestros Servicios</h2>
-                        <p>Descubre nuestras especialidades para realzar tu belleza de forma segura y profesional.</p>
-                    </div>
-                    <div class="accordion-container">
-                        ${accordionHTML}
-                    </div>
-                </div>
-            </section>
-        `;
+			<section id="servicios" class="services-section-cards">
+				<div class="container">
+					<div class="section-title">
+						<span>Nuestras Especialidades</span>
+						<h2>Catálogo de Tratamientos</h2>
+						<p>Soluciones personalizadas para tu bienestar y belleza.</p>
+					</div>
+					
+					<div class="catalog-wrapper">
+						${catalogHTML}
+					</div>
+				</div>
+			</section>
+		`;
     }
 
-	// 4. PACKS (Eliminado)
-	renderPacks() {
-		return '';
-	}
+    // 4. PACKS (Eliminado)
+    renderPacks() {
+        return '';
+    }
 
-	// 5. CONTACTO
-	renderContact() {
-		const { siteInfo, services } = this.config;
+    // 5. CONTACTO
+    renderContact() {
+        const { siteInfo, services } = this.config;
 
-		const serviceOptions = services.map(category => {
-			const options = category.treatments
-				.map(t => `<option value="${t.id}">${t.title}</option>`)
-				.join('');
-			return `<optgroup label="${category.category}">${options}</optgroup>`;
-		}).join('');
+        const serviceOptions = services.map(category => {
+            const options = category.treatments
+                .map(t => `<option value="${t.id}">${t.title}</option>`)
+                .join('');
+            return `<optgroup label="${category.category}">${options}</optgroup>`;
+        }).join('');
 
-		return `
+        return `
             <section id="contacto">
                 <div class="container">
                     <div class="section-title">
@@ -241,12 +247,12 @@ class EnfermeriaComponents {
                 </div>
             </section>
         `;
-	}
+    }
 
-	// 6. FOOTER
-	renderFooter() {
-		const { siteInfo, footer } = this.config;
-		return `
+    // 6. FOOTER
+    renderFooter() {
+        const { siteInfo, footer } = this.config;
+        return `
             <footer class="footer">
                 <div class="container">
                     <div class="footer-content">
@@ -260,49 +266,49 @@ class EnfermeriaComponents {
                 </div>
             </footer>
         `;
-	}
+    }
 
-	// RENDER MASTER
-	renderPage() {
-		const main = document.querySelector("main");
-		let contentContainer = document.getElementById("app-content");
-		if (!contentContainer) {
-			contentContainer = document.createElement("div");
-			contentContainer.id = "app-content";
-			main.appendChild(contentContainer);
-		}
+    // RENDER MASTER
+    renderPage() {
+        const main = document.querySelector("main");
+        let contentContainer = document.getElementById("app-content");
+        if (!contentContainer) {
+            contentContainer = document.createElement("div");
+            contentContainer.id = "app-content";
+            main.appendChild(contentContainer);
+        }
 
-		contentContainer.innerHTML = `
+        contentContainer.innerHTML = `
             ${this.renderHero()}
             ${this.renderAboutMe()}
             ${this.renderServices()}
             ${this.renderContact()}
         `;
 
-		const footer = document.querySelector("footer");
-		if (footer) footer.outerHTML = this.renderFooter();
+        const footer = document.querySelector("footer");
+        if (footer) footer.outerHTML = this.renderFooter();
 
-		document.title = this.config.siteInfo.title;
-		const brandSpan = document.querySelector(".nav-brand span");
-		if (brandSpan) brandSpan.textContent = this.config.siteInfo.brandName;
+        document.title = this.config.siteInfo.title;
+        const brandSpan = document.querySelector(".nav-brand span");
+        if (brandSpan) brandSpan.textContent = this.config.siteInfo.brandName;
 
-		const loader = document.querySelector(".loading-screen");
-		if (loader) loader.style.display = "none";
-	}
+        const loader = document.querySelector(".loading-screen");
+        if (loader) loader.style.display = "none";
+    }
 }
 
 async function loadAndRenderPage() {
-	try {
-		const response = await fetch("./config.json");
-		const config = await response.json();
-		const app = new EnfermeriaComponents(config);
-		app.renderPage();
-		setTimeout(() => {
-			if (typeof initializeAllFeatures === "function") initializeAllFeatures();
-		}, 100);
-	} catch (error) {
-		console.error("Error:", error);
-	}
+    try {
+        const response = await fetch("./config.json");
+        const config = await response.json();
+        const app = new EnfermeriaComponents(config);
+        app.renderPage();
+        setTimeout(() => {
+            if (typeof initializeAllFeatures === "function") initializeAllFeatures();
+        }, 100);
+    } catch (error) {
+        console.error("Error:", error);
+    }
 }
 window.EnfermeriaComponents = EnfermeriaComponents;
 window.loadAndRenderPage = loadAndRenderPage;

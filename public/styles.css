@@ -1128,3 +1128,163 @@ section {
 	justify-content: center;
 	z-index: 9999;
 }
+
+
+
+/* --- NUEVO DISEÑO SERVICIOS (TARJETAS) --- */
+
+.services-section-cards {
+    background-color: var(--secondary); /* Fondo beige suave */
+    padding-bottom: 6rem;
+}
+
+.catalog-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem; /* Separación entre categorías */
+}
+
+.service-category-group {
+    width: 100%;
+}
+
+.category-title {
+    font-family: "Playfair Display", serif;
+    font-size: 2rem;
+    color: var(--primary);
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(116, 84, 63, 0.1); /* Línea sutil separadora */
+    text-align: left;
+}
+
+/* La Cuadrícula (Grid) */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+/* La Tarjeta Individual */
+.service-card {
+    background-color: white;
+    border-radius: var(--radius-md);
+    padding: 2rem;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Para que todas tengan la misma altura */
+    border: 1px solid transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+    border-color: rgba(205, 126, 98, 0.3); /* Un toque de acento al pasar el mouse */
+}
+
+/* Cabecera de la tarjeta */
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+}
+
+.service-icon-box {
+    width: 50px;
+    height: 50px;
+    background-color: var(--secondary);
+    color: var(--primary);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+}
+
+.service-price-tag {
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    color: var(--accent);
+    background-color: rgba(205, 126, 98, 0.1);
+    padding: 0.4rem 0.8rem;
+    border-radius: var(--radius-full);
+    font-size: 0.95rem;
+}
+
+/* Cuerpo de la tarjeta */
+.card-body {
+    flex-grow: 1; /* Empuja el footer hacia abajo */
+}
+
+.card-body h4 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+    color: var(--text-main);
+}
+
+.card-body p {
+    font-size: 0.95rem;
+    color: var(--text-light);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    
+    /* Truco para limitar el texto a 3 líneas si es muy largo */
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.card-meta {
+    display: flex;
+    gap: 1rem;
+    font-size: 0.9rem;
+    color: var(--primary);
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+}
+
+.card-meta i {
+    margin-right: 5px;
+    color: var(--accent);
+}
+
+/* Pie de la tarjeta */
+.card-footer {
+    border-top: 1px solid var(--secondary);
+    padding-top: 1.5rem;
+    text-align: center;
+}
+
+.btn-card {
+    color: var(--primary);
+    font-weight: 600;
+    font-size: 0.95rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: gap 0.3s;
+}
+
+.btn-card:hover {
+    color: var(--accent);
+    gap: 0.8rem; /* Efecto flecha que se mueve */
+}
+
+/* Ajuste Responsive */
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr; /* Una sola columna en móvil */
+        gap: 1.5rem;
+    }
+    
+    .category-title {
+        font-size: 1.75rem;
+        text-align: center;
+    }
+}
