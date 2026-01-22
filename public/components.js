@@ -1,13 +1,13 @@
 // Sistema de Componentes Moderno y Renovado (Versión Dermoestética)
 class EnfermeriaComponents {
-	constructor(config) {
-		this.config = config;
-	}
+    constructor(config) {
+        this.config = config;
+    }
 
-	// 1. HERO MODERNO
-	renderHero() {
-		const { hero } = this.config;
-		return `
+    // 1. HERO MODERNO
+    renderHero() {
+        const { hero } = this.config;
+        return `
             <section id="inicio" class="hero">
                 <div class="container hero-content">
                     <div class="hero-text">
@@ -33,16 +33,16 @@ class EnfermeriaComponents {
                 </div>
             </section>
         `;
-	}
+    }
 
-	// 2. SOBRE MÍ
-	renderAboutMe() {
-		const { aboutMe } = this.config;
-		const educationHTML = aboutMe.education
-			.map(edu => `<li><i class="fas fa-check-circle"></i> ${edu}</li>`)
-			.join("");
-	
-		return `
+    // 2. SOBRE MÍ
+    renderAboutMe() {
+        const { aboutMe } = this.config;
+        const educationHTML = aboutMe.education
+            .map(edu => `<li><i class="fas fa-check-circle"></i> ${edu}</li>`)
+            .join("");
+
+        return `
 			<section id="sobre-mi" class="about-section">
 				<div class="container">
 					<div class="section-title">
@@ -91,68 +91,102 @@ class EnfermeriaComponents {
 				</div>
 			</section>
 		`;
-	}
+    }
 
-    // 3. SERVICIOS 
+    // 3. SERVICIOS (Nuevo Diseño: Tarjetas Elegantes)
     renderServices() {
         const { services } = this.config;
-        const accordionHTML = services.map((category, index) => {
-            const treatmentsHTML = category.treatments.map(treatment => `
-                <div class="treatment-item">
-                    <div class="treatment-icon"><i class="${treatment.icon}"></i></div>
-                    <div class="treatment-content">
-                        <h4>${treatment.title} <span class="treatment-duration">(${treatment.duration})</span></h4>
-                        <p>${treatment.description}</p>
-                    </div>
-                    <div class="treatment-action">
-                        <div class="treatment-price">${treatment.price}€</div>
-                        <button class="btn btn-primary btn-small" onclick="selectService('''${treatment.id}''')">
-                            Me Interesa
-                        </button>
-                        <a href="treatment-detail.html?id=${treatment.id}" class="btn btn-secondary btn-small">
-                            Más Info
-                        </a>
-                    </div>
-                </div>
-            `).join('');
 
+        const catalogHTML = services.map(category => {
+            // Generamos las tarjetas para cada tratamiento dentro de la categoría
+            const cardsHTML = category.treatments.map(treatment => `
+				<article class="service-card">
+					<div class="card-header">
+						<div class="service-icon-box">
+							<i class="${treatment.icon}"></i>
+						</div>
+						<span class="service-price-tag">${treatment.price}€</span>
+					</div>
+					
+					<div class="card-body">
+						<h4>${treatment.title}</h4>
+						<p>${treatment.description}</p>
+						
+						<div class="card-meta">
+							<span><i class="far fa-clock"></i> ${treatment.duration}</span>
+						</div>
+					</div>
+					
+					<div class="card-footer">
+						<a href="treatment-detail.html?id=${treatment.id}" class="btn btn-card">
+							Ver Detalles <i class="fas fa-arrow-right"></i>
+						</a>
+					</div>
+				</article>
+			`).join('');
+
+            // Devolvemos el bloque de la categoría completa
             return `
-                <div class="accordion-item">
-                    <button class="accordion-header" aria-expanded="${index === 0 ? 'true' : 'false'}">
-                        ${category.category}
-                        <i class="fas fa-chevron-down accordion-icon"></i>
-                    </button>
-                    <div class="accordion-content">
-                        <div class="treatments-list">
-                            ${treatmentsHTML}
-                        </div>
-                    </div>
-                </div>
-            `;
+				<div class="service-category-group">
+					<h3 class="category-title">${category.category}</h3>
+					<div class="services-grid">
+						${cardsHTML}
+					</div>
+				</div>
+			`;
         }).join('');
 
         return `
-            <section id="servicios" class="services-section">
-                <div class="container">
-                    <div class="section-title">
-                        <span>Catálogo</span>
-                        <h2>Nuestros Servicios</h2>
-                        <p>Descubre nuestras especialidades para realzar tu belleza de forma segura y profesional.</p>
-                    </div>
-                    <div class="accordion-container">
-                        ${accordionHTML}
-                    </div>
-                </div>
-            </section>
-        `;
+			<section id="servicios" class="services-section-cards">
+				<div class="container">
+					<div class="section-title">
+						<span>Nuestras Especialidades</span>
+						<h2>Catálogo de Tratamientos</h2>
+						<p>Soluciones personalizadas para tu bienestar y belleza.</p>
+					</div>
+					
+					<div class="catalog-wrapper">
+						${catalogHTML}
+					</div>
+				</div>
+			</section>
+		`;
     }
 
-	// 4. PACKS (Eliminado)
-	renderPacks() {
-		return '';
+    // 4. TESTIMONIOS (NUEVO)
+	renderTestimonials() {
+		const { testimonials } = this.config;
+		if (!testimonials) return '';
+
+		const cardsHTML = testimonials.map(t => `
+			<div class="testimonial-card">
+				<div class="testimonial-stars">
+					${'<i class="fas fa-star"></i>'.repeat(t.rating)}
+				</div>
+				<p class="testimonial-text">"${t.text}"</p>
+				<div class="testimonial-author">
+					<div class="author-avatar">${t.name.charAt(0)}</div>
+					<span>${t.name}</span>
+				</div>
+			</div>
+		`).join('');
+
+		return `
+			<section id="testimonios" class="testimonials-section">
+				<div class="container">
+					<div class="section-title">
+						<span>Lo que dicen mis pacientes</span>
+						<h2>Testimonios</h2>
+					</div>
+					<div class="testimonials-grid">
+						${cardsHTML}
+					</div>
+				</div>
+			</section>
+		`;
 	}
 
-	// 5. CONTACTO
+    // 5. CONTACTO (Actualizado con Mapa y Legal)
 	renderContact() {
 		const { siteInfo, services } = this.config;
 
@@ -172,40 +206,32 @@ class EnfermeriaComponents {
                     </div>
                     
                     <div class="contact-container">
-                        <!-- Lado Izquierdo: Info -->
                         <div class="contact-info">
                             <div class="contact-info-header">
-                                <img src="img/christinephoto1.jpeg" alt="Christine Cano" class="contact-photo">
                                 <h3>¿Hablamos?</h3>
-                                <p class="contact-info-description">Reserva tu cita para una valoración personalizada en mi consulta de Terrassa.</p>
+                                <p class="contact-info-description">Reserva tu cita para una valoración personalizada.</p>
                             </div>
                             
                             <div class="contact-details-list">
                                 <div class="contact-detail">
                                     <i class="fas fa-map-marker-alt"></i>
-                                    <div>
-                                        <div class="contact-detail-label">Dirección</div>
-                                        <strong>${siteInfo.coverage}</strong>
-                                    </div>
+                                    <div><strong>${siteInfo.coverage}</strong></div>
                                 </div>
                                 <div class="contact-detail">
                                     <i class="fas fa-phone-alt"></i>
-                                    <div>
-                                        <div class="contact-detail-label">Teléfono</div>
-                                        <strong>${siteInfo.phone}</strong>
-                                    </div>
+                                    <div><strong>${siteInfo.phone}</strong></div>
                                 </div>
                                 <div class="contact-detail">
                                     <i class="fas fa-envelope"></i>
-                                    <div>
-                                        <div class="contact-detail-label">Email</div>
-                                        <strong>${siteInfo.email}</strong>
-                                    </div>
+                                    <div><strong>${siteInfo.email}</strong></div>
                                 </div>
+                            </div>
+
+                            <div class="contact-map">
+                                <iframe src="${siteInfo.mapUrl}" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                             </div>
                         </div>
                         
-                        <!-- Lado Derecho: Formulario -->
                         <div class="contact-form-wrapper">
                             <form class="contact-form">
                                 <div class="form-group">
@@ -231,6 +257,13 @@ class EnfermeriaComponents {
                                     <label>Mensaje (Opcional)</label>
                                     <textarea class="form-control" rows="3"></textarea>
                                 </div>
+
+                                <div class="form-group form-checkbox">
+                                    <label>
+                                        <input type="checkbox" required>
+                                        He leído y acepto la <a href="privacidad.html" target="_blank">Política de Privacidad</a>
+                                    </label>
+                                </div>
                                 
                                 <button type="submit" class="btn btn-primary contact-form-submit">
                                     Solicitar Cita
@@ -243,7 +276,7 @@ class EnfermeriaComponents {
         `;
 	}
 
-	// 6. FOOTER
+    // 6. FOOTER (Con enlaces legales)
 	renderFooter() {
 		const { siteInfo, footer } = this.config;
 		return `
@@ -254,6 +287,10 @@ class EnfermeriaComponents {
                         <h3>${siteInfo.brandName}</h3>
                         <p class="footer-description">${footer.description}</p>
                     </div>
+                    <div class="footer-links-legal">
+                        <a href="legal.html">Aviso Legal</a> | 
+                        <a href="privacidad.html">Política de Privacidad</a>
+                    </div>
                     <div class="footer-bottom">
                         <p>${footer.copyright}</p>
                     </div>
@@ -262,47 +299,48 @@ class EnfermeriaComponents {
         `;
 	}
 
-	// RENDER MASTER
-	renderPage() {
-		const main = document.querySelector("main");
-		let contentContainer = document.getElementById("app-content");
-		if (!contentContainer) {
-			contentContainer = document.createElement("div");
-			contentContainer.id = "app-content";
-			main.appendChild(contentContainer);
-		}
+    // RENDER MASTER
+    renderPage() {
+        const main = document.querySelector("main");
+        let contentContainer = document.getElementById("app-content");
+        if (!contentContainer) {
+            contentContainer = document.createElement("div");
+            contentContainer.id = "app-content";
+            main.appendChild(contentContainer);
+        }
 
-		contentContainer.innerHTML = `
+        contentContainer.innerHTML = `
             ${this.renderHero()}
             ${this.renderAboutMe()}
             ${this.renderServices()}
+            ${this.renderTestimonials()}
             ${this.renderContact()}
         `;
 
-		const footer = document.querySelector("footer");
-		if (footer) footer.outerHTML = this.renderFooter();
+        const footer = document.querySelector("footer");
+        if (footer) footer.outerHTML = this.renderFooter();
 
-		document.title = this.config.siteInfo.title;
-		const brandSpan = document.querySelector(".nav-brand span");
-		if (brandSpan) brandSpan.textContent = this.config.siteInfo.brandName;
+        document.title = this.config.siteInfo.title;
+        const brandSpan = document.querySelector(".nav-brand span");
+        if (brandSpan) brandSpan.textContent = this.config.siteInfo.brandName;
 
-		const loader = document.querySelector(".loading-screen");
-		if (loader) loader.style.display = "none";
-	}
+        const loader = document.querySelector(".loading-screen");
+        if (loader) loader.style.display = "none";
+    }
 }
 
 async function loadAndRenderPage() {
-	try {
-		const response = await fetch("./config.json");
-		const config = await response.json();
-		const app = new EnfermeriaComponents(config);
-		app.renderPage();
-		setTimeout(() => {
-			if (typeof initializeAllFeatures === "function") initializeAllFeatures();
-		}, 100);
-	} catch (error) {
-		console.error("Error:", error);
-	}
+    try {
+        const response = await fetch("./config.json");
+        const config = await response.json();
+        const app = new EnfermeriaComponents(config);
+        app.renderPage();
+        setTimeout(() => {
+            if (typeof initializeAllFeatures === "function") initializeAllFeatures();
+        }, 100);
+    } catch (error) {
+        console.error("Error:", error);
+    }
 }
 window.EnfermeriaComponents = EnfermeriaComponents;
 window.loadAndRenderPage = loadAndRenderPage;

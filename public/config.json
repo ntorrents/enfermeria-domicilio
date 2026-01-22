@@ -1,11 +1,12 @@
 {
     "siteInfo": {
-        "title": "Christine Cano - Dermoestética Avanzada",
+        "title": "C3linic - Dermoestética Avanzada",
         "brandName": "C3LINIC",
         "phone": "+34 658 491 612",
-        "email": "info@christinecano.com",
+        "email": "contacto@c3linic.com",
         "schedule": "Cita Previa: Lunes a Viernes",
-        "coverage": "Terrassa, Barcelona"
+        "coverage": "Terrassa, Barcelona",
+        "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2985.879796839356!2d2.0089!3d41.5632!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a492f4c3a3a3a3%3A0x123456789!2sCarrer+de+l'Exemple%2C+123%2C+Terrassa!5e0!3m2!1ses!2ses!4v1600000000000!5m2!1ses!2ses"
     },
     "hero": {
         "title": "Realza tu Belleza Natural",
@@ -25,6 +26,23 @@
         "clinicAddress": "Carrer de l'Exemple, 123, 08221 Terrassa, Barcelona",
         "clinicNote": "Consulta privada equipada con la última tecnología para tu confort y seguridad."
     },
+    "testimonials": [
+        {
+            "name": "Marta G.",
+            "text": "Christine es una profesional excelente. Me hizo sentir muy cómoda y los resultados del Dermapen fueron visibles desde la primera sesión.",
+            "rating": 5
+        },
+        {
+            "name": "Jordi P.",
+            "text": "Trato cercano y muy profesional. Se nota mucho su experiencia como enfermera, lo que da mucha seguridad.",
+            "rating": 5
+        },
+        {
+            "name": "Laura M.",
+            "text": "Me encantó la rutina personalizada que me diseñó. Por fin entiendo qué necesita mi piel y he dejado de gastar en productos que no me servían.",
+            "rating": 5
+        }
+    ],
     "services": [
         {
             "category": "Microneedling",
@@ -34,8 +52,8 @@
                     "icon": "fas fa-bullseye",
                     "title": "Microneedling Facial (Dermapen)",
                     "description": "Técnica de inducción de colágeno que mejora la textura de la piel, reduce marcas de acné y suaviza líneas de expresión.",
-                    "price": 95,
-                    "duration": "60 min",
+                    "price": 45,
+                    "duration": "45 min",
                     "detail": {
                         "image": "https://via.placeholder.com/800x400.png/F7F5F0/74543F?text=Microneedling+Facial",
                         "description": "El Microneedling facial, conocido como Dermapen, es un tratamiento revolucionario que rejuvenece la piel desde dentro. Mediante un dispositivo de microagujas, se crean miles de microcanales en la epidermis de forma controlada. Esta acción activa la respuesta natural del cuerpo para repararse, estimulando la producción de colágeno y elastina. Es el tratamiento ideal para quienes buscan una piel visiblemente más joven, firme y uniforme, abordando problemas como arrugas finas, cicatrices de acné, poros dilatados y falta de luminosidad.",
@@ -47,18 +65,16 @@
                             },
                             {
                                 "icon": "fas fa-euro-sign",
-                                "title": "Precio",
-                                "text": "95€ por sesión."
+                                "title": "Precio"
                             },
                             {
                                 "icon": "far fa-clock",
-                                "title": "Duración",
-                                "text": "Aprox. 60 minutos."
+                                "title": "Duración"
                             },
                             {
                                 "icon": "fas fa-calendar-alt",
                                 "title": "Sesiones",
-                                "text": "Ciclo de 3 a 6 sesiones, cada 4-6 semanas."
+                                "text": "Idealmente una vez al mes."
                             },
                             {
                                 "icon": "fas fa-eye",
@@ -78,7 +94,7 @@
                     "icon": "fas fa-bullseye",
                     "title": "Microneedling Corporal (Dermapen)",
                     "description": "Tratamiento corporal que estimula el colágeno para reducir estrías, cicatrices y flacidez en abdomen, muslos y glúteos.",
-                    "price": 130,
+                    "price": 65,
                     "duration": "75 min",
                     "detail": {
                         "image": "https://via.placeholder.com/800x400.png/F7F5F0/74543F?text=Microneedling+Corporal",
@@ -91,13 +107,11 @@
                             },
                             {
                                 "icon": "fas fa-euro-sign",
-                                "title": "Precio",
-                                "text": "130€ por sesión."
+                                "title": "Precio"
                             },
                             {
                                 "icon": "far fa-clock",
-                                "title": "Duración",
-                                "text": "Entre 60 y 90 minutos."
+                                "title": "Duración"
                             },
                             {
                                 "icon": "fas fa-calendar-alt",
@@ -140,13 +154,11 @@
                             },
                             {
                                 "icon": "fas fa-euro-sign",
-                                "title": "Precio",
-                                "text": "160€ por sesión."
+                                "title": "Precio"
                             },
                             {
                                 "icon": "far fa-clock",
-                                "title": "Duración",
-                                "text": "Aprox. 30 minutos."
+                                "title": "Duración"
                             },
                             {
                                 "icon": "fas fa-calendar-alt",
@@ -184,13 +196,11 @@
                             },
                             {
                                 "icon": "fas fa-euro-sign",
-                                "title": "Precio",
-                                "text": "140€ por sesión."
+                                "title": "Precio"
                             },
                             {
                                 "icon": "far fa-clock",
-                                "title": "Duración",
-                                "text": "Unos 45 minutos."
+                                "title": "Duración"
                             },
                             {
                                 "icon": "fas fa-calendar-alt",
@@ -228,13 +238,11 @@
                             },
                             {
                                 "icon": "fas fa-euro-sign",
-                                "title": "Precio",
-                                "text": "100€ por sesión."
+                                "title": "Precio"
                             },
                             {
                                 "icon": "far fa-clock",
-                                "title": "Duración",
-                                "text": "Entre 30 y 45 minutos por zona."
+                                "title": "Duración"
                             },
                             {
                                 "icon": "fas fa-calendar-alt",
@@ -277,13 +285,11 @@
                             },
                             {
                                 "icon": "fas fa-euro-sign",
-                                "title": "Precio",
-                                "text": "Desde 320€."
+                                "title": "Precio"
                             },
                             {
                                 "icon": "far fa-clock",
-                                "title": "Duración",
-                                "text": "Aprox. 30-45 minutos."
+                                "title": "Duración"
                             },
                             {
                                 "icon": "fas fa-calendar-alt",
@@ -321,13 +327,11 @@
                             },
                             {
                                 "icon": "fas fa-euro-sign",
-                                "title": "Precio",
-                                "text": "Desde 350€ por vial."
+                                "title": "Precio"
                             },
                             {
                                 "icon": "far fa-clock",
-                                "title": "Duración",
-                                "text": "Aprox. 60 minutos."
+                                "title": "Duración"
                             },
                             {
                                 "icon": "fas fa-calendar-alt",
@@ -355,33 +359,31 @@
                 {
                     "id": "bioestimulacion-exosomas",
                     "icon": "fas fa-atom",
-                    "title": "Bioestimulación con Exosomas vegetales",
-                    "description": "Revolucionaria técnica regenerativa que mejora manchas, tono, hidratación y firmeza, reprogramando las células de la piel.",
-                    "price": 300,
-                    "duration": "60 min",
+                    "title": "Bioestimulador con Ácido Hialurónico y Aminoácidos",
+                    "description": "Estimula y renueva la piel con la fuerza del ácido hialurónico. Solución estimulante regenerativa a base de ácido hialurónico.",
+                    "price": 120,
+                    "duration": "30 min",
                     "detail": {
                         "image": "https://via.placeholder.com/800x400.png/F7F5F0/74543F?text=Bioestimulacion+con+Exosomas",
-                        "description": "La bioestimulación con exosomas es el tratamiento regenerativo más avanzado. Estas nanopartículas actúan como mensajeros celulares, instruyendo a las células de la piel para que se reparen y regeneren. Se aplican mediante microneedling para una penetración profunda, logrando una mejora global en la calidad de la piel: desde manchas y arrugas hasta la firmeza y la luminosidad.",
+                        "description": "Bioestimulador de colágeno y elastina, ademas de tener efectos reparadores, hidratantes y antioxidantes para la piel.",
                         "details": [
                             {
                                 "icon": "fas fa-star",
                                 "title": "Beneficios Clave",
-                                "text": "Regeneración profunda, reduce inflamación, mejora manchas y potencia firmeza."
+                                "text": "Piel revitalizada, hidratada y con más firmeza"
                             },
                             {
                                 "icon": "fas fa-euro-sign",
-                                "title": "Precio",
-                                "text": "300€ por sesión."
+                                "title": "Precio"
                             },
                             {
                                 "icon": "far fa-clock",
-                                "title": "Duración",
-                                "text": "Aprox. 60 minutos."
+                                "title": "Duración"
                             },
                             {
                                 "icon": "fas fa-calendar-alt",
                                 "title": "Sesiones",
-                                "text": "Protocolo de 2 a 3 sesiones, espaciadas por 4-6 semanas."
+                                "text": "Protocolo de 3 sesiones, espaciadas por 1 mes"
                             },
                             {
                                 "icon": "fas fa-eye",
@@ -391,7 +393,7 @@
                             {
                                 "icon": "fas fa-shield-alt",
                                 "title": "Cuidados",
-                                "text": "Uso de protección solar es fundamental. No requiere inactividad."
+                                "text": "Uso de protección solar es fundamental.No ejercicio máximo en 24h. No saunas. No piscina."
                             }
                         ]
                     }
@@ -399,10 +401,10 @@
                 {
                     "id": "bioestimulacion-total",
                     "icon": "fas fa-wand-magic-sparkles",
-                    "title": "Bioestimulación total",
+                    "title": "Bioestimulador de colágeno-eleastina y AC H",
                     "description": "Tratamiento rejuvenecedor que estimula los tejidos para restaurar la firmeza, elasticidad e hidratación natural de la piel.",
-                    "price": 250,
-                    "duration": "60 min",
+                    "price": 220,
+                    "duration": "45 min",
                     "detail": {
                         "image": "https://via.placeholder.com/800x400.png/F7F5F0/74543F?text=Bioestimulacion+Total",
                         "description": "La bioestimulación total es un cóctel de activos revitalizantes que se infiltra en la piel para restaurar su estructura y vitalidad. Combinando ácido hialurónico, vitaminas y aminoácidos, este tratamiento estimula la producción natural de colágeno y elastina, combatiendo la flacidez, la deshidratación y la falta de luminosidad para un rejuvenecimiento integral.",
@@ -414,13 +416,11 @@
                             },
                             {
                                 "icon": "fas fa-euro-sign",
-                                "title": "Precio",
-                                "text": "250€ por sesión."
+                                "title": "Precio"
                             },
                             {
                                 "icon": "far fa-clock",
-                                "title": "Duración",
-                                "text": "Unos 60-90 minutos."
+                                "title": "Duración"
                             },
                             {
                                 "icon": "fas fa-calendar-alt",
@@ -435,7 +435,7 @@
                             {
                                 "icon": "fas fa-shield-alt",
                                 "title": "Cuidados",
-                                "text": "Recuperación rápida. Aplicar protección solar."
+                                "text": "Recuperación rápida. Aplicar protección solar.No saunas. No piscina. No ejercicio intenso en 24h"
                             }
                         ]
                     }
@@ -463,13 +463,11 @@
                             },
                             {
                                 "icon": "fas fa-euro-sign",
-                                "title": "Precio",
-                                "text": "120€ por sesión."
+                                "title": "Precio"
                             },
                             {
                                 "icon": "far fa-clock",
-                                "title": "Duración",
-                                "text": "Entre 45 y 60 minutos."
+                                "title": "Duración"
                             },
                             {
                                 "icon": "fas fa-calendar-alt",
@@ -494,8 +492,8 @@
                     "icon": "fas fa-wand-magic",
                     "title": "Peeling exfoliante y lifting",
                     "description": "Fórmula innovadora con efecto lifting que exfolia la piel, unifica el tono y aporta una gran luminosidad.",
-                    "price": 100,
-                    "duration": "60 min",
+                    "price": 70,
+                    "duration": "45 min",
                     "detail": {
                         "image": "https://via.placeholder.com/800x400.png/F7F5F0/74543F?text=Peeling+Lifting",
                         "description": "Este peeling combina una potente acción exfoliante con un efecto tensor inmediato. Elimina células muertas, atenúa manchas y arrugas finas y, al mismo tiempo, proporciona un efecto lifting que redefine el óvalo facial para una piel luminosa y rejuvenecida.",
@@ -507,13 +505,11 @@
                             },
                             {
                                 "icon": "fas fa-euro-sign",
-                                "title": "Precio",
-                                "text": "100€ por sesión."
+                                "title": "Precio"
                             },
                             {
                                 "icon": "far fa-clock",
-                                "title": "Duración",
-                                "text": "Aprox. 60 minutos."
+                                "title": "Duración"
                             },
                             {
                                 "icon": "fas fa-calendar-alt",
@@ -543,8 +539,8 @@
                     "icon": "fas fa-star-of-life",
                     "title": "Eliminar verrugas y rubíes",
                     "description": "Eliminación segura, rápida y precisa de lesiones cutáneas benignas como verrugas y puntos rubí, sin dejar cicatriz.",
-                    "price": 90,
-                    "duration": "20 min",
+                    "price": 40,
+                    "duration": "30 min",
                     "detail": {
                         "image": "https://via.placeholder.com/800x400.png/F7F5F0/74543F?text=Eliminar+Verrugas",
                         "description": "Mediante técnicas de alta precisión como la electrocoagulación, se eliminan de forma rápida y segura lesiones cutáneas benignas como verrugas, puntos rubí o fibromas. Es un procedimiento mínimamente invasivo que coagula el tejido, evitando el sangrado y sin dejar cicatriz.",
@@ -556,13 +552,11 @@
                             },
                             {
                                 "icon": "fas fa-euro-sign",
-                                "title": "Precio",
-                                "text": "Desde 90€, según número y tipo de lesiones."
+                                "title": "Precio"
                             },
                             {
                                 "icon": "far fa-clock",
-                                "title": "Duración",
-                                "text": "Muy rápido, entre 15 y 30 minutos."
+                                "title": "Duración"
                             },
                             {
                                 "icon": "fas fa-calendar-alt",
@@ -600,13 +594,11 @@
                             },
                             {
                                 "icon": "fas fa-euro-sign",
-                                "title": "Precio",
-                                "text": "45€ por la consulta y diseño."
+                                "title": "Precio"
                             },
                             {
                                 "icon": "far fa-clock",
-                                "title": "Duración",
-                                "text": "La consulta inicial dura aprox. 60 minutos."
+                                "title": "Duración"
                             },
                             {
                                 "icon": "fas fa-box-open",
@@ -626,6 +618,6 @@
     ],
     "footer": {
         "description": "Clínica de enfermería dermoestética en Terrassa. Cuidamos tu piel con rigor científico y trato cercano.",
-        "copyright": "© 2025 Christine Cano Dermoestética. Todos los derechos reservados."
+        "copyright": "© 2025 C3linic. Todos los derechos reservados."
     }
 }

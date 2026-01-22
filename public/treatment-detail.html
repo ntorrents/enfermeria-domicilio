@@ -84,15 +84,27 @@
 
                         let detailsHtml = '';
                         if (treatment.detail.details && treatment.detail.details.length > 0) {
-                            detailsHtml = treatment.detail.details.map(detailItem => `
-                        <div class="detail-item">
-                            <i class="${detailItem.icon}"></i>
-                            <div class="detail-item-content">
-                                <h4>${escapeHTML(detailItem.title)}</h4>
-                                <p>${escapeHTML(detailItem.text)}</p>
-                            </div>
-                        </div>
-                    `).join('');
+                            detailsHtml = treatment.detail.details.map(detailItem => {
+                                let textoAmostrar = detailItem.text;
+
+                                if (detailItem.icon.includes('fa-euro-sign') || detailItem.title === 'Precio') {
+                                    textoAmostrar = `${treatment.price}€ por sesión.`;
+                                }
+
+                                if (detailItem.icon.includes('fa-clock') || detailItem.title.includes('Duración')) {
+                                    textoAmostrar = treatment.duration;
+                                }
+
+                                return `
+                                    <div class="detail-item">
+                                        <i class="${detailItem.icon}"></i>
+                                        <div class="detail-item-content">
+                                            <h4>${escapeHTML(detailItem.title)}</h4>
+                                            <p>${escapeHTML(textoAmostrar)}</p>
+                                        </div>
+                                    </div>
+                                `;
+                            }).join('');
                         }
 
                         // Generar HTML para la imagen (¡NUEVO!)
