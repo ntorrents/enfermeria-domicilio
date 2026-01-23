@@ -27,6 +27,11 @@ async function loadConfig() {
 }
 
 async function initApp() {
+    // Solo se ejecuta en la página principal
+    if (!document.getElementById('app-content')) {
+        return;
+    }
+
     const config = await loadConfig();
     if (!config) return; // Si falla la carga, paramos
 

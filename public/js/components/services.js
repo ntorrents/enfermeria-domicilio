@@ -21,7 +21,7 @@ export function renderServices(servicesData) {
                 </div>
                 
                 <div class="card-footer">
-                    <a href="treatment-detail.html?id=${treatment.id}" class="btn btn-card">
+                    <a href="../treatment-detail.html?id=${treatment.id}" class="btn btn-card">
                         Ver Detalles <i class="fas fa-arrow-right"></i>
                     </a>
                 </div>

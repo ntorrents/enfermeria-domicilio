@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detalle del Servicio</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/layout.css">
+    <link rel="stylesheet" href="./css/services.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
@@ -48,26 +50,27 @@
                 return str.replace(/`/g, '&#96;').replace(/\${/g, '&#36;{');
             };
 
-            fetch('config.json')
-                .then(response => response.json())
-                .then(config => {
+            Promise.all([
+                fetch('./config/services.json').then(response => response.json()),
+                fetch('./config/general.json').then(response => response.json())
+            ]).then(([servicesConfig, generalConfig]) => {
                     const footer = document.querySelector(".footer");
-                    if (footer && config.footer) {
+                    if (footer && generalConfig.footer) {
                         footer.innerHTML = `
                 <div class="container">
                     <div class="footer-content">
                         <i class="fas fa-spa footer-icon"></i>
-                        <h3>${config.siteInfo.brandName}</h3>
-                        <p class="footer-description">${config.footer.description}</p>
+                        <h3>${generalConfig.siteInfo.brandName}</h3>
+                        <p class="footer-description">${generalConfig.footer.description}</p>
                     </div>
                     <div class="footer-bottom">
-                        <p>${config.footer.copyright}</p>
+                        <p>${generalConfig.footer.copyright}</p>
                     </div>
                 </div>
                 `;
                     }
 
-                    const services = config.services;
+                    const services = servicesConfig;
                     let treatment = null;
                     for (const category of services) {
                         const foundTreatment = category.treatments.find(t => t.id === treatmentId);
@@ -107,7 +110,7 @@
                             }).join('');
                         }
 
-                        // Generar HTML para la imagen (¡NUEVO!)
+                        // Generar HTML para la imagen
                         let imageHtml = '';
                         if (treatment.detail.image) {
                             imageHtml = `<img src="${treatment.detail.image}" alt="${escapeHTML(treatment.title)}" class="treatment-detail-image">`;
