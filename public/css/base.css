@@ -1,23 +1,39 @@
 /* --- VARIABLES --- */
 :root {
+    /* COLORES PRINCIPALES */
     --primary-hue: 25;
-    --primary: hsl(var(--primary-hue), 30%, 35%);
-    /* #74543F */
-    --accent: hsl(20, 60%, 45%);
-    /* #CD7E62 */
+    --primary: hsl(var(--primary-hue), 30%, 35%);       /* #74543F */
+    --primary-rgb: 116, 84, 63;                          /* Para transparencias */
+    
+    --accent: hsl(20, 60%, 45%);                         /* #CD7E62 */
+    --accent-rgb: 205, 126, 98;                          /* Para transparencias */
     --accent-hover: hsl(20, 65%, 35%);
-    --secondary: hsl(35, 30%, 94%);
-    /* #F7F5F0 */
-    --bg-body: hsl(40, 20%, 98%);
-    /* #FDFCFA */
+
+    --secondary: hsl(35, 30%, 94%);                      /* #F7F5F0 */
+    --bg-body: hsl(40, 20%, 98%);                        /* #FDFCFA */
+    
+    /* TEXTOS */
     --text-main: hsl(25, 15%, 25%);
     --text-light: hsl(25, 10%, 35%);
-    --text-white: #ffffff;
+    
+    /* COLORES BASE & ESTADOS */
+    --white: #ffffff;
+    --white-rgb: 255, 255, 255;
+    
+    --black: #000000;
+    --black-rgb: 0, 0, 0;
 
-    --shadow-sm: 0 4px 6px -1px rgba(116, 84, 63, 0.1), 0 2px 4px -1px rgba(116, 84, 63, 0.06);
-    --shadow-md: 0 10px 15px -3px rgba(116, 84, 63, 0.1), 0 4px 6px -2px rgba(116, 84, 63, 0.05);
-    --shadow-lg: 0 20px 25px -5px rgba(116, 84, 63, 0.1), 0 10px 10px -5px rgba(116, 84, 63, 0.04);
+    --success: #4CAF50;
+    --error: #E53935;
+    --warning: #FFC107;
+    --border-light: #dddddd;
 
+    /* SOMBRAS (Usando variables RGB) */
+    --shadow-sm: 0 4px 6px -1px rgba(var(--primary-rgb), 0.1), 0 2px 4px -1px rgba(var(--primary-rgb), 0.06);
+    --shadow-md: 0 10px 15px -3px rgba(var(--primary-rgb), 0.1), 0 4px 6px -2px rgba(var(--primary-rgb), 0.05);
+    --shadow-lg: 0 20px 25px -5px rgba(var(--primary-rgb), 0.1), 0 10px 10px -5px rgba(var(--primary-rgb), 0.04);
+
+    /* BORDES */
     --radius-sm: 8px;
     --radius-md: 16px;
     --radius-lg: 24px;
@@ -61,12 +77,7 @@ a {
 }
 
 /* --- TIPOGRAFÍA --- */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
     font-family: "Playfair Display", serif;
     color: var(--primary);
     line-height: 1.2;
@@ -111,7 +122,7 @@ section {
 .badge {
     display: inline-block;
     padding: 0.25rem 0.75rem;
-    background-color: rgba(205, 126, 98, 0.1);
+    background-color: rgba(var(--accent-rgb), 0.1);
     color: var(--accent);
     border-radius: var(--radius-full);
     font-size: 0.85rem;
@@ -137,7 +148,7 @@ section {
 
 .btn-primary {
     background-color: var(--accent);
-    color: var(--text-white);
+    color: var(--white);
     box-shadow: var(--shadow-sm);
 }
 
@@ -155,7 +166,7 @@ section {
 
 .btn-secondary:hover {
     background-color: var(--primary);
-    color: var(--text-white);
+    color: var(--white);
     transform: translateY(-2px);
 }
 
@@ -183,11 +194,11 @@ section {
 .form-control {
     width: 100%;
     padding: 1rem;
-    border: 1px solid #ddd;
+    border: 1px solid var(--border-light);
     border-radius: var(--radius-sm);
     font-family: inherit;
     transition: 0.3s;
-    background-color: #fff;
+    background-color: var(--white);
     -webkit-appearance: none;
     appearance: none;
 }
@@ -216,27 +227,27 @@ section {
 /* --- NOTIFICACIONES TOAST (Elegantes) --- */
 .toast-container {
     position: fixed;
-    top: 90px; /* Un poco por debajo del header */
+    top: 90px;
     right: 20px;
-    z-index: 1100; /* Por encima de todo */
+    z-index: 1100;
     display: flex;
     flex-direction: column;
     gap: 15px;
-    pointer-events: none; /* Para que puedas hacer clic debajo */
+    pointer-events: none;
 }
 
 .toast {
-    background: white;
+    background: var(--white);
     padding: 1rem 1.5rem;
     border-radius: var(--radius-sm);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    box-shadow: 0 10px 30px rgba(var(--black-rgb), 0.15);
     display: flex;
     align-items: center;
     gap: 1rem;
     min-width: 300px;
     max-width: 400px;
-    transform: translateX(120%); /* Empieza escondido a la derecha */
-    transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55); /* Efecto rebote suave */
+    transform: translateX(120%);
+    transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     border-left: 5px solid var(--primary);
     pointer-events: auto;
 }
@@ -246,11 +257,11 @@ section {
 }
 
 /* Variantes de color */
-.toast-success { border-left-color: #4CAF50; }
-.toast-success i { color: #4CAF50; }
+.toast-success { border-left-color: var(--success); }
+.toast-success i { color: var(--success); }
 
-.toast-error { border-left-color: #E53935; }
-.toast-error i { color: #E53935; }
+.toast-error { border-left-color: var(--error); }
+.toast-error i { color: var(--error); }
 
 .toast-info { border-left-color: var(--accent); }
 .toast-info i { color: var(--accent); }
@@ -275,11 +286,6 @@ section {
 
 /* --- RESPONSIVE GENERAL --- */
 @media (max-width: 768px) {
-    h1 {
-        font-size: 2.5rem !important;
-    }
-
-    h2 {
-        font-size: 2rem;
-    }
+    h1 { font-size: 2.5rem !important; }
+    h2 { font-size: 2rem; }
 }

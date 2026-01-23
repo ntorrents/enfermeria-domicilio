@@ -6,7 +6,6 @@ function initializeMobileNavigation() {
     const navMenu = document.querySelector('.nav-menu');
 
     if (navToggle && navMenu) {
-        // Clonamos para limpiar eventos viejos
         const newToggle = navToggle.cloneNode(true);
         navToggle.parentNode.replaceChild(newToggle, navToggle);
         
@@ -88,16 +87,14 @@ function updateActiveNavigation() {
     });
 }
 
-// --- Formulario (Con tu lógica EmailJS) ---
+// --- Formulario ---
 function initializeContactForm() {
     const originalForm = document.getElementById('contactForm');
     if (!originalForm) return;
 
-    // Clonamos para evitar duplicados
     const newForm = originalForm.cloneNode(true);
     originalForm.parentNode.replaceChild(newForm, originalForm);
 
-    // Pre-selección desde URL
     const urlParams = new URLSearchParams(window.location.search);
     const serviceId = urlParams.get('service');
     if (serviceId) {
@@ -108,7 +105,6 @@ function initializeContactForm() {
     newForm.addEventListener('submit', (e) => {
         e.preventDefault();
         
-        // Obtenemos los datos de forma robusta
         const formData = {
             nombre: newForm.querySelector('[name="user_name"]')?.value,
             telefono: newForm.querySelector('[name="user_phone"]')?.value,
@@ -142,12 +138,35 @@ function initializeContactForm() {
                     btn.disabled = false;
                 });
         } else {
-            // Fallback si EmailJS no cargó
             showToast('Demo', 'EmailJS no está listo.', 'info');
             btn.innerText = originalText;
             btn.disabled = false;
         }
     });
+}
+
+// --- GESTIÓN DE COOKIES ---
+function initializeCookieConsent() {
+    const banner = document.getElementById('cookieBanner');
+    const acceptBtn = document.getElementById('acceptCookies');
+    
+    // Si no existe el banner o ya aceptó, salimos
+    if (!banner || localStorage.getItem('cookiesAccepted') === 'true') {
+        return;
+    }
+
+    // Mostrar el banner tras 1 segundo
+    setTimeout(() => {
+        banner.classList.add('show');
+    }, 1000);
+
+    // Al hacer click, guardamos y cerramos
+    if (acceptBtn) {
+        acceptBtn.addEventListener('click', () => {
+            localStorage.setItem('cookiesAccepted', 'true');
+            banner.classList.remove('show');
+        });
+    }
 }
 
 // --- EXPORTAR TODO JUNTO ---
@@ -156,6 +175,7 @@ export function initializeInteractions() {
     initializeSmoothScroll();
     updateHeaderOnScroll();
     initializeContactForm();
+    initializeCookieConsent(); // <--- Nueva función
     
     // Ancla inicial
     const hash = window.location.hash;
