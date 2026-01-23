@@ -26,7 +26,15 @@ class EnfermeriaComponents {
                     
                     <div class="hero-visual">
                         <div class="hero-image-wrapper">
-                            <img src="img/christinephoto2.jpeg" alt="Dermoestética y cuidado de la piel" class="hero-img-main" onerror="this.src='https://via.placeholder.com/450x550'">
+                            <img 
+                                src="img/christinephoto2.jpeg" 
+                                alt="Dermoestética y cuidado de la piel" 
+                                class="hero-img-main" 
+                                width="450" 
+                                height="550" 
+                                loading="eager"
+                                onerror="this.src='https://via.placeholder.com/450x550'"
+                            >
                         </div>
                     </div>
                 </div>
@@ -51,7 +59,7 @@ class EnfermeriaComponents {
 					
 					<div class="about-layout">
 						<div class="about-image-column">
-							<img src="./myphoto.jpeg" alt="${aboutMe.name}" class="about-photo" onerror="this.classList.add('img-error');">
+							<img src="./myphoto.jpeg" width="400" height="500" loading="lazy" alt="${aboutMe.name}" class="about-photo" onerror="this.classList.add('img-error');">
 						</div>
 						
 						<div class="about-content-column">
@@ -225,30 +233,30 @@ class EnfermeriaComponents {
                             </div>
 
                             <div class="contact-map">
-                                <iframe src="${siteInfo.mapUrl}" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                                <iframe title="Ubicación de la clínica" src="${siteInfo.mapUrl}" width="100%" height="250" loading="lazy" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                             </div>
                         </div>
                         
                         <div class="contact-form-wrapper">
                             <form id="contactForm" class="contact-form">
                                 <div class="form-group">
-                                    <label>Nombre Completo</label>
-                                    <input type="text" name="user_name" class="form-control" required>
+                                    <label for="userName">Nombre Completo</label>
+                                    <input type="text" id="userName" name="user_name" class="form-control" required>
                                 </div>
                                 
                                 <div class="form-group">
-                                    <label>Teléfono</label>
-                                    <input type="tel" name="user_phone" class="form-control" required>
+                                    <label for="userPhone">Teléfono</label>
+                                    <input type="tel" id="userPhone" name="user_phone" class="form-control" required>
                                 </div>
 
                                 <div class="form-group">
-                                    <label>Email (Opcional)</label>
-                                    <input type="email" name="user_email" class="form-control" placeholder="nombre@ejemplo.com">
+                                    <label for="userEmail">Email (Opcional)</label>
+                                    <input type="email" id="userEmail" name="user_email" class="form-control" placeholder="nombre@ejemplo.com">
                                 </div>
                                 
                                 <div class="form-group form-group-select">
-                                    <label>Servicio de interés</label>
-                                    <select name="service_interest" class="form-control" required>
+                                    <label for="serviceInterest">Servicio de interés</label>
+                                    <select id="serviceInterest" name="service_interest" class="form-control" required>
                                         <option value="">Seleccione un servicio...</option>
                                         ${serviceOptions}
                                         <option value="consulta">Duda / Otra consulta</option>
@@ -256,14 +264,14 @@ class EnfermeriaComponents {
                                 </div>
                                 
                                 <div class="form-group">
-                                    <label>Mensaje (Opcional)</label>
-                                    <textarea name="message" class="form-control" rows="3"></textarea>
+                                    <label for="userMessage">Mensaje (Opcional)</label>
+                                    <textarea id="userMessage" name="message" class="form-control" rows="3"></textarea>
                                 </div>
 
                                 <div class="form-group form-checkbox">
                                     <label>
                                         <input type="checkbox" required>
-                                        He leído y acepto la <a href="privacidad.html" target="_blank">Política de Privacidad</a>
+                                        He leído y acepto la <a href="privacidad.html" target="_blank" rel="noopener noreferrer">Política de Privacidad</a>
                                     </label>
                                 </div>
                                 

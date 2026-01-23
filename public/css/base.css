@@ -3,15 +3,15 @@
     --primary-hue: 25;
     --primary: hsl(var(--primary-hue), 30%, 35%);
     /* #74543F */
-    --accent: hsl(20, 60%, 55%);
+    --accent: hsl(20, 60%, 45%);
     /* #CD7E62 */
-    --accent-hover: hsl(20, 65%, 45%);
+    --accent-hover: hsl(20, 65%, 35%);
     --secondary: hsl(35, 30%, 94%);
     /* #F7F5F0 */
     --bg-body: hsl(40, 20%, 98%);
     /* #FDFCFA */
     --text-main: hsl(25, 15%, 25%);
-    --text-light: hsl(25, 10%, 45%);
+    --text-light: hsl(25, 10%, 35%);
     --text-white: #ffffff;
 
     --shadow-sm: 0 4px 6px -1px rgba(116, 84, 63, 0.1), 0 2px 4px -1px rgba(116, 84, 63, 0.06);

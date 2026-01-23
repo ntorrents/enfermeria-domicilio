@@ -1,5 +1,0 @@
---text: #050316;
---background: #f9f8f6;
---primary: #5e3d1c;
---secondary: #c9b59c;
---accent: #b87466;
