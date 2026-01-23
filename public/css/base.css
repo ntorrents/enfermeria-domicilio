@@ -5,7 +5,7 @@
     --primary: hsl(var(--primary-hue), 30%, 35%);       /* #74543F */
     --primary-rgb: 116, 84, 63;                          /* Para transparencias */
     
-    --accent: hsl(20, 60%, 45%);                         /* #CD7E62 */
+    --accent: hsl(20, 60%, 40%);                         /* #CD7E62 */
     --accent-rgb: 205, 126, 98;                          /* Para transparencias */
     --accent-hover: hsl(20, 65%, 35%);
 

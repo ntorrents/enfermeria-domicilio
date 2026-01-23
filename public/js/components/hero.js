@@ -22,13 +22,18 @@ export function renderHero(heroData) {
                 
                 <div class="hero-visual">
                     <div class="hero-image-wrapper">
-                        <img 
-                            src="../img/christine/christinephoto2.jpeg" 
-                            alt="Dermoestética" 
-                            class="hero-img-main" 
-                            width="450" height="550" loading="eager"
-                            onerror="this.src='https://via.placeholder.com/450x550'"
-                        >
+                        <picture>
+                            <source srcset="../img/christine/christinephoto2-mobile.webp" media="(max-width: 768px)" type="image/webp">
+                            <source srcset="../img/christine/christinephoto2.webp" type="image/webp">
+                            <img 
+                                src="img/christinephoto2.jpeg" 
+                                alt="Dermoestética" 
+                                class="hero-img-main" 
+                                width="450" height="550" 
+                                loading="eager" 
+                                fetchpriority="high"
+                            >
+                        </picture>
                     </div>
                 </div>
             </div>

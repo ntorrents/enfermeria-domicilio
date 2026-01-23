@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
-    <title>C3linic - Cargando...</title>
+    <title>C3linic - Dermoestética Avanzada</title>
     <meta name="description" content="Clínica de Dermoestética en Terrassa. Tratamientos faciales y corporales personalizados por Christine Cano." />
     
     <meta http-equiv="Content-Security-Policy" content="
@@ -18,20 +18,24 @@
     ">
     <meta name="referrer" content="strict-origin-when-cross-origin" />
 
-    <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==" />
+    <link rel="preload" as="image" href="img/christine/christinephoto2-mobile.webp" media="(max-width: 768px)" />
+    <link rel="preload" as="image" href="img/christine/christinephoto2.webp" media="(min-width: 769px)" />
 
     <link rel="stylesheet" href="./css/base.css" />
-    <link rel="stylesheet" href="./css/layout.css" /> 
+    <link rel="stylesheet" href="./css/layout.css" />
     <link rel="stylesheet" href="./css/hero.css" />
-    <link rel="stylesheet" href="./css/about.css" />
-    <link rel="stylesheet" href="./css/services.css" />
-    <link rel="stylesheet" href="./css/testimonials.css" />
-    <link rel="stylesheet" href="./css/contact.css" />
+
+    <link rel="stylesheet" href="./css/about.css" media="print" onload="this.media='all'" />
+    <link rel="stylesheet" href="./css/services.css" media="print" onload="this.media='all'" />
+    <link rel="stylesheet" href="./css/testimonials.css" media="print" onload="this.media='all'" />
+    <link rel="stylesheet" href="./css/contact.css" media="print" onload="this.media='all'" />
     
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" />
+    
+    <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==" />
 
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script src="./emailjs-config.js"></script>
@@ -57,14 +61,42 @@
     </header>
 
     <main>
-        <div class="loading-screen">
-            <div class="loader-content">
-                <i class="fas fa-spa fa-bounce" style="--fa-animation-duration: 2s"></i>
-                <p>Preparando su belleza...</p>
-            </div>
+        <div id="app-content">
+            <section id="inicio" class="hero">
+                <div class="container hero-content">
+                    <div class="hero-text">
+                        <span class="badge">Dermoestética & Imagen Corporal</span>
+                        <h1>Realza tu Belleza Natural</h1>
+                        <p>Servicios dermoestéticos profesionales para cuidar la salud y luminosidad de tu piel.</p>
+                        <div class="hero-actions">
+                            <a href="#contacto" class="btn btn-primary">
+                                Reservar Cita <i class="fas fa-arrow-right"></i>
+                            </a>
+                            <a href="#servicios" class="btn btn-secondary">
+                                Servicios
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-visual">
+                        <div class="hero-image-wrapper">
+                            <picture>
+                                <source srcset="img/christine/christinephoto2-mobile.webp" media="(max-width: 768px)" type="image/webp">
+                                <source srcset="img/christine/christinephoto2.webp" type="image/webp">
+                                <img 
+                                    src="img/christine/christinephoto2.jpeg" 
+                                    alt="Dermoestética y cuidado de la piel" 
+                                    class="hero-img-main" 
+                                    width="450" height="550" 
+                                    loading="eager" 
+                                    fetchpriority="high"
+                                >
+                            </picture>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
-
-        <div id="app-content"></div>
     </main>
 
     <footer class="footer"></footer>
@@ -75,7 +107,7 @@
 
     <div id="cookieBanner" class="cookie-banner">
         <div class="cookie-content">
-            <p>Utilizamos cookies propias y de terceros para mejorar tu experiencia de navegación y ofrecerte un servicio más personalizado. Al continuar navegando, aceptas su uso.</p>
+            <p>Utilizamos cookies propias y de terceros para mejorar tu experiencia. Al continuar navegando, aceptas su uso.</p>
         </div>
         <button id="acceptCookies" class="cookie-btn">Aceptar</button>
     </div>
