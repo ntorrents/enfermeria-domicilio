@@ -1,0 +1,37 @@
+{
+    "hero": {
+      "title": "Realza tu Belleza Natural",
+      "subtitle": "Servicios dermoestéticos profesionales para cuidar la salud y luminosidad de tu piel.",
+      "primaryButton": "Reservar Cita",
+      "secondaryButton": "Servicios"
+    },
+    "aboutMe": {
+      "name": "Christine Cano",
+      "title": "Enfermera Dermoestética",
+      "collegiateNumber": "075396",
+      "intro": "Como profesional de la salud mi enfoque va más allá de la estética. Entiendo que la piel es un reflejo de nuestro bienestar interno, por lo que trato cada servicio con una visión holística. Mi misión es ofrecer soluciones personalizadas que no solo mejoren la apariencia de la piel, sino que contribuyan al equilibrio físico y emocional de mis pacientes.",
+      "education": [
+        "Diplomada en Enfermería (UAB)",
+        "Máster en Dermoestética e Imagen Corporal (NUS Agency, Barcelona)"
+      ],
+      "clinicAddress": "Carrer de l'Exemple, 123, 08221 Terrassa, Barcelona",
+      "clinicNote": "Consulta privada equipada con la última tecnología para tu confort y seguridad."
+    },
+    "testimonials_OFF": [
+      {
+          "name": "Marta G.",
+          "text": "Christine es una profesional excelente. Me hizo sentir muy cómoda y los resultados del Dermapen fueron visibles desde la primera sesión.",
+          "rating": 5
+      },
+      {
+          "name": "Jordi P.",
+          "text": "Trato cercano y muy profesional. Se nota mucho su experiencia como enfermera, lo que da mucha seguridad.",
+          "rating": 5
+      },
+      {
+          "name": "Laura M.",
+          "text": "Me encantó la rutina personalizada que me diseñó. Por fin entiendo qué necesita mi piel y he dejado de gastar en productos que no me servían.",
+          "rating": 5
+      }
+    ]
+  }
