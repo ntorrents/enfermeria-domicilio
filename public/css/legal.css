@@ -1,0 +1,67 @@
+/* css/legal.css */
+
+/* Contenedor principal para lectura cómoda */
+.legal-main {
+    padding-top: 120px; /* Espacio para que no lo tape el header fijo */
+    padding-bottom: 60px;
+    background-color: var(--background); /* El color de fondo crema de tu web */
+    min-height: 80vh;
+}
+
+.legal-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* Títulos */
+.legal-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: var(--primary); /* Tu marrón oscuro */
+    margin-bottom: 2rem;
+    text-align: center;
+    border-bottom: 1px solid rgba(116, 84, 63, 0.1);
+    padding-bottom: 1rem;
+}
+
+.legal-content h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: var(--text-main);
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Texto */
+.legal-content p, 
+.legal-content li {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    color: var(--text-light);
+    line-height: 1.8; /* Importante para que no canse la vista */
+    margin-bottom: 1rem;
+}
+
+.legal-content ul {
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.legal-content strong {
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.legal-content a {
+    color: var(--accent);
+    text-decoration: underline;
+}
+
+/* Botón de volver */
+.legal-footer {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(116, 84, 63, 0.1);
+    text-align: center;
+}

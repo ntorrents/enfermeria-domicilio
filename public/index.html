@@ -1,44 +1,50 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
+
     <title>C3linic - Dermoestética Avanzada</title>
-    <meta name="description" content="Clínica de Dermoestética en Terrassa. Tratamientos faciales y corporales personalizados por Christine Cano." />
-    
+    <meta name="description"
+        content="Clínica de Dermoestética en Terrassa. Tratamientos faciales y corporales personalizados por Christine Cano." />
+
     <meta http-equiv="Content-Security-Policy" content="
         default-src 'self'; 
-        script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; 
-        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; 
-        font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; 
-        img-src 'self' data: https://via.placeholder.com; 
-        connect-src 'self' https://api.emailjs.com; 
-        frame-src 'self' https://www.google.com https://maps.google.com;
+        script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://static.cloudflareinsights.com; 
+        style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://fonts.googleapis.com; 
+        font-src 'self' https://cdnjs.cloudflare.com https://fonts.gstatic.com; 
+        img-src 'self' data: https:; 
+        connect-src 'self' https://api.emailjs.com https://cloudflareinsights.com;
+        frame-src 'self' https://www.google.com;
     ">
     <meta name="referrer" content="strict-origin-when-cross-origin" />
 
     <link rel="preload" as="image" href="img/christine/christinephoto2-mobile.webp" media="(max-width: 768px)" />
     <link rel="preload" as="image" href="img/christine/christinephoto2.webp" media="(min-width: 769px)" />
 
-    <link rel="stylesheet" href="./css/base.css" />
-    <link rel="stylesheet" href="./css/layout.css" />
-    <link rel="stylesheet" href="./css/hero.css" />
+    <link rel="stylesheet" href="./css/base.css?v=1.0" />
+    <link rel="stylesheet" href="./css/layout.css?v=1.0" />
+    <link rel="stylesheet" href="./css/hero.css?v=1.0" />
 
-    <link rel="stylesheet" href="./css/about.css" media="print" onload="this.media='all'" />
-    <link rel="stylesheet" href="./css/services.css" media="print" onload="this.media='all'" />
-    <link rel="stylesheet" href="./css/testimonials.css" media="print" onload="this.media='all'" />
-    <link rel="stylesheet" href="./css/contact.css" media="print" onload="this.media='all'" />
-    
+    <link rel="stylesheet" href="./css/about.css?v=1.0" media="print" onload="this.media='all'" />
+    <link rel="stylesheet" href="./css/services.css?v=1.0" media="print" onload="this.media='all'" />
+    <link rel="stylesheet" href="./css/testimonials.css?v=1.0" media="print" onload="this.media='all'" />
+    <link rel="stylesheet" href="./css/contact.css?v=1.0" media="print" onload="this.media='all'" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" />
-    
-    <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        crossorigin="anonymous" />
+
+    <link rel="icon" type="image/png"
+        href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==" />
 
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <script src="./emailjs-config.js"></script>
+    <script src="./emailjs-config.js?v=1.0"></script>
 </head>
 
 <body>
@@ -46,15 +52,9 @@
         <nav class="nav container">
             <div class="nav-brand">
                 <!-- <div class="brand-icon"><i class="fas fa-spa"></i></div> -->
-                <img 
-                    src="img/logooscuro.png" 
-                    alt="Logo C3linic" 
-                    class="logo-img-header" 
-                    style="mix-blend-mode: multiply; vertical-align: middle;"
-                    width="60" height="60" 
-                    loading="eager" 
-                    fetchpriority="high"
-                >
+                <img src="img/logooscuro.png" alt="Logo C3linic" class="logo-img-header"
+                    style="mix-blend-mode: multiply; vertical-align: middle;" width="60" height="60" loading="eager"
+                    fetchpriority="high">
                 <span>C3LINIC</span>
             </div>
             <ul class="nav-menu">
@@ -86,21 +86,16 @@
                             </a>
                         </div>
                     </div>
-                    
+
                     <div class="hero-visual">
                         <div class="hero-image-wrapper">
                             <picture>
-                                <source srcset="img/christine/christinephoto2-mobile.webp" media="(max-width: 768px)" type="image/webp">
+                                <source srcset="img/christine/christinephoto2-mobile.webp" media="(max-width: 768px)"
+                                    type="image/webp">
                                 <source srcset="img/christine/christinephoto2.webp" type="image/webp">
-                                <img 
-                                    src="img/christine/christinephoto2.jpeg" 
-                                    alt="Dermoestética y cuidado de la piel" 
-                                    class="hero-img-main" 
-                                    width="450" height="550" 
-                                    style="mix-blend-mode: multiply;"
-                                    loading="eager" 
-                                    fetchpriority="high"
-                                >
+                                <img src="img/christine/christinephoto2.jpeg" alt="Dermoestética y cuidado de la piel"
+                                    class="hero-img-main" width="450" height="550" style="mix-blend-mode: multiply;"
+                                    loading="eager" fetchpriority="high">
                             </picture>
                         </div>
                     </div>
@@ -111,17 +106,20 @@
 
     <footer class="footer"></footer>
 
-    <a href="https://wa.me/34658491612" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
+    <a href="https://wa.me/34658491612" class="whatsapp-float" target="_blank" rel="noopener noreferrer"
+        aria-label="Contactar por WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 
     <div id="cookieBanner" class="cookie-banner">
         <div class="cookie-content">
-            <p>Utilizamos cookies propias y de terceros para mejorar tu experiencia. Al continuar navegando, aceptas su uso.</p>
+            <p>Utilizamos cookies propias y de terceros para mejorar tu experiencia. Al continuar navegando, aceptas su
+                uso.</p>
         </div>
         <button id="acceptCookies" class="cookie-btn">Aceptar</button>
     </div>
 
-    <script type="module" src="./js/main.js"></script>
+    <script type="module" src="./js/main.js?v=1.0"></script>
 </body>
+
 </html>
