@@ -45,6 +45,11 @@
     overflow: hidden;
 }
 
+.service-card.card-highlight {
+    background-color: #faf9f6; /* Un tono muy sutil diferente si quieres */
+    border: 1px solid var(--accent); /* O un borde del color de tu marca */
+}
+
 .service-card:hover {
     transform: translateY(-5px);
     box-shadow: var(--shadow-lg);
@@ -242,6 +247,42 @@
     padding-top: 2rem;
 }
 
+/* --- ESTADO PRÓXIMAMENTE (Coming Soon) --- */
+
+/* Fondo gris y borde sutil */
+.service-card.coming-soon {
+    background-color: #f4f4f4; /* Un gris claro elegante */
+    border: 1px dashed #ccc;   /* Borde discontinuo para indicar "en construcción" */
+    opacity: 0.9;
+}
+
+/* Cambiar estilo del icono para que se vea apagado */
+.service-card.coming-soon .service-icon-box {
+    background-color: #e0e0e0;
+    color: #a0a0a0;
+}
+
+/* Etiqueta de "Próximamente" en lugar de precio */
+.service-card.coming-soon .service-price-tag {
+    background-color: #888;
+    color: white;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Botón deshabilitado */
+.btn-card.disabled {
+    color: #999;
+    cursor: default;
+    pointer-events: none; /* Evita que se pueda hacer clic */
+}
+
+.btn-card.disabled:hover {
+    gap: 0.5rem; /* Evita la animación de movimiento */
+    color: #999;
+}
+
 /* RESPONSIVE SERVICES */
 @media (max-width: 968px) {
     .treatment-detail-layout {
@@ -269,4 +310,18 @@
     .treatment-detail-image {
         height: 250px;
     }
+
+    .card-body p{
+        display: none;
+    }
+
+    .card-body h4 {
+        margin-bottom: 0.5rem;
+        min-height: auto;
+    }
+
+    .service-card.card-highlight .card-body p {
+        display: block; 
+    }
+    
 }

@@ -5,7 +5,13 @@ export function renderFooter(siteInfo, footerData) {
         <footer class="footer">
             <div class="container">
                 <div class="footer-content">
-                    <i class="fas fa-spa footer-icon"></i>
+                    <img 
+                        src="../img/logooscuro.png" 
+                        alt="Logo C3linic" 
+                        class="logo-img-footer" 
+                        width="70" height="70" 
+                        loading="eager" 
+                    >
                     <h3>${siteInfo.brandName}</h3>
                     <p class="footer-description">${footerData.description}</p>
                 </div>

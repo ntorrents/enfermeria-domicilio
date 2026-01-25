@@ -1,5 +1,27 @@
     [
         {
+            "category": "Diagnóstico y Valoración",
+            "treatments": [
+                {
+                    "id": "consulta-gratuita",
+                    "icon": "fas fa-comments", 
+                    "title": "1ª Consulta Informativa",
+                    "description": "¿Dudas sobre qué tratamiento es para ti? Ven a conocernos, evaluamos tu piel y te explicamos opciones sin ningún compromiso.",
+                    "price": "GRATIS",
+                    "duration": "20 min",
+                    "detail": {
+                        "image": "https://via.placeholder.com/800x400.png/F7F5F0/74543F?text=Consulta+Informativa",
+                        "description": "El primer paso para una piel radiante es entender qué necesita. En esta sesión gratuita de 20 minutos, analizaremos tu tipo de piel, escucharemos tus objetivos y te recomendaremos el protocolo ideal para ti. Sin letra pequeña y sin compromiso de compra. Solo ven, infórmate y decide con tranquilidad.",
+                        "details": [
+                            { "icon": "fas fa-check", "title": "Sin coste", "text": "Totalmente gratuita." },
+                            { "icon": "fas fa-user-md", "title": "Diagnóstico", "text": "Valoración profesional de tu caso." },
+                            { "icon": "fas fa-hand-holding-heart", "title": "Sin compromiso", "text": "No estás obligada a reservar nada después." }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
             "category": "Microneedling",
             "treatments": [
                 {
@@ -7,6 +29,7 @@
                     "icon": "fas fa-droplet",
                     "title": "Microneedling Facial (Dermapen)",
                     "description": "Técnica de inducción de colágeno que mejora la textura de la piel, reduce marcas de acné y suaviza líneas de expresión.",
+                    "comingSoon": false,
                     "price": 45,
                     "duration": "45 min",
                     "detail": {
@@ -48,9 +71,10 @@
                     "id": "microneedling-corporal",
                     "icon": "fas fa-person",
                     "title": "Microneedling Corporal (Dermapen)",
-                    "description": "Tratamiento corporal que estimula el colágeno para reducir estrías, cicatrices y flacidez en abdomen, muslos y glúteos.",
+                    "description": "Tratamiento corporal que estimula el colágeno para reducir estrías, cicatrices y flacidez.",
+                    "comingSoon": false,
                     "price": 65,
-                    "duration": "75 min",
+                    "duration": "45 min",
                     "detail": {
                         "image": "https://via.placeholder.com/800x400.png/F7F5F0/74543F?text=Microneedling+Corporal",
                         "description": "El Microneedling corporal utiliza la misma tecnología de inducción de colágeno que el tratamiento facial para tratar zonas más extensas del cuerpo. Es una solución altamente eficaz para mejorar la apariencia de estrías, cicatrices post-quirúrgicas y la flacidez en áreas como el abdomen, los muslos y los glúteos. El tratamiento promueve la regeneración celular y la reestructuración de la dermis, dando como resultado una piel más lisa, firme y uniforme.",
@@ -96,6 +120,7 @@
                     "icon": "fas fa-user",
                     "title": "Mesoterapia capilar",
                     "description": "Tratamiento avanzado para la caída del cabello. Fortalece la fibra capilar, estimula el crecimiento y aumenta el volumen.",
+                    "comingSoon": false,
                     "price": 160,
                     "duration": "30 min",
                     "detail": {
@@ -137,8 +162,9 @@
                     "id": "mesoterapia-facial",
                     "icon": "fas fa-face-smile",
                     "title": "Mesoterapia facial",
-                    "description": "Renueva e hidrata la piel en profundidad con ácido hialurónico y vitaminas para un rostro más luminoso y rejuvenecido.",
-                    "price": 140,
+                    "description": "Renueva e hidrata la piel en profundidad con ácido hialurónico, aminoácidos y antioxidantes para un rostro más luminoso y rejuvenecido.",
+                    "comingSoon": false,
+                    "price": 120,
                     "duration": "45 min",
                     "detail": {
                         "image": "https://via.placeholder.com/800x400.png/F7F5F0/74543F?text=Mesoterapia+Facial",
@@ -179,7 +205,8 @@
                     "id": "mesoterapia-corporal",
                     "icon": "fas fa-person-running",
                     "title": "Mesoterapia corporal Anticelulítico",
-                    "description": "Combate la celulitis y la grasa localizada, mejorando el contorno corporal y el aspecto de la piel de naranja.",
+                    "description": "Combate la celulitis y la grasa localizada, mejorando el contorno corporal y el aspecto de la piel.",
+                    "comingSoon": false,
                     "price": 100,
                     "duration": "45 min",
                     "detail": {
@@ -226,9 +253,10 @@
                     "id": "relleno-labios",
                     "icon": "fas fa-syringe",
                     "title": "Relleno de labios",
-                    "description": "Aumenta el volumen, define la forma y corrige asimetrías para unos labios más sensuales y de aspecto natural.",
-                    "price": 320,
-                    "duration": "30 min",
+                    "description": "Aumenta el volumen, define la forma y corrige asimetrías respetando la naturaleza de tus labios.",
+                    "comingSoon": false,
+                    "price": 290,
+                    "duration": "45 min",
                     "detail": {
                         "image": "https://via.placeholder.com/800x400.png/F7F5F0/74543F?text=Relleno+de+Labios",
                         "description": "El relleno de labios con ácido hialurónico es uno de los tratamientos más demandados para mejorar la estética facial. Permite aumentar el volumen, perfilar el contorno, marcar el arco de cupido, corregir asimetrías e hidratar en profundidad, logrando unos labios más definidos, jugosos y sensuales con un resultado natural y armonioso.",
@@ -268,7 +296,8 @@
                     "id": "relleno-menton-mandibula",
                     "icon": "fas fa-face-smile-beam",
                     "title": "Rellenos de mentón y mandíbula",
-                    "description": "Define el óvalo facial, mejora la proyección del mentón y armoniza los rasgos para un rostro más equilibrado.",
+                    "description": "Mejora la proyección del mentón y armoniza los rasgos para un rostro más equilibrado.",
+                    "comingSoon": false,
                     "price": 350,
                     "duration": "60 min",
                     "detail": {
@@ -305,6 +334,49 @@
                             }
                         ]
                     }
+                },
+                {
+                    "id": "relleno-pomulos",
+                    "icon": "fas fa-face-smile-beam",
+                    "title": "Rellenos de pómulos",
+                    "description": "Restaura el volumen perdido, eleva las facciones y define el rostro con un efecto lifting natural.",
+                    "comingSoon": false,
+                    "price": 290,
+                    "duration": "45 min",
+                    "detail": {
+                        "image": "https://via.placeholder.com/800x400.png/F7F5F0/74543F?text=Relleno+de+Menton",
+                        "description": "",
+                        "details": [
+                            {
+                                "icon": "fas fa-star",
+                                "title": "Beneficios Clave",
+                                "text": ""
+                            },
+                            {
+                                "icon": "fas fa-euro-sign",
+                                "title": "Precio"
+                            },
+                            {
+                                "icon": "far fa-clock",
+                                "title": "Duración"
+                            },
+                            {
+                                "icon": "fas fa-calendar-alt",
+                                "title": "Duración Resultado",
+                                "text": ""
+                            },
+                            {
+                                "icon": "fas fa-eye",
+                                "title": "Resultados",
+                                "text": ""
+                            },
+                            {
+                                "icon": "fas fa-shield-alt",
+                                "title": "Cuidados",
+                                "text": ""
+                            }
+                        ]
+                    }
                 }
             ]
         },
@@ -315,7 +387,8 @@
                     "id": "bioestimulacion-exosomas",
                     "icon": "fas fa-atom",
                     "title": "Bioestimulador con Ácido Hialurónico y Aminoácidos",
-                    "description": "Estimula y renueva la piel con la fuerza del ácido hialurónico. Solución estimulante regenerativa a base de ácido hialurónico.",
+                    "description": "Solución regenerativa con ácido hialurónico que estimula y revitaliza la matriz dérmica, mejorando la calidad y firmeza de la piel.",
+                    "comingSoon": false,
                     "price": 120,
                     "duration": "30 min",
                     "detail": {
@@ -356,8 +429,9 @@
                 {
                     "id": "bioestimulacion-total",
                     "icon": "fas fa-wand-magic-sparkles",
-                    "title": "Bioestimulador de colágeno-eleastina y AC H",
-                    "description": "Tratamiento rejuvenecedor que estimula los tejidos para restaurar la firmeza, elasticidad e hidratación natural de la piel.",
+                    "title": "Bioestimulador de colágeno-eleastina y Ácido Hialurónico",
+                    "description": "Bioestimulador de colágeno y elastina, ademas de tener efectos reparadores, hidratantes y antioxidantes para la piel.",
+                    "comingSoon": false,
                     "price": 220,
                     "duration": "45 min",
                     "detail": {
@@ -401,53 +475,12 @@
             "category": "Peelings",
             "treatments": [
                 {
-                    "id": "peeling-estrias-cicatrices",
-                    "icon": "fas fa-wand-sparkles",
-                    "title": "Peeling químico para estrías y cicatrices",
-                    "description": "Exfolia y revitaliza la piel para unificar el tono y mejorar la textura de estrías y cicatrices eficazmente.",
-                    "price": 90,
-                    "duration": "45 min",
-                    "detail": {
-                        "image": "https://via.placeholder.com/800x400.png/F7F5F0/74543F?text=Peeling+para+Estrias",
-                        "description": "Este peeling químico está específicamente formulado para tratar estrías y cicatrices. Actúa exfoliando las capas superficiales de la piel, promoviendo la renovación celular y la formación de nuevo colágeno, lo que resulta en una mejora significativa en la textura y el color de las marcas.",
-                        "details": [
-                            {
-                                "icon": "fas fa-star",
-                                "title": "Beneficios Clave",
-                                "text": "Mejora la textura y color de estrías y cicatrices, y unifica el tono."
-                            },
-                            {
-                                "icon": "fas fa-euro-sign",
-                                "title": "Precio"
-                            },
-                            {
-                                "icon": "far fa-clock",
-                                "title": "Duración"
-                            },
-                            {
-                                "icon": "fas fa-calendar-alt",
-                                "title": "Sesiones",
-                                "text": "Ciclo de 4 a 8 sesiones, cada 2-3 semanas."
-                            },
-                            {
-                                "icon": "fas fa-eye",
-                                "title": "Resultados",
-                                "text": "Progresivos. Piel más lisa y tono atenuado con cada sesión."
-                            },
-                            {
-                                "icon": "fas fa-shield-alt",
-                                "title": "Cuidados",
-                                "text": "La piel se descamará. Uso de protección solar SPF 50+ es fundamental."
-                            }
-                        ]
-                    }
-                },
-                {
                     "id": "peeling-exfoliante-lifting",
                     "icon": "fas fa-wand-magic",
                     "title": "Peeling exfoliante y lifting",
                     "description": "Fórmula innovadora con efecto lifting que exfolia la piel, unifica el tono y aporta una gran luminosidad.",
-                    "price": 70,
+                    "comingSoon": false,
+                    "price": 60,
                     "duration": "45 min",
                     "detail": {
                         "image": "https://via.placeholder.com/800x400.png/F7F5F0/74543F?text=Peeling+Lifting",
@@ -483,6 +516,49 @@
                             }
                         ]
                     }
+                },
+                {
+                    "id": "peeling-estrias-cicatrices",
+                    "icon": "fas fa-wand-sparkles",
+                    "title": "Peeling químico para estrías y cicatrices",
+                    "description": "Exfolia y revitaliza la piel para unificar el tono y mejorar la textura de estrías y cicatrices eficazmente.",
+                    "comingSoon": false,
+                    "price": 70,
+                    "duration": "45 min",
+                    "detail": {
+                        "image": "https://via.placeholder.com/800x400.png/F7F5F0/74543F?text=Peeling+para+Estrias",
+                        "description": "Este peeling químico está específicamente formulado para tratar estrías y cicatrices. Actúa exfoliando las capas superficiales de la piel, promoviendo la renovación celular y la formación de nuevo colágeno, lo que resulta en una mejora significativa en la textura y el color de las marcas.",
+                        "details": [
+                            {
+                                "icon": "fas fa-star",
+                                "title": "Beneficios Clave",
+                                "text": "Mejora la textura y color de estrías y cicatrices, y unifica el tono."
+                            },
+                            {
+                                "icon": "fas fa-euro-sign",
+                                "title": "Precio"
+                            },
+                            {
+                                "icon": "far fa-clock",
+                                "title": "Duración"
+                            },
+                            {
+                                "icon": "fas fa-calendar-alt",
+                                "title": "Sesiones",
+                                "text": "Ciclo de 4 a 8 sesiones, cada 2-3 semanas."
+                            },
+                            {
+                                "icon": "fas fa-eye",
+                                "title": "Resultados",
+                                "text": "Progresivos. Piel más lisa y tono atenuado con cada sesión."
+                            },
+                            {
+                                "icon": "fas fa-shield-alt",
+                                "title": "Cuidados",
+                                "text": "La piel se descamará. Uso de protección solar SPF 50+ es fundamental."
+                            }
+                        ]
+                    }
                 }
             ]
         },
@@ -490,10 +566,49 @@
             "category": "Otros Servicios",
             "treatments": [
                 {
+                    "id": "rutina-personalizada",
+                    "icon": "fas fa-leaf",
+                    "title": "Rutina personalizada",
+                    "description": "Análisis de piel y hábitos para diseñar una rutina de cuidado facial a medida y conseguir resultados visibles y duraderos.",
+                    "comingSoon": false,
+                    "price": 45,
+                    "duration": "60 min",
+                    "detail": {
+                        "image": "https://via.placeholder.com/800x400.png/F7F5F0/74543F?text=Rutina+Personalizada",
+                        "description": "Una buena rutina de cuidado en casa es clave para mantener la piel sana. Realizo un diagnóstico para entender tu piel, preocupaciones y estilo de vida y, con ello, diseño una rutina cosmética 100% personalizada con los productos que realmente necesitas.",
+                        "details": [
+                            {
+                                "icon": "fas fa-star",
+                                "title": "Beneficios Clave",
+                                "text": "Aprenderás a cuidar tu piel, optimizarás tu inversión y conseguirás resultados."
+                            },
+                            {
+                                "icon": "fas fa-euro-sign",
+                                "title": "Precio"
+                            },
+                            {
+                                "icon": "far fa-clock",
+                                "title": "Duración"
+                            },
+                            {
+                                "icon": "fas fa-box-open",
+                                "title": "Qué Incluye",
+                                "text": "Análisis de piel, revisión de rutina y diseño de una nueva."
+                            },
+                            {
+                                "icon": "fas fa-mobile-alt",
+                                "title": "Modalidad",
+                                "text": "La consulta puede ser presencial o telemática."
+                            }
+                        ]
+                    }
+                },
+                {
                     "id": "eliminar-verrugas",
                     "icon": "fas fa-star-of-life",
                     "title": "Eliminar verrugas y rubíes",
                     "description": "Eliminación segura, rápida y precisa de lesiones cutáneas benignas como verrugas y puntos rubí, sin dejar cicatriz.",
+                    "comingSoon": true,
                     "price": 40,
                     "duration": "30 min",
                     "detail": {
@@ -527,43 +642,6 @@
                                 "icon": "fas fa-shield-alt",
                                 "title": "Cuidados",
                                 "text": "Se forma una pequeña costra que cae sola en 5-10 días."
-                            }
-                        ]
-                    }
-                },
-                {
-                    "id": "rutina-personalizada",
-                    "icon": "fas fa-leaf",
-                    "title": "Rutina personalizada a domicilio",
-                    "description": "Análisis de piel y hábitos para diseñar una rutina de cuidado facial a medida y conseguir resultados visibles y duraderos.",
-                    "price": 45,
-                    "duration": "60 min",
-                    "detail": {
-                        "image": "https://via.placeholder.com/800x400.png/F7F5F0/74543F?text=Rutina+Personalizada",
-                        "description": "Una buena rutina de cuidado en casa es clave para mantener la piel sana. Realizo un diagnóstico para entender tu piel, preocupaciones y estilo de vida y, con ello, diseño una rutina cosmética 100% personalizada con los productos que realmente necesitas.",
-                        "details": [
-                            {
-                                "icon": "fas fa-star",
-                                "title": "Beneficios Clave",
-                                "text": "Aprenderás a cuidar tu piel, optimizarás tu inversión y conseguirás resultados."
-                            },
-                            {
-                                "icon": "fas fa-euro-sign",
-                                "title": "Precio"
-                            },
-                            {
-                                "icon": "far fa-clock",
-                                "title": "Duración"
-                            },
-                            {
-                                "icon": "fas fa-box-open",
-                                "title": "Qué Incluye",
-                                "text": "Análisis de piel, revisión de rutina y diseño de una nueva."
-                            },
-                            {
-                                "icon": "fas fa-mobile-alt",
-                                "title": "Modalidad",
-                                "text": "La consulta puede ser presencial o telemática."
                             }
                         ]
                     }
