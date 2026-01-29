@@ -1,6 +1,17 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-21X8X249W2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-21X8X249W2');
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Política de Privacidad - C3LINIC</title>
@@ -8,25 +19,37 @@
 
     <meta http-equiv="Content-Security-Policy" content="
         default-src 'self'; 
-        script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://static.cloudflareinsights.com; 
+        script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://static.cloudflareinsights.com https://*.clarity.ms https://www.googletagmanager.com; 
         style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://fonts.googleapis.com; 
         font-src 'self' https://cdnjs.cloudflare.com https://fonts.gstatic.com; 
-        img-src 'self' data: https:; 
-        connect-src 'self' https://api.emailjs.com https://cloudflareinsights.com;
+        img-src 'self' data: https://*.clarity.ms https://*.google-analytics.com https://*.googletagmanager.com; 
+        connect-src 'self' https://api.emailjs.com https://cloudflareinsights.com https://*.clarity.ms https://*.google-analytics.com;
         frame-src 'self' https://www.google.com;
     ">
 
+    <script type="text/javascript">
+        (function (c, l, a, r, i, t, y) {
+            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+        })(window, document, "clarity", "script", "v7idwx1407");
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <link rel="stylesheet" href="./css/base.css?v=1.0">
-    <link rel="stylesheet" href="./css/layout.css?v=1.0">
-    <link rel="stylesheet" href="./css/legal.css?v=1.0">
-    
-    <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==" />
+    <link rel="stylesheet" href="./css/base.css?v=2.0">
+    <link rel="stylesheet" href="./css/layout.css?v=2.0">
+    <link rel="stylesheet" href="./css/legal.css?v=2.0">
+
+    <link rel="icon" type="image/png"
+        href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==" />
 </head>
+
 <body>
 
     <header class="header">
@@ -35,19 +58,24 @@
                 <img src="img/logooscuro.png" alt="Logo C3linic" style="mix-blend-mode: multiply; height: 50px;">
                 <span>C3LINIC</span>
             </div>
-            <a href="index.html" class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.9rem;">Volver a la Web</a>
+            <a href="index.html" class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.9rem;">Volver a la
+                Web</a>
         </nav>
     </header>
 
     <main class="legal-main">
         <div class="legal-container">
             <h1 class="legal-title">Política de Privacidad</h1>
-            
+
             <div class="legal-content">
-                <p>En <strong>C3LINIC</strong> nos tomamos muy en serio la privacidad de tus datos. De conformidad con lo dispuesto en el Reglamento (UE) 2016/679 (RGPD) y la Ley Orgánica 3/2018 (LOPDGDD), te informamos de lo siguiente:</p>
+                <p>En <strong>C3LINIC</strong> nos tomamos muy en serio la privacidad de tus datos. De conformidad con
+                    lo dispuesto en el Reglamento (UE) 2016/679 (RGPD) y la Ley Orgánica 3/2018 (LOPDGDD), te informamos
+                    de lo siguiente:</p>
 
                 <h2>1. Responsable del Tratamiento</h2>
-                <p>Tus datos serán tratados por <strong>Christine Cano</strong>, con domicilio en Carrer del Camí de Castellar, nº5, 08226 Terrassa. Puedes contactar con nosotros para cualquier tema relacionado con la privacidad en: <strong>contacto@c3linic.com</strong>.</p>
+                <p>Tus datos serán tratados por <strong>Christine Cano</strong>, con domicilio en Carrer del Camí de
+                    Castellar, nº5, 08226 Terrassa. Puedes contactar con nosotros para cualquier tema relacionado con la
+                    privacidad en: <strong>contacto@c3linic.com</strong>.</p>
 
                 <h2>2. Finalidad del tratamiento</h2>
                 <p>Tratamos la información que nos facilitas con el fin de:</p>
@@ -60,16 +88,21 @@
                 <h2>3. Legitimación</h2>
                 <p>La base legal para el tratamiento de tus datos es:</p>
                 <ul>
-                    <li><strong>El consentimiento:</strong> Al rellenar el formulario de contacto o escribirnos, aceptas expresamente esta política.</li>
-                    <li><strong>La ejecución de un contrato:</strong> En caso de que contrates nuestros servicios, el tratamiento es necesario para la prestación del mismo.</li>
+                    <li><strong>El consentimiento:</strong> Al rellenar el formulario de contacto o escribirnos, aceptas
+                        expresamente esta política.</li>
+                    <li><strong>La ejecución de un contrato:</strong> En caso de que contrates nuestros servicios, el
+                        tratamiento es necesario para la prestación del mismo.</li>
                 </ul>
 
                 <h2>4. Destinatarios</h2>
-                <p>Tus datos no se cederán a terceros, salvo obligación legal (ej. Hacienda) o proveedores necesarios para el servicio (ej. gestoría, plataforma de email) que cumplan con la normativa de privacidad.</p>
+                <p>Tus datos no se cederán a terceros, salvo obligación legal (ej. Hacienda) o proveedores necesarios
+                    para el servicio (ej. gestoría, plataforma de email) que cumplan con la normativa de privacidad.</p>
 
                 <h2>5. Tus Derechos</h2>
-                <p>Tienes derecho a acceder a tus datos, rectificarlos si son inexactos, solicitar su supresión cuando ya no sean necesarios, oponerte al tratamiento y solicitar la portabilidad de los mismos.</p>
-                <p>Para ejercer estos derechos, envía un correo electrónico a <strong>contacto@c3linic.com</strong> adjuntando una copia de tu DNI.</p>
+                <p>Tienes derecho a acceder a tus datos, rectificarlos si son inexactos, solicitar su supresión cuando
+                    ya no sean necesarios, oponerte al tratamiento y solicitar la portabilidad de los mismos.</p>
+                <p>Para ejercer estos derechos, envía un correo electrónico a <strong>contacto@c3linic.com</strong>
+                    adjuntando una copia de tu DNI.</p>
             </div>
 
             <div class="legal-footer">
@@ -85,4 +118,5 @@
     </footer>
 
 </body>
+
 </html>

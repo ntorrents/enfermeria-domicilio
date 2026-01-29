@@ -2,6 +2,16 @@
 <html lang="es">
 
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-21X8X249W2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-21X8X249W2');
+    </script>
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -11,11 +21,11 @@
 
     <meta http-equiv="Content-Security-Policy" content="
         default-src 'self'; 
-        script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://static.cloudflareinsights.com; 
+        script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://static.cloudflareinsights.com https://*.clarity.ms https://www.googletagmanager.com; 
         style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://fonts.googleapis.com; 
         font-src 'self' https://cdnjs.cloudflare.com https://fonts.gstatic.com; 
-        img-src 'self' data: https:; 
-        connect-src 'self' https://api.emailjs.com https://cloudflareinsights.com;
+        img-src 'self' data: https://*.clarity.ms https://*.google-analytics.com https://*.googletagmanager.com; 
+        connect-src 'self' https://api.emailjs.com https://cloudflareinsights.com https://*.clarity.ms https://*.google-analytics.com;
         frame-src 'self' https://www.google.com;
     ">
     <meta name="referrer" content="strict-origin-when-cross-origin" />
@@ -23,14 +33,14 @@
     <link rel="preload" as="image" href="img/christine/christinephoto2-mobile.webp" media="(max-width: 768px)" />
     <link rel="preload" as="image" href="img/christine/christinephoto2.webp" media="(min-width: 769px)" />
 
-    <link rel="stylesheet" href="./css/base.css?v=1.0" />
-    <link rel="stylesheet" href="./css/layout.css?v=1.0" />
-    <link rel="stylesheet" href="./css/hero.css?v=1.0" />
+    <link rel="stylesheet" href="./css/base.css?v=2.0" />
+    <link rel="stylesheet" href="./css/layout.css?v=2.0" />
+    <link rel="stylesheet" href="./css/hero.css?v=2.0" />
 
-    <link rel="stylesheet" href="./css/about.css?v=1.0" media="print" onload="this.media='all'" />
-    <link rel="stylesheet" href="./css/services.css?v=1.0" media="print" onload="this.media='all'" />
-    <link rel="stylesheet" href="./css/testimonials.css?v=1.0" media="print" onload="this.media='all'" />
-    <link rel="stylesheet" href="./css/contact.css?v=1.0" media="print" onload="this.media='all'" />
+    <link rel="stylesheet" href="./css/about.css?v=2.0" media="print" onload="this.media='all'" />
+    <link rel="stylesheet" href="./css/services.css?v=2.0" media="print" onload="this.media='all'" />
+    <link rel="stylesheet" href="./css/testimonials.css?v=2.0" media="print" onload="this.media='all'" />
+    <link rel="stylesheet" href="./css/contact.css?v=2.0" media="print" onload="this.media='all'" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -43,8 +53,15 @@
     <link rel="icon" type="image/png"
         href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==" />
 
+    <script type="text/javascript">
+        (function (c, l, a, r, i, t, y) {
+            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+        })(window, document, "clarity", "script", "v7idwx1407");
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <script src="./emailjs-config.js?v=1.0"></script>
+    <script src="./emailjs-config.js?v=2.0"></script>
 </head>
 
 <body>
@@ -119,7 +136,7 @@
         <button id="acceptCookies" class="cookie-btn">Aceptar</button>
     </div>
 
-    <script type="module" src="./js/main.js?v=1.0"></script>
+    <script type="module" src="./js/main.js?v=2.0"></script>
 </body>
 
 </html>
