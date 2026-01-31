@@ -111,10 +111,10 @@
 
 .logo-img-footer {
     display: block;
-    margin: 0 auto 0.5rem auto; /* Centrado */
+    margin: 0 auto 0.5rem auto;
     height: auto;
 
-    /* LA MAGIA: */
+    /* PROCESO: */
     /* 1. invert(1): El fondo BLANCO se vuelve NEGRO. El logo marrón se vuelve azulado. */
     /* 2. grayscale(1): Quitamos el color azulado para que sea gris/blanco. */
     /* 3. brightness(2): Forzamos que el logo brille hasta ser blanco puro. */

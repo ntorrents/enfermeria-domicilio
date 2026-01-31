@@ -65,3 +65,7 @@
     border-top: 1px solid rgba(116, 84, 63, 0.1);
     text-align: center;
 }
+
+.footer .container p{
+    color: rgba(var(--white-rgb), 0.7);
+}

@@ -6,10 +6,10 @@ export function renderFooter(siteInfo, footerData) {
             <div class="container">
                 <div class="footer-content">
                     <img 
-                        src="../img/logooscuro.png" 
+                        src="../img/Logo C3 svg.svg" 
                         alt="Logo C3linic" 
                         class="logo-img-footer" 
-                        width="70" height="70" 
+                        width="100" height="100" 
                         loading="eager" 
                     >
                     <h3>${siteInfo.brandName}</h3>
