@@ -8,10 +8,10 @@
                     "title": "1ª Consulta Informativa",
                     "description": "¿Dudas sobre qué tratamiento es para ti? Ven a conocernos, evaluamos tu piel y te explicamos opciones sin ningún compromiso.",
                     "price": "GRATIS",
-                    "duration": "20 min",
+                    "duration": "60 min",
                     "detail": {
                         "image": "https://via.placeholder.com/800x400.png/F7F5F0/74543F?text=Consulta+Informativa",
-                        "description": "El primer paso para una piel radiante es entender qué necesita. En esta sesión gratuita de 20 minutos, analizaremos tu tipo de piel, escucharemos tus objetivos y te recomendaremos el protocolo ideal para ti. Sin letra pequeña y sin compromiso de compra. Solo ven, infórmate y decide con tranquilidad.",
+                        "description": "El primer paso para una piel radiante es entender qué necesita. En esta sesión gratuita de 1 hora, analizaremos tu tipo de piel, escucharemos tus objetivos y te recomendaremos el protocolo ideal para ti. Sin letra pequeña y sin compromiso de compra. Solo ven, infórmate y decide con tranquilidad.",
                         "details": [
                             { "icon": "fas fa-check", "title": "Sin coste", "text": "Totalmente gratuita." },
                             { "icon": "fas fa-user-md", "title": "Diagnóstico", "text": "Valoración profesional de tu caso." },

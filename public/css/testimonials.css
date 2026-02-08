@@ -1,3 +1,4 @@
+
 .testimonials-section {
     background-color: #fff;
 }
@@ -14,6 +15,8 @@
     border-radius: var(--radius-md);
     box-shadow: var(--shadow-sm);
     text-align: center;
+    display: flex;
+    flex-direction: column;
 }
 
 .testimonial-stars {
@@ -26,6 +29,7 @@
     font-style: italic;
     color: var(--text-main);
     margin-bottom: 1.5rem;
+    flex-grow: 1;
 }
 
 .testimonial-author {

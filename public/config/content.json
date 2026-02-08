@@ -17,20 +17,20 @@
       "clinicAddress": "Terrassa, Barcelona",
       "clinicNote": "Consulta privada"
     },
-    "testimonials_OFF": [
+    "testimonials": [
       {
-          "name": "Marta G.",
-          "text": "Christine es una profesional excelente. Me hizo sentir muy cómoda y los resultados del Dermapen fueron visibles desde la primera sesión.",
+          "name": "Loïda",
+          "text": "Muy contenta, gracias, Christine.\nExplicaciones muy claras sobre el tratamiento recibido. Trato muy cercano. Buena profesional.",
           "rating": 5
       },
       {
-          "name": "Jordi P.",
-          "text": "Trato cercano y muy profesional. Se nota mucho su experiencia como enfermera, lo que da mucha seguridad.",
+          "name": "Alba",
+          "text": "Christine es una profesional increíble, estoy muy contenta con el resultado y por el trato.\nLa recomiendo al cien por cien!",
           "rating": 5
       },
       {
-          "name": "Laura M.",
-          "text": "Me encantó la rutina personalizada que me diseñó. Por fin entiendo qué necesita mi piel y he dejado de gastar en productos que no me servían.",
+          "name": "Pol",
+          "text": "Todo genial. Des del primer momento se interesó por mis rutinas, hábitos y lo que yo buscaba para, en este caso, mi cuidado y mejora de la piel de la cara.Trato muy profesional antes, durante y después del tratamiento. 100% recomendable.",
           "rating": 5
       }
     ]
