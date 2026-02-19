@@ -4,7 +4,7 @@
             "treatments": [
                 {
                     "id": "consulta-gratuita",
-                    "icon": "fas fa-comments", 
+                    "icon": "fas fa-comments",
                     "title": "1ª Consulta Informativa",
                     "description": "¿Dudas sobre qué tratamiento es para ti? Ven a conocernos, evaluamos tu piel y te explicamos opciones sin ningún compromiso.",
                     "price": "GRATIS",
@@ -13,9 +13,21 @@
                         "image": "https://via.placeholder.com/800x400.png/F7F5F0/74543F?text=Consulta+Informativa",
                         "description": "El primer paso para una piel radiante es entender qué necesita. En esta sesión gratuita de 1 hora, analizaremos tu tipo de piel, escucharemos tus objetivos y te recomendaremos el protocolo ideal para ti. Sin letra pequeña y sin compromiso de compra. Solo ven, infórmate y decide con tranquilidad.",
                         "details": [
-                            { "icon": "fas fa-check", "title": "Sin coste", "text": "Totalmente gratuita." },
-                            { "icon": "fas fa-user-md", "title": "Diagnóstico", "text": "Valoración profesional de tu caso." },
-                            { "icon": "fas fa-hand-holding-heart", "title": "Sin compromiso", "text": "No estás obligada a reservar nada después." }
+                            {
+                                "icon": "fas fa-check",
+                                "title": "Sin coste",
+                                "text": "Totalmente gratuita."
+                            },
+                            {
+                                "icon": "fas fa-user-md",
+                                "title": "Diagnóstico",
+                                "text": "Valoración profesional de tu caso."
+                            },
+                            {
+                                "icon": "fas fa-hand-holding-heart",
+                                "title": "Sin compromiso",
+                                "text": "No estás obligada a reservar nada después."
+                            }
                         ]
                     }
                 }
@@ -30,7 +42,7 @@
                     "title": "Microneedling Facial (Dermapen)",
                     "description": "Técnica de inducción de colágeno que mejora la textura de la piel, reduce marcas de acné y suaviza líneas de expresión.",
                     "comingSoon": false,
-                    "price": 45,
+                    "price": 65,
                     "duration": "45 min",
                     "detail": {
                         "image": "https://via.placeholder.com/800x400.png/F7F5F0/74543F?text=Microneedling+Facial",
@@ -73,7 +85,7 @@
                     "title": "Microneedling Corporal (Dermapen)",
                     "description": "Tratamiento corporal que estimula el colágeno para reducir estrías, cicatrices y flacidez.",
                     "comingSoon": false,
-                    "price": 65,
+                    "price": 75,
                     "duration": "45 min",
                     "detail": {
                         "image": "https://via.placeholder.com/800x400.png/F7F5F0/74543F?text=Microneedling+Corporal",
@@ -240,6 +252,97 @@
                                 "icon": "fas fa-shield-alt",
                                 "title": "Cuidados",
                                 "text": "Beber abundante agua y combinar con estilo de vida saludable."
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "category": "Diatermia Regenerativa",
+            "treatments": [
+                {
+                    "id": "diatermia-cicatrices-fibrosis",
+                    "icon": "fas fa-band-aid",
+                    "title": "Tratamiento de Cicatrices y Fibrosis",
+                    "description": "Acelera la regeneración natural de tu piel para suavizar cicatrices, reducir fibrosis y recuperar la elasticidad perdida.",
+                    "comingSoon": false,
+                    "price": 60,
+                    "duration": "45 min",
+                    "detail": {
+                        "image": "https://via.placeholder.com/800x400.png/F7F5F0/74543F?text=Cicatrices+y+Fibrosis",
+                        "description": "¿Tienes una cicatriz que te incomoda, se ve abultada o te causa molestias? Ya sea por una cesárea, una cirugía reciente o una herida antigua, nuestra tecnología de Diatermia de alta frecuencia ayuda a tu piel a sanar mejor. Este tratamiento indoloro y relajante trabaja en profundidad para recuperar la elasticidad, suavidad y tono natural, despidiéndote de las cicatrices hundidas, los queloides y la piel tirante. Vuelve a sentirte cómoda en tu propia piel.",
+                        "details": [
+                            {
+                                "icon": "fas fa-star",
+                                "title": "Beneficios Clave",
+                                "text": "Suaviza cicatrices, reduce fibrosis y queloides, y elimina la sensación de tirantez."
+                            },
+                            {
+                                "icon": "fas fa-euro-sign",
+                                "title": "Precio"
+                            },
+                            {
+                                "icon": "far fa-clock",
+                                "title": "Duración"
+                            },
+                            {
+                                "icon": "fas fa-calendar-alt",
+                                "title": "Sesiones",
+                                "text": "Depende de la antigüedad de la cicatriz. Recomendado ciclo de 5 a 8 sesiones."
+                            },
+                            {
+                                "icon": "fas fa-eye",
+                                "title": "Resultados",
+                                "text": "Progresivos. Mejora del tejido y reducción de molestias desde las primeras sesiones."
+                            },
+                            {
+                                "icon": "fas fa-shield-alt",
+                                "title": "Cuidados",
+                                "text": "Mantener la zona bien hidratada y protegida de la exposición solar."
+                            }
+                        ]
+                    }
+                },
+                {
+                    "id": "diatermia-postparto",
+                    "icon": "fas fa-person-dress",
+                    "title": "Recuperación Abdominal Postparto",
+                    "description": "Restaura tu abdomen tras el embarazo. Combate la flacidez, mejora el tono muscular y reduce volumen retenido.",
+                    "comingSoon": false,
+                    "price": 65,
+                    "duration": "45 min",
+                    "detail": {
+                        "image": "https://via.placeholder.com/800x400.png/F7F5F0/74543F?text=Recuperacion+Postparto",
+                        "description": "Tu cuerpo ha hecho un trabajo increíble dando vida, y ahora merece el mejor cuidado. Te acompañamos en tu postparto con Diatermia Abdominal, diseñada para restaurar tu abdomen desde el interior. Mediante calor profundo y localizado, estimulamos la producción de colágeno y elastina para reafirmar la piel estriada, drenar líquidos retenidos y favorecer la oxigenación celular, ayudando a que todo vuelva a su sitio de forma natural.",
+                        "details": [
+                            {
+                                "icon": "fas fa-star",
+                                "title": "Beneficios Clave",
+                                "text": "Tensado cutáneo, drenaje de líquidos, desinflamación y recuperación del tejido celular."
+                            },
+                            {
+                                "icon": "fas fa-euro-sign",
+                                "title": "Precio"
+                            },
+                            {
+                                "icon": "far fa-clock",
+                                "title": "Duración"
+                            },
+                            {
+                                "icon": "fas fa-calendar-alt",
+                                "title": "Sesiones",
+                                "text": "Ciclo inicial recomendado de 6 a 10 sesiones, 1 o 2 por semana."
+                            },
+                            {
+                                "icon": "fas fa-eye",
+                                "title": "Resultados",
+                                "text": "Desinflamación rápida y mejora gradual de la firmeza y calidad de la piel."
+                            },
+                            {
+                                "icon": "fas fa-shield-alt",
+                                "title": "Cuidados",
+                                "text": "Beber abundante agua para favorecer el drenaje y combinar con hábitos saludables."
                             }
                         ]
                     }
@@ -524,6 +627,49 @@
                     "description": "Exfolia y revitaliza la piel para unificar el tono y mejorar la textura de estrías y cicatrices eficazmente.",
                     "comingSoon": false,
                     "price": 70,
+                    "duration": "45 min",
+                    "detail": {
+                        "image": "https://via.placeholder.com/800x400.png/F7F5F0/74543F?text=Peeling+para+Estrias",
+                        "description": "Este peeling químico está específicamente formulado para tratar estrías y cicatrices. Actúa exfoliando las capas superficiales de la piel, promoviendo la renovación celular y la formación de nuevo colágeno, lo que resulta en una mejora significativa en la textura y el color de las marcas.",
+                        "details": [
+                            {
+                                "icon": "fas fa-star",
+                                "title": "Beneficios Clave",
+                                "text": "Mejora la textura y color de estrías y cicatrices, y unifica el tono."
+                            },
+                            {
+                                "icon": "fas fa-euro-sign",
+                                "title": "Precio"
+                            },
+                            {
+                                "icon": "far fa-clock",
+                                "title": "Duración"
+                            },
+                            {
+                                "icon": "fas fa-calendar-alt",
+                                "title": "Sesiones",
+                                "text": "Ciclo de 4 a 8 sesiones, cada 2-3 semanas."
+                            },
+                            {
+                                "icon": "fas fa-eye",
+                                "title": "Resultados",
+                                "text": "Progresivos. Piel más lisa y tono atenuado con cada sesión."
+                            },
+                            {
+                                "icon": "fas fa-shield-alt",
+                                "title": "Cuidados",
+                                "text": "La piel se descamará. Uso de protección solar SPF 50+ es fundamental."
+                            }
+                        ]
+                    }
+                },
+                {
+                    "id": "peeling-antimanchas",
+                    "icon": "fas fa-wand-sparkles",
+                    "title": "Peeling Antimanchas",
+                    "description": "Renueva y revitaliza tu piel para combatir las manchas cutáneas. Un tratamiento suave y altamente eficaz que devuelve la luminosidad y uniformidad al rostro desde la primera sesión.",
+                    "comingSoon": false,
+                    "price": 60,
                     "duration": "45 min",
                     "detail": {
                         "image": "https://via.placeholder.com/800x400.png/F7F5F0/74543F?text=Peeling+para+Estrias",
