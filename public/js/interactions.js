@@ -1,4 +1,5 @@
 import { showToast } from './utils/toast.js';
+import { buildTreatmentModalContent } from './components/services.js';
 
 // --- Navegación Móvil ---
 function initializeMobileNavigation() {
@@ -145,6 +146,146 @@ function initializeContactForm() {
     });
 }
 
+// --- Servicios: Tabs + selector de packs + modal detalle ---
+function initializeServicesTabsAndModal() {
+  const section = document.getElementById('servicios');
+  if (!section) return;
+
+  const tabs = section.querySelectorAll('.services-tab');
+  const panels = section.querySelectorAll('.services-panel');
+  const modal = document.getElementById('treatment-modal');
+  const modalBody = document.getElementById('treatment-modal-body');
+
+  tabs.forEach((tab) => {
+    tab.addEventListener('click', () => {
+      const tabId = tab.getAttribute('data-tab');
+      tabs.forEach((t) => {
+        t.classList.remove('active');
+        t.setAttribute('aria-selected', 'false');
+      });
+      panels.forEach((p) => {
+        const isActive = p.id === `panel-${tabId}`;
+        p.classList.toggle('active', isActive);
+        p.setAttribute('aria-hidden', !isActive);
+      });
+      tab.classList.add('active');
+      tab.setAttribute('aria-selected', 'true');
+    });
+  });
+
+  section.querySelectorAll('.pack-option').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const card = btn.closest('.treatment-card');
+      if (!card) return;
+      card.querySelectorAll('.pack-option').forEach((b) => b.classList.remove('active'));
+      btn.classList.add('active');
+      const total = btn.getAttribute('data-total');
+      const pack = btn.getAttribute('data-pack');
+      const display = card.querySelector('.pack-price-display');
+      if (display) {
+        display.innerHTML = pack === 'single'
+          ? `<strong>${total}€</strong> por esta sesión`
+          : `<strong>${total}€</strong> total`;
+      }
+    });
+  });
+
+  const openModal = (treatmentId) => {
+    const services = window.__SERVICES_CONFIG;
+    if (!services || !Array.isArray(services)) return;
+    let treatment = null;
+    for (const cat of services) {
+      treatment = cat.treatments.find((t) => t.id === treatmentId);
+      if (treatment) break;
+    }
+    if (!treatment) return;
+    if (modalBody) modalBody.innerHTML = buildTreatmentModalContent(treatment);
+    if (modal) {
+      modal.removeAttribute('hidden');
+      modal.querySelector('.treatment-modal-close')?.focus();
+    }
+  };
+
+  const closeModal = () => {
+    if (modal) modal.setAttribute('hidden', '');
+  };
+
+  section.addEventListener('click', (e) => {
+    const verMas = e.target.closest('.btn-ver-mas');
+    if (verMas) {
+      e.preventDefault();
+      const id = verMas.getAttribute('data-treatment-id');
+      if (id) openModal(id);
+    }
+  });
+
+  modal?.querySelector('.treatment-modal-overlay')?.addEventListener('click', closeModal);
+  modal?.querySelector('.treatment-modal-close')?.addEventListener('click', closeModal);
+
+  modal?.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeModal();
+  });
+}
+
+// --- Testimonios: carrusel infinito en móvil ---
+function initializeTestimonialsCarousel() {
+  const section = document.getElementById('testimonios');
+  if (!section) return;
+
+  const wrapper = section.querySelector('.testimonials-carousel-wrapper');
+  const track = section.querySelector('.testimonials-track');
+  const prevBtn = section.querySelector('.testimonials-prev');
+  const nextBtn = section.querySelector('.testimonials-next');
+  const cards = track ? [...track.querySelectorAll('.testimonial-card')] : [];
+  const n = cards.length;
+
+  if (n === 0 || !prevBtn || !nextBtn) return;
+
+  let currentIndex = 0;
+  const isMobile = () => window.matchMedia('(max-width: 768px)').matches;
+
+  function setTransform(index, noTransition = false) {
+    if (!track) return;
+    if (noTransition) track.style.transition = 'none';
+    const percentPerSlide = 100 / n;
+    track.style.transform = isMobile() ? `translateX(-${index * percentPerSlide}%)` : 'none';
+    if (noTransition) {
+      track.offsetHeight;
+      track.style.transition = '';
+    }
+  }
+
+  function goTo(index) {
+    if (!isMobile()) return;
+    currentIndex = ((index % n) + n) % n;
+    setTransform(currentIndex);
+  }
+
+  function next() {
+    if (!isMobile()) return;
+    goTo(currentIndex + 1);
+  }
+
+  function prev() {
+    if (!isMobile()) return;
+    goTo(currentIndex - 1);
+  }
+
+  prevBtn.addEventListener('click', prev);
+  nextBtn.addEventListener('click', next);
+
+  let resizeTimeout;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(() => {
+      if (isMobile()) setTransform(currentIndex);
+      else setTransform(0, true);
+    }, 100);
+  });
+
+  if (isMobile()) setTransform(0);
+}
+
 // --- GESTIÓN DE COOKIES ---
 function initializeCookieConsent() {
     const banner = document.getElementById('cookieBanner');
@@ -175,7 +316,9 @@ export function initializeInteractions() {
     initializeSmoothScroll();
     updateHeaderOnScroll();
     initializeContactForm();
-    initializeCookieConsent(); // <--- Nueva función
+    initializeServicesTabsAndModal();
+    initializeTestimonialsCarousel();
+    initializeCookieConsent();
     
     // Ancla inicial
     const hash = window.location.hash;

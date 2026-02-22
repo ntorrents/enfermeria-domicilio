@@ -1,12 +1,74 @@
-
 .testimonials-section {
     background-color: #fff;
 }
 
-.testimonials-grid {
+/* Desktop: grid de testimonios */
+.testimonials-carousel-wrapper {
+    display: block;
+}
+
+.testimonials-carousel-wrapper .testimonials-arrow {
+    display: none;
+}
+
+.testimonials-carousel-wrapper .testimonials-slider {
+    overflow: visible;
+}
+
+.testimonials-carousel-wrapper .testimonials-track {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
+    transform: none;
+}
+
+/* Mobile: carrusel un testimonio + flechas */
+@media (max-width: 768px) {
+    .testimonials-carousel-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .testimonials-carousel-wrapper .testimonials-arrow {
+        display: flex;
+        flex: 0 0 auto;
+        width: 2.5rem;
+        height: 2.5rem;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid rgba(var(--primary-rgb), 0.2);
+        border-radius: 50%;
+        background: white;
+        color: var(--primary);
+        cursor: pointer;
+        transition: background 0.2s, color 0.2s;
+    }
+
+    .testimonials-carousel-wrapper .testimonials-arrow:hover {
+        background: var(--accent);
+        color: white;
+        border-color: var(--accent);
+    }
+
+    .testimonials-carousel-wrapper .testimonials-slider {
+        flex: 1;
+        min-width: 0;
+        overflow: hidden;
+    }
+
+    .testimonials-carousel-wrapper .testimonials-track {
+        display: flex;
+        grid-template-columns: unset;
+        gap: 0;
+        width: 300%;
+        transition: transform 0.35s ease;
+    }
+
+    .testimonials-carousel-wrapper .testimonials-track .testimonial-card {
+        flex: 0 0 33.333%;
+        min-width: 0;
+    }
 }
 
 .testimonial-card {

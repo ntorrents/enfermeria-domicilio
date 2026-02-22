@@ -4,6 +4,63 @@
     padding-bottom: 6rem;
 }
 
+/* --- Tabs por categoría (mobile-first) --- */
+.services-tabs-wrapper {
+    margin-bottom: 2rem;
+    -webkit-overflow-scrolling: touch;
+}
+
+.services-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 0.25rem 0;
+}
+
+.services-tab {
+    flex: 0 0 auto;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: var(--text-light);
+    background: white;
+    border: 1px solid rgba(var(--primary-rgb), 0.15);
+    border-radius: var(--radius-full);
+    padding: 0.6rem 1.2rem;
+    cursor: pointer;
+    transition: color 0.2s, background 0.2s, border-color 0.2s;
+    white-space: nowrap;
+}
+
+.services-tab:hover {
+    color: var(--primary);
+    border-color: rgba(var(--primary-rgb), 0.3);
+}
+
+.services-tab.active {
+    color: white;
+    background: var(--primary);
+    border-color: var(--primary);
+}
+
+.services-panels {
+    position: relative;
+}
+
+.services-panel {
+    display: none;
+}
+
+.services-panel.active {
+    display: block;
+    animation: servicesPanelIn 0.25s ease;
+}
+
+@keyframes servicesPanelIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
 .catalog-wrapper {
     display: flex;
     flex-direction: column;
@@ -149,6 +206,203 @@
 .btn-card:hover {
     color: var(--accent);
     gap: 0.8rem;
+}
+
+/* Botón "Ver más" (mismo estilo que enlace, pero button) */
+button.btn-card.btn-ver-mas {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font: inherit;
+}
+
+/* --- Caja de Packs (3ª al 50% / 5ª gratis) --- */
+.pack-box {
+    width: calc(100% + 4rem);
+    margin-left: -2rem;
+    margin-right: -2rem;
+    margin-top: 0.5rem;
+    padding: 1rem 2rem;
+    background: rgba(var(--accent-rgb), 0.08);
+    border-radius: var(--radius-md);
+}
+
+.pack-box-title {
+    margin: 0 0 0.5rem 0;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.service-card .card-body .pack-box {
+    margin-bottom: 0.5rem;
+}
+
+.pack-selector {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.pack-option {
+    flex: 1 1 0;
+    min-width: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+    font-family: "Inter", sans-serif;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--text-main);
+    background: white;
+    border: 1px solid rgba(var(--primary-rgb), 0.15);
+    border-radius: var(--radius-sm);
+    padding: 0.6rem 0.5rem;
+    cursor: pointer;
+    transition: color 0.2s, background 0.2s, border-color 0.2s;
+}
+
+.pack-option:hover {
+    color: var(--primary);
+    border-color: rgba(var(--primary-rgb), 0.3);
+}
+
+.pack-option.active {
+    color: white;
+    background: var(--accent);
+    border-color: var(--accent);
+}
+
+.pack-option-title {
+    font-weight: 600;
+    font-size: 0.9rem;
+    line-height: 1.2;
+}
+
+.pack-option-detail {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--accent);
+    line-height: 1.2;
+}
+
+.pack-option-price {
+    font-size: 0.8rem;
+    opacity: 0.95;
+}
+
+.pack-option.active .pack-option-price {
+    opacity: 1;
+}
+
+.pack-price-display {
+    margin: 0;
+    font-size: 0.95rem;
+    color: var(--primary);
+    font-weight: 500;
+}
+
+.pack-price-display strong {
+    color: var(--accent);
+}
+
+.service-price-tag--soon {
+    background-color: #888;
+    color: white;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* --- Modal detalle tratamiento --- */
+.treatment-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.treatment-modal[hidden] {
+    display: none !important;
+}
+
+.treatment-modal-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(var(--primary-rgb), 0.4);
+    backdrop-filter: blur(4px);
+    cursor: pointer;
+}
+
+.treatment-modal-dialog {
+    position: relative;
+    width: 100%;
+    max-width: 520px;
+    max-height: 90vh;
+    overflow: auto;
+    background: white;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    padding: 2rem;
+}
+
+.treatment-modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--secondary);
+    border: none;
+    border-radius: var(--radius-full);
+    color: var(--primary);
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+
+.treatment-modal-close:hover {
+    background: var(--accent);
+    color: white;
+}
+
+.treatment-modal-body {
+    padding-right: 2rem;
+}
+
+.treatment-modal-title {
+    font-family: "Playfair Display", serif;
+    font-size: 1.75rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+    padding-right: 2.5rem;
+}
+
+.treatment-modal-description {
+    font-size: 1rem;
+    color: var(--text-light);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.treatment-modal-body .details-list {
+    margin-bottom: 1.5rem;
+}
+
+.treatment-modal-body .btn-block {
+    width: 100%;
+    text-align: center;
+    display: block;
 }
 
 /* --- PÁGINA DETALLE TRATAMIENTO --- */
@@ -297,6 +551,15 @@
 }
 
 @media (max-width: 768px) {
+    .services-tabs {
+        padding-bottom: 0.5rem;
+    }
+
+    .services-tab {
+        font-size: 0.85rem;
+        padding: 0.5rem 1rem;
+    }
+
     .services-grid {
         grid-template-columns: 1fr;
         gap: 1.5rem;
@@ -311,7 +574,7 @@
         height: 250px;
     }
 
-    .card-body p{
+    .card-body p {
         display: none;
     }
 
@@ -321,7 +584,33 @@
     }
 
     .service-card.card-highlight .card-body p {
-        display: block; 
+        display: block;
     }
-    
+
+    .pack-selector {
+        flex-direction: column;
+    }
+
+    .pack-option {
+        width: 100%;
+    }
+
+    .treatment-modal-dialog {
+        max-height: 85vh;
+        padding: 1.5rem;
+    }
+
+    .treatment-modal-close {
+        top: 0.75rem;
+        right: 0.75rem;
+    }
+
+    .treatment-modal-body {
+        padding-right: 0;
+    }
+
+    .treatment-modal-title {
+        padding-right: 0;
+        font-size: 1.5rem;
+    }
 }

@@ -36,7 +36,10 @@ async function initApp() {
     if (!config) return; // Si falla la carga, paramos
 
     const appContainer = document.getElementById('app-content');
-    
+
+    // Exponer servicios para el modal de detalle (sin rutas a treatment-detail)
+    window.__SERVICES_CONFIG = config.services;
+
     // 1. Renderizado Estático (HTML)
     appContainer.innerHTML = [
         renderHero(config.hero),

@@ -11,7 +11,7 @@
                     "duration": "60 min",
                     "detail": {
                         "image": "https://via.placeholder.com/800x400.png/F7F5F0/74543F?text=Consulta+Informativa",
-                        "description": "El primer paso para una piel radiante es entender qué necesita. En esta sesión gratuita de 1 hora, analizaremos tu tipo de piel, escucharemos tus objetivos y te recomendaremos el protocolo ideal para ti. Sin letra pequeña y sin compromiso de compra. Solo ven, infórmate y decide con tranquilidad.",
+                        "description": "En esta sesión de una hora valoramos tu tipo de piel, tus preocupaciones y tus objetivos. Te explicamos qué tratamientos encajan contigo y cómo funcionan, sin compromiso. Es el punto de partida ideal para decidir con tranquilidad.",
                         "details": [
                             {
                                 "icon": "fas fa-check",
@@ -46,7 +46,7 @@
                     "duration": "45 min",
                     "detail": {
                         "image": "https://via.placeholder.com/800x400.png/F7F5F0/74543F?text=Microneedling+Facial",
-                        "description": "El Microneedling facial, conocido como Dermapen, es un tratamiento revolucionario que rejuvenece la piel desde dentro. Mediante un dispositivo de microagujas, se crean miles de microcanales en la epidermis de forma controlada. Esta acción activa la respuesta natural del cuerpo para repararse, estimulando la producción de colágeno y elastina. Es el tratamiento ideal para quienes buscan una piel visiblemente más joven, firme y uniforme, abordando problemas como arrugas finas, cicatrices de acné, poros dilatados y falta de luminosidad.",
+                        "description": "El Dermapen crea microcanales controlados en la piel para activar la reparación natural y la producción de colágeno y elastina. Indicado para mejorar textura, suavizar arrugas finas, atenuar cicatrices de acné y unificar el tono. La piel gana firmeza y luminosidad de forma progresiva.",
                         "details": [
                             {
                                 "icon": "fas fa-star",
@@ -89,7 +89,7 @@
                     "duration": "45 min",
                     "detail": {
                         "image": "https://via.placeholder.com/800x400.png/F7F5F0/74543F?text=Microneedling+Corporal",
-                        "description": "El Microneedling corporal utiliza la misma tecnología de inducción de colágeno que el tratamiento facial para tratar zonas más extensas del cuerpo. Es una solución altamente eficaz para mejorar la apariencia de estrías, cicatrices post-quirúrgicas y la flacidez en áreas como el abdomen, los muslos y los glúteos. El tratamiento promueve la regeneración celular y la reestructuración de la dermis, dando como resultado una piel más lisa, firme y uniforme.",
+                        "description": "Misma tecnología que el facial aplicada a zonas corporales: abdomen, muslos, glúteos. Favorece la regeneración de la dermis y mejora la apariencia de estrías, cicatrices y flacidez. La piel se vuelve más lisa y firme con un protocolo adecuado.",
                         "details": [
                             {
                                 "icon": "fas fa-star",
@@ -137,7 +137,7 @@
                     "duration": "30 min",
                     "detail": {
                         "image": "https://via.placeholder.com/800x400.png/F7F5F0/74543F?text=Mesoterapia+Capilar",
-                        "description": "La mesoterapia capilar es un tratamiento de bioestimulación que combate la caída del cabello y promueve su crecimiento. Consiste en microinyecciones en el cuero cabelludo de un cóctel personalizado de vitaminas, minerales y aminoácidos que nutren el folículo piloso, mejoran la circulación y revitalizan el cabello desde la raíz.",
+                        "description": "Microinyecciones en el cuero cabelludo con un cóctel de vitaminas, minerales y aminoácidos que nutren el folículo, mejoran la circulación y fortalecen la fibra capilar. Indicado para frenar la caída y favorecer un cabello más denso y con más volumen.",
                         "details": [
                             {
                                 "icon": "fas fa-star",
@@ -180,7 +180,7 @@
                     "duration": "45 min",
                     "detail": {
                         "image": "https://via.placeholder.com/800x400.png/F7F5F0/74543F?text=Mesoterapia+Facial",
-                        "description": "Este tratamiento de rejuvenecimiento facial consiste en la aplicación de microinyecciones de ácido hialurónico no reticulado y un cóctel de vitaminas. Aporta una hidratación profunda, mejora la elasticidad y estimula la producción de colágeno. El resultado es un 'efecto glow' inmediato, con una piel visiblemente más jugosa, tersa y luminosa.",
+                        "description": "Microinyecciones de ácido hialurónico no reticulado y vitaminas que hidratan en profundidad, mejoran la elasticidad y estimulan el colágeno. Proporciona un efecto glow inmediato y una piel más tersa y luminosa.",
                         "details": [
                             {
                                 "icon": "fas fa-star",
@@ -223,7 +223,7 @@
                     "duration": "45 min",
                     "detail": {
                         "image": "https://via.placeholder.com/800x400.png/F7F5F0/74543F?text=Mesoterapia+Corporal",
-                        "description": "Tratamiento enfocado en combatir la celulitis y la grasa localizada en áreas como abdomen, flancos, muslos y cartucheras. Se realizan microinyecciones con una mezcla de sustancias lipolíticas, drenantes y reafirmantes que actúan directamente sobre el tejido adiposo, facilitando la eliminación de grasa, mejorando la circulación y alisando la 'piel de naranja'.",
+                        "description": "Microinyecciones con activos lipolíticos, drenantes y reafirmantes en abdomen, flancos, muslos y cartucheras. Actúa sobre el tejido adiposo y la circulación para mejorar el contorno y el aspecto de la piel de naranja.",
                         "details": [
                             {
                                 "icon": "fas fa-star",
@@ -271,7 +271,7 @@
                     "duration": "45 min",
                     "detail": {
                         "image": "https://via.placeholder.com/800x400.png/F7F5F0/74543F?text=Cicatrices+y+Fibrosis",
-                        "description": "¿Tienes una cicatriz que te incomoda, se ve abultada o te causa molestias? Ya sea por una cesárea, una cirugía reciente o una herida antigua, nuestra tecnología de Diatermia de alta frecuencia ayuda a tu piel a sanar mejor. Este tratamiento indoloro y relajante trabaja en profundidad para recuperar la elasticidad, suavidad y tono natural, despidiéndote de las cicatrices hundidas, los queloides y la piel tirante. Vuelve a sentirte cómoda en tu propia piel.",
+                        "description": "La diatermia de alta frecuencia aplicada a cicatrices y fibrosis favorece la regeneración del tejido, reduce queloides y tirantez y mejora la elasticidad y el tono. Indicada para cicatrices postquirúrgicas, cesárea o heridas antiguas. Tratamiento indoloro y relajante.",
                         "details": [
                             {
                                 "icon": "fas fa-star",
@@ -314,7 +314,7 @@
                     "duration": "45 min",
                     "detail": {
                         "image": "https://via.placeholder.com/800x400.png/F7F5F0/74543F?text=Recuperacion+Postparto",
-                        "description": "Tu cuerpo ha hecho un trabajo increíble dando vida, y ahora merece el mejor cuidado. Te acompañamos en tu postparto con Diatermia Abdominal, diseñada para restaurar tu abdomen desde el interior. Mediante calor profundo y localizado, estimulamos la producción de colágeno y elastina para reafirmar la piel estriada, drenar líquidos retenidos y favorecer la oxigenación celular, ayudando a que todo vuelva a su sitio de forma natural.",
+                        "description": "Diatermia abdominal específica para el postparto: calor profundo que estimula colágeno y elastina, reafirma la piel, favorece el drenaje de líquidos y la oxigenación del tejido. Ayuda a recuperar la zona abdominal de forma natural y confortable.",
                         "details": [
                             {
                                 "icon": "fas fa-star",
@@ -362,7 +362,7 @@
                     "duration": "45 min",
                     "detail": {
                         "image": "https://via.placeholder.com/800x400.png/F7F5F0/74543F?text=Relleno+de+Labios",
-                        "description": "El relleno de labios con ácido hialurónico es uno de los tratamientos más demandados para mejorar la estética facial. Permite aumentar el volumen, perfilar el contorno, marcar el arco de cupido, corregir asimetrías e hidratar en profundidad, logrando unos labios más definidos, jugosos y sensuales con un resultado natural y armonioso.",
+                        "description": "Relleno con ácido hialurónico para aumentar volumen, perfilar el contorno, definir el arco de Cupido y corregir asimetrías. Resultado natural, hidratación en profundidad y labios más definidos y armónicos.",
                         "details": [
                             {
                                 "icon": "fas fa-star",
@@ -405,7 +405,7 @@
                     "duration": "60 min",
                     "detail": {
                         "image": "https://via.placeholder.com/800x400.png/F7F5F0/74543F?text=Relleno+de+Menton",
-                        "description": "La marcación mandibular y la proyección de mentón con ácido hialurónico son técnicas no quirúrgicas para definir y armonizar el tercio inferior del rostro. Permiten realzar los ángulos mandibulares para un aspecto más definido, o proyectar un mentón retraído, logrando un perfil más equilibrado y un óvalo facial más estilizado.",
+                        "description": "Ácido hialurónico para marcar la mandíbula y proyectar el mentón sin cirugía. Define el tercio inferior del rostro, realza los ángulos y equilibra el perfil para un óvalo facial más armónico.",
                         "details": [
                             {
                                 "icon": "fas fa-star",
@@ -448,13 +448,8 @@
                     "duration": "45 min",
                     "detail": {
                         "image": "https://via.placeholder.com/800x400.png/F7F5F0/74543F?text=Relleno+de+Menton",
-                        "description": "",
+                        "description": "Relleno con ácido hialurónico para restaurar volumen en pómulos, elevar las facciones y conseguir un efecto lifting natural. Define el rostro y aporta luminosidad sin cirugía.",
                         "details": [
-                            {
-                                "icon": "fas fa-star",
-                                "title": "Beneficios Clave",
-                                "text": ""
-                            },
                             {
                                 "icon": "fas fa-euro-sign",
                                 "title": "Precio"
@@ -466,17 +461,12 @@
                             {
                                 "icon": "fas fa-calendar-alt",
                                 "title": "Duración Resultado",
-                                "text": ""
-                            },
-                            {
-                                "icon": "fas fa-eye",
-                                "title": "Resultados",
-                                "text": ""
+                                "text": "Entre 12 y 18 meses."
                             },
                             {
                                 "icon": "fas fa-shield-alt",
                                 "title": "Cuidados",
-                                "text": ""
+                                "text": "Leve inflamación. Evitar presionar la zona tratada."
                             }
                         ]
                     }
@@ -496,7 +486,7 @@
                     "duration": "30 min",
                     "detail": {
                         "image": "https://via.placeholder.com/800x400.png/F7F5F0/74543F?text=Bioestimulacion+con+Exosomas",
-                        "description": "Bioestimulador de colágeno y elastina, ademas de tener efectos reparadores, hidratantes y antioxidantes para la piel.",
+                        "description": "Infiltración de ácido hialurónico y aminoácidos que estimula la matriz dérmica y mejora la calidad y firmeza de la piel. Efectos reparadores, hidratantes y antioxidantes. Indicado como base de rejuvenecimiento.",
                         "details": [
                             {
                                 "icon": "fas fa-star",
@@ -539,7 +529,7 @@
                     "duration": "45 min",
                     "detail": {
                         "image": "https://via.placeholder.com/800x400.png/F7F5F0/74543F?text=Bioestimulacion+Total",
-                        "description": "La bioestimulación total es un cóctel de activos revitalizantes que se infiltra en la piel para restaurar su estructura y vitalidad. Combinando ácido hialurónico, vitaminas y aminoácidos, este tratamiento estimula la producción natural de colágeno y elastina, combatiendo la flacidez, la deshidratación y la falta de luminosidad para un rejuvenecimiento integral.",
+                        "description": "Cóctel de ácido hialurónico, vitaminas y aminoácidos que se infiltra en profundidad para restaurar la estructura cutánea. Estimula colágeno y elastina, combate flacidez y deshidratación y devuelve luminosidad. Rejuvenecimiento facial integral.",
                         "details": [
                             {
                                 "icon": "fas fa-star",
@@ -587,7 +577,7 @@
                     "duration": "45 min",
                     "detail": {
                         "image": "https://via.placeholder.com/800x400.png/F7F5F0/74543F?text=Peeling+Lifting",
-                        "description": "Este peeling combina una potente acción exfoliante con un efecto tensor inmediato. Elimina células muertas, atenúa manchas y arrugas finas y, al mismo tiempo, proporciona un efecto lifting que redefine el óvalo facial para una piel luminosa y rejuvenecida.",
+                        "description": "Peeling que combina exfoliación profunda con efecto tensor inmediato. Elimina células muertas, unifica el tono, atenúa manchas y arrugas finas y redefine el óvalo facial. Piel luminosa desde la primera sesión.",
                         "details": [
                             {
                                 "icon": "fas fa-star",
@@ -630,7 +620,7 @@
                     "duration": "45 min",
                     "detail": {
                         "image": "https://via.placeholder.com/800x400.png/F7F5F0/74543F?text=Peeling+para+Estrias",
-                        "description": "Este peeling químico está específicamente formulado para tratar estrías y cicatrices. Actúa exfoliando las capas superficiales de la piel, promoviendo la renovación celular y la formación de nuevo colágeno, lo que resulta en una mejora significativa en la textura y el color de las marcas.",
+                        "description": "Peeling químico formulado para estrías y cicatrices. Exfolia las capas superficiales, estimula la renovación celular y la formación de colágeno, mejorando la textura y el color de las marcas de forma progresiva.",
                         "details": [
                             {
                                 "icon": "fas fa-star",
@@ -673,13 +663,8 @@
                     "duration": "45 min",
                     "detail": {
                         "image": "https://via.placeholder.com/800x400.png/F7F5F0/74543F?text=Peeling+para+Estrias",
-                        "description": "Este peeling químico está específicamente formulado para tratar estrías y cicatrices. Actúa exfoliando las capas superficiales de la piel, promoviendo la renovación celular y la formación de nuevo colágeno, lo que resulta en una mejora significativa en la textura y el color de las marcas.",
+                        "description": "Peeling específico para manchas cutáneas: renueva la piel, unifica el tono y devuelve luminosidad. Suave y eficaz, con resultados visibles desde las primeras sesiones. Protección solar posterior esencial.",
                         "details": [
-                            {
-                                "icon": "fas fa-star",
-                                "title": "Beneficios Clave",
-                                "text": "Mejora la textura y color de estrías y cicatrices, y unifica el tono."
-                            },
                             {
                                 "icon": "fas fa-euro-sign",
                                 "title": "Precio"
@@ -689,19 +674,9 @@
                                 "title": "Duración"
                             },
                             {
-                                "icon": "fas fa-calendar-alt",
-                                "title": "Sesiones",
-                                "text": "Ciclo de 4 a 8 sesiones, cada 2-3 semanas."
-                            },
-                            {
-                                "icon": "fas fa-eye",
-                                "title": "Resultados",
-                                "text": "Progresivos. Piel más lisa y tono atenuado con cada sesión."
-                            },
-                            {
                                 "icon": "fas fa-shield-alt",
                                 "title": "Cuidados",
-                                "text": "La piel se descamará. Uso de protección solar SPF 50+ es fundamental."
+                                "text": "La piel puede descamarse. Uso de protección solar SPF 50+ es fundamental."
                             }
                         ]
                     }
@@ -721,7 +696,7 @@
                     "duration": "60 min",
                     "detail": {
                         "image": "https://via.placeholder.com/800x400.png/F7F5F0/74543F?text=Rutina+Personalizada",
-                        "description": "Una buena rutina de cuidado en casa es clave para mantener la piel sana. Realizo un diagnóstico para entender tu piel, preocupaciones y estilo de vida y, con ello, diseño una rutina cosmética 100% personalizada con los productos que realmente necesitas.",
+                        "description": "Diagnóstico de tu piel y estilo de vida para diseñar una rutina cosmética a medida: productos, orden de aplicación y hábitos. Aprenderás a cuidar tu piel de forma eficaz y a optimizar tu inversión.",
                         "details": [
                             {
                                 "icon": "fas fa-star",
@@ -759,7 +734,7 @@
                     "duration": "30 min",
                     "detail": {
                         "image": "https://via.placeholder.com/800x400.png/F7F5F0/74543F?text=Eliminar+Verrugas",
-                        "description": "Mediante técnicas de alta precisión como la electrocoagulación, se eliminan de forma rápida y segura lesiones cutáneas benignas como verrugas, puntos rubí o fibromas. Es un procedimiento mínimamente invasivo que coagula el tejido, evitando el sangrado y sin dejar cicatriz.",
+                        "description": "Electrocoagulación de precisión para eliminar verrugas, puntos rubí y fibromas de forma segura. Procedimiento mínimamente invasivo, con bajo riesgo de sangrado y sin dejar cicatriz visible.",
                         "details": [
                             {
                                 "icon": "fas fa-star",
