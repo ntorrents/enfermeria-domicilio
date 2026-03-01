@@ -1,772 +1,729 @@
-    [
-        {
-            "category": "Diagnóstico y Valoración",
-            "treatments": [
-                {
-                    "id": "consulta-gratuita",
-                    "icon": "fas fa-comments",
-                    "title": "1ª Consulta Informativa",
-                    "description": "¿Dudas sobre qué tratamiento es para ti? Ven a conocernos, evaluamos tu piel y te explicamos opciones sin ningún compromiso.",
-                    "price": "GRATIS",
-                    "duration": "60 min",
-                    "detail": {
-                        "image": "https://via.placeholder.com/800x400.png/F7F5F0/74543F?text=Consulta+Informativa",
-                        "description": "En esta sesión de una hora valoramos tu tipo de piel, tus preocupaciones y tus objetivos. Te explicamos qué tratamientos encajan contigo y cómo funcionan, sin compromiso. Es el punto de partida ideal para decidir con tranquilidad.",
-                        "details": [
-                            {
-                                "icon": "fas fa-check",
-                                "title": "Sin coste",
-                                "text": "Totalmente gratuita."
-                            },
-                            {
-                                "icon": "fas fa-user-md",
-                                "title": "Diagnóstico",
-                                "text": "Valoración profesional de tu caso."
-                            },
-                            {
-                                "icon": "fas fa-hand-holding-heart",
-                                "title": "Sin compromiso",
-                                "text": "No estás obligada a reservar nada después."
-                            }
-                        ]
-                    }
-                }
-            ]
-        },
-        {
-            "category": "Microneedling",
-            "treatments": [
-                {
-                    "id": "microneedling-facial",
-                    "icon": "fas fa-droplet",
-                    "title": "Microneedling Facial (Dermapen)",
-                    "description": "Técnica de inducción de colágeno que mejora la textura de la piel, reduce marcas de acné y suaviza líneas de expresión.",
-                    "comingSoon": false,
-                    "price": 65,
-                    "duration": "45 min",
-                    "detail": {
-                        "image": "https://via.placeholder.com/800x400.png/F7F5F0/74543F?text=Microneedling+Facial",
-                        "description": "El Dermapen crea microcanales controlados en la piel para activar la reparación natural y la producción de colágeno y elastina. Indicado para mejorar textura, suavizar arrugas finas, atenuar cicatrices de acné y unificar el tono. La piel gana firmeza y luminosidad de forma progresiva.",
-                        "details": [
-                            {
-                                "icon": "fas fa-star",
-                                "title": "Beneficios Clave",
-                                "text": "Reduce arrugas, minimiza marcas de acné, mejora la firmeza y unifica el tono."
-                            },
-                            {
-                                "icon": "fas fa-euro-sign",
-                                "title": "Precio"
-                            },
-                            {
-                                "icon": "far fa-clock",
-                                "title": "Duración"
-                            },
-                            {
-                                "icon": "fas fa-calendar-alt",
-                                "title": "Sesiones",
-                                "text": "Idealmente una vez al mes."
-                            },
-                            {
-                                "icon": "fas fa-eye",
-                                "title": "Resultados",
-                                "text": "Luminosidad desde la primera sesión. Mejora de textura desde la tercera semana."
-                            },
-                            {
-                                "icon": "fas fa-shield-alt",
-                                "title": "Cuidados",
-                                "text": "Usar protección solar SPF 50+. Evitar exposición directa al sol."
-                            }
-                        ]
-                    }
-                },
-                {
-                    "id": "microneedling-corporal",
-                    "icon": "fas fa-person",
-                    "title": "Microneedling Corporal (Dermapen)",
-                    "description": "Tratamiento corporal que estimula el colágeno para reducir estrías, cicatrices y flacidez.",
-                    "comingSoon": false,
-                    "price": 75,
-                    "duration": "45 min",
-                    "detail": {
-                        "image": "https://via.placeholder.com/800x400.png/F7F5F0/74543F?text=Microneedling+Corporal",
-                        "description": "Misma tecnología que el facial aplicada a zonas corporales: abdomen, muslos, glúteos. Favorece la regeneración de la dermis y mejora la apariencia de estrías, cicatrices y flacidez. La piel se vuelve más lisa y firme con un protocolo adecuado.",
-                        "details": [
-                            {
-                                "icon": "fas fa-star",
-                                "title": "Beneficios Clave",
-                                "text": "Reduce estrías y cicatrices, mejora la firmeza y combate la flacidez."
-                            },
-                            {
-                                "icon": "fas fa-euro-sign",
-                                "title": "Precio"
-                            },
-                            {
-                                "icon": "far fa-clock",
-                                "title": "Duración"
-                            },
-                            {
-                                "icon": "fas fa-calendar-alt",
-                                "title": "Sesiones",
-                                "text": "Ciclo de 4 a 6 sesiones, cada 4-6 semanas."
-                            },
-                            {
-                                "icon": "fas fa-eye",
-                                "title": "Resultados",
-                                "text": "Progresivos. La mejora de textura se nota tras la primera sesión."
-                            },
-                            {
-                                "icon": "fas fa-shield-alt",
-                                "title": "Cuidados",
-                                "text": "Mantener la piel hidratada y protegida del sol."
-                            }
-                        ]
-                    }
-                }
-            ]
-        },
-        {
-            "category": "Mesoterapia",
-            "treatments": [
-                {
-                    "id": "mesoterapia-capilar",
-                    "icon": "fas fa-user",
-                    "title": "Mesoterapia capilar",
-                    "description": "Tratamiento avanzado para la caída del cabello. Fortalece la fibra capilar, estimula el crecimiento y aumenta el volumen.",
-                    "comingSoon": false,
-                    "price": 160,
-                    "duration": "30 min",
-                    "detail": {
-                        "image": "https://via.placeholder.com/800x400.png/F7F5F0/74543F?text=Mesoterapia+Capilar",
-                        "description": "Microinyecciones en el cuero cabelludo con un cóctel de vitaminas, minerales y aminoácidos que nutren el folículo, mejoran la circulación y fortalecen la fibra capilar. Indicado para frenar la caída y favorecer un cabello más denso y con más volumen.",
-                        "details": [
-                            {
-                                "icon": "fas fa-star",
-                                "title": "Beneficios Clave",
-                                "text": "Frena la caída, fortalece la fibra, estimula el crecimiento y aumenta la densidad."
-                            },
-                            {
-                                "icon": "fas fa-euro-sign",
-                                "title": "Precio"
-                            },
-                            {
-                                "icon": "far fa-clock",
-                                "title": "Duración"
-                            },
-                            {
-                                "icon": "fas fa-calendar-alt",
-                                "title": "Sesiones",
-                                "text": "Tratamiento de choque semanal (4-6 semanas) y mantenimiento."
-                            },
-                            {
-                                "icon": "fas fa-eye",
-                                "title": "Resultados",
-                                "text": "Reducción de caída en primeras semanas. Densidad a partir del 2º mes."
-                            },
-                            {
-                                "icon": "fas fa-shield-alt",
-                                "title": "Cuidados",
-                                "text": "No lavar el cabello hasta pasadas 24 horas."
-                            }
-                        ]
-                    }
-                },
-                {
-                    "id": "mesoterapia-facial",
-                    "icon": "fas fa-face-smile",
-                    "title": "Mesoterapia facial",
-                    "description": "Renueva e hidrata la piel en profundidad con ácido hialurónico, aminoácidos y antioxidantes para un rostro más luminoso y rejuvenecido.",
-                    "comingSoon": false,
-                    "price": 120,
-                    "duration": "45 min",
-                    "detail": {
-                        "image": "https://via.placeholder.com/800x400.png/F7F5F0/74543F?text=Mesoterapia+Facial",
-                        "description": "Microinyecciones de ácido hialurónico no reticulado y vitaminas que hidratan en profundidad, mejoran la elasticidad y estimulan el colágeno. Proporciona un efecto glow inmediato y una piel más tersa y luminosa.",
-                        "details": [
-                            {
-                                "icon": "fas fa-star",
-                                "title": "Beneficios Clave",
-                                "text": "Hidratación profunda, mejora de elasticidad y firmeza, piel radiante."
-                            },
-                            {
-                                "icon": "fas fa-euro-sign",
-                                "title": "Precio"
-                            },
-                            {
-                                "icon": "far fa-clock",
-                                "title": "Duración"
-                            },
-                            {
-                                "icon": "fas fa-calendar-alt",
-                                "title": "Sesiones",
-                                "text": "Protocolo inicial de 3 a 5 sesiones y mantenimiento."
-                            },
-                            {
-                                "icon": "fas fa-eye",
-                                "title": "Resultados",
-                                "text": "Efecto 'glow' inmediato. Firmeza se consolida con las sesiones."
-                            },
-                            {
-                                "icon": "fas fa-shield-alt",
-                                "title": "Cuidados",
-                                "text": "Evitar maquillaje y exposición solar directa durante 24h."
-                            }
-                        ]
-                    }
-                },
-                {
-                    "id": "mesoterapia-corporal",
-                    "icon": "fas fa-person-running",
-                    "title": "Mesoterapia corporal Anticelulítico",
-                    "description": "Combate la celulitis y la grasa localizada, mejorando el contorno corporal y el aspecto de la piel.",
-                    "comingSoon": false,
-                    "price": 100,
-                    "duration": "45 min",
-                    "detail": {
-                        "image": "https://via.placeholder.com/800x400.png/F7F5F0/74543F?text=Mesoterapia+Corporal",
-                        "description": "Microinyecciones con activos lipolíticos, drenantes y reafirmantes en abdomen, flancos, muslos y cartucheras. Actúa sobre el tejido adiposo y la circulación para mejorar el contorno y el aspecto de la piel de naranja.",
-                        "details": [
-                            {
-                                "icon": "fas fa-star",
-                                "title": "Beneficios Clave",
-                                "text": "Reduce celulitis y grasa localizada, mejora la circulación y reafirma la piel."
-                            },
-                            {
-                                "icon": "fas fa-euro-sign",
-                                "title": "Precio"
-                            },
-                            {
-                                "icon": "far fa-clock",
-                                "title": "Duración"
-                            },
-                            {
-                                "icon": "fas fa-calendar-alt",
-                                "title": "Sesiones",
-                                "text": "Mínimo de 6 a 10 sesiones, 1-2 por semana."
-                            },
-                            {
-                                "icon": "fas fa-eye",
-                                "title": "Resultados",
-                                "text": "Mejora de textura desde las primeras sesiones. Reducción de contorno progresiva."
-                            },
-                            {
-                                "icon": "fas fa-shield-alt",
-                                "title": "Cuidados",
-                                "text": "Beber abundante agua y combinar con estilo de vida saludable."
-                            }
-                        ]
-                    }
-                }
-            ]
-        },
-        {
-            "category": "Diatermia Regenerativa",
-            "treatments": [
-                {
-                    "id": "diatermia-cicatrices-fibrosis",
-                    "icon": "fas fa-band-aid",
-                    "title": "Tratamiento de Cicatrices y Fibrosis",
-                    "description": "Acelera la regeneración natural de tu piel para suavizar cicatrices, reducir fibrosis y recuperar la elasticidad perdida.",
-                    "comingSoon": false,
-                    "price": 60,
-                    "duration": "45 min",
-                    "detail": {
-                        "image": "https://via.placeholder.com/800x400.png/F7F5F0/74543F?text=Cicatrices+y+Fibrosis",
-                        "description": "La diatermia de alta frecuencia aplicada a cicatrices y fibrosis favorece la regeneración del tejido, reduce queloides y tirantez y mejora la elasticidad y el tono. Indicada para cicatrices postquirúrgicas, cesárea o heridas antiguas. Tratamiento indoloro y relajante.",
-                        "details": [
-                            {
-                                "icon": "fas fa-star",
-                                "title": "Beneficios Clave",
-                                "text": "Suaviza cicatrices, reduce fibrosis y queloides, y elimina la sensación de tirantez."
-                            },
-                            {
-                                "icon": "fas fa-euro-sign",
-                                "title": "Precio"
-                            },
-                            {
-                                "icon": "far fa-clock",
-                                "title": "Duración"
-                            },
-                            {
-                                "icon": "fas fa-calendar-alt",
-                                "title": "Sesiones",
-                                "text": "Depende de la antigüedad de la cicatriz. Recomendado ciclo de 5 a 8 sesiones."
-                            },
-                            {
-                                "icon": "fas fa-eye",
-                                "title": "Resultados",
-                                "text": "Progresivos. Mejora del tejido y reducción de molestias desde las primeras sesiones."
-                            },
-                            {
-                                "icon": "fas fa-shield-alt",
-                                "title": "Cuidados",
-                                "text": "Mantener la zona bien hidratada y protegida de la exposición solar."
-                            }
-                        ]
-                    }
-                },
-                {
-                    "id": "diatermia-postparto",
-                    "icon": "fas fa-person-dress",
-                    "title": "Recuperación Abdominal Postparto",
-                    "description": "Restaura tu abdomen tras el embarazo. Combate la flacidez, mejora el tono muscular y reduce volumen retenido.",
-                    "comingSoon": false,
-                    "price": 65,
-                    "duration": "45 min",
-                    "detail": {
-                        "image": "https://via.placeholder.com/800x400.png/F7F5F0/74543F?text=Recuperacion+Postparto",
-                        "description": "Diatermia abdominal específica para el postparto: calor profundo que estimula colágeno y elastina, reafirma la piel, favorece el drenaje de líquidos y la oxigenación del tejido. Ayuda a recuperar la zona abdominal de forma natural y confortable.",
-                        "details": [
-                            {
-                                "icon": "fas fa-star",
-                                "title": "Beneficios Clave",
-                                "text": "Tensado cutáneo, drenaje de líquidos, desinflamación y recuperación del tejido celular."
-                            },
-                            {
-                                "icon": "fas fa-euro-sign",
-                                "title": "Precio"
-                            },
-                            {
-                                "icon": "far fa-clock",
-                                "title": "Duración"
-                            },
-                            {
-                                "icon": "fas fa-calendar-alt",
-                                "title": "Sesiones",
-                                "text": "Ciclo inicial recomendado de 6 a 10 sesiones, 1 o 2 por semana."
-                            },
-                            {
-                                "icon": "fas fa-eye",
-                                "title": "Resultados",
-                                "text": "Desinflamación rápida y mejora gradual de la firmeza y calidad de la piel."
-                            },
-                            {
-                                "icon": "fas fa-shield-alt",
-                                "title": "Cuidados",
-                                "text": "Beber abundante agua para favorecer el drenaje y combinar con hábitos saludables."
-                            }
-                        ]
-                    }
-                }
-            ]
-        },
-        {
-            "category": "Rellenos Dérmicos",
-            "treatments": [
-                {
-                    "id": "relleno-labios",
-                    "icon": "fas fa-syringe",
-                    "title": "Relleno de labios",
-                    "description": "Aumenta el volumen, define la forma y corrige asimetrías respetando la naturaleza de tus labios.",
-                    "comingSoon": false,
-                    "price": 290,
-                    "duration": "45 min",
-                    "detail": {
-                        "image": "https://via.placeholder.com/800x400.png/F7F5F0/74543F?text=Relleno+de+Labios",
-                        "description": "Relleno con ácido hialurónico para aumentar volumen, perfilar el contorno, definir el arco de Cupido y corregir asimetrías. Resultado natural, hidratación en profundidad y labios más definidos y armónicos.",
-                        "details": [
-                            {
-                                "icon": "fas fa-star",
-                                "title": "Beneficios Clave",
-                                "text": "Aumento de volumen, perfilado, corrección de asimetrías e hidratación."
-                            },
-                            {
-                                "icon": "fas fa-euro-sign",
-                                "title": "Precio"
-                            },
-                            {
-                                "icon": "far fa-clock",
-                                "title": "Duración"
-                            },
-                            {
-                                "icon": "fas fa-calendar-alt",
-                                "title": "Duración Resultado",
-                                "text": "Entre 6 y 12 meses."
-                            },
-                            {
-                                "icon": "fas fa-eye",
-                                "title": "Resultados",
-                                "text": "Inmediatos, con resultado definitivo estabilizado en unos días."
-                            },
-                            {
-                                "icon": "fas fa-shield-alt",
-                                "title": "Cuidados",
-                                "text": "Evitar calor y no masajear la zona los primeros días."
-                            }
-                        ]
-                    }
-                },
-                {
-                    "id": "relleno-menton-mandibula",
-                    "icon": "fas fa-face-smile-beam",
-                    "title": "Rellenos de mentón y mandíbula",
-                    "description": "Mejora la proyección del mentón y armoniza los rasgos para un rostro más equilibrado.",
-                    "comingSoon": false,
-                    "price": 350,
-                    "duration": "60 min",
-                    "detail": {
-                        "image": "https://via.placeholder.com/800x400.png/F7F5F0/74543F?text=Relleno+de+Menton",
-                        "description": "Ácido hialurónico para marcar la mandíbula y proyectar el mentón sin cirugía. Define el tercio inferior del rostro, realza los ángulos y equilibra el perfil para un óvalo facial más armónico.",
-                        "details": [
-                            {
-                                "icon": "fas fa-star",
-                                "title": "Beneficios Clave",
-                                "text": "Define el arco mandibular, proyecta el mentón y armoniza el perfil sin cirugía."
-                            },
-                            {
-                                "icon": "fas fa-euro-sign",
-                                "title": "Precio"
-                            },
-                            {
-                                "icon": "far fa-clock",
-                                "title": "Duración"
-                            },
-                            {
-                                "icon": "fas fa-calendar-alt",
-                                "title": "Duración Resultado",
-                                "text": "De 12 a 18 meses aproximadamente."
-                            },
-                            {
-                                "icon": "fas fa-eye",
-                                "title": "Resultados",
-                                "text": "Inmediatos. Se aprecia la nueva definición al finalizar la sesión."
-                            },
-                            {
-                                "icon": "fas fa-shield-alt",
-                                "title": "Cuidados",
-                                "text": "Leve inflamación. Evitar presionar la zona tratada."
-                            }
-                        ]
-                    }
-                },
-                {
-                    "id": "relleno-pomulos",
-                    "icon": "fas fa-face-smile-beam",
-                    "title": "Rellenos de pómulos",
-                    "description": "Restaura el volumen perdido, eleva las facciones y define el rostro con un efecto lifting natural.",
-                    "comingSoon": false,
-                    "price": 290,
-                    "duration": "45 min",
-                    "detail": {
-                        "image": "https://via.placeholder.com/800x400.png/F7F5F0/74543F?text=Relleno+de+Menton",
-                        "description": "Relleno con ácido hialurónico para restaurar volumen en pómulos, elevar las facciones y conseguir un efecto lifting natural. Define el rostro y aporta luminosidad sin cirugía.",
-                        "details": [
-                            {
-                                "icon": "fas fa-euro-sign",
-                                "title": "Precio"
-                            },
-                            {
-                                "icon": "far fa-clock",
-                                "title": "Duración"
-                            },
-                            {
-                                "icon": "fas fa-calendar-alt",
-                                "title": "Duración Resultado",
-                                "text": "Entre 12 y 18 meses."
-                            },
-                            {
-                                "icon": "fas fa-shield-alt",
-                                "title": "Cuidados",
-                                "text": "Leve inflamación. Evitar presionar la zona tratada."
-                            }
-                        ]
-                    }
-                }
-            ]
-        },
-        {
-            "category": "Bioestimulación",
-            "treatments": [
-                {
-                    "id": "bioestimulacion-exosomas",
-                    "icon": "fas fa-atom",
-                    "title": "Bioestimulador con Ácido Hialurónico y Aminoácidos",
-                    "description": "Solución regenerativa con ácido hialurónico que estimula y revitaliza la matriz dérmica, mejorando la calidad y firmeza de la piel.",
-                    "comingSoon": false,
-                    "price": 120,
-                    "duration": "30 min",
-                    "detail": {
-                        "image": "https://via.placeholder.com/800x400.png/F7F5F0/74543F?text=Bioestimulacion+con+Exosomas",
-                        "description": "Infiltración de ácido hialurónico y aminoácidos que estimula la matriz dérmica y mejora la calidad y firmeza de la piel. Efectos reparadores, hidratantes y antioxidantes. Indicado como base de rejuvenecimiento.",
-                        "details": [
-                            {
-                                "icon": "fas fa-star",
-                                "title": "Beneficios Clave",
-                                "text": "Piel revitalizada, hidratada y con más firmeza"
-                            },
-                            {
-                                "icon": "fas fa-euro-sign",
-                                "title": "Precio"
-                            },
-                            {
-                                "icon": "far fa-clock",
-                                "title": "Duración"
-                            },
-                            {
-                                "icon": "fas fa-calendar-alt",
-                                "title": "Sesiones",
-                                "text": "Protocolo de 3 sesiones, espaciadas por 1 mes"
-                            },
-                            {
-                                "icon": "fas fa-eye",
-                                "title": "Resultados",
-                                "text": "Progresivos, con efectos consolidados en los meses siguientes."
-                            },
-                            {
-                                "icon": "fas fa-shield-alt",
-                                "title": "Cuidados",
-                                "text": "Uso de protección solar es fundamental.No ejercicio máximo en 24h. No saunas. No piscina."
-                            }
-                        ]
-                    }
-                },
-                {
-                    "id": "bioestimulacion-total",
-                    "icon": "fas fa-wand-magic-sparkles",
-                    "title": "Bioestimulador de colágeno-eleastina y Ácido Hialurónico",
-                    "description": "Bioestimulador de colágeno y elastina, ademas de tener efectos reparadores, hidratantes y antioxidantes para la piel.",
-                    "comingSoon": false,
-                    "price": 220,
-                    "duration": "45 min",
-                    "detail": {
-                        "image": "https://via.placeholder.com/800x400.png/F7F5F0/74543F?text=Bioestimulacion+Total",
-                        "description": "Cóctel de ácido hialurónico, vitaminas y aminoácidos que se infiltra en profundidad para restaurar la estructura cutánea. Estimula colágeno y elastina, combate flacidez y deshidratación y devuelve luminosidad. Rejuvenecimiento facial integral.",
-                        "details": [
-                            {
-                                "icon": "fas fa-star",
-                                "title": "Beneficios Clave",
-                                "text": "Aumenta firmeza y elasticidad, hidrata en profundidad y revitaliza la piel."
-                            },
-                            {
-                                "icon": "fas fa-euro-sign",
-                                "title": "Precio"
-                            },
-                            {
-                                "icon": "far fa-clock",
-                                "title": "Duración"
-                            },
-                            {
-                                "icon": "fas fa-calendar-alt",
-                                "title": "Sesiones",
-                                "text": "Protocolo inicial de 3 sesiones y mantenimiento cada 6 meses."
-                            },
-                            {
-                                "icon": "fas fa-eye",
-                                "title": "Resultados",
-                                "text": "Hidratación inmediata. Firmeza de forma gradual."
-                            },
-                            {
-                                "icon": "fas fa-shield-alt",
-                                "title": "Cuidados",
-                                "text": "Recuperación rápida. Aplicar protección solar.No saunas. No piscina. No ejercicio intenso en 24h"
-                            }
-                        ]
-                    }
-                }
-            ]
-        },
-        {
-            "category": "Peelings",
-            "treatments": [
-                {
-                    "id": "peeling-exfoliante-lifting",
-                    "icon": "fas fa-wand-magic",
-                    "title": "Peeling exfoliante y lifting",
-                    "description": "Fórmula innovadora con efecto lifting que exfolia la piel, unifica el tono y aporta una gran luminosidad.",
-                    "comingSoon": false,
-                    "price": 60,
-                    "duration": "45 min",
-                    "detail": {
-                        "image": "https://via.placeholder.com/800x400.png/F7F5F0/74543F?text=Peeling+Lifting",
-                        "description": "Peeling que combina exfoliación profunda con efecto tensor inmediato. Elimina células muertas, unifica el tono, atenúa manchas y arrugas finas y redefine el óvalo facial. Piel luminosa desde la primera sesión.",
-                        "details": [
-                            {
-                                "icon": "fas fa-star",
-                                "title": "Beneficios Clave",
-                                "text": "Efecto lifting inmediato, exfoliación profunda y gran luminosidad."
-                            },
-                            {
-                                "icon": "fas fa-euro-sign",
-                                "title": "Precio"
-                            },
-                            {
-                                "icon": "far fa-clock",
-                                "title": "Duración"
-                            },
-                            {
-                                "icon": "fas fa-calendar-alt",
-                                "title": "Sesiones",
-                                "text": "Ideal como tratamiento flash o en ciclo de 3-4 sesiones."
-                            },
-                            {
-                                "icon": "fas fa-eye",
-                                "title": "Resultados",
-                                "text": "Tensor y luminosidad visibles desde la primera sesión."
-                            },
-                            {
-                                "icon": "fas fa-shield-alt",
-                                "title": "Cuidados",
-                                "text": "Correcta y constante protección solar tras el tratamiento."
-                            }
-                        ]
-                    }
-                },
-                {
-                    "id": "peeling-estrias-cicatrices",
-                    "icon": "fas fa-wand-sparkles",
-                    "title": "Peeling químico para estrías y cicatrices",
-                    "description": "Exfolia y revitaliza la piel para unificar el tono y mejorar la textura de estrías y cicatrices eficazmente.",
-                    "comingSoon": false,
-                    "price": 70,
-                    "duration": "45 min",
-                    "detail": {
-                        "image": "https://via.placeholder.com/800x400.png/F7F5F0/74543F?text=Peeling+para+Estrias",
-                        "description": "Peeling químico formulado para estrías y cicatrices. Exfolia las capas superficiales, estimula la renovación celular y la formación de colágeno, mejorando la textura y el color de las marcas de forma progresiva.",
-                        "details": [
-                            {
-                                "icon": "fas fa-star",
-                                "title": "Beneficios Clave",
-                                "text": "Mejora la textura y color de estrías y cicatrices, y unifica el tono."
-                            },
-                            {
-                                "icon": "fas fa-euro-sign",
-                                "title": "Precio"
-                            },
-                            {
-                                "icon": "far fa-clock",
-                                "title": "Duración"
-                            },
-                            {
-                                "icon": "fas fa-calendar-alt",
-                                "title": "Sesiones",
-                                "text": "Ciclo de 4 a 8 sesiones, cada 2-3 semanas."
-                            },
-                            {
-                                "icon": "fas fa-eye",
-                                "title": "Resultados",
-                                "text": "Progresivos. Piel más lisa y tono atenuado con cada sesión."
-                            },
-                            {
-                                "icon": "fas fa-shield-alt",
-                                "title": "Cuidados",
-                                "text": "La piel se descamará. Uso de protección solar SPF 50+ es fundamental."
-                            }
-                        ]
-                    }
-                },
-                {
-                    "id": "peeling-antimanchas",
-                    "icon": "fas fa-wand-sparkles",
-                    "title": "Peeling Antimanchas",
-                    "description": "Renueva y revitaliza tu piel para combatir las manchas cutáneas. Un tratamiento suave y altamente eficaz que devuelve la luminosidad y uniformidad al rostro desde la primera sesión.",
-                    "comingSoon": false,
-                    "price": 60,
-                    "duration": "45 min",
-                    "detail": {
-                        "image": "https://via.placeholder.com/800x400.png/F7F5F0/74543F?text=Peeling+para+Estrias",
-                        "description": "Peeling específico para manchas cutáneas: renueva la piel, unifica el tono y devuelve luminosidad. Suave y eficaz, con resultados visibles desde las primeras sesiones. Protección solar posterior esencial.",
-                        "details": [
-                            {
-                                "icon": "fas fa-euro-sign",
-                                "title": "Precio"
-                            },
-                            {
-                                "icon": "far fa-clock",
-                                "title": "Duración"
-                            },
-                            {
-                                "icon": "fas fa-shield-alt",
-                                "title": "Cuidados",
-                                "text": "La piel puede descamarse. Uso de protección solar SPF 50+ es fundamental."
-                            }
-                        ]
-                    }
-                }
-            ]
-        },
-        {
-            "category": "Otros Servicios",
-            "treatments": [
-                {
-                    "id": "rutina-personalizada",
-                    "icon": "fas fa-leaf",
-                    "title": "Rutina personalizada",
-                    "description": "Análisis de piel y hábitos para diseñar una rutina de cuidado facial a medida y conseguir resultados visibles y duraderos.",
-                    "comingSoon": false,
-                    "price": 45,
-                    "duration": "60 min",
-                    "detail": {
-                        "image": "https://via.placeholder.com/800x400.png/F7F5F0/74543F?text=Rutina+Personalizada",
-                        "description": "Diagnóstico de tu piel y estilo de vida para diseñar una rutina cosmética a medida: productos, orden de aplicación y hábitos. Aprenderás a cuidar tu piel de forma eficaz y a optimizar tu inversión.",
-                        "details": [
-                            {
-                                "icon": "fas fa-star",
-                                "title": "Beneficios Clave",
-                                "text": "Aprenderás a cuidar tu piel, optimizarás tu inversión y conseguirás resultados."
-                            },
-                            {
-                                "icon": "fas fa-euro-sign",
-                                "title": "Precio"
-                            },
-                            {
-                                "icon": "far fa-clock",
-                                "title": "Duración"
-                            },
-                            {
-                                "icon": "fas fa-box-open",
-                                "title": "Qué Incluye",
-                                "text": "Análisis de piel, revisión de rutina y diseño de una nueva."
-                            },
-                            {
-                                "icon": "fas fa-mobile-alt",
-                                "title": "Modalidad",
-                                "text": "La consulta puede ser presencial o telemática."
-                            }
-                        ]
-                    }
-                },
-                {
-                    "id": "eliminar-verrugas",
-                    "icon": "fas fa-star-of-life",
-                    "title": "Eliminar verrugas y rubíes",
-                    "description": "Eliminación segura, rápida y precisa de lesiones cutáneas benignas como verrugas y puntos rubí, sin dejar cicatriz.",
-                    "comingSoon": true,
-                    "price": 40,
-                    "duration": "30 min",
-                    "detail": {
-                        "image": "https://via.placeholder.com/800x400.png/F7F5F0/74543F?text=Eliminar+Verrugas",
-                        "description": "Electrocoagulación de precisión para eliminar verrugas, puntos rubí y fibromas de forma segura. Procedimiento mínimamente invasivo, con bajo riesgo de sangrado y sin dejar cicatriz visible.",
-                        "details": [
-                            {
-                                "icon": "fas fa-star",
-                                "title": "Beneficios Clave",
-                                "text": "Eliminación precisa y definitiva sin cicatriz."
-                            },
-                            {
-                                "icon": "fas fa-euro-sign",
-                                "title": "Precio"
-                            },
-                            {
-                                "icon": "far fa-clock",
-                                "title": "Duración"
-                            },
-                            {
-                                "icon": "fas fa-calendar-alt",
-                                "title": "Sesiones",
-                                "text": "Normalmente una única sesión es suficiente."
-                            },
-                            {
-                                "icon": "fas fa-eye",
-                                "title": "Resultados",
-                                "text": "Inmediato. La lesión es eliminada al momento."
-                            },
-                            {
-                                "icon": "fas fa-shield-alt",
-                                "title": "Cuidados",
-                                "text": "Se forma una pequeña costra que cae sola en 5-10 días."
-                            }
-                        ]
-                    }
-                }
-            ]
-        }
-    ]
+[
+	{
+		"category": "Diagnóstico y Valoración",
+		"treatments": [
+			{
+				"id": "consulta-gratuita",
+				"icon": "fas fa-comments",
+				"title": "1ª Consulta Informativa",
+				"description": "¿Dudas sobre qué tratamiento es para ti? Ven a conocernos, evaluamos tu piel y te explicamos opciones sin ningún compromiso.",
+				"price": "GRATIS",
+				"duration": "60 min",
+				"detail": {
+					"image": "https://via.placeholder.com/800x400.png/F7F5F0/74543F?text=Consulta+Informativa",
+					"description": "En esta sesión de una hora valoramos tu tipo de piel, tus preocupaciones y tus objetivos. Te explicamos qué tratamientos encajan contigo y cómo funcionan, sin compromiso. Es el punto de partida ideal para decidir con tranquilidad.",
+					"details": [
+						{
+							"icon": "fas fa-check",
+							"title": "Sin coste",
+							"text": "Totalmente gratuita."
+						},
+						{
+							"icon": "fas fa-user-md",
+							"title": "Diagnóstico",
+							"text": "Valoración profesional de tu caso."
+						},
+						{
+							"icon": "fas fa-hand-holding-heart",
+							"title": "Sin compromiso",
+							"text": "No estás obligada a reservar nada después."
+						}
+					]
+				}
+			}
+		]
+	},
+	{
+		"category": "Microneedling",
+		"treatments": [
+			{
+				"id": "microneedling-facial",
+				"icon": "fas fa-droplet",
+				"title": "Microneedling Facial (Dermapen)",
+				"description": "Técnica de inducción de colágeno que mejora la textura de la piel, reduce marcas de acné y suaviza líneas de expresión.",
+				"comingSoon": false,
+				"price": 65,
+				"duration": "45 min",
+				"detail": {
+					"image": "https://via.placeholder.com/800x400.png/F7F5F0/74543F?text=Microneedling+Facial",
+					"description": "El Dermapen crea microcanales controlados en la piel para activar la reparación natural y la producción de colágeno y elastina. Indicado para mejorar textura, suavizar arrugas finas, atenuar cicatrices de acné y unificar el tono. La piel gana firmeza y luminosidad de forma progresiva.",
+					"details": [
+						{
+							"icon": "fas fa-star",
+							"title": "Beneficios Clave",
+							"text": "Reduce arrugas, minimiza marcas de acné, mejora la firmeza y unifica el tono."
+						},
+						{
+							"icon": "fas fa-euro-sign",
+							"title": "Precio"
+						},
+						{
+							"icon": "far fa-clock",
+							"title": "Duración"
+						},
+						{
+							"icon": "fas fa-calendar-alt",
+							"title": "Sesiones",
+							"text": "Idealmente una vez al mes."
+						},
+						{
+							"icon": "fas fa-eye",
+							"title": "Resultados",
+							"text": "Luminosidad desde la primera sesión. Mejora de textura desde la tercera semana."
+						},
+						{
+							"icon": "fas fa-shield-alt",
+							"title": "Cuidados",
+							"text": "Usar protección solar SPF 50+. Evitar exposición directa al sol."
+						}
+					]
+				}
+			},
+			{
+				"id": "microneedling-corporal",
+				"icon": "fas fa-person",
+				"title": "Microneedling Corporal (Dermapen)",
+				"description": "Tratamiento corporal que estimula el colágeno para reducir estrías, cicatrices y flacidez.",
+				"comingSoon": false,
+				"price": 75,
+				"duration": "45 min",
+				"detail": {
+					"image": "https://via.placeholder.com/800x400.png/F7F5F0/74543F?text=Microneedling+Corporal",
+					"description": "Misma tecnología que el facial aplicada a zonas corporales: abdomen, muslos, glúteos. Favorece la regeneración de la dermis y mejora la apariencia de estrías, cicatrices y flacidez. La piel se vuelve más lisa y firme con un protocolo adecuado.",
+					"details": [
+						{
+							"icon": "fas fa-star",
+							"title": "Beneficios Clave",
+							"text": "Reduce estrías y cicatrices, mejora la firmeza y combate la flacidez."
+						},
+						{
+							"icon": "fas fa-euro-sign",
+							"title": "Precio"
+						},
+						{
+							"icon": "far fa-clock",
+							"title": "Duración"
+						},
+						{
+							"icon": "fas fa-calendar-alt",
+							"title": "Sesiones",
+							"text": "Ciclo de 4 a 6 sesiones, cada 4-6 semanas."
+						},
+						{
+							"icon": "fas fa-eye",
+							"title": "Resultados",
+							"text": "Progresivos. La mejora de textura se nota tras la primera sesión."
+						},
+						{
+							"icon": "fas fa-shield-alt",
+							"title": "Cuidados",
+							"text": "Mantener la piel hidratada y protegida del sol."
+						}
+					]
+				}
+			}
+		]
+	},
+	{
+		"category": "Mesoterapia",
+		"treatments": [
+			{
+				"id": "mesoterapia-capilar",
+				"icon": "fas fa-user",
+				"title": "Mesoterapia capilar",
+				"description": "Tratamiento avanzado para la caída del cabello. Fortalece la fibra capilar, estimula el crecimiento y aumenta el volumen.",
+				"comingSoon": false,
+				"price": 160,
+				"duration": "30 min",
+				"detail": {
+					"image": "https://via.placeholder.com/800x400.png/F7F5F0/74543F?text=Mesoterapia+Capilar",
+					"description": "Microinyecciones en el cuero cabelludo con un cóctel de vitaminas, minerales y aminoácidos que nutren el folículo, mejoran la circulación y fortalecen la fibra capilar. Indicado para frenar la caída y favorecer un cabello más denso y con más volumen.",
+					"details": [
+						{
+							"icon": "fas fa-star",
+							"title": "Beneficios Clave",
+							"text": "Frena la caída, fortalece la fibra, estimula el crecimiento y aumenta la densidad."
+						},
+						{
+							"icon": "fas fa-euro-sign",
+							"title": "Precio"
+						},
+						{
+							"icon": "far fa-clock",
+							"title": "Duración"
+						},
+						{
+							"icon": "fas fa-calendar-alt",
+							"title": "Sesiones",
+							"text": "Tratamiento de choque semanal (4-6 semanas) y mantenimiento."
+						},
+						{
+							"icon": "fas fa-eye",
+							"title": "Resultados",
+							"text": "Reducción de caída en primeras semanas. Densidad a partir del 2º mes."
+						},
+						{
+							"icon": "fas fa-shield-alt",
+							"title": "Cuidados",
+							"text": "No lavar el cabello hasta pasadas 24 horas."
+						}
+					]
+				}
+			},
+			{
+				"id": "mesoterapia-facial",
+				"icon": "fas fa-face-smile",
+				"title": "Mesoterapia facial",
+				"description": "Renueva e hidrata la piel en profundidad con ácido hialurónico, aminoácidos y antioxidantes para un rostro más luminoso y rejuvenecido.",
+				"comingSoon": false,
+				"price": 120,
+				"duration": "45 min",
+				"detail": {
+					"image": "https://via.placeholder.com/800x400.png/F7F5F0/74543F?text=Mesoterapia+Facial",
+					"description": "Microinyecciones de ácido hialurónico no reticulado y vitaminas que hidratan en profundidad, mejoran la elasticidad y estimulan el colágeno. Proporciona un efecto glow inmediato y una piel más tersa y luminosa.",
+					"details": [
+						{
+							"icon": "fas fa-star",
+							"title": "Beneficios Clave",
+							"text": "Hidratación profunda, mejora de elasticidad y firmeza, piel radiante."
+						},
+						{
+							"icon": "fas fa-euro-sign",
+							"title": "Precio"
+						},
+						{
+							"icon": "far fa-clock",
+							"title": "Duración"
+						},
+						{
+							"icon": "fas fa-calendar-alt",
+							"title": "Sesiones",
+							"text": "Protocolo inicial de 3 a 5 sesiones y mantenimiento."
+						},
+						{
+							"icon": "fas fa-eye",
+							"title": "Resultados",
+							"text": "Efecto 'glow' inmediato. Firmeza se consolida con las sesiones."
+						},
+						{
+							"icon": "fas fa-shield-alt",
+							"title": "Cuidados",
+							"text": "Evitar maquillaje y exposición solar directa durante 24h."
+						}
+					]
+				}
+			},
+			{
+				"id": "mesoterapia-corporal",
+				"icon": "fas fa-person-running",
+				"title": "Mesoterapia corporal Anticelulítico",
+				"description": "Combate la celulitis y la grasa localizada, mejorando el contorno corporal y el aspecto de la piel.",
+				"comingSoon": false,
+				"price": 100,
+				"duration": "45 min",
+				"detail": {
+					"image": "https://via.placeholder.com/800x400.png/F7F5F0/74543F?text=Mesoterapia+Corporal",
+					"description": "Microinyecciones con activos lipolíticos, drenantes y reafirmantes en abdomen, flancos, muslos y cartucheras. Actúa sobre el tejido adiposo y la circulación para mejorar el contorno y el aspecto de la piel de naranja.",
+					"details": [
+						{
+							"icon": "fas fa-star",
+							"title": "Beneficios Clave",
+							"text": "Reduce celulitis y grasa localizada, mejora la circulación y reafirma la piel."
+						},
+						{
+							"icon": "fas fa-euro-sign",
+							"title": "Precio"
+						},
+						{
+							"icon": "far fa-clock",
+							"title": "Duración"
+						},
+						{
+							"icon": "fas fa-calendar-alt",
+							"title": "Sesiones",
+							"text": "Mínimo de 6 a 10 sesiones, 1-2 por semana."
+						},
+						{
+							"icon": "fas fa-eye",
+							"title": "Resultados",
+							"text": "Mejora de textura desde las primeras sesiones. Reducción de contorno progresiva."
+						},
+						{
+							"icon": "fas fa-shield-alt",
+							"title": "Cuidados",
+							"text": "Beber abundante agua y combinar con estilo de vida saludable."
+						}
+					]
+				}
+			}
+		]
+	},
+	{
+		"category": "Diatermia Regenerativa",
+		"treatments": [
+			{
+				"id": "diatermia-cicatrices-fibrosis",
+				"icon": "fas fa-band-aid",
+				"title": "Tratamiento de Cicatrices y Fibrosis",
+				"description": "Acelera la regeneración natural de tu piel para suavizar cicatrices, reducir fibrosis y recuperar la elasticidad perdida.",
+				"comingSoon": false,
+				"price": 60,
+				"duration": "45 min",
+				"detail": {
+					"image": "https://via.placeholder.com/800x400.png/F7F5F0/74543F?text=Cicatrices+y+Fibrosis",
+					"description": "La diatermia de alta frecuencia aplicada a cicatrices y fibrosis favorece la regeneración del tejido, reduce queloides y tirantez y mejora la elasticidad y el tono. Indicada para cicatrices postquirúrgicas, cesárea o heridas antiguas. Tratamiento indoloro y relajante.",
+					"details": [
+						{
+							"icon": "fas fa-star",
+							"title": "Beneficios Clave",
+							"text": "Suaviza cicatrices, reduce fibrosis y queloides, y elimina la sensación de tirantez."
+						},
+						{
+							"icon": "fas fa-euro-sign",
+							"title": "Precio"
+						},
+						{
+							"icon": "far fa-clock",
+							"title": "Duración"
+						},
+						{
+							"icon": "fas fa-calendar-alt",
+							"title": "Sesiones",
+							"text": "Depende de la antigüedad de la cicatriz. Recomendado ciclo de 5 a 8 sesiones."
+						},
+						{
+							"icon": "fas fa-eye",
+							"title": "Resultados",
+							"text": "Progresivos. Mejora del tejido y reducción de molestias desde las primeras sesiones."
+						},
+						{
+							"icon": "fas fa-shield-alt",
+							"title": "Cuidados",
+							"text": "Mantener la zona bien hidratada y protegida de la exposición solar."
+						}
+					]
+				}
+			},
+			{
+				"id": "diatermia-postparto",
+				"icon": "fas fa-person-dress",
+				"title": "Recuperación Abdominal Postparto",
+				"description": "Restaura tu abdomen tras el embarazo. Combate la flacidez, mejora el tono muscular y reduce volumen retenido.",
+				"comingSoon": false,
+				"price": 65,
+				"duration": "45 min",
+				"detail": {
+					"image": "https://via.placeholder.com/800x400.png/F7F5F0/74543F?text=Recuperacion+Postparto",
+					"description": "Diatermia abdominal específica para el postparto: calor profundo que estimula colágeno y elastina, reafirma la piel, favorece el drenaje de líquidos y la oxigenación del tejido. Ayuda a recuperar la zona abdominal de forma natural y confortable.",
+					"details": [
+						{
+							"icon": "fas fa-star",
+							"title": "Beneficios Clave",
+							"text": "Tensado cutáneo, drenaje de líquidos, desinflamación y recuperación del tejido celular."
+						},
+						{
+							"icon": "fas fa-euro-sign",
+							"title": "Precio"
+						},
+						{
+							"icon": "far fa-clock",
+							"title": "Duración"
+						},
+						{
+							"icon": "fas fa-calendar-alt",
+							"title": "Sesiones",
+							"text": "Ciclo inicial recomendado de 6 a 10 sesiones, 1 o 2 por semana."
+						},
+						{
+							"icon": "fas fa-eye",
+							"title": "Resultados",
+							"text": "Desinflamación rápida y mejora gradual de la firmeza y calidad de la piel."
+						},
+						{
+							"icon": "fas fa-shield-alt",
+							"title": "Cuidados",
+							"text": "Beber abundante agua para favorecer el drenaje y combinar con hábitos saludables."
+						}
+					]
+				}
+			}
+		]
+	},
+	{
+		"category": "Rellenos Dérmicos",
+		"treatments": [
+			{
+				"id": "relleno-labios",
+				"icon": "fas fa-syringe",
+				"title": "Relleno de labios",
+				"description": "Aumenta el volumen, define la forma y corrige asimetrías respetando la naturaleza de tus labios.",
+				"comingSoon": false,
+				"price": 290,
+				"duration": "45 min",
+				"detail": {
+					"image": "https://via.placeholder.com/800x400.png/F7F5F0/74543F?text=Relleno+de+Labios",
+					"description": "Relleno con ácido hialurónico para aumentar volumen, perfilar el contorno, definir el arco de Cupido y corregir asimetrías. Resultado natural, hidratación en profundidad y labios más definidos y armónicos.",
+					"details": [
+						{
+							"icon": "fas fa-star",
+							"title": "Beneficios Clave",
+							"text": "Aumento de volumen, perfilado, corrección de asimetrías e hidratación."
+						},
+						{
+							"icon": "fas fa-euro-sign",
+							"title": "Precio"
+						},
+						{
+							"icon": "far fa-clock",
+							"title": "Duración"
+						},
+						{
+							"icon": "fas fa-calendar-alt",
+							"title": "Duración Resultado",
+							"text": "Entre 6 y 12 meses."
+						},
+						{
+							"icon": "fas fa-eye",
+							"title": "Resultados",
+							"text": "Inmediatos, con resultado definitivo estabilizado en unos días."
+						},
+						{
+							"icon": "fas fa-shield-alt",
+							"title": "Cuidados",
+							"text": "Evitar calor y no masajear la zona los primeros días."
+						}
+					]
+				}
+			},
+			{
+				"id": "relleno-menton-mandibula",
+				"icon": "fas fa-face-smile-beam",
+				"title": "Rellenos de mentón y mandíbula",
+				"description": "Mejora la proyección del mentón y armoniza los rasgos para un rostro más equilibrado.",
+				"comingSoon": false,
+				"price": 350,
+				"duration": "60 min",
+				"detail": {
+					"image": "https://via.placeholder.com/800x400.png/F7F5F0/74543F?text=Relleno+de+Menton",
+					"description": "Ácido hialurónico para marcar la mandíbula y proyectar el mentón sin cirugía. Define el tercio inferior del rostro, realza los ángulos y equilibra el perfil para un óvalo facial más armónico.",
+					"details": [
+						{
+							"icon": "fas fa-star",
+							"title": "Beneficios Clave",
+							"text": "Define el arco mandibular, proyecta el mentón y armoniza el perfil sin cirugía."
+						},
+						{
+							"icon": "fas fa-euro-sign",
+							"title": "Precio"
+						},
+						{
+							"icon": "far fa-clock",
+							"title": "Duración"
+						},
+						{
+							"icon": "fas fa-calendar-alt",
+							"title": "Duración Resultado",
+							"text": "De 12 a 18 meses aproximadamente."
+						},
+						{
+							"icon": "fas fa-eye",
+							"title": "Resultados",
+							"text": "Inmediatos. Se aprecia la nueva definición al finalizar la sesión."
+						},
+						{
+							"icon": "fas fa-shield-alt",
+							"title": "Cuidados",
+							"text": "Leve inflamación. Evitar presionar la zona tratada."
+						}
+					]
+				}
+			},
+			{
+				"id": "relleno-pomulos",
+				"icon": "fas fa-face-smile-beam",
+				"title": "Rellenos de pómulos",
+				"description": "Restaura el volumen perdido, eleva las facciones y define el rostro con un efecto lifting natural.",
+				"comingSoon": false,
+				"price": 290,
+				"duration": "45 min",
+				"detail": {
+					"image": "https://via.placeholder.com/800x400.png/F7F5F0/74543F?text=Relleno+de+Menton",
+					"description": "Relleno con ácido hialurónico para restaurar volumen en pómulos, elevar las facciones y conseguir un efecto lifting natural. Define el rostro y aporta luminosidad sin cirugía.",
+					"details": [
+						{
+							"icon": "fas fa-euro-sign",
+							"title": "Precio"
+						},
+						{
+							"icon": "far fa-clock",
+							"title": "Duración"
+						},
+						{
+							"icon": "fas fa-calendar-alt",
+							"title": "Duración Resultado",
+							"text": "Entre 12 y 18 meses."
+						},
+						{
+							"icon": "fas fa-shield-alt",
+							"title": "Cuidados",
+							"text": "Leve inflamación. Evitar presionar la zona tratada."
+						}
+					]
+				}
+			}
+		]
+	},
+	{
+		"category": "Bioestimulación",
+		"treatments": [
+			{
+				"id": "bioestimulacion-total",
+				"icon": "fas fa-wand-magic-sparkles",
+				"title": "Bioestimulador de colágeno-eleastina y Ácido Hialurónico",
+				"description": "Bioestimulador de colágeno y elastina, ademas de tener efectos reparadores, hidratantes y antioxidantes para la piel.",
+				"comingSoon": false,
+				"price": 220,
+				"duration": "45 min",
+				"detail": {
+					"image": "https://via.placeholder.com/800x400.png/F7F5F0/74543F?text=Bioestimulacion+Total",
+					"description": "Cóctel de ácido hialurónico, vitaminas y aminoácidos que se infiltra en profundidad para restaurar la estructura cutánea. Estimula colágeno y elastina, combate flacidez y deshidratación y devuelve luminosidad. Rejuvenecimiento facial integral.",
+					"details": [
+						{
+							"icon": "fas fa-star",
+							"title": "Beneficios Clave",
+							"text": "Aumenta firmeza y elasticidad, hidrata en profundidad y revitaliza la piel."
+						},
+						{
+							"icon": "fas fa-euro-sign",
+							"title": "Precio"
+						},
+						{
+							"icon": "far fa-clock",
+							"title": "Duración"
+						},
+						{
+							"icon": "fas fa-calendar-alt",
+							"title": "Sesiones",
+							"text": "Protocolo inicial de 3 sesiones y mantenimiento cada 6 meses."
+						},
+						{
+							"icon": "fas fa-eye",
+							"title": "Resultados",
+							"text": "Hidratación inmediata. Firmeza de forma gradual."
+						},
+						{
+							"icon": "fas fa-shield-alt",
+							"title": "Cuidados",
+							"text": "Recuperación rápida. Aplicar protección solar.No saunas. No piscina. No ejercicio intenso en 24h"
+						}
+					]
+				}
+			}
+		]
+	},
+	{
+		"category": "Peelings",
+		"treatments": [
+			{
+				"id": "peeling-exfoliante-lifting",
+				"icon": "fas fa-wand-magic",
+				"title": "Peeling exfoliante y lifting",
+				"description": "Fórmula innovadora con efecto lifting que exfolia la piel, unifica el tono y aporta una gran luminosidad.",
+				"comingSoon": false,
+				"price": 60,
+				"duration": "45 min",
+				"detail": {
+					"image": "https://via.placeholder.com/800x400.png/F7F5F0/74543F?text=Peeling+Lifting",
+					"description": "Peeling que combina exfoliación profunda con efecto tensor inmediato. Elimina células muertas, unifica el tono, atenúa manchas y arrugas finas y redefine el óvalo facial. Piel luminosa desde la primera sesión.",
+					"details": [
+						{
+							"icon": "fas fa-star",
+							"title": "Beneficios Clave",
+							"text": "Efecto lifting inmediato, exfoliación profunda y gran luminosidad."
+						},
+						{
+							"icon": "fas fa-euro-sign",
+							"title": "Precio"
+						},
+						{
+							"icon": "far fa-clock",
+							"title": "Duración"
+						},
+						{
+							"icon": "fas fa-calendar-alt",
+							"title": "Sesiones",
+							"text": "Ideal como tratamiento flash o en ciclo de 3-4 sesiones."
+						},
+						{
+							"icon": "fas fa-eye",
+							"title": "Resultados",
+							"text": "Tensor y luminosidad visibles desde la primera sesión."
+						},
+						{
+							"icon": "fas fa-shield-alt",
+							"title": "Cuidados",
+							"text": "Correcta y constante protección solar tras el tratamiento."
+						}
+					]
+				}
+			},
+			{
+				"id": "peeling-estrias-cicatrices",
+				"icon": "fas fa-wand-sparkles",
+				"title": "Peeling químico para estrías y cicatrices",
+				"description": "Exfolia y revitaliza la piel para unificar el tono y mejorar la textura de estrías y cicatrices eficazmente.",
+				"comingSoon": false,
+				"price": 70,
+				"duration": "45 min",
+				"detail": {
+					"image": "https://via.placeholder.com/800x400.png/F7F5F0/74543F?text=Peeling+para+Estrias",
+					"description": "Peeling químico formulado para estrías y cicatrices. Exfolia las capas superficiales, estimula la renovación celular y la formación de colágeno, mejorando la textura y el color de las marcas de forma progresiva.",
+					"details": [
+						{
+							"icon": "fas fa-star",
+							"title": "Beneficios Clave",
+							"text": "Mejora la textura y color de estrías y cicatrices, y unifica el tono."
+						},
+						{
+							"icon": "fas fa-euro-sign",
+							"title": "Precio"
+						},
+						{
+							"icon": "far fa-clock",
+							"title": "Duración"
+						},
+						{
+							"icon": "fas fa-calendar-alt",
+							"title": "Sesiones",
+							"text": "Ciclo de 4 a 8 sesiones, cada 2-3 semanas."
+						},
+						{
+							"icon": "fas fa-eye",
+							"title": "Resultados",
+							"text": "Progresivos. Piel más lisa y tono atenuado con cada sesión."
+						},
+						{
+							"icon": "fas fa-shield-alt",
+							"title": "Cuidados",
+							"text": "La piel se descamará. Uso de protección solar SPF 50+ es fundamental."
+						}
+					]
+				}
+			},
+			{
+				"id": "peeling-antimanchas",
+				"icon": "fas fa-wand-sparkles",
+				"title": "Peeling Antimanchas",
+				"description": "Renueva y revitaliza tu piel para combatir las manchas cutáneas. Un tratamiento suave y altamente eficaz que devuelve la luminosidad y uniformidad al rostro desde la primera sesión.",
+				"comingSoon": false,
+				"price": 60,
+				"duration": "45 min",
+				"detail": {
+					"image": "https://via.placeholder.com/800x400.png/F7F5F0/74543F?text=Peeling+para+Estrias",
+					"description": "Peeling específico para manchas cutáneas: renueva la piel, unifica el tono y devuelve luminosidad. Suave y eficaz, con resultados visibles desde las primeras sesiones. Protección solar posterior esencial.",
+					"details": [
+						{
+							"icon": "fas fa-euro-sign",
+							"title": "Precio"
+						},
+						{
+							"icon": "far fa-clock",
+							"title": "Duración"
+						},
+						{
+							"icon": "fas fa-shield-alt",
+							"title": "Cuidados",
+							"text": "La piel puede descamarse. Uso de protección solar SPF 50+ es fundamental."
+						}
+					]
+				}
+			}
+		]
+	},
+	{
+		"category": "Otros Servicios",
+		"treatments": [
+			{
+				"id": "rutina-personalizada",
+				"icon": "fas fa-leaf",
+				"title": "Rutina personalizada",
+				"description": "Análisis de piel y hábitos para diseñar una rutina de cuidado facial a medida y conseguir resultados visibles y duraderos.",
+				"comingSoon": false,
+				"price": 45,
+				"duration": "60 min",
+				"detail": {
+					"image": "https://via.placeholder.com/800x400.png/F7F5F0/74543F?text=Rutina+Personalizada",
+					"description": "Diagnóstico de tu piel y estilo de vida para diseñar una rutina cosmética a medida: productos, orden de aplicación y hábitos. Aprenderás a cuidar tu piel de forma eficaz y a optimizar tu inversión.",
+					"details": [
+						{
+							"icon": "fas fa-star",
+							"title": "Beneficios Clave",
+							"text": "Aprenderás a cuidar tu piel, optimizarás tu inversión y conseguirás resultados."
+						},
+						{
+							"icon": "fas fa-euro-sign",
+							"title": "Precio"
+						},
+						{
+							"icon": "far fa-clock",
+							"title": "Duración"
+						},
+						{
+							"icon": "fas fa-box-open",
+							"title": "Qué Incluye",
+							"text": "Análisis de piel, revisión de rutina y diseño de una nueva."
+						},
+						{
+							"icon": "fas fa-mobile-alt",
+							"title": "Modalidad",
+							"text": "La consulta puede ser presencial o telemática."
+						}
+					]
+				}
+			},
+			{
+				"id": "eliminar-verrugas",
+				"icon": "fas fa-star-of-life",
+				"title": "Eliminar verrugas y rubíes",
+				"description": "Eliminación segura, rápida y precisa de lesiones cutáneas benignas como verrugas y puntos rubí, sin dejar cicatriz.",
+				"comingSoon": true,
+				"price": 40,
+				"duration": "30 min",
+				"detail": {
+					"image": "https://via.placeholder.com/800x400.png/F7F5F0/74543F?text=Eliminar+Verrugas",
+					"description": "Electrocoagulación de precisión para eliminar verrugas, puntos rubí y fibromas de forma segura. Procedimiento mínimamente invasivo, con bajo riesgo de sangrado y sin dejar cicatriz visible.",
+					"details": [
+						{
+							"icon": "fas fa-star",
+							"title": "Beneficios Clave",
+							"text": "Eliminación precisa y definitiva sin cicatriz."
+						},
+						{
+							"icon": "fas fa-euro-sign",
+							"title": "Precio"
+						},
+						{
+							"icon": "far fa-clock",
+							"title": "Duración"
+						},
+						{
+							"icon": "fas fa-calendar-alt",
+							"title": "Sesiones",
+							"text": "Normalmente una única sesión es suficiente."
+						},
+						{
+							"icon": "fas fa-eye",
+							"title": "Resultados",
+							"text": "Inmediato. La lesión es eliminada al momento."
+						},
+						{
+							"icon": "fas fa-shield-alt",
+							"title": "Cuidados",
+							"text": "Se forma una pequeña costra que cae sola en 5-10 días."
+						}
+					]
+				}
+			}
+		]
+	}
+]

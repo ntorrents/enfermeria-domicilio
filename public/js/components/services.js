@@ -1,9 +1,9 @@
 /**
- * Tratamientos con packs: solo estos IDs tienen bonos 3 y 5 sesiones.
- * - Bioestimulación: ambos
- * - Diatermia: ambos
- * - Microneedling: ambos
- * - Mesoterapia: SOLO corporal (no facial ni capilar)
+ * Tratamientos que tienen packs de sesiones (1, 3 y/o 5).
+ * - Bioestimulación: ambos (solo 1 y 3, ver abajo)
+ * - Diatermia: ambos (1, 3 y 5)
+ * - Microneedling: ambos (1, 3 y 5)
+ * - Mesoterapia: SOLO corporal (1, 3 y 5)
  */
 const TREATMENT_IDS_WITH_PACKS = [
   'bioestimulacion-exosomas',
@@ -13,6 +13,17 @@ const TREATMENT_IDS_WITH_PACKS = [
   'microneedling-facial',
   'microneedling-corporal',
   'mesoterapia-corporal'
+];
+
+/**
+ * Tratamientos que solo tienen Pack 3 (no Pack 5).
+ * Añade aquí el id del tratamiento si en el futuro quieres ocultar Pack 5
+ * (o solo mostrar 1 y 3, o solo 1 y 5, etc.; para otros casos habría que
+ * ampliar la lógica más abajo).
+ */
+const TREATMENT_IDS_PACK3_ONLY = [
+  'bioestimulacion-exosomas',
+  'bioestimulacion-total'
 ];
 
 /**
@@ -127,6 +138,13 @@ function renderTreatmentCard(treatment) {
     const single = getDisplayPrice(priceNum, 'single');
     const pack3 = getDisplayPrice(priceNum, 'pack3');
     const pack5 = getDisplayPrice(priceNum, 'pack5');
+    const onlyPack3 = TREATMENT_IDS_PACK3_ONLY.includes(treatment.id);
+    const pack5Button = onlyPack3 ? '' : `
+          <button type="button" class="pack-option" data-pack="pack5" data-total="${pack5}">
+            <span class="pack-option-title">Pack 5 sesiones</span>
+            <span class="pack-option-detail">5ª gratis</span>
+            <span class="pack-option-price">${pack5}€ total</span>
+          </button>`;
     priceBlock = `
       <div class="pack-box">
         <p class="pack-box-title">Packs</p>
@@ -140,11 +158,7 @@ function renderTreatmentCard(treatment) {
             <span class="pack-option-detail">3ª al 50%</span>
             <span class="pack-option-price">${pack3}€ total</span>
           </button>
-          <button type="button" class="pack-option" data-pack="pack5" data-total="${pack5}">
-            <span class="pack-option-title">Pack 5 sesiones</span>
-            <span class="pack-option-detail">5ª gratis</span>
-            <span class="pack-option-price">${pack5}€ total</span>
-          </button>
+          ${pack5Button}
         </div>
         <p class="pack-price-display"><strong>${single}€</strong> por esta sesión</p>
       </div>
