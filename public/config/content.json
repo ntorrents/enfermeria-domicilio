@@ -1,37 +1,42 @@
 {
-    "hero": {
-      "title": "Realza tu Belleza Natural",
-      "subtitle": "Servicios dermoestéticos profesionales para cuidar la salud y luminosidad de tu piel.",
-      "primaryButton": "Reservar Cita",
-      "secondaryButton": "Servicios"
-    },
-    "aboutMe": {
-      "name": "Christine Cano",
-      "title": "Enfermera Dermoestética",
-      "collegiateNumber": "075396",
-      "intro": "Para mí, cuidar tu piel es cuidar de ti en tu totalidad. Entiendo que lo que proyectamos al exterior nace de nuestro equilibrio interno; por eso, mi enfoque no se queda en la superficie, sino que es holístico.",
-      "education": [
-        "Diplomada en Enfermería (UAB)",
-        "Máster en Dermoestética e Imagen Corporal (NUS Agency, Barcelona)"
-      ],
-      "clinicAddress": "Terrassa, Barcelona",
-      "clinicNote": "Consulta privada"
-    },
-    "testimonials": [
-      {
-          "name": "Loïda",
-          "text": "Muy contenta, gracias, Christine.\nExplicaciones muy claras sobre el tratamiento recibido. Trato muy cercano. Buena profesional.",
-          "rating": 5
-      },
-      {
-          "name": "Alba",
-          "text": "Christine es una profesional increíble, estoy muy contenta con el resultado y por el trato.\nLa recomiendo al cien por cien!",
-          "rating": 5
-      },
-      {
-          "name": "Pol",
-          "text": "Todo genial. Des del primer momento se interesó por mis rutinas, hábitos y lo que yo buscaba para, en este caso, mi cuidado y mejora de la piel de la cara.Trato muy profesional antes, durante y después del tratamiento. 100% recomendable.",
-          "rating": 5
-      }
-    ]
-  }
+	"gallery": {
+		"title": "Fotos",
+		"subtitle": "Nuestra clínica",
+		"images": ["1.jpeg", "2.jpeg", "3.jpeg", "4.jpeg", "5.jpeg"]
+	},
+	"hero": {
+		"title": "Realza tu Belleza Natural",
+		"subtitle": "Servicios dermoestéticos profesionales para cuidar la salud y luminosidad de tu piel.",
+		"primaryButton": "Reservar Cita",
+		"secondaryButton": "Servicios"
+	},
+	"aboutMe": {
+		"name": "Christine Cano",
+		"title": "Enfermera Dermoestética",
+		"collegiateNumber": "075396",
+		"intro": "Para mí, cuidar tu piel es cuidar de ti en tu totalidad. Entiendo que lo que proyectamos al exterior nace de nuestro equilibrio interno; por eso, mi enfoque no se queda en la superficie, sino que es holístico.",
+		"education": [
+			"Diplomada en Enfermería (UAB)",
+			"Máster en Dermoestética e Imagen Corporal (NUS Agency, Barcelona)"
+		],
+		"clinicAddress": "Terrassa, Barcelona",
+		"clinicNote": "Consulta privada"
+	},
+	"testimonials": [
+		{
+			"name": "Loïda",
+			"text": "Muy contenta, gracias, Christine.\nExplicaciones muy claras sobre el tratamiento recibido. Trato muy cercano. Buena profesional.",
+			"rating": 5
+		},
+		{
+			"name": "Alba",
+			"text": "Christine es una profesional increíble, estoy muy contenta con el resultado y por el trato.\nLa recomiendo al cien por cien!",
+			"rating": 5
+		},
+		{
+			"name": "Pol",
+			"text": "Todo genial. Des del primer momento se interesó por mis rutinas, hábitos y lo que yo buscaba para, en este caso, mi cuidado y mejora de la piel de la cara.Trato muy profesional antes, durante y después del tratamiento. 100% recomendable.",
+			"rating": 5
+		}
+	]
+}

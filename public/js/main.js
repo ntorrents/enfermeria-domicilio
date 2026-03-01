@@ -3,6 +3,7 @@ import { renderHero } from './components/hero.js';
 import { renderAbout } from './components/about.js';
 import { renderServices } from './components/services.js';
 import { renderTestimonials } from './components/testimonials.js';
+import { renderGallery } from './components/gallery.js';
 import { renderContact } from './components/contact.js';
 import { renderFooter } from './components/footer.js';
 
@@ -46,6 +47,7 @@ async function initApp() {
         renderAbout(config.aboutMe),
         renderServices(config.services),
         renderTestimonials(config.testimonials),
+        renderGallery(config.gallery),
         renderContact(config.siteInfo, config.services)
     ].join('');
 

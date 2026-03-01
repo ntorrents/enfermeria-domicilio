@@ -291,6 +291,10 @@ button.btn-card.btn-ver-mas {
     line-height: 1.2;
 }
 
+.pack-option.active .pack-option-detail {
+    color: white;
+}
+
 .pack-option-price {
     font-size: 0.8rem;
     opacity: 0.95;

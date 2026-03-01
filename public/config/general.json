@@ -1,15 +1,15 @@
 {
-    "siteInfo": {
-      "title": "C3linic - Dermoestética Avanzada",
-      "brandName": "C3LINIC",
-      "phone": "+34 658 491 612",
-      "email": "contacto@c3linic.com",
-      "schedule": "Cita Previa: Lunes a Viernes",
-      "coverage": "Terrassa, Barcelona",
-      "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2985.879796839356!2d2.0089!3d41.5632!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a492f4c3a3a3a3%3A0x123456789!2sCarrer+de+l'Exemple%2C+123%2C+Terrassa!5e0!3m2!1ses!2ses!4v1600000000000!5m2!1ses!2ses"
-    },
-    "footer": {
-      "description": "Dermoestética profesional y cuidado integral en Terrassa. Tratamientos faciales y corporales adaptados a ti.",
-      "copyright": "© 2026 C3linic. Christine Cano Cana Dermoestética. Todos los derechos reservados."
-    }
-  }
+	"siteInfo": {
+		"title": "C3linic - Dermoestética Avanzada",
+		"brandName": "C3LINIC",
+		"phone": "+34 658 491 612",
+		"email": "contacto@c3linic.com",
+		"schedule": "Cita Previa: Lunes a Viernes",
+		"coverage": "Carrer Cervantes, 79, Terrassa (Barcelona)",
+		"mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5970.041060284978!2d2.0087906761132066!3d41.56880027127724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a492c6caf21e83%3A0xdd365c97fa76dbe!2sC.%20de%20Cervantes%2C%2079%2C%2008221%20Terrassa%2C%20Barcelona!5e0!3m2!1ses!2ses!4v1772373964329!5m2!1ses!2ses"
+	},
+	"footer": {
+		"description": "Dermoestética profesional y cuidado integral en Terrassa. Tratamientos faciales y corporales adaptados a ti.",
+		"copyright": "© 2026 C3linic. Christine Cano Cana Dermoestética. Todos los derechos reservados."
+	}
+}

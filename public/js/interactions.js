@@ -286,6 +286,86 @@ function initializeTestimonialsCarousel() {
   if (isMobile()) setTransform(0);
 }
 
+// --- Galería: lightbox para ver fotos completas y pasar una a una ---
+function initializeGalleryLightbox() {
+  const section = document.getElementById('fotos');
+  if (!section) return;
+
+  const lightbox = document.getElementById('gallery-lightbox');
+  const lightboxImg = document.getElementById('gallery-lightbox-img');
+  const closeBtn = lightbox?.querySelector('.gallery-lightbox-close');
+  const prevBtn = lightbox?.querySelector('.gallery-lightbox-prev');
+  const nextBtn = lightbox?.querySelector('.gallery-lightbox-next');
+
+  if (!lightbox || !lightboxImg) return;
+
+  const items = section.querySelectorAll('.gallery-item[data-src]');
+  const urls = [...items].map((el) => el.getAttribute('data-src'));
+  const n = urls.length;
+  let currentIndex = 0;
+
+  function showImage(index) {
+    currentIndex = ((index % n) + n) % n;
+    lightboxImg.src = urls[currentIndex];
+  }
+
+  function open(index) {
+    currentIndex = ((index % n) + n) % n;
+    lightboxImg.src = urls[currentIndex];
+    lightbox.classList.add('is-open');
+    lightbox.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    closeBtn?.focus();
+  }
+
+  function close() {
+    lightbox.classList.remove('is-open');
+    lightbox.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+
+  section.addEventListener('click', (e) => {
+    const item = e.target.closest('.gallery-item[data-index]');
+    if (!item) return;
+    const index = parseInt(item.getAttribute('data-index'), 10);
+    open(index);
+  });
+
+  section.addEventListener('keydown', (e) => {
+    if (e.key !== 'Enter' && e.key !== ' ') return;
+    const item = e.target.closest('.gallery-item[data-index]');
+    if (!item) return;
+    e.preventDefault();
+    const index = parseInt(item.getAttribute('data-index'), 10);
+    open(index);
+  });
+
+  closeBtn?.addEventListener('click', close);
+  prevBtn?.addEventListener('click', () => {
+    showImage(currentIndex - 1);
+  });
+  nextBtn?.addEventListener('click', () => {
+    showImage(currentIndex + 1);
+  });
+
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) close();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (!lightbox.classList.contains('is-open')) return;
+    if (e.key === 'Escape') close();
+    if (e.key === 'ArrowLeft') {
+      showImage(currentIndex - 1);
+      e.preventDefault();
+    }
+    if (e.key === 'ArrowRight') {
+      showImage(currentIndex + 1);
+      e.preventDefault();
+    }
+  });
+}
+
 // --- GESTIÓN DE COOKIES ---
 function initializeCookieConsent() {
     const banner = document.getElementById('cookieBanner');
@@ -318,6 +398,7 @@ export function initializeInteractions() {
     initializeContactForm();
     initializeServicesTabsAndModal();
     initializeTestimonialsCarousel();
+    initializeGalleryLightbox();
     initializeCookieConsent();
     
     // Ancla inicial
