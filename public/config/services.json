@@ -641,6 +641,64 @@
 		]
 	},
 	{
+		"category": "Maderoterapia",
+		"treatments": [
+			{
+				"id": "maderoterapia-drenaje-linfatico",
+				"icon": "fas fa-spa",
+				"title": "Maderoterapia Corporal y Drenaje Linfático",
+				"description": "Redefine tu silueta de forma natural y efectiva. Combinamos maderoterapia con drenaje linfático manual para remodelación corporal y bienestar integral.",
+				"comingSoon": false,
+				"price": 50,
+				"duration": "30 min",
+				"detail": {
+					"image": "https://via.placeholder.com/800x400.png/F7F5F0/74543F?text=Maderoterapia+y+Drenaje+Linfatico",
+					"description": "En c3linic combinamos la sabiduría de la técnica milenaria de la maderoterapia con la precisión clínica del drenaje linfático manual. Este tratamiento dual no solo busca resultados estéticos visibles, sino que promueve el equilibrio interno de tu organismo. Utilizamos instrumentos de madera anatómicamente diseñados para ejercer una presión controlada sobre las diferentes zonas del cuerpo. Esta fricción activa la circulación sanguínea y rompe los cúmulos grasos localizados. Finalizamos la sesión con técnicas de drenaje linfático que ayudan a tu cuerpo a eliminar las toxinas y líquidos movilizados, potenciando el efecto reductor y desinflamatorio.",
+					"details": [
+						{
+							"icon": "fas fa-star",
+							"title": "Beneficios principales",
+							"text": "Remodelación corporal, acción anticelulítica, detoxificación profunda, tonificación y firmeza, y bienestar integral."
+						},
+						{
+							"icon": "fas fa-circle-dot",
+							"title": "Acción anticelulítica",
+							"text": "Alisa la textura de la piel y mejora el aspecto de la piel de naranja."
+						},
+						{
+							"icon": "fas fa-droplet",
+							"title": "Detoxificación profunda",
+							"text": "Estimula el sistema linfático para una eliminación eficaz de líquidos retenidos."
+						},
+						{
+							"icon": "fas fa-hand-sparkles",
+							"title": "Tonificación y firmeza",
+							"text": "Reactiva la producción de elastina y colágeno."
+						},
+						{
+							"icon": "fas fa-heart",
+							"title": "Bienestar integral",
+							"text": "Alivia tensiones musculares y reduce el estrés gracias al masaje profundo."
+						},
+						{
+							"icon": "fas fa-euro-sign",
+							"title": "Precio"
+						},
+						{
+							"icon": "far fa-clock",
+							"title": "Duración"
+						},
+						{
+							"icon": "fas fa-calendar-alt",
+							"title": "Sesiones",
+							"text": "Disponible sesión suelta, pack de 3 sesiones (3ª al 50%) o pack de 5 sesiones (5ª gratis)."
+						}
+					]
+				}
+			}
+		]
+	},
+	{
 		"category": "Otros Servicios",
 		"treatments": [
 			{

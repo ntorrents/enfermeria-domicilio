@@ -12,7 +12,8 @@ const TREATMENT_IDS_WITH_PACKS = [
   'diatermia-postparto',
   'microneedling-facial',
   'microneedling-corporal',
-  'mesoterapia-corporal'
+  'mesoterapia-corporal',
+  'maderoterapia-drenaje-linfatico'
 ];
 
 /**
