@@ -128,16 +128,16 @@
 		"category": "Mesoterapia",
 		"treatments": [
 			{
-				"id": "mesoterapia-capilar",
-				"icon": "fas fa-user",
-				"title": "Mesoterapia capilar",
-				"description": "Tratamiento avanzado para la caída del cabello. Fortalece la fibra capilar, estimula el crecimiento y aumenta el volumen.",
+				"id": "mesoterapia-polinucleotidos",
+				"icon": "fas fa-eye",
+				"title": "Polinucleótidos en Ojeras",
+				"description": "Renueva la zona del contorno de ojos mediante un proceso de regeneración celular avanzado. Este protocolo utiliza polinucleótidos (PDRN) para bioestimular la piel desde el interior, devolviendo la vitalidad y firmeza a tu mirada de forma natural.",
 				"comingSoon": false,
-				"price": 160,
-				"duration": "30 min",
+				"price": 110,
+				"duration": "45 min",
 				"detail": {
 					"image": "https://via.placeholder.com/800x400.png/F7F5F0/74543F?text=Mesoterapia+Capilar",
-					"description": "Microinyecciones en el cuero cabelludo con un cóctel de vitaminas, minerales y aminoácidos que nutren el folículo, mejoran la circulación y fortalecen la fibra capilar. Indicado para frenar la caída y favorecer un cabello más denso y con más volumen.",
+					"description": "Dermis más densa: Incrementa el grosor de la piel de la ojera en un 15%, ideal para zonas finas o marcadas.\n Firmeza y elasticidad: Mejora el tono cutáneo estimulando la síntesis propia de colágeno sin generar fibrosis.\n Mirada descansada: Activa el metabolismo celular para reparar el tejido y eliminar los signos de fatiga.",
 					"details": [
 						{
 							"icon": "fas fa-star",
@@ -165,7 +165,7 @@
 						{
 							"icon": "fas fa-shield-alt",
 							"title": "Cuidados",
-							"text": "No lavar el cabello hasta pasadas 24 horas."
+							"text": "Evitar maquillaje y exposición solar directa durante 24h."
 						}
 					]
 				}
@@ -252,6 +252,49 @@
 							"icon": "fas fa-shield-alt",
 							"title": "Cuidados",
 							"text": "Beber abundante agua y combinar con estilo de vida saludable."
+						}
+					]
+				}
+			},
+			{
+				"id": "mesoterapia-capilar",
+				"icon": "fas fa-user",
+				"title": "Mesoterapia capilar",
+				"description": "Tratamiento avanzado para la caída del cabello. Fortalece la fibra capilar, estimula el crecimiento y aumenta el volumen.",
+				"comingSoon": false,
+				"price": 160,
+				"duration": "30 min",
+				"detail": {
+					"image": "https://via.placeholder.com/800x400.png/F7F5F0/74543F?text=Mesoterapia+Capilar",
+					"description": "Microinyecciones en el cuero cabelludo con un cóctel de vitaminas, minerales y aminoácidos que nutren el folículo, mejoran la circulación y fortalecen la fibra capilar. Indicado para frenar la caída y favorecer un cabello más denso y con más volumen.",
+					"details": [
+						{
+							"icon": "fas fa-star",
+							"title": "Beneficios Clave",
+							"text": "Frena la caída, fortalece la fibra, estimula el crecimiento y aumenta la densidad."
+						},
+						{
+							"icon": "fas fa-euro-sign",
+							"title": "Precio"
+						},
+						{
+							"icon": "far fa-clock",
+							"title": "Duración"
+						},
+						{
+							"icon": "fas fa-calendar-alt",
+							"title": "Sesiones",
+							"text": "Tratamiento de choque semanal (4-6 semanas) y mantenimiento."
+						},
+						{
+							"icon": "fas fa-eye",
+							"title": "Resultados",
+							"text": "Reducción de caída en primeras semanas. Densidad a partir del 2º mes."
+						},
+						{
+							"icon": "fas fa-shield-alt",
+							"title": "Cuidados",
+							"text": "No lavar el cabello hasta pasadas 24 horas."
 						}
 					]
 				}

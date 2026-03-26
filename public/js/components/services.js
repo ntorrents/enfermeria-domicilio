@@ -6,14 +6,15 @@
  * - Mesoterapia: SOLO corporal (1, 3 y 5)
  */
 const TREATMENT_IDS_WITH_PACKS = [
-  'bioestimulacion-exosomas',
-  'bioestimulacion-total',
-  'diatermia-cicatrices-fibrosis',
-  'diatermia-postparto',
-  'microneedling-facial',
-  'microneedling-corporal',
-  'mesoterapia-corporal',
-  'maderoterapia-drenaje-linfatico'
+	"bioestimulacion-exosomas",
+	"bioestimulacion-total",
+	"diatermia-cicatrices-fibrosis",
+	"diatermia-postparto",
+	"microneedling-facial",
+	"microneedling-corporal",
+	"mesoterapia-corporal",
+	"maderoterapia-drenaje-linfatico",
+	"mesoterapia-polinucleotidos",
 ];
 
 /**
@@ -23,8 +24,8 @@ const TREATMENT_IDS_WITH_PACKS = [
  * ampliar la lógica más abajo).
  */
 const TREATMENT_IDS_PACK3_ONLY = [
-  'bioestimulacion-exosomas',
-  'bioestimulacion-total'
+	"bioestimulacion-exosomas",
+	"bioestimulacion-total",
 ];
 
 /**
@@ -34,52 +35,57 @@ const TREATMENT_IDS_PACK3_ONLY = [
  * - pack5: 4+1 gratis → total = 4 sesiones
  */
 function getDisplayPrice(price, packType) {
-  if (typeof price !== 'number') return null;
-  switch (packType) {
-    case 'pack3': return Math.round(price * 2.5);
-    case 'pack5': return price * 4;
-    default: return price;
-  }
+	if (typeof price !== "number") return null;
+	switch (packType) {
+		case "pack3":
+			return Math.round(price * 2.5);
+		case "pack5":
+			return price * 4;
+		default:
+			return price;
+	}
 }
 
 function escapeHTML(str) {
-  if (!str) return '';
-  const div = document.createElement('div');
-  div.textContent = str;
-  return div.innerHTML;
+	if (!str) return "";
+	const div = document.createElement("div");
+	div.textContent = str;
+	return div.innerHTML;
 }
 
 export function renderServices(servicesData) {
-  if (!servicesData || !Array.isArray(servicesData)) return '';
+	if (!servicesData || !Array.isArray(servicesData)) return "";
 
-  const tabsHTML = servicesData
-    .map((category, index) => {
-      const slug = slugify(category.category);
-      const isFirst = index === 0;
-      return `
-        <button type="button" class="services-tab ${isFirst ? 'active' : ''}" data-tab="${slug}" aria-selected="${isFirst}">
+	const tabsHTML = servicesData
+		.map((category, index) => {
+			const slug = slugify(category.category);
+			const isFirst = index === 0;
+			return `
+        <button type="button" class="services-tab ${isFirst ? "active" : ""}" data-tab="${slug}" aria-selected="${isFirst}">
           ${escapeHTML(category.category)}
         </button>
       `;
-    })
-    .join('');
+		})
+		.join("");
 
-  const panelsHTML = servicesData
-    .map((category, index) => {
-      const slug = slugify(category.category);
-      const isFirst = index === 0;
-      const cardsHTML = category.treatments.map((t) => renderTreatmentCard(t)).join('');
-      return `
-        <div class="services-panel ${isFirst ? 'active' : ''}" id="panel-${slug}" role="tabpanel" aria-hidden="${!isFirst}">
+	const panelsHTML = servicesData
+		.map((category, index) => {
+			const slug = slugify(category.category);
+			const isFirst = index === 0;
+			const cardsHTML = category.treatments
+				.map((t) => renderTreatmentCard(t))
+				.join("");
+			return `
+        <div class="services-panel ${isFirst ? "active" : ""}" id="panel-${slug}" role="tabpanel" aria-hidden="${!isFirst}">
           <div class="services-grid">
             ${cardsHTML}
           </div>
         </div>
       `;
-    })
-    .join('');
+		})
+		.join("");
 
-  return `
+	return `
     <section id="servicios" class="services-section-cards">
       <div class="container">
         <div class="section-title">
@@ -113,40 +119,43 @@ export function renderServices(servicesData) {
 }
 
 function slugify(text) {
-  return text
-    .toLowerCase()
-    .normalize('NFD')
-    .replace(/[\u0300-\u036f]/g, '')
-    .replace(/\s+/g, '-')
-    .replace(/[^a-z0-9-]/g, '');
+	return text
+		.toLowerCase()
+		.normalize("NFD")
+		.replace(/[\u0300-\u036f]/g, "")
+		.replace(/\s+/g, "-")
+		.replace(/[^a-z0-9-]/g, "");
 }
 
 function renderTreatmentCard(treatment) {
-  const isComingSoon = treatment.comingSoon === true;
-  const hasPacks = TREATMENT_IDS_WITH_PACKS.includes(treatment.id);
-  const priceNum = typeof treatment.price === 'number' ? treatment.price : null;
+	const isComingSoon = treatment.comingSoon === true;
+	const hasPacks = TREATMENT_IDS_WITH_PACKS.includes(treatment.id);
+	const priceNum = typeof treatment.price === "number" ? treatment.price : null;
 
-  let cardClass = 'service-card treatment-card';
-  if (isComingSoon) cardClass += ' coming-soon';
-  if (treatment.id === 'consulta-gratuita') cardClass += ' card-highlight';
+	let cardClass = "service-card treatment-card";
+	if (isComingSoon) cardClass += " coming-soon";
+	if (treatment.id === "consulta-gratuita") cardClass += " card-highlight";
 
-  let priceBlock;
-  if (isComingSoon) {
-    priceBlock = '<span class="service-price-tag service-price-tag--soon">Próximamente</span>';
-  } else if (typeof treatment.price === 'string') {
-    priceBlock = `<span class="service-price-tag">${escapeHTML(treatment.price)}</span>`;
-  } else if (hasPacks && priceNum !== null) {
-    const single = getDisplayPrice(priceNum, 'single');
-    const pack3 = getDisplayPrice(priceNum, 'pack3');
-    const pack5 = getDisplayPrice(priceNum, 'pack5');
-    const onlyPack3 = TREATMENT_IDS_PACK3_ONLY.includes(treatment.id);
-    const pack5Button = onlyPack3 ? '' : `
+	let priceBlock;
+	if (isComingSoon) {
+		priceBlock =
+			'<span class="service-price-tag service-price-tag--soon">Próximamente</span>';
+	} else if (typeof treatment.price === "string") {
+		priceBlock = `<span class="service-price-tag">${escapeHTML(treatment.price)}</span>`;
+	} else if (hasPacks && priceNum !== null) {
+		const single = getDisplayPrice(priceNum, "single");
+		const pack3 = getDisplayPrice(priceNum, "pack3");
+		const pack5 = getDisplayPrice(priceNum, "pack5");
+		const onlyPack3 = TREATMENT_IDS_PACK3_ONLY.includes(treatment.id);
+		const pack5Button = onlyPack3
+			? ""
+			: `
           <button type="button" class="pack-option" data-pack="pack5" data-total="${pack5}">
             <span class="pack-option-title">Pack 5 sesiones</span>
             <span class="pack-option-detail">5ª gratis</span>
             <span class="pack-option-price">${pack5}€ total</span>
           </button>`;
-    priceBlock = `
+		priceBlock = `
       <div class="pack-box">
         <p class="pack-box-title">Packs</p>
         <div class="pack-selector" role="group" aria-label="Elegir sesión suelta o pack">
@@ -164,34 +173,36 @@ function renderTreatmentCard(treatment) {
         <p class="pack-price-display"><strong>${single}€</strong> por esta sesión</p>
       </div>
     `;
-  } else if (priceNum !== null) {
-    priceBlock = `<span class="service-price-tag">${priceNum}€</span>`;
-  } else {
-    priceBlock = '';
-  }
+	} else if (priceNum !== null) {
+		priceBlock = `<span class="service-price-tag">${priceNum}€</span>`;
+	} else {
+		priceBlock = "";
+	}
 
-  const description = escapeHTML(treatment.description || 'Descripción disponible próximamente.');
-  const metaHTML = treatment.duration
-    ? `<div class="card-meta"><span><i class="far fa-clock"></i> ${escapeHTML(treatment.duration)}</span></div>`
-    : '';
+	const description = escapeHTML(
+		treatment.description || "Descripción disponible próximamente.",
+	);
+	const metaHTML = treatment.duration
+		? `<div class="card-meta"><span><i class="far fa-clock"></i> ${escapeHTML(treatment.duration)}</span></div>`
+		: "";
 
-  const verMasHTML = isComingSoon
-    ? '<span class="btn btn-card disabled">Disponible pronto</span>'
-    : `<button type="button" class="btn btn-card btn-ver-mas" data-treatment-id="${escapeHTML(treatment.id)}">Ver más <i class="fas fa-arrow-right"></i></button>`;
+	const verMasHTML = isComingSoon
+		? '<span class="btn btn-card disabled">Disponible pronto</span>'
+		: `<button type="button" class="btn btn-card btn-ver-mas" data-treatment-id="${escapeHTML(treatment.id)}">Ver más <i class="fas fa-arrow-right"></i></button>`;
 
-  return `
+	return `
     <article class="${cardClass}" data-treatment-id="${escapeHTML(treatment.id)}">
       <div class="card-header">
         <div class="service-icon-box">
           <i class="${escapeHTML(treatment.icon)}"></i>
         </div>
-        ${priceNum !== null && hasPacks ? '' : priceBlock}
+        ${priceNum !== null && hasPacks ? "" : priceBlock}
       </div>
       <div class="card-body">
         <h4>${escapeHTML(treatment.title)}</h4>
         <p>${description}</p>
         ${metaHTML}
-        ${hasPacks && priceNum !== null ? priceBlock : ''}
+        ${hasPacks && priceNum !== null ? priceBlock : ""}
         <div class="card-footer">${verMasHTML}</div>
       </div>
     </article>
@@ -203,35 +214,37 @@ function renderTreatmentCard(treatment) {
  * Mantiene la info de services.json por si se quiere ampliar después.
  */
 export function buildTreatmentModalContent(treatment) {
-  if (!treatment || !treatment.detail) return '';
+	if (!treatment || !treatment.detail) return "";
 
-  const d = treatment.detail;
-  let detailsListHTML = '';
-  const excludeTitles = ['Beneficios Clave', 'Sesiones', 'Resultados'];
-  if (d.details && d.details.length > 0) {
-    detailsListHTML = d.details
-      .filter((item) => !excludeTitles.includes(item.title))
-      .map((item) => {
-        let text = item.text;
-        if (item.icon && item.icon.includes('fa-euro-sign')) text = `${treatment.price}€ por sesión.`;
-        if (item.icon && item.icon.includes('fa-clock')) text = treatment.duration;
-        return `
+	const d = treatment.detail;
+	let detailsListHTML = "";
+	const excludeTitles = ["Beneficios Clave", "Sesiones", "Resultados"];
+	if (d.details && d.details.length > 0) {
+		detailsListHTML = d.details
+			.filter((item) => !excludeTitles.includes(item.title))
+			.map((item) => {
+				let text = item.text;
+				if (item.icon && item.icon.includes("fa-euro-sign"))
+					text = `${treatment.price}€ por sesión.`;
+				if (item.icon && item.icon.includes("fa-clock"))
+					text = treatment.duration;
+				return `
           <div class="detail-item">
             <i class="${escapeHTML(item.icon)}"></i>
             <div class="detail-item-content">
               <h4>${escapeHTML(item.title)}</h4>
-              <p>${escapeHTML(text || '')}</p>
+              <p>${escapeHTML(text || "")}</p>
             </div>
           </div>
         `;
-      })
-      .join('');
-  }
+			})
+			.join("");
+	}
 
-  const reserveHref = `index.html?service=${encodeURIComponent(treatment.id)}#contacto`;
-  return `
+	const reserveHref = `index.html?service=${encodeURIComponent(treatment.id)}#contacto`;
+	return `
     <h2 id="treatment-modal-title" class="treatment-modal-title">${escapeHTML(treatment.title)}</h2>
-    ${d.description ? `<p class="treatment-modal-description">${escapeHTML(d.description)}</p>` : ''}
+    ${d.description ? `<p class="treatment-modal-description">${escapeHTML(d.description)}</p>` : ""}
     <div class="details-list">${detailsListHTML}</div>
     <a href="${reserveHref}" class="btn btn-primary btn-block">Reservar este tratamiento</a>
   `;
