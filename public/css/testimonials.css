@@ -2,72 +2,61 @@
     background-color: #fff;
 }
 
-/* Desktop: grid de testimonios */
-.testimonials-carousel-wrapper {
-    display: block;
+/* Marquee Wrapper */
+.testimonials-marquee-wrapper {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    /* Opcional: difuminar los bordes izquierdo y derecho */
+    -webkit-mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+    mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
 }
 
-.testimonials-carousel-wrapper .testimonials-arrow {
-    display: none;
+.testimonials-marquee-track {
+    display: flex;
+    gap: 1.5rem;
+    width: max-content;
+    /* Duración de 30s. Si hay más tarjetas, aumenta el tiempo para mantener la velocidad */
+    animation: scroll-marquee 40s linear infinite;
 }
 
-.testimonials-carousel-wrapper .testimonials-slider {
-    overflow: visible;
+/* Pausar animación al hacer hover */
+.testimonials-marquee-wrapper:hover .testimonials-marquee-track {
+    animation-play-state: paused;
 }
 
-.testimonials-carousel-wrapper .testimonials-track {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    transform: none;
+@keyframes scroll-marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-50% - 0.75rem)); } 
+    /* -50% es la mitad del track (los 5 originales). 
+       El -0.75rem compensa exactamente la mitad del gap (1.5rem / 2) 
+       para que el bucle sea perfecto. */
 }
 
-/* Mobile: carrusel un testimonio + flechas */
+/* Tarjetas */
+.testimonials-marquee-track .testimonial-card {
+    /* Mostramos 3 elementos en desktop. 
+       El contenedor wrapper de la sección es de max-width: 1200px con padding.
+       Calculamos el ancho aproximado: (100vw (limitado al container) / 3) - gap. 
+       Para asegurar que ocupan un tercio exacto del contenedor visible: */
+    width: calc((min(100vw, 1200px) - 4rem - 3rem) / 3); 
+    /* 4rem = padding de container (2rem x 2)
+       3rem = gap total visible (2 gaps de 1.5rem entre 3 cards) */
+    
+    flex-shrink: 0;
+}
+
+@media (max-width: 968px) {
+    .testimonials-marquee-track .testimonial-card {
+        /* Mostrar 2 tarjetas en tablet */
+        width: calc((100vw - 4rem - 1.5rem) / 2);
+    }
+}
+
 @media (max-width: 768px) {
-    .testimonials-carousel-wrapper {
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-    }
-
-    .testimonials-carousel-wrapper .testimonials-arrow {
-        display: flex;
-        flex: 0 0 auto;
-        width: 2.5rem;
-        height: 2.5rem;
-        align-items: center;
-        justify-content: center;
-        border: 1px solid rgba(var(--primary-rgb), 0.2);
-        border-radius: 50%;
-        background: white;
-        color: var(--primary);
-        cursor: pointer;
-        transition: background 0.2s, color 0.2s;
-    }
-
-    .testimonials-carousel-wrapper .testimonials-arrow:hover {
-        background: var(--accent);
-        color: white;
-        border-color: var(--accent);
-    }
-
-    .testimonials-carousel-wrapper .testimonials-slider {
-        flex: 1;
-        min-width: 0;
-        overflow: hidden;
-    }
-
-    .testimonials-carousel-wrapper .testimonials-track {
-        display: flex;
-        grid-template-columns: unset;
-        gap: 0;
-        width: 300%;
-        transition: transform 0.35s ease;
-    }
-
-    .testimonials-carousel-wrapper .testimonials-track .testimonial-card {
-        flex: 0 0 33.333%;
-        min-width: 0;
+    .testimonials-marquee-track .testimonial-card {
+        /* Mostrar 1 tarjeta en móvil */
+        width: calc(100vw - 4rem);
     }
 }
 
@@ -88,7 +77,10 @@
 }
 
 .testimonial-text {
+    font-size: 1.15rem;
+    line-height: 1.7;
     font-style: italic;
+    font-family: 'Codec Pro', sans-serif;
     color: var(--text-main);
     margin-bottom: 1.5rem;
     flex-grow: 1;
@@ -112,5 +104,5 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: "Playfair Display", serif;
+    font-family: 'Codec Pro', sans-serif;
 }

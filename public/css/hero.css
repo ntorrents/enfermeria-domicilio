@@ -118,3 +118,36 @@
         max-width: 320px;
     }
 }
+
+/* Modificador para usar una foto principal de fondo/portada (Hero BG) */
+.hero--bg-image {
+    background-image: url('../img/placeholder-bg.jpg'); /* Actualizar ruta */
+    background-size: cover;
+    background-position: center;
+    color: var(--white);
+}
+
+.hero--bg-image::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Overlay oscuro para que el texto resalte */
+    border-radius: 0;
+    z-index: 0;
+}
+
+.hero--bg-image .hero-content {
+    z-index: 1;
+}
+
+.hero--bg-image .hero-text h1,
+.hero--bg-image .hero-text p,
+.hero--bg-image .hero-text .badge {
+    color: var(--white);
+}
+
+.hero--bg-image .hero-visual {
+    display: none; /* Oculta la imagen lateral si se usa foto de fondo */
+}

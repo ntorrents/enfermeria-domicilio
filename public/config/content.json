@@ -2,7 +2,7 @@
 	"gallery": {
 		"title": "Fotos",
 		"subtitle": "Nuestra clínica",
-		"images": ["1.jpeg", "2.jpeg", "3.jpeg", "4.jpeg", "5.jpeg"]
+		"images": ["1.jpeg", "2.jpeg", "3.jpeg", "4.jpeg", "5.jpeg", "6.jpeg", "7.jpeg"]
 	},
 	"hero": {
 		"title": "Realza tu Belleza Natural",
@@ -36,6 +36,16 @@
 		{
 			"name": "Pol",
 			"text": "Todo genial. Des del primer momento se interesó por mis rutinas, hábitos y lo que yo buscaba para, en este caso, mi cuidado y mejora de la piel de la cara.Trato muy profesional antes, durante y después del tratamiento. 100% recomendable.",
+			"rating": 5
+		},
+		{
+			"name": "Silvia",
+			"text": "Me he ido a hacer los labios y no puedo estar más feliz con el resultado. Su trato es súper cercano, me fue explicando cada paso y, aunque al principio tenía un poco de miedo por los pinchazos, supo ganarse mi confianza totalmente. ¡La recomiendo 100%!",
+			"rating": 5
+		},
+		{
+			"name": "Ainoa",
+			"text": "Super satisfecha con Christine y su servicio! Entiende perfectamente lo que buscas, te acompaña en todo el procedimiento y te explica cualquier duda que tengas sin inconveniente. Ya la he recomendado a amigas mías y repetiría sus servicios, muy contenta.",
 			"rating": 5
 		}
 	]

@@ -1,5 +1,5 @@
-import { showToast } from './utils/toast.js';
-import { buildTreatmentModalContent } from './components/services.js';
+import { showToast } from './utils/toast.js?v=202607261340';
+import { buildTreatmentModalContent } from './components/services.js?v=202607261340';
 
 // --- Navegación Móvil ---
 function initializeMobileNavigation() {
@@ -227,64 +227,8 @@ function initializeServicesTabsAndModal() {
   });
 }
 
-// --- Testimonios: carrusel infinito en móvil ---
-function initializeTestimonialsCarousel() {
-  const section = document.getElementById('testimonios');
-  if (!section) return;
-
-  const wrapper = section.querySelector('.testimonials-carousel-wrapper');
-  const track = section.querySelector('.testimonials-track');
-  const prevBtn = section.querySelector('.testimonials-prev');
-  const nextBtn = section.querySelector('.testimonials-next');
-  const cards = track ? [...track.querySelectorAll('.testimonial-card')] : [];
-  const n = cards.length;
-
-  if (n === 0 || !prevBtn || !nextBtn) return;
-
-  let currentIndex = 0;
-  const isMobile = () => window.matchMedia('(max-width: 768px)').matches;
-
-  function setTransform(index, noTransition = false) {
-    if (!track) return;
-    if (noTransition) track.style.transition = 'none';
-    const percentPerSlide = 100 / n;
-    track.style.transform = isMobile() ? `translateX(-${index * percentPerSlide}%)` : 'none';
-    if (noTransition) {
-      track.offsetHeight;
-      track.style.transition = '';
-    }
-  }
-
-  function goTo(index) {
-    if (!isMobile()) return;
-    currentIndex = ((index % n) + n) % n;
-    setTransform(currentIndex);
-  }
-
-  function next() {
-    if (!isMobile()) return;
-    goTo(currentIndex + 1);
-  }
-
-  function prev() {
-    if (!isMobile()) return;
-    goTo(currentIndex - 1);
-  }
-
-  prevBtn.addEventListener('click', prev);
-  nextBtn.addEventListener('click', next);
-
-  let resizeTimeout;
-  window.addEventListener('resize', () => {
-    clearTimeout(resizeTimeout);
-    resizeTimeout = setTimeout(() => {
-      if (isMobile()) setTransform(currentIndex);
-      else setTransform(0, true);
-    }, 100);
-  });
-
-  if (isMobile()) setTransform(0);
-}
+// --- Testimonios: ahora se manejan con CSS puro (marquee) ---
+// (Lógica eliminada para usar @keyframes infinitos)
 
 // --- Galería: lightbox para ver fotos completas y pasar una a una ---
 function initializeGalleryLightbox() {
@@ -300,7 +244,7 @@ function initializeGalleryLightbox() {
   if (!lightbox || !lightboxImg) return;
 
   const items = section.querySelectorAll('.gallery-item[data-src]');
-  const urls = [...items].map((el) => el.getAttribute('data-src'));
+  const urls = Array.from(new Set([...items].map((el) => el.getAttribute('data-src'))));
   const n = urls.length;
   let currentIndex = 0;
 
@@ -397,7 +341,6 @@ export function initializeInteractions() {
     updateHeaderOnScroll();
     initializeContactForm();
     initializeServicesTabsAndModal();
-    initializeTestimonialsCarousel();
     initializeGalleryLightbox();
     initializeCookieConsent();
     

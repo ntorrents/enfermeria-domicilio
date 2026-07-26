@@ -1,14 +1,15 @@
 // Importamos Componentes
-import { renderHero } from './components/hero.js';
-import { renderAbout } from './components/about.js';
-import { renderServices } from './components/services.js';
-import { renderTestimonials } from './components/testimonials.js';
-import { renderGallery } from './components/gallery.js';
-import { renderContact } from './components/contact.js';
-import { renderFooter } from './components/footer.js';
+import { renderHero } from './components/hero.js?v=202607261340';
+import { renderAbout } from './components/about.js?v=202607261340';
+import { renderServices } from './components/services.js?v=202607261340';
+import { renderTestimonials } from './components/testimonials.js?v=202607261340';
+import { renderGallery } from './components/gallery.js?v=202607261340';
+import { renderGiftCard } from './components/giftcard.js?v=202607261340';
+import { renderContact } from './components/contact.js?v=202607261340';
+import { renderFooter } from './components/footer.js?v=202607261340';
 
 // Importamos la Lógica de Interacción
-import { initializeInteractions } from './interactions.js';
+import { initializeInteractions } from './interactions.js?v=202607261340';
 
 async function loadConfig() {
     try {
@@ -48,6 +49,7 @@ async function initApp() {
         renderServices(config.services),
         renderTestimonials(config.testimonials),
         renderGallery(config.gallery),
+        renderGiftCard(),
         renderContact(config.siteInfo, config.services)
     ].join('');
 

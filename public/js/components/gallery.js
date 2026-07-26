@@ -12,14 +12,13 @@ export function renderGallery(galleryData) {
   const title = galleryData.title || 'Fotos';
   const subtitle = galleryData.subtitle || '';
 
-  const itemsHTML = images
+  const itemsHTML = [...images, ...images]
     .map((filename, index) => {
       const src = GALLERY_BASE_PATH + encodeURIComponent(filename);
-      const isLarge = index === 0 || (images.length >= 8 && index === 4);
-      const sizeClass = isLarge ? 'gallery-item--large' : 'gallery-item--small';
+      const originalIndex = index % images.length;
       return `
-        <div class="gallery-item ${sizeClass}" role="button" tabindex="0" data-index="${index}" data-src="${src}" aria-label="Ver foto ${index + 1}">
-          <img src="${src}" alt="${title} ${index + 1}" loading="lazy">
+        <div class="gallery-item" role="button" tabindex="0" data-index="${originalIndex}" data-src="${src}" aria-label="Ver foto ${originalIndex + 1}">
+          <img src="${src}" alt="${title} ${originalIndex + 1}" loading="lazy">
         </div>
       `;
     })
@@ -33,8 +32,10 @@ export function renderGallery(galleryData) {
           <h2>${title}</h2>
           ${subtitle ? `<p>${subtitle}</p>` : ''}
         </div>
-        <div class="gallery-collage">
-          ${itemsHTML}
+        <div class="gallery-marquee-wrapper">
+          <div class="gallery-marquee-track">
+            ${itemsHTML}
+          </div>
         </div>
       </div>
       <div id="gallery-lightbox" class="gallery-lightbox" aria-hidden="true">

@@ -56,7 +56,9 @@ function escapeHTML(str) {
 export function renderServices(servicesData) {
 	if (!servicesData || !Array.isArray(servicesData)) return "";
 
-	const tabsHTML = servicesData
+	const visibleServices = servicesData.filter(cat => !cat.hidden);
+
+	const tabsHTML = visibleServices
 		.map((category, index) => {
 			const slug = slugify(category.category);
 			const isFirst = index === 0;
@@ -68,7 +70,7 @@ export function renderServices(servicesData) {
 		})
 		.join("");
 
-	const panelsHTML = servicesData
+	const panelsHTML = visibleServices
 		.map((category, index) => {
 			const slug = slugify(category.category);
 			const isFirst = index === 0;
@@ -138,41 +140,9 @@ function renderTreatmentCard(treatment) {
 
 	let priceBlock;
 	if (isComingSoon) {
-		priceBlock =
-			'<span class="service-price-tag service-price-tag--soon">Próximamente</span>';
+		priceBlock = '<span class="service-price-tag service-price-tag--soon">Próximamente</span>';
 	} else if (typeof treatment.price === "string") {
 		priceBlock = `<span class="service-price-tag">${escapeHTML(treatment.price)}</span>`;
-	} else if (hasPacks && priceNum !== null) {
-		const single = getDisplayPrice(priceNum, "single");
-		const pack3 = getDisplayPrice(priceNum, "pack3");
-		const pack5 = getDisplayPrice(priceNum, "pack5");
-		const onlyPack3 = TREATMENT_IDS_PACK3_ONLY.includes(treatment.id);
-		const pack5Button = onlyPack3
-			? ""
-			: `
-          <button type="button" class="pack-option" data-pack="pack5" data-total="${pack5}">
-            <span class="pack-option-title">Pack 5 sesiones</span>
-            <span class="pack-option-detail">5ª gratis</span>
-            <span class="pack-option-price">${pack5}€ total</span>
-          </button>`;
-		priceBlock = `
-      <div class="pack-box">
-        <p class="pack-box-title">Packs</p>
-        <div class="pack-selector" role="group" aria-label="Elegir sesión suelta o pack">
-          <button type="button" class="pack-option active" data-pack="single" data-total="${single}">
-            <span class="pack-option-title">1 sesión</span>
-            <span class="pack-option-price">${single}€</span>
-          </button>
-          <button type="button" class="pack-option" data-pack="pack3" data-total="${pack3}">
-            <span class="pack-option-title">Pack 3 sesiones</span>
-            <span class="pack-option-detail">3ª al 50%</span>
-            <span class="pack-option-price">${pack3}€ total</span>
-          </button>
-          ${pack5Button}
-        </div>
-        <p class="pack-price-display"><strong>${single}€</strong> por esta sesión</p>
-      </div>
-    `;
 	} else if (priceNum !== null) {
 		priceBlock = `<span class="service-price-tag">${priceNum}€</span>`;
 	} else {
@@ -190,19 +160,21 @@ function renderTreatmentCard(treatment) {
 		? '<span class="btn btn-card disabled">Disponible pronto</span>'
 		: `<button type="button" class="btn btn-card btn-ver-mas" data-treatment-id="${escapeHTML(treatment.id)}">Ver más <i class="fas fa-arrow-right"></i></button>`;
 
+	const packBadge = hasPacks ? `<div class="pack-badge"><i class="fas fa-layer-group"></i> Packs disponibles</div>` : "";
+
 	return `
     <article class="${cardClass}" data-treatment-id="${escapeHTML(treatment.id)}">
       <div class="card-header">
         <div class="service-icon-box">
           <i class="${escapeHTML(treatment.icon)}"></i>
         </div>
-        ${priceNum !== null && hasPacks ? "" : priceBlock}
+        ${priceBlock}
       </div>
       <div class="card-body">
         <h4>${escapeHTML(treatment.title)}</h4>
         <p>${description}</p>
         ${metaHTML}
-        ${hasPacks && priceNum !== null ? priceBlock : ""}
+        ${packBadge}
         <div class="card-footer">${verMasHTML}</div>
       </div>
     </article>
@@ -241,11 +213,52 @@ export function buildTreatmentModalContent(treatment) {
 			.join("");
 	}
 
+	let packsInfoHTML = "";
+	const hasPacks = TREATMENT_IDS_WITH_PACKS.includes(treatment.id);
+	const priceNum = typeof treatment.price === "number" ? treatment.price : null;
+
+	if (hasPacks && priceNum !== null) {
+		const single = getDisplayPrice(priceNum, "single");
+		const pack3 = getDisplayPrice(priceNum, "pack3");
+		const pack5 = getDisplayPrice(priceNum, "pack5");
+		const onlyPack3 = TREATMENT_IDS_PACK3_ONLY.includes(treatment.id);
+
+		packsInfoHTML = `
+      <div class="modal-pack-info">
+        <h3>Opciones de Sesiones y Packs</h3>
+        <ul class="modal-pack-list">
+          <li>
+            <div class="modal-pack-item-info">
+              <strong>1 Sesión</strong>
+            </div>
+            <div class="modal-pack-item-price">${single}€</div>
+          </li>
+          <li>
+            <div class="modal-pack-item-info">
+              <strong>Pack 3 sesiones</strong>
+              <span>(3ª al 50%)</span>
+            </div>
+            <div class="modal-pack-item-price">${pack3}€</div>
+          </li>
+          ${!onlyPack3 ? `
+          <li>
+            <div class="modal-pack-item-info">
+              <strong>Pack 5 sesiones</strong>
+              <span>(5ª gratis)</span>
+            </div>
+            <div class="modal-pack-item-price">${pack5}€</div>
+          </li>` : ""}
+        </ul>
+      </div>
+    `;
+	}
+
 	const reserveHref = `index.html?service=${encodeURIComponent(treatment.id)}#contacto`;
 	return `
     <h2 id="treatment-modal-title" class="treatment-modal-title">${escapeHTML(treatment.title)}</h2>
     ${d.description ? `<p class="treatment-modal-description">${escapeHTML(d.description)}</p>` : ""}
     <div class="details-list">${detailsListHTML}</div>
+    ${packsInfoHTML}
     <a href="${reserveHref}" class="btn btn-primary btn-block">Reservar este tratamiento</a>
   `;
 }

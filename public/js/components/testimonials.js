@@ -1,7 +1,8 @@
 export function renderTestimonials(testimonialsData) {
     if (!testimonialsData || testimonialsData.length === 0) return '';
 
-    const cardsHTML = testimonialsData.map(t => `
+    // Generamos las tarjetas originales
+    const originalCardsHTML = testimonialsData.map(t => `
         <div class="testimonial-card">
             <div class="testimonial-stars">
                 ${'<i class="fas fa-star"></i>'.repeat(t.rating)}
@@ -14,6 +15,9 @@ export function renderTestimonials(testimonialsData) {
         </div>
     `).join('');
 
+    // Duplicamos el contenido para el efecto de bucle infinito (marquee)
+    const cardsHTML = originalCardsHTML + originalCardsHTML;
+
     return `
         <section id="testimonios" class="testimonials-section">
             <div class="container">
@@ -21,18 +25,10 @@ export function renderTestimonials(testimonialsData) {
                     <span>Lo que dicen mis pacientes</span>
                     <h2>Testimonios</h2>
                 </div>
-                <div class="testimonials-carousel-wrapper">
-                    <button type="button" class="testimonials-arrow testimonials-prev" aria-label="Testimonio anterior">
-                        <i class="fas fa-chevron-left"></i>
-                    </button>
-                    <div class="testimonials-slider">
-                        <div class="testimonials-track">
-                            ${cardsHTML}
-                        </div>
+                <div class="testimonials-marquee-wrapper">
+                    <div class="testimonials-marquee-track">
+                        ${cardsHTML}
                     </div>
-                    <button type="button" class="testimonials-arrow testimonials-next" aria-label="Siguiente testimonio">
-                        <i class="fas fa-chevron-right"></i>
-                    </button>
                 </div>
             </div>
         </section>

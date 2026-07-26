@@ -16,7 +16,7 @@
 
 /* Títulos */
 .legal-title {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Codec Pro', sans-serif;
     font-size: 2.5rem;
     color: var(--primary); /* Tu marrón oscuro */
     margin-bottom: 2rem;
@@ -26,9 +26,9 @@
 }
 
 .legal-content h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.5rem;
-    color: var(--text-main);
+    font-family: 'Codec Pro', sans-serif;
+    font-size: 1.8rem;
+    color: var(--primary);
     margin-top: 2.5rem;
     margin-bottom: 1rem;
 }

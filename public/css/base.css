@@ -76,9 +76,33 @@ a {
     transition: all 0.3s ease;
 }
 
-/* --- TIPOGRAFÍA --- */
+/* --- TIPOGRAFÍA CODEC PRO --- */
+@font-face {
+    font-family: 'Codec Pro';
+    src: url('../fonts/CodecPro-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Codec Pro';
+    src: url('../fonts/CodecPro-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Codec Pro';
+    src: url('../fonts/CodecPro-Heavy.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
 h1, h2, h3, h4, h5, h6 {
-    font-family: "Playfair Display", serif;
+    font-family: 'Codec Pro', sans-serif;
     color: var(--primary);
     line-height: 1.2;
     font-weight: 700;
