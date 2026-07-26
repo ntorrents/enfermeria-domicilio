@@ -57,7 +57,7 @@
     width: 450px;
     height: 550px;
     aspect-ratio: 450 / 550; /* Esto reserva el hueco exacto */
-    background-color: var(--secondary);
+    background-color: transparent;
 }
 
 .hero-img-main {
