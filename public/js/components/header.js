@@ -15,6 +15,8 @@ export function renderHeader() {
                 <li><a href="/#servicios">Servicios</a></li>
                 <li><a href="/#fotos">Fotos</a></li>
                 <li><a href="/cuidados-post-tratamiento">Cuidados</a></li>
+                <li class="nav-item"><a href="/tarjeta-regalo" class="nav-link">Tarjeta Regalo</a></li>
+                <li class="nav-item"><a href="/recomendador" class="nav-link" style="color: var(--primary); font-weight: 600;"><i class="fas fa-magic"></i> Test de Piel</a></li>
                 <li><a href="/contacto" class="btn-nav">Cita Previa</a></li>
             </ul>
             <div class="nav-toggle" role="button" tabindex="0" aria-label="Abrir menú">

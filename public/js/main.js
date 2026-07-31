@@ -7,6 +7,7 @@ import { renderGallery } from './components/gallery.js?v=202607261605';
 import { renderGiftCard } from './components/giftcard.js?v=202607261605';
 import { renderFAQ } from './components/faq.js?v=202607261605';
 import { renderGiftCardForm, initGiftCardFormLogic } from './components/giftcard-form.js?v=202607261605';
+import { renderRecommender, initRecommenderLogic } from './components/recommender.js?v=202607261605';
 import { renderContact } from './components/contact.js?v=202607261605';
 import { renderFooter } from './components/footer.js?v=202607261605';
 import { renderPostCare, initPostCareTabs } from './components/postcare.js?v=202607261605';
@@ -63,6 +64,9 @@ async function initApp() {
         } else if (path.startsWith('/tarjeta-regalo')) {
             appContainer.innerHTML = renderGiftCardForm(config.services);
             setTimeout(() => initGiftCardFormLogic(config.services), 100);
+        } else if (path.startsWith('/recomendador')) {
+            appContainer.innerHTML = renderRecommender();
+            setTimeout(() => initRecommenderLogic(config.services), 100);
         }
     }
 
