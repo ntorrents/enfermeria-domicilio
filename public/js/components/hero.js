@@ -11,7 +11,7 @@ export function renderHero(heroData) {
                     <h1>${heroData.title}</h1>
                     <p>${heroData.subtitle}</p>
                     <div class="hero-actions">
-                        <a href="#contacto" class="btn btn-primary">
+                        <a href="/contacto" class="btn btn-primary">
                             ${heroData.primaryButton} <i class="fas fa-arrow-right"></i>
                         </a>
                         <a href="#servicios" class="btn btn-secondary">

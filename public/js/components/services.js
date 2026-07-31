@@ -259,7 +259,8 @@ export function buildTreatmentModalContent(treatment) {
     `;
 	}
 
-	const reserveHref = `index.html?service=${encodeURIComponent(treatment.id)}#contacto`;
+    // If it's the specific service page link, modify according to requirement
+    const reserveHref = `/contacto?servicio=${treatment.id}`;
 	return `
     <h2 id="treatment-modal-title" class="treatment-modal-title">${escapeHTML(treatment.title)}</h2>
     ${d.description ? `<p class="treatment-modal-description">${escapeHTML(d.description)}</p>` : ""}

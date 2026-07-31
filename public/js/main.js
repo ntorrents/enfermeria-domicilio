@@ -1,4 +1,4 @@
-// Importamos Componentes
+import { renderHeader } from './components/header.js?v=202607261605';
 import { renderHero } from './components/hero.js?v=202607261605';
 import { renderAbout } from './components/about.js?v=202607261605';
 import { renderServices } from './components/services.js?v=202607261605';
@@ -8,20 +8,18 @@ import { renderGiftCard } from './components/giftcard.js?v=202607261605';
 import { renderFAQ } from './components/faq.js?v=202607261605';
 import { renderContact } from './components/contact.js?v=202607261605';
 import { renderFooter } from './components/footer.js?v=202607261605';
+import { renderPostCare, initPostCareTabs } from './components/postcare.js?v=202607261605';
 
 // Importamos la Lógica de Interacción
 import { initializeInteractions } from './interactions.js?v=202607261605';
 
 async function loadConfig() {
     try {
-        // Carga paralela de los 3 archivos JSON
         const [general, content, services] = await Promise.all([
-            fetch('./config/general.json').then(res => res.json()),
-            fetch('./config/content.json').then(res => res.json()),
-            fetch('./config/services.json').then(res => res.json())
+            fetch('/config/general.json').then(res => res.json()),
+            fetch('/config/content.json').then(res => res.json()),
+            fetch('/config/services.json').then(res => res.json())
         ]);
-        
-        // Fusionamos todo en un solo objeto config
         return { ...general, ...content, services };
     } catch (error) {
         console.error("Error cargando configuración:", error);
@@ -30,30 +28,40 @@ async function loadConfig() {
 }
 
 async function initApp() {
-    // Solo se ejecuta en la página principal
-    if (!document.getElementById('app-content')) {
-        return;
-    }
-
     const config = await loadConfig();
-    if (!config) return; // Si falla la carga, paramos
+    if (!config) return;
 
-    const appContainer = document.getElementById('app-content');
-
-    // Exponer servicios para el modal de detalle (sin rutas a treatment-detail)
     window.__SERVICES_CONFIG = config.services;
 
-    // 1. Renderizado Estático (HTML)
-    appContainer.innerHTML = [
-        renderHero(config.hero),
-        renderAbout(config.aboutMe),
-        renderServices(config.services),
-        renderTestimonials(config.testimonials),
-        renderGallery(config.gallery),
-        renderGiftCard(),
-        renderFAQ(),
-        renderContact(config.siteInfo, config.services)
-    ].join('');
+    // 0. Render Header
+    const headerElement = document.getElementById('site-header');
+    if (headerElement) {
+        headerElement.innerHTML = renderHeader();
+    }
+
+    // 1. Renderizado Condicional por Ruta
+    const appContainer = document.getElementById('app-content');
+    if (appContainer) {
+        const path = window.location.pathname;
+
+        if (path === '/' || path === '/index.html') {
+            appContainer.innerHTML = [
+                renderHero(config.hero),
+                renderAbout(config.aboutMe),
+                renderServices(config.services),
+                renderTestimonials(config.testimonials),
+                renderGallery(config.gallery),
+                renderGiftCard(),
+                renderFAQ()
+            ].join('');
+        } else if (path.startsWith('/contacto')) {
+            appContainer.innerHTML = renderContact(config.siteInfo, config.services);
+        } else if (path.startsWith('/cuidados-post-tratamiento')) {
+            appContainer.innerHTML = renderPostCare();
+            // Initialize postcare specific tabs after render
+            setTimeout(initPostCareTabs, 100);
+        }
+    }
 
     // 2. Renderizado Footer (va fuera del app-content normalmente, o reemplaza el existente)
     const footerElement = document.querySelector('footer');

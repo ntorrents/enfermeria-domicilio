@@ -1,12 +1,19 @@
 export function renderContact(siteInfo, servicesData) {
     if (!siteInfo || !servicesData) return '';
 
+    // Leer parámetro de la URL
+    const urlParams = typeof window !== 'undefined' ? new URLSearchParams(window.location.search) : new URLSearchParams();
+    const selectedService = urlParams.get('servicio');
+
     const visibleServices = servicesData.filter(cat => !cat.hidden && cat.category.toUpperCase() !== 'OCULTOS');
 
     const serviceOptions = visibleServices.map(category => {
         const options = category.treatments
             .filter(t => !t.hidden)
-            .map(t => `<option value="${t.id}">${t.title}</option>`)
+            .map(t => {
+                const isSelected = selectedService === t.id ? 'selected' : '';
+                return `<option value="${t.id}" ${isSelected}>${t.title}</option>`;
+            })
             .join('');
         return `<optgroup label="${category.category}">${options}</optgroup>`;
     }).join('');
@@ -88,7 +95,7 @@ export function renderContact(siteInfo, servicesData) {
                             <div class="form-group form-checkbox">
                                 <label>
                                     <input type="checkbox" required>
-                                    He leído y acepto la <a href="privacidad.html" target="_blank" rel="noopener noreferrer">Política de Privacidad</a>
+                                    He leído y acepto la <a href="/privacidad.html" target="_blank" rel="noopener noreferrer">Política de Privacidad</a>
                                 </label>
                             </div>
                             
