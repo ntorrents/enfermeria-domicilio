@@ -1,0 +1,281 @@
+/* Layout principal */
+.giftcard-page-section {
+    padding-bottom: 5rem;
+    background-color: var(--bg-body);
+}
+
+.giftcard-layout {
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: 3rem;
+    align-items: start;
+}
+
+@media (max-width: 968px) {
+    .giftcard-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Formulario */
+.giftcard-form-container {
+    background: white;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    padding: 2.5rem;
+}
+
+.form-block {
+    margin-bottom: 2.5rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba(var(--primary-rgb), 0.1);
+}
+
+.form-block:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.form-block-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.form-block-title i {
+    font-size: 1.2rem;
+    color: var(--accent);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+@media (max-width: 576px) {
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Radio Cards (Tratamiento vs Importe) */
+.radio-cards-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.radio-card {
+    position: relative;
+    border: 1px solid rgba(var(--primary-rgb), 0.2);
+    border-radius: var(--radius-sm);
+    padding: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.radio-card:hover {
+    border-color: var(--primary);
+    background: rgba(var(--primary-rgb), 0.02);
+}
+
+.radio-card input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.radio-card input[type="radio"]:checked + .radio-card-content {
+    color: var(--primary);
+}
+
+.radio-card:has(input[type="radio"]:checked) {
+    border-color: var(--primary);
+    background: rgba(var(--primary-rgb), 0.05);
+    box-shadow: var(--shadow-sm);
+}
+
+.radio-card-content i {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    color: var(--accent);
+}
+
+.radio-card-content span {
+    display: block;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Resumen (Sidebar) */
+.giftcard-summary {
+    background: var(--bg-alt);
+    border-radius: var(--radius-md);
+    padding: 2rem;
+    position: sticky;
+    top: 100px;
+    box-shadow: var(--shadow-sm);
+}
+
+.summary-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(var(--primary-rgb), 0.1);
+    padding-bottom: 1rem;
+}
+
+.summary-line {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    font-size: 1.05rem;
+    color: var(--text-main);
+}
+
+.summary-line.total {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(var(--primary-rgb), 0.1);
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.btn-confirm {
+    width: 100%;
+    margin-top: 2rem;
+    font-size: 1.1rem;
+    padding: 1rem;
+}
+
+/* Modal Bizum */
+.bizum-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.bizum-modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.bizum-modal {
+    background: white;
+    border-radius: var(--radius-md);
+    width: 90%;
+    max-width: 500px;
+    padding: 2.5rem;
+    box-shadow: var(--shadow-lg);
+    transform: translateY(20px);
+    transition: transform 0.3s ease;
+    position: relative;
+    text-align: center;
+}
+
+.bizum-modal-overlay.active .bizum-modal {
+    transform: translateY(0);
+}
+
+.bizum-modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--text-muted);
+    cursor: pointer;
+}
+
+.bizum-icon {
+    width: 60px;
+    height: 60px;
+    background: #00A4E1; /* Color Bizum */
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    margin: 0 auto 1.5rem auto;
+}
+
+.bizum-modal h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+}
+
+.bizum-modal p {
+    color: var(--text-main);
+    margin-bottom: 2rem;
+}
+
+.bizum-details {
+    background: var(--bg-alt);
+    border-radius: var(--radius-sm);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+.bizum-detail-row {
+    margin-bottom: 1rem;
+}
+
+.bizum-detail-row:last-child {
+    margin-bottom: 0;
+}
+
+.bizum-detail-row span {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 0.2rem;
+}
+
+.bizum-detail-row strong {
+    display: block;
+    font-size: 1.1rem;
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.btn-whatsapp {
+    background: #25D366;
+    color: white;
+    border: none;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+}
+
+.btn-whatsapp:hover {
+    background: #20BA56;
+}

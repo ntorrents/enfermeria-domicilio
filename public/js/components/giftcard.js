@@ -21,7 +21,7 @@ export function renderGiftCard() {
                         <li><i class="fas fa-calendar-alt"></i> Total flexibilidad: canjeable por el tratamiento deseado o importe abierto</li>
                     </ul>
                     
-                    <a href="#contacto" class="btn btn-primary giftcard-btn">Solicitar Tarjeta Regalo <i class="fas fa-gift"></i></a>
+                    <a href="/tarjeta-regalo" class="btn btn-primary giftcard-btn">Solicitar Tarjeta Regalo <i class="fas fa-gift"></i></a>
                 </div>
                 
                 <div class="giftcard-gallery giftcard-gallery--2-items">
