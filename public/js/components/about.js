@@ -8,13 +8,13 @@ export function renderAbout(aboutData) {
     return `
         <section id="sobre-mi" class="about-section">
             <div class="container">
-                <div class="section-title">
+                <div class="section-title animate-on-scroll">
                     <span>Tu Especialista de Confianza</span>
                     <h2>Conoce a Christine</h2>
                 </div>
                 
                 <div class="about-layout">
-                    <div class="about-image-column">
+                    <div class="about-image-column animate-on-scroll">
                         <img 
                             src="../img/christine/myphoto.jpeg" 
                             alt="${aboutData.name}" 
@@ -26,7 +26,7 @@ export function renderAbout(aboutData) {
                         >
                     </div>
                     
-                    <div class="about-content-column">
+                    <div class="about-content-column animate-on-scroll">
                         <div class="about-header">
                             <h3>${aboutData.name}</h3>
                             <p class="about-subtitle">

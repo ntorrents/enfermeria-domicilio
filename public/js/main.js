@@ -5,6 +5,7 @@ import { renderServices } from './components/services.js?v=202607261605';
 import { renderTestimonials } from './components/testimonials.js?v=202607261605';
 import { renderGallery } from './components/gallery.js?v=202607261605';
 import { renderGiftCard } from './components/giftcard.js?v=202607261605';
+import { renderFAQ } from './components/faq.js?v=202607261605';
 import { renderContact } from './components/contact.js?v=202607261605';
 import { renderFooter } from './components/footer.js?v=202607261605';
 
@@ -50,6 +51,7 @@ async function initApp() {
         renderTestimonials(config.testimonials),
         renderGallery(config.gallery),
         renderGiftCard(),
+        renderFAQ(),
         renderContact(config.siteInfo, config.services)
     ].join('');
 

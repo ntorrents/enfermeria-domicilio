@@ -90,15 +90,21 @@ export function renderServices(servicesData) {
 	return `
     <section id="servicios" class="services-section-cards">
       <div class="container">
-        <div class="section-title">
+        <div class="section-title animate-on-scroll">
           <span>Nuestras Especialidades</span>
           <h2>Catálogo de Tratamientos</h2>
           <p>Soluciones personalizadas para tu bienestar y belleza.</p>
         </div>
 
-        <div class="services-tabs-wrapper" role="tablist" aria-label="Categorías de tratamientos">
+        <div class="services-tabs-wrapper animate-on-scroll" role="tablist" aria-label="Categorías de tratamientos">
           <div class="services-tabs">
             ${tabsHTML}
+            <div class="services-search-container">
+              <button type="button" class="services-search-btn" aria-label="Buscar tratamiento">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+              </button>
+              <input type="text" id="services-search-input" class="services-search-input" placeholder="Buscar..." aria-label="Buscar tratamientos">
+            </div>
           </div>
         </div>
 
@@ -163,7 +169,7 @@ function renderTreatmentCard(treatment) {
 	const packBadge = hasPacks ? `<div class="pack-badge"><i class="fas fa-layer-group"></i> Packs disponibles</div>` : "";
 
 	return `
-    <article class="${cardClass}" data-treatment-id="${escapeHTML(treatment.id)}">
+    <article class="${cardClass} animate-on-scroll" data-treatment-id="${escapeHTML(treatment.id)}">
       <div class="card-header">
         <div class="service-icon-box">
           <i class="${escapeHTML(treatment.icon)}"></i>

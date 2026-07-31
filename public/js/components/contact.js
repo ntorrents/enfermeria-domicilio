@@ -1,8 +1,11 @@
 export function renderContact(siteInfo, servicesData) {
     if (!siteInfo || !servicesData) return '';
 
-    const serviceOptions = servicesData.map(category => {
+    const visibleServices = servicesData.filter(cat => !cat.hidden && cat.category.toUpperCase() !== 'OCULTOS');
+
+    const serviceOptions = visibleServices.map(category => {
         const options = category.treatments
+            .filter(t => !t.hidden)
             .map(t => `<option value="${t.id}">${t.title}</option>`)
             .join('');
         return `<optgroup label="${category.category}">${options}</optgroup>`;
@@ -11,12 +14,12 @@ export function renderContact(siteInfo, servicesData) {
     return `
         <section id="contacto">
             <div class="container">
-                <div class="section-title">
+                <div class="section-title animate-on-scroll">
                     <span>Reserva tu cita</span>
                     <h2>Contacto</h2>
                 </div>
                 
-                <div class="contact-container">
+                <div class="contact-container animate-on-scroll">
                     <div class="contact-info">
                         <div class="contact-info-header">
                             <h3>¿Hablamos?</h3>

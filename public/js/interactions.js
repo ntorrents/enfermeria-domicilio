@@ -36,15 +36,41 @@ function initializeMobileNavigation() {
 function initializeSmoothScroll() {
     document.querySelectorAll('a[href^="#"]').forEach(link => {
         link.addEventListener('click', (e) => {
-            e.preventDefault();
             const targetId = link.getAttribute('href');
+            if (targetId === '#') return;
             const targetSection = document.querySelector(targetId);
+            
             if (targetSection) {
+                e.preventDefault();
                 const headerHeight = document.querySelector('.header')?.offsetHeight || 80;
-                window.scrollTo({
-                    top: targetSection.offsetTop - headerHeight,
-                    behavior: 'smooth'
-                });
+                const targetPosition = targetSection.offsetTop - headerHeight;
+                const startPosition = window.pageYOffset;
+                const distance = targetPosition - startPosition;
+                const duration = 1200; // 1.2 segundos (más lento que el nativo)
+                let start = null;
+
+                // Función de aceleración y deceleración suave
+                const easeInOutCubic = (t, b, c, d) => {
+                    t /= d/2;
+                    if (t < 1) return c/2*t*t*t + b;
+                    t -= 2;
+                    return c/2*(t*t*t + 2) + b;
+                };
+
+                const animation = (currentTime) => {
+                    if (start === null) start = currentTime;
+                    const timeElapsed = currentTime - start;
+                    const run = easeInOutCubic(timeElapsed, startPosition, distance, duration);
+                    window.scrollTo(0, run);
+                    if (timeElapsed < duration) {
+                        requestAnimationFrame(animation);
+                    } else {
+                        // Asegurar posición exacta al terminar
+                        window.scrollTo(0, targetPosition);
+                    }
+                };
+                
+                requestAnimationFrame(animation);
             }
         });
     });
@@ -156,9 +182,13 @@ function initializeServicesTabsAndModal() {
   const modal = document.getElementById('treatment-modal');
   const modalBody = document.getElementById('treatment-modal-body');
 
+  let lastActiveTabId = tabs.length > 0 ? tabs[0].getAttribute('data-tab') : null;
+
   tabs.forEach((tab) => {
     tab.addEventListener('click', () => {
       const tabId = tab.getAttribute('data-tab');
+      lastActiveTabId = tabId;
+      
       tabs.forEach((t) => {
         t.classList.remove('active');
         t.setAttribute('aria-selected', 'false');
@@ -170,8 +200,75 @@ function initializeServicesTabsAndModal() {
       });
       tab.classList.add('active');
       tab.setAttribute('aria-selected', 'true');
+      
+      // Clear search when changing tabs
+      const searchInput = section.querySelector('#services-search-input');
+      if (searchInput && searchInput.value !== '') {
+        searchInput.value = '';
+        searchInput.dispatchEvent(new Event('input'));
+      }
     });
   });
+
+  const searchContainer = section.querySelector('.services-search-container');
+  const searchBtn = section.querySelector('.services-search-btn');
+  const searchInput = section.querySelector('#services-search-input');
+
+  if (searchContainer && searchBtn && searchInput) {
+    searchBtn.addEventListener('click', () => {
+      searchContainer.classList.toggle('is-active');
+      if (searchContainer.classList.contains('is-active')) {
+        searchInput.focus();
+      } else {
+        searchInput.value = '';
+        searchInput.dispatchEvent(new Event('input'));
+      }
+    });
+
+    searchInput.addEventListener('input', (e) => {
+      const searchTerm = e.target.value.toLowerCase().trim();
+      
+      if (searchTerm !== '') {
+        // Deselect all tabs to indicate global search
+        tabs.forEach(t => {
+          t.classList.remove('active');
+          t.setAttribute('aria-selected', 'false');
+        });
+        // Activate all panels for searching
+        panels.forEach(p => {
+          p.classList.add('active');
+          p.setAttribute('aria-hidden', 'false');
+        });
+      } else {
+        // Restore last active tab
+        if (lastActiveTabId) {
+          tabs.forEach(t => {
+            const isActive = t.getAttribute('data-tab') === lastActiveTabId;
+            t.classList.toggle('active', isActive);
+            t.setAttribute('aria-selected', isActive.toString());
+          });
+          panels.forEach(p => {
+            const isActive = p.id === `panel-${lastActiveTabId}`;
+            p.classList.toggle('active', isActive);
+            p.setAttribute('aria-hidden', (!isActive).toString());
+          });
+        }
+      }
+
+      // Filter all cards
+      const allCards = section.querySelectorAll('.treatment-card');
+      allCards.forEach(card => {
+        const title = card.querySelector('h4')?.textContent.toLowerCase() || '';
+        const desc = card.querySelector('p')?.textContent.toLowerCase() || '';
+        
+        if (title.includes(searchTerm) || desc.includes(searchTerm)) {
+          card.style.display = '';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  }
 
   section.querySelectorAll('.pack-option').forEach((btn) => {
     btn.addEventListener('click', () => {
@@ -334,6 +431,54 @@ function initializeCookieConsent() {
     }
 }
 
+// --- FAQ ---
+function initializeFAQ() {
+    const faqHeaders = document.querySelectorAll('.faq-header');
+    
+    faqHeaders.forEach(header => {
+        header.addEventListener('click', () => {
+            const item = header.parentElement;
+            const content = header.nextElementSibling;
+            
+            const isActive = item.classList.contains('is-active');
+            
+            // Close all others
+            document.querySelectorAll('.faq-item').forEach(otherItem => {
+                otherItem.classList.remove('is-active');
+                otherItem.querySelector('.faq-header').setAttribute('aria-expanded', 'false');
+                const otherContent = otherItem.querySelector('.faq-content');
+                if (otherContent) otherContent.style.maxHeight = null;
+            });
+            
+            if (!isActive) {
+                item.classList.add('is-active');
+                header.setAttribute('aria-expanded', 'true');
+                content.style.maxHeight = content.scrollHeight + "px";
+            }
+        });
+    });
+}
+
+// --- SCROLL ANIMATIONS ---
+function initializeScrollAnimations() {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                // Optional: stop observing once it's visible
+                // observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.1, // Trigger when 10% of element is visible
+        rootMargin: "0px 0px -50px 0px"
+    });
+
+    document.querySelectorAll('.animate-on-scroll').forEach((el) => {
+        observer.observe(el);
+    });
+}
+
 // --- EXPORTAR TODO JUNTO ---
 export function initializeInteractions() {
     initializeMobileNavigation();
@@ -343,6 +488,8 @@ export function initializeInteractions() {
     initializeServicesTabsAndModal();
     initializeGalleryLightbox();
     initializeCookieConsent();
+    initializeFAQ();
+    initializeScrollAnimations();
     
     // Ancla inicial
     const hash = window.location.hash;

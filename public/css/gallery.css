@@ -16,7 +16,8 @@
   display: flex;
   gap: 1rem;
   width: max-content;
-  animation: gallery-scroll 35s linear infinite;
+  animation: gallery-scroll 80s linear infinite;
+  animation-direction: reverse;
 }
 
 .gallery-marquee-wrapper:hover .gallery-marquee-track {

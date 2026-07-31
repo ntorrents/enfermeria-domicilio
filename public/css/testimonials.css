@@ -2,6 +2,56 @@
     background-color: #fff;
 }
 
+/* Google Reviews Badge */
+.google-reviews-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 0.5rem 1.2rem;
+    background: var(--bg-body);
+    border-radius: var(--radius-full);
+    border: 1px solid rgba(var(--primary-rgb), 0.1);
+    margin: 1rem auto 0 auto;
+    box-shadow: var(--shadow-sm);
+}
+
+.google-icon {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+}
+
+.google-reviews-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.google-reviews-stars {
+    color: #FFC107;
+    font-size: 0.75rem;
+    margin-bottom: 0.1rem;
+    display: flex;
+    gap: 0.1rem;
+}
+
+.google-reviews-text span {
+    font-family: "Inter", sans-serif;
+    font-size: 0.8rem;
+    color: var(--text-main);
+}
+
+.google-reviews-text strong {
+    color: var(--primary);
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .google-reviews-badge {
+        margin-bottom: 2rem;
+    }
+}
+
 /* Marquee Wrapper */
 .testimonials-marquee-wrapper {
     overflow: hidden;

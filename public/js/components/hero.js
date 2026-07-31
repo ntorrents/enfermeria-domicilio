@@ -6,7 +6,7 @@ export function renderHero(heroData) {
     return `
         <section id="inicio" class="hero">
             <div class="container hero-content">
-                <div class="hero-text">
+                <div class="hero-text animate-on-scroll">
                     <span class="badge">Dermoestética & Imagen Corporal</span>
                     <h1>${heroData.title}</h1>
                     <p>${heroData.subtitle}</p>
@@ -21,7 +21,7 @@ export function renderHero(heroData) {
                 </div>
                 
                 <div class="hero-visual">
-                    <div class="hero-image-wrapper">
+                    <div class="hero-image-wrapper animate-on-scroll">
                         <img 
                             src="img/christine/christine-portada.JPG" 
                             alt="Dermoestética Christine Cano" 

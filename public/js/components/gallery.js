@@ -12,13 +12,20 @@ export function renderGallery(galleryData) {
   const title = galleryData.title || 'Fotos';
   const subtitle = galleryData.subtitle || '';
 
+  const seoAltTags = [
+    "Consulta médica dermoestética C3linic en Terrassa",
+    "Camilla de tratamiento dermoestético",
+    "Christine Cano enfermera dermoestética"
+  ];
+
   const itemsHTML = [...images, ...images]
     .map((filename, index) => {
       const src = GALLERY_BASE_PATH + encodeURIComponent(filename);
       const originalIndex = index % images.length;
+      const altText = seoAltTags[originalIndex % seoAltTags.length];
       return `
         <div class="gallery-item" role="button" tabindex="0" data-index="${originalIndex}" data-src="${src}" aria-label="Ver foto ${originalIndex + 1}">
-          <img src="${src}" alt="${title} ${originalIndex + 1}" loading="lazy">
+          <img src="${src}" alt="${altText}" loading="lazy">
         </div>
       `;
     })
@@ -27,7 +34,7 @@ export function renderGallery(galleryData) {
   return `
     <section id="fotos" class="gallery-section">
       <div class="container">
-        <div class="section-title">
+        <div class="section-title animate-on-scroll">
           <span>Espacio</span>
           <h2>${title}</h2>
           ${subtitle ? `<p>${subtitle}</p>` : ''}
