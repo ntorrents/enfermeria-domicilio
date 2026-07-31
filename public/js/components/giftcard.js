@@ -26,10 +26,10 @@ export function renderGiftCard() {
                 
                 <div class="giftcard-gallery giftcard-gallery--2-items">
                     <div class="gift-img-wrapper img-1">
-                        <img src="img/giftcard-1.jpeg" alt="Caja Regalo Exterior" loading="lazy">
+                        <img src="/img/giftcard-1.jpeg" alt="Caja Regalo Exterior" loading="lazy">
                     </div>
                     <div class="gift-img-wrapper img-2">
-                        <img src="img/giftcard-2.jpeg" alt="Detalles de la tarjeta" loading="lazy">
+                        <img src="/img/giftcard-2.jpeg" alt="Detalles de la tarjeta" loading="lazy">
                     </div>
                 </div>
             </div>

@@ -67,7 +67,7 @@
 }
 
 .quiz-question {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Codec Pro', sans-serif;
     font-size: 1.8rem;
     color: var(--primary);
     margin-bottom: 2rem;
@@ -177,7 +177,7 @@
 }
 
 .results-header h3 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Codec Pro', sans-serif;
     font-size: 2rem;
     color: var(--primary);
     margin-bottom: 0.5rem;
@@ -207,7 +207,7 @@
 }
 
 .result-info h4 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Codec Pro', sans-serif;
     font-size: 1.4rem;
     color: var(--primary);
     margin-bottom: 0.5rem;

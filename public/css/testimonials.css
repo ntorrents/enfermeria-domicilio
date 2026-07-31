@@ -127,13 +127,18 @@
 }
 
 .testimonial-text {
-    font-size: 1.15rem;
-    line-height: 1.7;
+    font-size: 1.05rem;
+    line-height: 1.6;
     font-style: italic;
     font-family: 'Codec Pro', sans-serif;
     color: var(--text-main);
     margin-bottom: 1.5rem;
     flex-grow: 1;
+}
+
+.testimonial-text--long {
+    font-size: 0.9rem;
+    line-height: 1.5;
 }
 
 .testimonial-author {

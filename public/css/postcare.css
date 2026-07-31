@@ -13,7 +13,7 @@
 
 .postcare-intro::before {
     content: '"';
-    font-family: 'Playfair Display', serif;
+    font-family: 'Codec Pro', sans-serif;
     font-size: 8rem;
     color: rgba(var(--primary-rgb), 0.1);
     position: absolute;
@@ -120,7 +120,7 @@
 .postcare-tab-panel h3 {
     color: var(--primary);
     margin-bottom: 2rem;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Codec Pro', sans-serif;
     font-size: 1.8rem;
 }
 

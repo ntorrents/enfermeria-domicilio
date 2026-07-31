@@ -2,18 +2,21 @@ export function renderTestimonials(testimonialsData) {
     if (!testimonialsData || testimonialsData.length === 0) return '';
 
     // Generamos las tarjetas originales
-    const originalCardsHTML = testimonialsData.map(t => `
+    const originalCardsHTML = testimonialsData.map(t => {
+        const textClass = t.text.length > 180 ? 'testimonial-text testimonial-text--long' : 'testimonial-text';
+        return `
         <div class="testimonial-card">
             <div class="testimonial-stars">
                 ${'<i class="fas fa-star"></i>'.repeat(t.rating)}
             </div>
-            <p class="testimonial-text">"${t.text}"</p>
+            <p class="${textClass}">"${t.text}"</p>
             <div class="testimonial-author">
                 <div class="author-avatar">${t.name.charAt(0)}</div>
                 <span>${t.name}</span>
             </div>
         </div>
-    `).join('');
+        `;
+    }).join('');
 
     // Duplicamos el contenido para el efecto de bucle infinito (marquee)
     const cardsHTML = originalCardsHTML + originalCardsHTML;

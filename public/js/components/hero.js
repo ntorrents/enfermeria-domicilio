@@ -23,7 +23,7 @@ export function renderHero(heroData) {
                 <div class="hero-visual">
                     <div class="hero-image-wrapper animate-on-scroll">
                         <img 
-                            src="img/christine/christine-portada.JPG" 
+                            src="/img/christine/christine-portada.JPG" 
                             alt="Dermoestética Christine Cano" 
                             class="hero-img-main" 
                             width="450" height="550" 

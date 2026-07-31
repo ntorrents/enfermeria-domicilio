@@ -101,7 +101,7 @@ export function renderRecommender() {
                     <!-- PANTALLA DE CARGA -->
                     <div id="step-loading" class="quiz-step quiz-loading">
                         <div class="spinner"></div>
-                        <h3 style="font-family: 'Playfair Display', serif; color: var(--primary);">Analizando tus respuestas...</h3>
+                        <h3 style="font-family: 'Codec Pro', sans-serif; color: var(--primary);">Analizando tus respuestas...</h3>
                         <p style="color: var(--text-muted);">Buscando los mejores tratamientos para ti</p>
                     </div>
 
