@@ -653,4 +653,8 @@ button.btn-card.btn-ver-mas {
         padding-right: 0;
         font-size: 1.5rem;
     }
+    
+    .detail-item-cuidados {
+        display: none !important;
+    }
 }

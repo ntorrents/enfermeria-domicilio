@@ -18,7 +18,7 @@
 
 @media (max-width: 768px) {
     .recommender-container {
-        padding: 2rem 1.5rem;
+        padding: 1.5rem 1rem;
         border-radius: var(--radius-md);
     }
 }
@@ -251,19 +251,36 @@
 }
 
 @media (max-width: 768px) {
+    .results-header h3 {
+        font-size: 1.6rem;
+    }
+    .result-info h4 {
+        font-size: 1.2rem;
+    }
+    .result-desc {
+        font-size: 0.9rem;
+    }
     .result-card {
         flex-direction: column;
         align-items: flex-start;
-        gap: 1.5rem;
+        gap: 1.2rem;
+        padding: 1.2rem;
     }
     .result-action {
         width: 100%;
         text-align: left;
         display: flex;
-        justify-content: space-between;
-        align-items: center;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.8rem;
     }
     .result-price {
         margin-bottom: 0;
+        font-size: 1.3rem;
+    }
+    .result-action .btn {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
     }
 }

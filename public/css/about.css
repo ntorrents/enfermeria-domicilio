@@ -134,3 +134,9 @@
         max-width: 450px;
     }
 }
+
+@media (max-width: 768px) {
+    .about-image-column .about-photo {
+        max-width: 250px;
+    }
+}

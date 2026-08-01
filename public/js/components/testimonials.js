@@ -43,10 +43,12 @@ export function renderTestimonials(testimonialsData) {
                     </div>
                 </div>
 
-                <div class="testimonials-marquee-wrapper">
+                <div class="testimonials-marquee-wrapper" style="position: relative;">
+                    <button class="mobile-slider-btn prev" onclick="const t=document.querySelector('.testimonials-marquee-track'); t.scrollBy({left: -t.clientWidth, behavior: 'smooth'})" aria-label="Anterior"><i class="fas fa-chevron-left"></i></button>
                     <div class="testimonials-marquee-track">
                         ${cardsHTML}
                     </div>
+                    <button class="mobile-slider-btn next" onclick="const t=document.querySelector('.testimonials-marquee-track'); t.scrollBy({left: t.clientWidth, behavior: 'smooth'})" aria-label="Siguiente"><i class="fas fa-chevron-right"></i></button>
                 </div>
             </div>
         </section>

@@ -285,8 +285,8 @@ export function initRecommenderLogic(servicesData) {
             });
         }
 
-        // Limitar a máximo 3 resultados para no saturar
-        matchedTreatments = matchedTreatments.slice(0, 3);
+        // Limitar a máximo 4 resultados para no saturar
+        matchedTreatments = matchedTreatments.slice(0, 4);
 
         // 3. Renderizar las tarjetas
         resultsContainer.innerHTML = matchedTreatments.map(t => `

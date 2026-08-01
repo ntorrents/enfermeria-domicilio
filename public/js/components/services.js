@@ -207,7 +207,7 @@ export function buildTreatmentModalContent(treatment) {
 				if (item.icon && item.icon.includes("fa-clock"))
 					text = treatment.duration;
 				return `
-          <div class="detail-item">
+          <div class="detail-item detail-item-${escapeHTML(item.title.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z-]/g, ''))}">
             <i class="${escapeHTML(item.icon)}"></i>
             <div class="detail-item-content">
               <h4>${escapeHTML(item.title)}</h4>
