@@ -22,7 +22,7 @@ export function renderFooter(siteInfo, footerData) {
                 <div class="footer-bottom">
                     <p>${footerData.copyright}</p>
                     <p style="margin-top: 0.8rem; font-size: 0.75rem; color: var(--text-muted); opacity: 0.8;">
-                        Desarrollado por <a href="https://baseclinica.com" target="_blank" rel="noopener noreferrer" style="color: var(--text-muted); font-weight: 500; text-decoration: underline; text-underline-offset: 3px;"><i class="fas fa-laptop-medical" style="margin-right: 4px; font-size: 0.7rem;"></i>Base Clinica</a>
+                        Desarrollado por <a href="https://www.baseclinica.com" target="_blank" rel="noopener noreferrer" style="color: var(--text-muted); font-weight: 500; text-decoration: underline; text-underline-offset: 3px;"><i class="fas fa-laptop-medical" style="margin-right: 4px; font-size: 0.7rem;"></i>Base Clinica</a>
                     </p>
                 </div>
             </div>
