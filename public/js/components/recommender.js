@@ -267,8 +267,9 @@ export function initRecommenderLogic(servicesData) {
         // 2. Extraer los datos reales del JSON (servicesData)
         let matchedTreatments = [];
         servicesData.forEach(cat => {
+            if (cat.hidden) return;
             cat.treatments.forEach(t => {
-                if (recommendedIds.includes(t.id)) {
+                if (recommendedIds.includes(t.id) && !t.hidden && !t.comingSoon) {
                     matchedTreatments.push(t);
                 }
             });

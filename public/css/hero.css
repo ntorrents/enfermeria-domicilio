@@ -8,17 +8,7 @@
     overflow: hidden;
 }
 
-.hero::before {
-    content: "";
-    position: absolute;
-    top: -10%;
-    right: -5%;
-    width: 50%;
-    height: 80%;
-    background: radial-gradient(circle, rgba(205, 126, 98, 0.08) 0%, rgba(255, 255, 255, 0) 70%);
-    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-    z-index: 0;
-}
+
 
 .hero-content {
     display: grid;

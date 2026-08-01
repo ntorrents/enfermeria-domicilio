@@ -75,6 +75,7 @@ export function renderServices(servicesData) {
 			const slug = slugify(category.category);
 			const isFirst = index === 0;
 			const cardsHTML = category.treatments
+				.filter((t) => !t.hidden)
 				.map((t) => renderTreatmentCard(t))
 				.join("");
 			return `
