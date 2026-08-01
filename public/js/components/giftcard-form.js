@@ -53,7 +53,7 @@ export function renderGiftCardForm(servicesData) {
                                 
                                 <div class="form-group" style="margin-top: 1.5rem;">
                                     <label>Método de Envío *</label>
-                                    <select id="shippingMethod" name="shippingMethod" class="form-control" required>
+                                    <select id="shippingMethod" name="shippingMethod" class="form-control" aria-label="Método de envío" required>
                                         <option value="pickup">Recogida en Clínica (0,00€)</option>
                                         <option value="delivery">Envío a Domicilio en Cataluña (4,90€)</option>
                                     </select>

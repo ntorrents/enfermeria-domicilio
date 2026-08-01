@@ -1,5 +1,5 @@
-import { showToast } from './utils/toast.js?v=202608011235';
-import { buildTreatmentModalContent } from './components/services.js?v=202608011235';
+import { showToast } from './utils/toast.js?v=202608011240';
+import { buildTreatmentModalContent } from './components/services.js?v=202608011240';
 
 // --- Navegación Móvil ---
 function initializeMobileNavigation() {

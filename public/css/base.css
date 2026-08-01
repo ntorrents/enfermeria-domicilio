@@ -79,7 +79,7 @@ a {
 /* --- TIPOGRAFÍA CODEC PRO --- */
 @font-face {
     font-family: 'Codec Pro';
-    src: url('../fonts/CodecPro-Regular.ttf') format('truetype');
+    src: url('../fonts/CodecPro-Regular.woff2') format('woff2');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -87,7 +87,7 @@ a {
 
 @font-face {
     font-family: 'Codec Pro';
-    src: url('../fonts/CodecPro-Bold.ttf') format('truetype');
+    src: url('../fonts/CodecPro-Bold.woff2') format('woff2');
     font-weight: 700;
     font-style: normal;
     font-display: swap;
@@ -95,10 +95,26 @@ a {
 
 @font-face {
     font-family: 'Codec Pro';
-    src: url('../fonts/CodecPro-Heavy.ttf') format('truetype');
+    src: url('../fonts/CodecPro-Heavy.woff2') format('woff2');
     font-weight: 800;
     font-style: normal;
     font-display: swap;
+}
+
+/* --- FONT AWESOME OVERRIDE (a11y/performance) --- */
+@font-face {
+    font-family: 'Font Awesome 6 Free';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/webfonts/fa-regular-400.woff2") format("woff2");
+}
+@font-face {
+    font-family: 'Font Awesome 6 Free';
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+    src: url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/webfonts/fa-solid-900.woff2") format("woff2");
 }
 
 h1, h2, h3, h4, h5, h6 {

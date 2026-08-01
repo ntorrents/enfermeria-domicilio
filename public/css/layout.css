@@ -141,7 +141,7 @@
 /* --- FOOTER --- */
 .footer {
     background: var(--primary);
-    color: rgba(var(--white-rgb), 0.8);
+    color: var(--white);
     padding: 4rem 0 2rem;
     text-align: center;
 }

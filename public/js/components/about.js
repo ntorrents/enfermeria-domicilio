@@ -16,7 +16,7 @@ export function renderAbout(aboutData) {
                 <div class="about-layout">
                     <div class="about-image-column animate-on-scroll">
                         <img 
-                            src="/img/christine/myphoto.jpeg" 
+                            src="/img/christine/myphoto.webp" 
                             alt="${aboutData.name}" 
                             class="about-photo" 
                             width="400" 

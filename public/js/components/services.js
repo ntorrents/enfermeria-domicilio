@@ -63,7 +63,7 @@ export function renderServices(servicesData) {
 			const slug = slugify(category.category);
 			const isFirst = index === 0;
 			return `
-        <button type="button" class="services-tab ${isFirst ? "active" : ""}" data-tab="${slug}" aria-selected="${isFirst}">
+		<button type="button" role="tab" class="services-tab ${isFirst ? "active" : ""}" data-tab="${slug}" aria-selected="${isFirst}">
           ${escapeHTML(category.category)}
         </button>
       `;
