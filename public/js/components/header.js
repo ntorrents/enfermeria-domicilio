@@ -11,7 +11,7 @@ export function renderHeader() {
             </div>
             <ul class="nav-menu">
                 <li class="nav-item has-dropdown">
-                    <a href="/#servicios" class="nav-link">Servicios <i class="fas fa-chevron-down" style="font-size: 0.8rem;"></i></a>
+                    <a href="/#servicios" class="nav-link">Servicios <svg width="0.8rem" height="0.8rem" viewBox="0 0 512 512" fill="currentColor" style="vertical-align: middle; margin-left: 2px;" xmlns="http://www.w3.org/2000/svg"><path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/></svg></a>
                     <ul class="dropdown-menu">
                         <li><a href="/#servicios">Tratamientos</a></li>
                         <li><a href="/tarjeta-regalo">Tarjeta Regalo</a></li>

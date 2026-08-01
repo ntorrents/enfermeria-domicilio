@@ -22,6 +22,13 @@ function loadLazyScripts() {
     ['scroll', 'mousemove', 'touchstart', 'keydown'].forEach(event => {
         window.removeEventListener(event, loadLazyScripts);
     });
+
+    // Cargar FontAwesome de forma asíncrona
+    const faStyle = document.createElement('link');
+    faStyle.rel = 'stylesheet';
+    faStyle.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css';
+    faStyle.crossOrigin = 'anonymous';
+    document.head.appendChild(faStyle);
 }
 
 // Iniciar a la primera interacción

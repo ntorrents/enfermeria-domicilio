@@ -1,19 +1,19 @@
-import { renderHeader } from './components/header.js?v=202608011245';
-import { renderHero } from './components/hero.js?v=202608011245';
-import { renderAbout } from './components/about.js?v=202608011245';
-import { renderServices } from './components/services.js?v=202608011245';
-import { renderTestimonials } from './components/testimonials.js?v=202608011245';
-import { renderGallery } from './components/gallery.js?v=202608011245';
-import { renderGiftCard } from './components/giftcard.js?v=202608011245';
-import { renderFAQ } from './components/faq.js?v=202608011245';
-import { renderGiftCardForm, initGiftCardFormLogic } from './components/giftcard-form.js?v=202608011245';
-import { renderRecommender, initRecommenderLogic } from './components/recommender.js?v=202608011245';
-import { renderContact } from './components/contact.js?v=202608011245';
-import { renderFooter } from './components/footer.js?v=202608011245';
-import { renderPostCare, initPostCareTabs } from './components/postcare.js?v=202608011245';
+import { renderHeader } from './components/header.js?v=202608011255';
+import { renderHero } from './components/hero.js?v=202608011255';
+import { renderAbout } from './components/about.js?v=202608011255';
+import { renderServices } from './components/services.js?v=202608011255';
+import { renderTestimonials } from './components/testimonials.js?v=202608011255';
+import { renderGallery } from './components/gallery.js?v=202608011255';
+import { renderGiftCard } from './components/giftcard.js?v=202608011255';
+import { renderFAQ } from './components/faq.js?v=202608011255';
+import { renderGiftCardForm, initGiftCardFormLogic } from './components/giftcard-form.js?v=202608011255';
+import { renderRecommender, initRecommenderLogic } from './components/recommender.js?v=202608011255';
+import { renderContact } from './components/contact.js?v=202608011255';
+import { renderFooter } from './components/footer.js?v=202608011255';
+import { renderPostCare, initPostCareTabs } from './components/postcare.js?v=202608011255';
 
 // Importamos la Lógica de Interacción
-import { initializeInteractions } from './interactions.js?v=202608011245';
+import { initializeInteractions } from './interactions.js?v=202608011255';
 
 async function loadConfig() {
     try {
