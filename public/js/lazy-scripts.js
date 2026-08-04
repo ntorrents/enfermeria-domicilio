@@ -13,7 +13,7 @@ function loadLazyScripts() {
     emailJsScript.src = "https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js";
     emailJsScript.onload = () => {
         const configScript = document.createElement('script');
-        configScript.src = "/emailjs-config.js?v=202608020010";
+        configScript.src = "/emailjs-config.js?v=202608041548";
         document.body.appendChild(configScript);
     };
     document.body.appendChild(emailJsScript);

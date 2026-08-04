@@ -21,9 +21,21 @@ export function renderGiftCardForm(servicesData) {
                 </div>
 
                 <div class="giftcard-layout">
-                    <!-- Formulario -->
-                    <div class="giftcard-form-container animate-on-scroll">
-                        <form id="giftcardForm">
+                    <!-- Columna Izquierda (Galería + Form) -->
+                    <div class="giftcard-left-column">
+                        <!-- Galería de imágenes -->
+                        <div class="giftcard-form-gallery-row animate-on-scroll">
+                            <div class="gift-img-wrapper">
+                                <img src="/img/giftcard-1.jpeg" alt="Caja Regalo Exterior" loading="lazy">
+                            </div>
+                            <div class="gift-img-wrapper">
+                                <img src="/img/giftcard-2.jpeg" alt="Detalles de la tarjeta" loading="lazy">
+                            </div>
+                        </div>
+                        
+                        <!-- Formulario -->
+                        <div class="giftcard-form-container animate-on-scroll">
+                            <form id="giftcardForm">
                             <!-- BLOQUE 1: COMPRADOR -->
                             <div class="form-block">
                                 <h3 class="form-block-title"><i class="fas fa-user"></i> Datos del Comprador</h3>
@@ -139,6 +151,7 @@ export function renderGiftCardForm(servicesData) {
                             </div>
                         </form>
                     </div>
+                    </div> <!-- End left column -->
 
                     <!-- Resumen (Sidebar) -->
                     <div class="giftcard-summary animate-on-scroll">

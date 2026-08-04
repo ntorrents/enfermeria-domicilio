@@ -105,7 +105,8 @@
     }
 
     .hero-image-wrapper {
-        max-width: 320px;
+        max-width: 200px;
+        margin-top: 1rem;
     }
 }
 

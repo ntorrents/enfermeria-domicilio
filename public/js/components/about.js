@@ -56,7 +56,7 @@ export function renderAbout(aboutData) {
                              </div>
                         </div>
                         
-                        <a href="#contacto" class="btn btn-primary">Reservar una Cita</a>
+                        <a href="/contacto" class="btn btn-primary">Reservar una Cita</a>
                     </div>
                 </div>
             </div>

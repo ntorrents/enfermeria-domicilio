@@ -11,10 +11,10 @@ export function renderHero(heroData) {
                     <h1>${heroData.title}</h1>
                     <p>${heroData.subtitle}</p>
                     <div class="hero-actions">
-                        <a href="/contacto" class="btn btn-primary">
-                            ${heroData.primaryButton} <svg width="1em" height="1em" viewBox="0 0 448 512" fill="currentColor" style="vertical-align: -0.125em; margin-left: 4px;" xmlns="http://www.w3.org/2000/svg"><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg>
+                        <a href="#servicios" class="btn btn-primary">
+                            ${heroData.primaryButton} <svg width="1em" height="1em" viewBox="0 0 512 512" fill="currentColor" style="vertical-align: -0.125em; margin-left: 4px;" xmlns="http://www.w3.org/2000/svg"><path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/></svg>
                         </a>
-                        <a href="#servicios" class="btn btn-secondary">
+                        <a href="/contacto" class="btn btn-secondary">
                             ${heroData.secondaryButton}
                         </a>
                     </div>

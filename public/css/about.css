@@ -136,7 +136,20 @@
 }
 
 @media (max-width: 768px) {
+    .about-layout {
+        gap: 1rem;
+    }
+
     .about-image-column .about-photo {
-        max-width: 250px;
+        max-width: 200px;
+    }
+    
+    .about-clinic-info {
+        padding: 1.2rem;
+        gap: 0.5rem;
+    }
+
+    .about-credentials ul {
+        gap: 0.5rem;
     }
 }

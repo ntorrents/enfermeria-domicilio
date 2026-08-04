@@ -1,19 +1,20 @@
-import { renderHeader } from './components/header.js?v=202608020010';
-import { renderHero } from './components/hero.js?v=202608020010';
-import { renderAbout } from './components/about.js?v=202608020010';
-import { renderServices } from './components/services.js?v=202608020010';
-import { renderTestimonials } from './components/testimonials.js?v=202608020010';
-import { renderGallery } from './components/gallery.js?v=202608020010';
-import { renderGiftCard } from './components/giftcard.js?v=202608020010';
-import { renderFAQ } from './components/faq.js?v=202608020010';
-import { renderGiftCardForm, initGiftCardFormLogic } from './components/giftcard-form.js?v=202608020010';
-import { renderRecommender, initRecommenderLogic } from './components/recommender.js?v=202608020010';
-import { renderContact } from './components/contact.js?v=202608020010';
-import { renderFooter } from './components/footer.js?v=202608020010';
-import { renderPostCare, initPostCareTabs } from './components/postcare.js?v=202608020010';
+import { renderHeader } from './components/header.js?v=202608041548';
+import { renderHero } from './components/hero.js?v=202608041548';
+import { renderTestBanner } from './components/test-banner.js?v=202608041548';
+import { renderAbout } from './components/about.js?v=202608041548';
+import { renderServices } from './components/services.js?v=202608041548';
+import { renderTestimonials } from './components/testimonials.js?v=202608041548';
+import { renderGallery } from './components/gallery.js?v=202608041548';
+import { renderGiftCard } from './components/giftcard.js?v=202608041548';
+import { renderFAQ } from './components/faq.js?v=202608041548';
+import { renderGiftCardForm, initGiftCardFormLogic } from './components/giftcard-form.js?v=202608041548';
+import { renderRecommender, initRecommenderLogic } from './components/recommender.js?v=202608041548';
+import { renderContact } from './components/contact.js?v=202608041548';
+import { renderFooter } from './components/footer.js?v=202608041548';
+import { renderPostCare, initPostCareTabs } from './components/postcare.js?v=202608041548';
 
 // Importamos la Lógica de Interacción
-import { initializeInteractions } from './interactions.js?v=202608020010';
+import { initializeInteractions } from './interactions.js?v=202608041548';
 
 async function loadConfig() {
     try {
@@ -49,6 +50,7 @@ async function initApp() {
         if (path === '/' || path === '/index.html') {
             appContainer.innerHTML = [
                 renderHero(config.hero),
+                renderTestBanner(),
                 renderAbout(config.aboutMe),
                 renderServices(config.services),
                 renderTestimonials(config.testimonials),

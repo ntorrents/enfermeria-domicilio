@@ -139,12 +139,17 @@ export function initRecommenderLogic(servicesData) {
     let currentStep = 0; // 0 = intro, 1..3 = quiz, 4 = loading, 5 = results
     const totalSteps = 3;
     
-    // Respuestas
+    // Respuestas con LocalStorage
+    const savedAnswers = JSON.parse(localStorage.getItem('c3linic_quiz_answers') || '{}');
     const answers = {
-        zone: '',
-        goal: '',
-        state: ''
+        zone: savedAnswers.zone || '',
+        goal: savedAnswers.goal || '',
+        state: savedAnswers.state || ''
     };
+
+    function saveToLocal() {
+        localStorage.setItem('c3linic_quiz_answers', JSON.stringify(answers));
+    }
 
     // DOM Elements
     const quizHeader = document.getElementById('quizHeader');
@@ -197,6 +202,16 @@ export function initRecommenderLogic(servicesData) {
         // Ocultar todos
         document.querySelectorAll('.quiz-step').forEach(el => el.classList.remove('active'));
         
+        // Auto-scroll en móvil
+        if (window.innerWidth <= 768 && stepIndex > 0 && stepIndex < 5) {
+            setTimeout(() => {
+                const recommenderSection = document.querySelector('.recommender-section');
+                if (recommenderSection) {
+                    recommenderSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            }, 50);
+        }
+
         // Setup visibilidad extra
         if (stepIndex === 0) {
             quizHeader.style.display = 'none';
@@ -333,6 +348,7 @@ export function initRecommenderLogic(servicesData) {
         answers.zone = '';
         answers.goal = '';
         answers.state = '';
+        saveToLocal();
         document.querySelectorAll('input[type="radio"]').forEach(r => r.checked = false);
         showStep(1);
     });
@@ -342,15 +358,27 @@ export function initRecommenderLogic(servicesData) {
         radio.addEventListener('change', (e) => {
             answers.zone = e.target.value;
             // Si cambian de zona, borrar el goal porque las opciones cambiarán
-            answers.goal = ''; 
+            answers.goal = '';
+            saveToLocal();
         });
     });
 
     document.querySelectorAll('input[name="q_state"]').forEach(radio => {
         radio.addEventListener('change', (e) => {
             answers.state = e.target.value;
+            saveToLocal();
         });
     });
+
+    // Iniciar pre-rellenando si hay datos en LocalStorage
+    if (answers.zone) {
+        const zoneInput = document.querySelector(`input[name="q_zone"][value="${answers.zone}"]`);
+        if (zoneInput) zoneInput.checked = true;
+    }
+    if (answers.state) {
+        const stateInput = document.querySelector(`input[name="q_state"][value="${answers.state}"]`);
+        if (stateInput) stateInput.checked = true;
+    }
 
     // Iniciar con todo oculto excepto paso 0
     showStep(0);
