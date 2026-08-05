@@ -67,8 +67,8 @@
             };
 
             Promise.all([
-                fetch('./config/services.json?v=202608051419').then(response => response.json()),
-                fetch('./config/general.json?v=202608051419').then(response => response.json())
+                fetch('./config/services.json?v=202608051425').then(response => response.json()),
+                fetch('./config/general.json?v=202608051425').then(response => response.json())
             ]).then(([servicesConfig, generalConfig]) => {
                     const footer = document.querySelector(".footer");
                     if (footer && generalConfig.footer) {

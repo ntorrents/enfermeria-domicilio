@@ -1,27 +1,27 @@
-import { renderHeader } from './components/header.js?v=202608051419';
-import { renderHero } from './components/hero.js?v=202608051419';
-import { renderTestBanner } from './components/test-banner.js?v=202608051419';
-import { renderAbout } from './components/about.js?v=202608051419';
-import { renderServices } from './components/services.js?v=202608051419';
-import { renderTestimonials } from './components/testimonials.js?v=202608051419';
-import { renderGallery } from './components/gallery.js?v=202608051419';
-import { renderGiftCard } from './components/giftcard.js?v=202608051419';
-import { renderFAQ } from './components/faq.js?v=202608051419';
-import { renderGiftCardForm, initGiftCardFormLogic } from './components/giftcard-form.js?v=202608051419';
-import { renderRecommender, initRecommenderLogic } from './components/recommender.js?v=202608051419';
-import { renderContact } from './components/contact.js?v=202608051419';
-import { renderFooter } from './components/footer.js?v=202608051419';
-import { renderPostCare, initPostCareTabs } from './components/postcare.js?v=202608051419';
+import { renderHeader } from './components/header.js?v=202608051425';
+import { renderHero } from './components/hero.js?v=202608051425';
+import { renderTestBanner } from './components/test-banner.js?v=202608051425';
+import { renderAbout } from './components/about.js?v=202608051425';
+import { renderServices } from './components/services.js?v=202608051425';
+import { renderTestimonials } from './components/testimonials.js?v=202608051425';
+import { renderGallery } from './components/gallery.js?v=202608051425';
+import { renderGiftCard } from './components/giftcard.js?v=202608051425';
+import { renderFAQ } from './components/faq.js?v=202608051425';
+import { renderGiftCardForm, initGiftCardFormLogic } from './components/giftcard-form.js?v=202608051425';
+import { renderRecommender, initRecommenderLogic } from './components/recommender.js?v=202608051425';
+import { renderContact } from './components/contact.js?v=202608051425';
+import { renderFooter } from './components/footer.js?v=202608051425';
+import { renderPostCare, initPostCareTabs } from './components/postcare.js?v=202608051425';
 
 // Importamos la Lógica de Interacción
-import { initializeInteractions } from './interactions.js?v=202608051419';
+import { initializeInteractions } from './interactions.js?v=202608051425';
 
 async function loadConfig() {
     try {
         const [general, content, services] = await Promise.all([
-            fetch('/config/general.json?v=202608051419').then(res => res.json()),
-            fetch('/config/content.json?v=202608051419').then(res => res.json()),
-            fetch('/config/services.json?v=202608051419').then(res => res.json())
+            fetch('/config/general.json?v=202608051425').then(res => res.json()),
+            fetch('/config/content.json?v=202608051425').then(res => res.json()),
+            fetch('/config/services.json?v=202608051425').then(res => res.json())
         ]);
         return { ...general, ...content, services };
     } catch (error) {
