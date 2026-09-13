@@ -1,6 +1,6 @@
-import { showToast } from './utils/toast.js?v=202608051425';
-import { buildTreatmentModalContent } from './components/services.js?v=202608051425';
-import { t } from './i18n.js?v=202608051425';
+import { showToast } from './utils/toast.js?v=202609131710';
+import { buildTreatmentModalContent } from './components/services.js?v=202609131710';
+import { t } from './i18n.js?v=202609131710';
 
 // --- Navegación Móvil ---
 function initializeMobileNavigation() {
@@ -81,17 +81,29 @@ function initializeSmoothScroll() {
 function updateHeaderOnScroll() {
     const header = document.querySelector('.header');
     if (!header) return;
-    
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            header.style.backgroundColor = 'rgba(253, 252, 250, 0.95)';
-            header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+
+    const hero = document.querySelector('.hero');
+    if (hero) header.classList.add('header--over-hero');
+
+    const syncHeader = () => {
+        const overHero = hero && window.scrollY < hero.offsetHeight - 80;
+        if (hero) {
+            header.classList.toggle('header--solid', window.scrollY > 40);
+            header.classList.toggle('header--over-hero', Boolean(overHero));
+            if (!overHero && window.scrollY <= 40) {
+                header.classList.remove('header--solid');
+            }
         } else {
-            header.style.backgroundColor = 'rgba(253, 252, 250, 0.5)';
-            header.style.boxShadow = 'none';
+            header.classList.add('header--solid');
+            header.classList.remove('header--over-hero');
         }
+        header.style.backgroundColor = '';
+        header.style.boxShadow = '';
         updateActiveNavigation();
-    });
+    };
+
+    syncHeader();
+    window.addEventListener('scroll', syncHeader, { passive: true });
 }
 
 function updateActiveNavigation() {
@@ -201,6 +213,13 @@ function initializeServicesTabsAndModal() {
       });
       tab.classList.add('active');
       tab.setAttribute('aria-selected', 'true');
+
+      const activePanel = section.querySelector(`#panel-${tabId} .stagger-children`);
+      if (activePanel) {
+        activePanel.classList.remove('is-visible');
+        void activePanel.offsetWidth;
+        activePanel.classList.add('is-visible');
+      }
       
       // Clear search when changing tabs
       const searchInput = section.querySelector('#services-search-input');
@@ -462,22 +481,69 @@ function initializeFAQ() {
 
 // --- SCROLL ANIMATIONS ---
 function initializeScrollAnimations() {
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    const markVisible = (el) => {
+        el.classList.add('is-visible');
+    };
+
+    if (reduceMotion) {
+        document.querySelectorAll('.animate-on-scroll, .reveal, .stagger-children').forEach(markVisible);
+        return;
+    }
+
+    // Hero reveals: fire shortly after paint
+    requestAnimationFrame(() => {
+        document.querySelectorAll('.hero .reveal').forEach(markVisible);
+    });
+
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('is-visible');
-                // Optional: stop observing once it's visible
-                // observer.unobserve(entry.target);
+                markVisible(entry.target);
+                observer.unobserve(entry.target);
             }
         });
     }, {
-        threshold: 0.1, // Trigger when 10% of element is visible
-        rootMargin: "0px 0px -50px 0px"
+        threshold: 0.12,
+        rootMargin: '0px 0px -8% 0px'
     });
 
-    document.querySelectorAll('.animate-on-scroll').forEach((el) => {
+    document.querySelectorAll('.animate-on-scroll, .reveal, .stagger-children').forEach((el) => {
+        if (el.closest('.hero')) return; // already handled
         observer.observe(el);
     });
+
+    initializeParallax();
+}
+
+function initializeParallax() {
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduceMotion) return;
+
+    const nodes = Array.from(document.querySelectorAll('.parallax-slow'));
+    if (!nodes.length) return;
+
+    let ticking = false;
+    const update = () => {
+        const vh = window.innerHeight;
+        nodes.forEach((el) => {
+            const rect = el.getBoundingClientRect();
+            const progress = (vh - rect.top) / (vh + rect.height);
+            const offset = Math.max(-18, Math.min(18, (progress - 0.5) * 28));
+            el.style.transform = `translate3d(0, ${offset}px, 0)`;
+        });
+        ticking = false;
+    };
+
+    window.addEventListener('scroll', () => {
+        if (!ticking) {
+            ticking = true;
+            requestAnimationFrame(update);
+        }
+    }, { passive: true });
+
+    update();
 }
 
 // --- EXPORTAR TODO JUNTO ---

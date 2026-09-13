@@ -1,4 +1,4 @@
-import { t, getUI } from '../i18n.js?v=202608051425';
+import { t, getUI } from '../i18n.js?v=202609131710';
 
 /**
  * Galería / collage de fotos (ej. clínica).
@@ -32,7 +32,7 @@ export function renderGallery(galleryData) {
     <section id="fotos" class="gallery-section">
       <div class="container">
         <div class="section-title animate-on-scroll">
-          <span>${t('gallery.eyebrow')}</span>
+          <span>05 / ${t('gallery.eyebrow')}</span>
           <h2>${title}</h2>
           ${subtitle ? `<p>${subtitle}</p>` : ''}
         </div>

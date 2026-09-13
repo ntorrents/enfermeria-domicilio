@@ -1,8 +1,14 @@
-import { t, getUI } from '../i18n.js?v=202608051425';
+import { t, getUI } from '../i18n.js?v=202609131710';
 
 function renderItems(items) {
     return (items || []).map(item => `
-        <li><i class="${item.icon}"></i> <strong>${item.title}</strong> ${item.text}</li>
+        <li>
+            <i class="${item.icon}" aria-hidden="true"></i>
+            <div class="postcare-item-body">
+                <strong>${item.title}</strong>
+                <p>${item.text}</p>
+            </div>
+        </li>
     `).join('');
 }
 

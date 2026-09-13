@@ -1,56 +1,88 @@
 .test-banner {
-    background-color: var(--bg-body);
-    padding: 4rem 0;
-    text-align: center;
+    background: var(--accent);
+    padding: 4.5rem 0;
+    color: var(--white);
+}
+
+.test-banner .container {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
 }
 
 .test-banner-container {
-    background-color: white;
-    border-radius: 20px;
-    padding: 3rem 2rem;
-    box-shadow: var(--shadow-md);
-    max-width: 800px;
-    margin: 0 auto;
-    border: 1px solid var(--border-light);
+    background: transparent;
+    border-radius: 0;
+    box-shadow: none;
+    border: none;
+    display: grid;
+    grid-template-columns: 1.4fr auto;
+    gap: 2rem 3rem;
+    align-items: end;
 }
 
-.test-banner-badge {
-    background-color: var(--accent);
-    color: white;
-    font-weight: bold;
-    margin-bottom: 1rem;
-    display: inline-block;
+.test-banner-copy {
+    min-width: 0;
+}
+
+.test-banner-index {
+    display: block;
+    font-family: var(--font-body);
+    font-size: 0.68rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: rgba(var(--white-rgb), 0.65);
+    margin-bottom: 0.85rem;
 }
 
 .test-banner h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    color: var(--primary);
+    font-size: clamp(1.75rem, 3.5vw, 2.6rem);
+    margin-bottom: 0.85rem;
+    color: var(--white);
+    max-width: 18ch;
+    line-height: 1.1;
 }
 
 .test-banner p {
-    color: var(--text-light);
-    margin-bottom: 2rem;
-    font-size: 1.1rem;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
+    color: rgba(var(--white-rgb), 0.82);
+    margin-bottom: 0;
+    font-size: 1.05rem;
+    max-width: 36rem;
 }
 
 .test-banner-btn {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    font-size: 1.1rem;
-    padding: 1rem 2rem;
+    font-size: 1rem;
+    padding: 1rem 1.75rem;
+    white-space: nowrap;
+    align-self: end;
 }
 
 @media (max-width: 768px) {
-    .test-banner-container {
-        padding: 2rem 1.5rem;
+    .test-banner {
+        padding: 3.5rem 0;
     }
-    
+
+    .test-banner .container {
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+    }
+
+    .test-banner-container {
+        grid-template-columns: 1fr;
+        gap: 1.75rem;
+    }
+
+    .test-banner-btn {
+        width: 100%;
+        justify-content: center;
+        white-space: normal;
+    }
+
     .test-banner h2 {
-        font-size: 1.5rem;
+        max-width: none;
     }
 }

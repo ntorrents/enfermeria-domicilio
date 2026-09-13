@@ -1,4 +1,4 @@
-import { t, FREE_PRICE_VALUES } from '../i18n.js?v=202608051425';
+import { t, FREE_PRICE_VALUES } from '../i18n.js?v=202609131710';
 
 export function renderRecommender() {
     return `
@@ -17,10 +17,10 @@ export function renderRecommender() {
                         </div>
                     </div>
 
-                    <div id="step-0" class="quiz-step active" style="text-align: center;">
-                        <i class="fas fa-magic" style="font-size: 3rem; color: var(--accent); margin-bottom: 1.5rem;"></i>
+                    <div id="step-0" class="quiz-step active">
+                        <i class="fas fa-magic" style="font-size: 1.5rem; color: var(--accent); margin-bottom: 1.25rem; display: inline-block;"></i>
                         <h3 class="quiz-question">${t('recommender.startTitle')}</h3>
-                        <p style="color: var(--text-main); margin-bottom: 2.5rem; max-width: 500px; margin-left: auto; margin-right: auto;">
+                        <p style="color: var(--text-light); margin-bottom: 2rem; max-width: 36rem;">
                             ${t('recommender.startText')}
                         </p>
                         <button id="btnStartQuiz" class="btn btn-primary">${t('recommender.startCta')} <i class="fas fa-arrow-right"></i></button>
@@ -94,7 +94,7 @@ export function renderRecommender() {
 
                     <div id="step-loading" class="quiz-step quiz-loading">
                         <div class="spinner"></div>
-                        <h3 style="font-family: 'Codec Pro', sans-serif; color: var(--primary);">${t('recommender.loadingTitle')}</h3>
+                        <h3 style="font-family: var(--font-display); font-weight: 500; color: var(--primary);">${t('recommender.loadingTitle')}</h3>
                         <p style="color: var(--text-muted);">${t('recommender.loadingText')}</p>
                     </div>
 
@@ -104,7 +104,7 @@ export function renderRecommender() {
                             <p style="color: var(--text-main);">${t('recommender.resultsSub')}</p>
                         </div>
                         <div id="resultsContainer" class="results-grid"></div>
-                        <div style="text-align: center; margin-top: 2rem;">
+                        <div style="text-align: left; margin-top: 1.5rem;">
                             <button id="btnRestartQuiz" class="btn btn-secondary"><i class="fas fa-redo"></i> ${t('recommender.restart')}</button>
                         </div>
                     </div>

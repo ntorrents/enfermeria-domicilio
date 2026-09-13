@@ -1,4 +1,4 @@
-import { t, FREE_PRICE_VALUES } from '../i18n.js?v=202608051425';
+import { t, FREE_PRICE_VALUES } from '../i18n.js?v=202609131710';
 
 export function renderGiftCardForm(servicesData) {
     if (!servicesData) return '';

@@ -1,4 +1,4 @@
-import { t, getLang } from '../i18n.js?v=202608051425';
+import { t, getLang } from '../i18n.js?v=202609131710';
 
 export function renderContact(siteInfo, servicesData) {
     if (!siteInfo || !servicesData) return '';

@@ -1,20 +1,21 @@
 /* --- Galería / Marquee de fotos --- */
 .gallery-section {
   background-color: var(--secondary);
-  padding: 4rem 0;
+  padding: 5.5rem 0 4rem;
 }
 
 .gallery-marquee-wrapper {
   overflow: hidden;
   position: relative;
   width: 100%;
-  -webkit-mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
-  mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+  margin-top: 0.5rem;
+  -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+  mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
 }
 
 .gallery-marquee-track {
   display: flex;
-  gap: 1rem;
+  gap: 0.65rem;
   width: max-content;
   animation: gallery-scroll 80s linear infinite;
   animation-direction: reverse;
@@ -26,24 +27,24 @@
 
 @keyframes gallery-scroll {
   0% { transform: translateX(0); }
-  100% { transform: translateX(calc(-50% - 0.5rem)); }
+  100% { transform: translateX(calc(-50% - 0.325rem)); }
 }
 
 .gallery-marquee-track .gallery-item {
-  width: 280px;
-  height: 190px;
+  width: 340px;
+  height: 420px;
   flex-shrink: 0;
-  border-radius: var(--radius-md);
+  border-radius: 0;
   overflow: hidden;
   position: relative;
   cursor: pointer;
-  box-shadow: var(--shadow-sm);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: none;
+  transition: transform 0.45s ease, filter 0.45s ease;
 }
 
 .gallery-marquee-track .gallery-item:hover {
-  transform: translateY(-4px) scale(1.02);
-  box-shadow: var(--shadow-md);
+  transform: scale(1.02);
+  filter: brightness(1.05);
 }
 
 .gallery-marquee-track .gallery-item img {
@@ -55,8 +56,8 @@
 
 @media (max-width: 768px) {
   .gallery-marquee-track .gallery-item {
-    width: 220px;
-    height: 150px;
+    width: 240px;
+    height: 300px;
   }
 }
 

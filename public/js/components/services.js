@@ -1,4 +1,4 @@
-import { t, DETAIL_EXCLUDE_TITLES } from '../i18n.js?v=202608051425';
+import { t, DETAIL_EXCLUDE_TITLES } from '../i18n.js?v=202609131710';
 
 /**
  * Tratamientos que tienen packs de sesiones (1, 3 y/o 5).
@@ -81,7 +81,7 @@ export function renderServices(servicesData) {
 				.join("");
 			return `
         <div class="services-panel ${isFirst ? "active" : ""}" id="panel-${slug}" role="tabpanel" aria-hidden="${!isFirst}">
-          <div class="services-grid">
+          <div class="services-grid stagger-children">
             ${cardsHTML}
           </div>
         </div>
@@ -93,7 +93,7 @@ export function renderServices(servicesData) {
     <section id="servicios" class="services-section-cards">
       <div class="container">
         <div class="section-title animate-on-scroll">
-          <span>${t('services.eyebrow')}</span>
+          <span>02 / ${t('services.eyebrow')}</span>
           <h2>${t('services.title')}</h2>
           <p>${t('services.subtitle')}</p>
         </div>

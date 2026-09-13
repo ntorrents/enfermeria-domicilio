@@ -1,144 +1,194 @@
 .hero {
+    position: relative;
     min-height: 100vh;
-    padding-top: 80px;
+    min-height: 100dvh;
     display: flex;
     align-items: center;
-    background: linear-gradient(135deg, var(--bg-body) 0%, var(--secondary) 100%);
-    position: relative;
+    justify-content: center;
+    padding: 0;
+    overflow: hidden;
+    color: var(--white);
+}
+
+.hero--marble {
+    background: #6b4a38;
+}
+
+.hero-media {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
     overflow: hidden;
 }
 
+.hero-media-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    transform: scale(1.04);
+    animation: heroKenBurns 24s ease-out forwards;
+    will-change: transform;
+}
 
+.hero-media-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(
+            180deg,
+            rgba(55, 38, 30, 0.38) 0%,
+            rgba(55, 38, 30, 0.28) 40%,
+            rgba(45, 30, 24, 0.48) 100%
+        );
+}
 
 .hero-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: center;
     position: relative;
     z-index: 1;
-}
-
-.hero-text h1 {
-    font-size: 4rem;
-    margin-bottom: 1.5rem;
-    color: var(--primary);
-}
-
-.hero-text p {
-    font-size: 1.25rem;
-    margin-bottom: 2.5rem;
-    max-width: 90%;
-}
-
-.hero-actions {
-    display: flex;
-    gap: 1rem;
-}
-
-.hero-visual {
-    position: relative;
+    width: 100%;
+    padding-top: 6.5rem;
+    padding-bottom: 4.5rem;
     display: flex;
     justify-content: center;
 }
 
-.hero-image-wrapper {
-    position: relative;
-    width: 450px;
-    height: 550px;
-    aspect-ratio: 450 / 550; /* Esto reserva el hueco exacto */
-    background-color: transparent;
+.hero-text {
+    max-width: 36rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.hero-img-main {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 200px 200px 20px 20px;
-    box-shadow: var(--shadow-lg);
-    position: relative;
-    z-index: 2;
+.hero-kicker {
+    order: 1;
+    font-family: var(--font-body);
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: rgba(var(--white-rgb), 0.78);
+    margin: 0 0 1.35rem;
 }
 
-/* RESPONSIVE HERO */
-@media (max-width: 968px) {
-    .hero {
-        text-align: center;
-        padding-top: 140px;
-        padding-bottom: 4rem;
-    }
+.hero-brand-name {
+    order: 2;
+    font-family: var(--font-brand);
+    font-size: clamp(2.35rem, 6vw, 3.4rem);
+    font-weight: 400;
+    letter-spacing: 0.16em;
+    color: var(--white);
+    line-height: 1;
+    margin: 0 0 1.75rem;
+}
 
-    .hero-content {
-        grid-template-columns: 1fr;
-        gap: 3rem;
-    }
+.hero-brand-name b {
+    font-weight: 700;
+}
 
-    .hero-actions {
-        justify-content: center;
-    }
+.hero-text h1 {
+    order: 3;
+    font-family: var(--font-display);
+    font-size: clamp(2.1rem, 4.8vw, 3.35rem);
+    font-weight: 500;
+    line-height: 1.08;
+    letter-spacing: 0.01em;
+    color: var(--white);
+    margin: 0 0 1.15rem;
+    max-width: 16ch;
+}
 
-    .hero-image-wrapper {
-        margin: 2rem auto 0;
-        width: 100%;
-        max-width: 550px;
-        height: auto;
-        aspect-ratio: 4/5;
-    }
+.hero-lead {
+    order: 4;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    line-height: 1.75;
+    letter-spacing: 0.02em;
+    color: rgba(var(--white-rgb), 0.88);
+    margin: 0 0 2.25rem;
+    max-width: 30rem;
+}
+
+.hero-actions {
+    order: 5;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1.25rem 1.75rem;
+}
+
+.btn-hero {
+    min-height: 3rem;
+    padding: 0.85rem 1.85rem;
+}
+
+.hero .btn-primary {
+    background: var(--white);
+    color: var(--primary);
+    border-color: var(--white);
+    box-shadow: none;
+}
+
+.hero .btn-primary:hover {
+    background: transparent;
+    color: var(--white);
+    border-color: rgba(var(--white-rgb), 0.85);
+}
+
+.hero-text-link {
+    font-family: var(--font-body);
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(var(--white-rgb), 0.9);
+    border-bottom: 1px solid rgba(var(--white-rgb), 0.45);
+    padding-bottom: 0.2rem;
+    transition: color 0.25s ease, border-color 0.25s ease;
+}
+
+.hero-text-link:hover {
+    color: var(--white);
+    border-bottom-color: var(--white);
+}
+
+@keyframes heroKenBurns {
+    from { transform: scale(1.06); }
+    to { transform: scale(1.0); }
 }
 
 @media (max-width: 768px) {
     .hero {
-        padding-top: 100px;
-        padding-bottom: 3rem;
-        min-height: auto;
+        min-height: 92vh;
+        align-items: center;
+    }
+
+    .hero-content {
+        padding-top: 6rem;
+        padding-bottom: 3.5rem;
+    }
+
+    .hero-text {
+        max-width: 100%;
     }
 
     .hero-actions {
         flex-direction: column;
         width: 100%;
-        gap: 1rem;
+        gap: 1.25rem;
     }
 
     .hero-actions .btn {
         width: 100%;
         justify-content: center;
     }
+}
 
-    .hero-image-wrapper {
-        max-width: 200px;
-        margin-top: 1rem;
+@media (prefers-reduced-motion: reduce) {
+    .hero-media-img {
+        animation: none;
+        transform: scale(1);
     }
-}
-
-/* Modificador para usar una foto principal de fondo/portada (Hero BG) */
-.hero--bg-image {
-    background-image: url('../img/placeholder-bg.jpg'); /* Actualizar ruta */
-    background-size: cover;
-    background-position: center;
-    color: var(--white);
-}
-
-.hero--bg-image::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.4); /* Overlay oscuro para que el texto resalte */
-    border-radius: 0;
-    z-index: 0;
-}
-
-.hero--bg-image .hero-content {
-    z-index: 1;
-}
-
-.hero--bg-image .hero-text h1,
-.hero--bg-image .hero-text p,
-.hero--bg-image .hero-text .badge {
-    color: var(--white);
-}
-
-.hero--bg-image .hero-visual {
-    display: none; /* Oculta la imagen lateral si se usa foto de fondo */
 }

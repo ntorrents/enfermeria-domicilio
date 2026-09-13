@@ -1,4 +1,4 @@
-import { t, getUI } from '../i18n.js?v=202608051425';
+import { t, getUI } from '../i18n.js?v=202609131710';
 
 export function renderFAQ() {
     const faqs = getUI().faq?.items || [];
@@ -21,7 +21,7 @@ export function renderFAQ() {
         <section id="faq" class="faq-section">
             <div class="container">
                 <div class="section-title animate-on-scroll">
-                    <span>${t('faq.eyebrow')}</span>
+                    <span>07 / ${t('faq.eyebrow')}</span>
                     <h2>${t('faq.title')}</h2>
                 </div>
                 <div class="faq-container">

@@ -47,14 +47,14 @@ export function getUI() {
 export async function loadUI(lang = getLang()) {
 	currentLang = lang;
 	document.documentElement.lang = lang;
-	const res = await fetch(`/config/${lang}/ui.json?v=202608051425`);
+	const res = await fetch(`/config/${lang}/ui.json?v=202609131710`);
 	uiStrings = await res.json();
 	window.__I18N = { lang, t, getUI, setLang };
 	return uiStrings;
 }
 
 export function configUrl(file, lang = getLang()) {
-	return `/config/${lang}/${file}?v=202608051425`;
+	return `/config/${lang}/${file}?v=202609131710`;
 }
 
 /** Títulos de detalle que no se muestran en el modal (ES + CA). */

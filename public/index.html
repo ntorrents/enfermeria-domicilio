@@ -30,25 +30,25 @@
     
     <meta name="referrer" content="strict-origin-when-cross-origin" />
 
-    <link rel="preload" as="image" href="/img/christine/christine-portada.webp?v=202608051425" fetchpriority="high" />
+    <link rel="preload" as="image" href="/img/hero-marble-terracotta.webp" fetchpriority="high" type="image/webp" />
 
-    <link rel="stylesheet" href="/css/base.css?v=202608051425" />
-    <link rel="stylesheet" href="/css/layout.css?v=202608051425" />
-    <link rel="stylesheet" href="/css/hero.css?v=202608051425" />
-    <link rel="stylesheet" href="/css/test-banner.css?v=202608051425" />
+    <link rel="stylesheet" href="/css/base.css?v=202609131710" />
+    <link rel="stylesheet" href="/css/layout.css?v=202609131710" />
+    <link rel="stylesheet" href="/css/hero.css?v=202609131710" />
+    <link rel="stylesheet" href="/css/test-banner.css?v=202609131710" />
 
-    <link rel="stylesheet" href="/css/about.css?v=202608051425" media="print" onload="this.media='all'" />
-    <link rel="stylesheet" href="/css/services.css?v=202608051425" media="print" onload="this.media='all'" />
-    <link rel="stylesheet" href="/css/testimonials.css?v=202608051425" media="print" onload="this.media='all'" />
-    <link rel="stylesheet" href="/css/gallery.css?v=202608051425" media="print" onload="this.media='all'" />
-    <link rel="stylesheet" href="/css/giftcard.css?v=202608051425" media="print" onload="this.media='all'" />
-    <link rel="stylesheet" href="/css/faq.css?v=202608051425" media="print" onload="this.media='all'" />
-    <link rel="stylesheet" href="/css/contact.css?v=202608051425" media="print" onload="this.media='all'" />
+    <link rel="stylesheet" href="/css/about.css?v=202609131710" media="print" onload="this.media='all'" />
+    <link rel="stylesheet" href="/css/services.css?v=202609131710" media="print" onload="this.media='all'" />
+    <link rel="stylesheet" href="/css/testimonials.css?v=202609131710" media="print" onload="this.media='all'" />
+    <link rel="stylesheet" href="/css/gallery.css?v=202609131710" media="print" onload="this.media='all'" />
+    <link rel="stylesheet" href="/css/giftcard.css?v=202609131710" media="print" onload="this.media='all'" />
+    <link rel="stylesheet" href="/css/faq.css?v=202609131710" media="print" onload="this.media='all'" />
+    <link rel="stylesheet" href="/css/contact.css?v=202609131710" media="print" onload="this.media='all'" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Montserrat:wght@300;400;500;600;700&display=swap"
         rel="stylesheet" />
     
 
@@ -56,7 +56,7 @@
 
     
     
-    <script defer src="/js/lazy-scripts.js?v=202608051425"></script>
+    <script defer src="/js/lazy-scripts.js?v=202609131710"></script>
     
     <!-- Vercel Speed Insights -->
     <script>
@@ -115,27 +115,28 @@
 
     <main>
         <div id="app-content">
-            <section id="inicio" class="hero">
+            <section id="inicio" class="hero hero--marble">
+                <div class="hero-media" aria-hidden="true">
+                    <img
+                        src="/img/hero-marble-terracotta.webp"
+                        alt=""
+                        class="hero-media-img"
+                        width="1600"
+                        height="703"
+                        loading="eager"
+                        fetchpriority="high"
+                    >
+                    <div class="hero-media-overlay"></div>
+                </div>
                 <div class="container hero-content">
                     <div class="hero-text">
-                        <span class="badge">Dermoestética & Imagen Corporal</span>
+                        <p class="hero-kicker">Dermoestética & Imagen Corporal</p>
+                        <p class="hero-brand-name brand-wordmark">C<b>3</b>LINIC</p>
                         <h1>Realza tu Belleza Natural</h1>
-                        <p>Servicios dermoestéticos profesionales para cuidar la salud y luminosidad de tu piel.</p>
+                        <p class="hero-lead">Servicios dermoestéticos profesionales para cuidar la salud y luminosidad de tu piel.</p>
                         <div class="hero-actions">
-                            <a href="#contacto" class="btn btn-primary">
-                                Reservar Cita <i class="fas fa-arrow-right"></i>
-                            </a>
-                            <a href="#servicios" class="btn btn-secondary">
-                                Servicios
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="hero-visual">
-                        <div class="hero-image-wrapper">
-                            <img src="/img/christine/christine-portada.webp?v=202608051425" alt="Dermoestética y cuidado de la piel"
-                                class="hero-img-main" width="450" height="550" style="mix-blend-mode: multiply;"
-                                loading="eager" fetchpriority="high">
+                            <a href="#servicios" class="btn btn-primary btn-hero">Ver Tratamientos</a>
+                            <a href="/contacto" class="hero-text-link">Reservar Cita</a>
                         </div>
                     </div>
                 </div>
@@ -158,7 +159,7 @@
         <button id="acceptCookies" class="cookie-btn">Aceptar</button>
     </div>
 
-    <script type="module" src="/js/main.js?v=202608051425"></script>
+    <script type="module" src="/js/main.js?v=202609131710"></script>
 </body>
 
 </html>
