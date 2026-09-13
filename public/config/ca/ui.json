@@ -1,0 +1,345 @@
+{
+  "langName": "Català",
+  "langShort": "CA",
+  "header": {
+    "services": "Serveis",
+    "treatments": "Tractaments",
+    "giftCard": "Targeta Regal",
+    "postCare": "Cures Posttractament",
+    "recommender": "✨ Què necessita la teva pell?",
+    "contact": "Contacte",
+    "openMenu": "Obrir menú",
+    "switchTo": "Cambiar a castellano"
+  },
+  "footer": {
+    "legal": "Avís Legal",
+    "privacy": "Política de Privacitat",
+    "developedBy": "Desenvolupat per"
+  },
+  "hero": {
+    "badge": "Dermoestètica & Imatge Corporal",
+    "alt": "Dermoestètica Christine Cano"
+  },
+  "about": {
+    "eyebrow": "La Teva Especialista de Confiança",
+    "title": "Coneix la Christine",
+    "collegiate": "Col·legiada Núm.",
+    "educationTitle": "La Meva Formació",
+    "cta": "Reservar una Cita"
+  },
+  "testBanner": {
+    "badge": "NOVETAT!",
+    "title": "No saps quin tractament és l'ideal per a tu?",
+    "text": "Respon unes breus preguntes i rep una recomanació personalitzada segons les necessitats úniques de la teva pell.",
+    "cta": "Fer el Test ara"
+  },
+  "services": {
+    "eyebrow": "Les Nostres Especialitats",
+    "title": "Catàleg de Tractaments",
+    "subtitle": "Solucions personalitzades per al teu benestar i bellesa.",
+    "tabsAria": "Categories de tractaments",
+    "searchAria": "Cercar tractament",
+    "searchPlaceholder": "Cercar...",
+    "searchInputAria": "Cercar tractaments",
+    "comingSoon": "Properament",
+    "availableSoon": "Disponible aviat",
+    "seeMore": "Veure més",
+    "close": "Tancar",
+    "session1": "1 Sessió",
+    "reserve": "Reservar aquest tractament",
+    "perSession": "per aquesta sessió",
+    "total": "total",
+    "packsTitle": "Opcions de Sessions i Packs",
+    "pack3Strong": "Pack 3 sessions",
+    "pack3Note": "(3a al 50%)",
+    "pack5Strong": "Pack 5 sessions",
+    "pack5Note": "(5a gratis)",
+    "perSessionDot": "per sessió.",
+    "packsAvailable": "Packs disponibles"
+  },
+  "testimonials": {
+    "eyebrow": "El que diuen les meves pacients",
+    "title": "Testimonis",
+    "onGoogle": "a Google",
+    "prev": "Anterior",
+    "next": "Següent"
+  },
+  "gallery": {
+    "eyebrow": "Espai",
+    "viewPhoto": "Veure foto",
+    "close": "Tancar",
+    "prev": "Foto anterior",
+    "next": "Següent foto",
+    "alts": [
+      "Consulta mèdica dermoestètica C3linic a Terrassa",
+      "Llitera de tractament dermoestètic",
+      "Christine Cano infermera dermoestètica"
+    ]
+  },
+  "giftcardHome": {
+    "badge": "Regala Benestar",
+    "title": "L'Experiència C3LINIC",
+    "subtitle": "Més que un tractament, un moment de cura i desconnexió.",
+    "desc": "Sorprèn aquesta persona especial amb la nostra <strong>Targeta Regal</strong>. Una elegant caixa física que inclou una invitació personalitzada per gaudir de qualsevol dels nostres tractaments dermoestètics. El regal perfecte per a qui valora la cura personal, la salut de la pell i un servei exclusiu.",
+    "feature1": "Estoig regal físic amb targeta dedicatòria personalitzada",
+    "feature2": "Diagnòstic dermoestètic inicial per adaptar el tractament a la seva pell",
+    "feature3": "Total flexibilitat: bescanviable pel tractament desitjat o import obert",
+    "cta": "Sol·licitar Targeta Regal",
+    "alt1": "Caixa Regal Exterior",
+    "alt2": "Detalls de la targeta"
+  },
+  "faq": {
+    "eyebrow": "Resolvem els teus dubtes",
+    "title": "Preguntes Freqüents",
+    "items": [
+      {
+        "question": "Quant duren els tractaments?",
+        "answer": "La durada varia segons el tractament, però generalment les nostres sessions oscil·len entre els 30 i 60 minuts. A la teva primera consulta et detallarem el temps estimat per al teu cas específic."
+      },
+      {
+        "question": "Com és la primera cita de valoració?",
+        "answer": "És una cita gratuïta i sense compromís on analitzarem el teu tipus de pell, escoltarem les teves preocupacions i objectius. A partir d'aquí, dissenyarem un pla de tractament totalment personalitzat per a tu."
+      },
+      {
+        "question": "Els tractaments són dolorosos?",
+        "answer": "La majoria dels nostres tractaments són indolors o causen molèsties mínimes. Sempre prioritzem la teva comoditat i, si el tractament ho requereix, apliquem crema anestèsica tòpica per assegurar que l'experiència sigui el més placentera possible."
+      },
+      {
+        "question": "Quines cures bàsiques he de tenir després d'un tractament?",
+        "answer": "Tot i que depèn del procediment, en general recomanem evitar l'exposició directa al sol, usar sempre protector solar SPF 50+, no aplicar maquillatge les primeres 24 hores i mantenir la pell ben hidratada."
+      }
+    ]
+  },
+  "contact": {
+    "eyebrow": "Reserva la teva cita",
+    "title": "Contacte",
+    "talkTitle": "Parlem?",
+    "talkText": "Reserva la teva cita per a una valoració personalitzada.",
+    "mapTitle": "Mapa d'ubicació",
+    "name": "Nom Complet",
+    "phone": "Telèfon (Opcional)",
+    "email": "Email (Opcional)",
+    "service": "Servei d'interès",
+    "selectService": "Selecciona un servei...",
+    "otherQuery": "Dubte / Altra consulta",
+    "message": "Missatge (Opcional)",
+    "privacyAccept": "He llegit i accepto la",
+    "privacyLink": "Política de Privacitat",
+    "submit": "Sol·licitar Cita",
+    "toastIncompleteTitle": "Dades incompletes",
+    "toastIncompleteText": "Si us plau, omple el nom i el telèfon.",
+    "sending": "Enviant...",
+    "toastSentTitle": "Enviat!",
+    "toastSentText": "Et contactarem aviat.",
+    "toastErrorTitle": "Error",
+    "toastErrorText": "Hi ha hagut un problema en enviar.",
+    "toastDemoTitle": "Demo",
+    "toastDemoText": "EmailJS no està a punt."
+  },
+  "postcare": {
+    "eyebrow": "Recomanacions",
+    "title": "Cures a Casa",
+    "quote": "\"L'èxit de qualsevol tractament dermoestètic no acaba a la consulta; continua a casa amb les teves cures diàries. He preparat aquestes indicacions per assegurar-nos que els resultats siguin òptims i la teva pell es recuperi de forma ideal. Segueix aquests consells i gaudeix de la teva nova lluminositat!\"",
+    "authorRole": "Infermera Dermoestètica",
+    "tabFacial": "Facial & Peeling",
+    "tabInjectables": "Injectables",
+    "tabBody": "Corporal",
+    "tabHair": "Capilar",
+    "facialTitle": "Cures per a Facial & Peeling",
+    "facialItems": [
+      {
+        "icon": "fas fa-sun",
+        "title": "Protecció Solar Estricta:",
+        "text": "Aplica FPS 50+ cada 2-3 hores i evita l'exposició solar directa durant els propers dies."
+      },
+      {
+        "icon": "fas fa-tint",
+        "title": "Extra Hidratació:",
+        "text": "La teva pell pot sentir-se tirant o seca. Usa cremes hidratants reparadores recomanades."
+      },
+      {
+        "icon": "fas fa-ban",
+        "title": "Evitar Calor Extrema:",
+        "text": "No vagis a saunes, banys turcs ni facis exercici intens que provoqui molta sudoració les primeres 48h."
+      },
+      {
+        "icon": "fas fa-hand-sparkles",
+        "title": "No Exfoliar:",
+        "text": "Evita l'ús d'exfoliants, àcids o retinols fins que la pell s'hagi recuperat completament."
+      }
+    ],
+    "injectablesTitle": "Cures per a Injectables (Àcid Hialurònic, Polinucleòtids)",
+    "injectablesItems": [
+      {
+        "icon": "fas fa-bed",
+        "title": "Repòs Relatiu:",
+        "text": "Evita l'exercici físic intens i ajupir-te bruscament durant les primeres 24 hores."
+      },
+      {
+        "icon": "fas fa-hand-paper",
+        "title": "No Tocar ni Pressionar:",
+        "text": "No massatgis ni pressionis la zona tractada per evitar desplaçar el producte."
+      },
+      {
+        "icon": "fas fa-snowflake",
+        "title": "Fred Local:",
+        "text": "Si notes inflamació, pots aplicar fred local indirecte (embolcallat en un drap) durant intervals curts."
+      },
+      {
+        "icon": "fas fa-wine-glass-alt",
+        "title": "Evitar Alcohol:",
+        "text": "És recomanable no consumir alcohol les primeres 24h per reduir el risc d'hematomes."
+      }
+    ],
+    "bodyTitle": "Cures per a Tractaments Corporals",
+    "bodyItems": [
+      {
+        "icon": "fas fa-glass-water",
+        "title": "Augmentar la Ingesta d'Aigua:",
+        "text": "Beu almenys 2 litres d'aigua al dia per ajudar al drenatge limfàtic i eliminar toxines."
+      },
+      {
+        "icon": "fas fa-walking",
+        "title": "Activitat Lleugera:",
+        "text": "Caminar ajuda a activar la circulació i millora els resultats dels tractaments corporals."
+      },
+      {
+        "icon": "fas fa-pump-soap",
+        "title": "Hidratació Profunda:",
+        "text": "Mantén la pell del cos molt ben hidratada amb cremes reafirmants o anticel·lulítiques si se t'ha indicat."
+      },
+      {
+        "icon": "fas fa-bath",
+        "title": "Evitar Aigua Molt Calenta:",
+        "text": "Duches amb aigua tèbia i evitar banys molt calents immediats."
+      }
+    ],
+    "hairTitle": "Cures per a Tractaments Capil·lars",
+    "hairItems": [
+      {
+        "icon": "fas fa-shower",
+        "title": "Rentat Suau:",
+        "text": "Evita rentar el cabell en les primeres 12-24 hores després del tractament. Després usa un xampú suau."
+      },
+      {
+        "icon": "fas fa-spray-can",
+        "title": "Productes Recomanats:",
+        "text": "Utilitza únicament els productes tòpics pautats a la consulta."
+      },
+      {
+        "icon": "fas fa-ban",
+        "title": "Sense Tractaments Agressius:",
+        "text": "Evita tints, decoloracions o eines de calor extrema (planxes) durant els primers dies."
+      },
+      {
+        "icon": "fas fa-hard-hat",
+        "title": "Protegir del Sol i el Fregament:",
+        "text": "Usa barrets amples si has d'estar al sol i evita gratar el cuir cabellut."
+      }
+    ]
+  },
+  "recommender": {
+    "eyebrow": "Test de Pell",
+    "title": "Què necessita la teva pell?",
+    "stepOf": "Pas",
+    "of": "de",
+    "startTitle": "Descobreix el teu tractament ideal",
+    "startText": "Respon 3 breus preguntes sobre la teva pell i els teus objectius, i et recomanarem els tractaments dermoestètics que millor s'adapten a les teves necessitats.",
+    "startCta": "Començar Test",
+    "q1": "1. Quina zona vols tractar?",
+    "zoneFacial": "Facial",
+    "zoneBody": "Corporal",
+    "zoneHair": "Capilar",
+    "q2": "2. Quina és la teva preocupació principal?",
+    "q3": "3. Com definiries l'estat de la teva pell?",
+    "stateSensitive": "Sensible o reactiva",
+    "stateDry": "Seca / Apagada",
+    "stateMixed": "Mixta / Grassa",
+    "stateMature": "Madura / Flaccidesa",
+    "prev": "Anterior",
+    "next": "Següent",
+    "book": "Reservar cita",
+    "restart": "Tornar a fer el test",
+    "fallbackTitle": "1a Consulta Informativa",
+    "goals": {
+      "f_arrugas": "Línies d'expressió / Arrugues",
+      "f_manchas": "Taques / Manca de lluminositat",
+      "f_marcas": "Marques d'acne / Textura",
+      "f_volumen": "Pèrdua de volum / Harmonització",
+      "f_ojeras": "Ulleres / Mirada cansada",
+      "c_celulitis": "Cel·lulitis / Greix localitzat",
+      "c_flacidez": "Flaccidesa / Recuperació",
+      "c_estrias": "Estries / Cicatrius",
+      "h_caida": "Caiguda del cabell / Poc volum"
+    },
+    "loadingTitle": "Analitzant les teves respostes...",
+    "loadingText": "Buscant els millors tractaments per a tu",
+    "resultsHeading": "Els Teus Tractaments Recomanats",
+    "resultsSub": "Segons les teves respostes, aquestes són les millors opcions per a tu:",
+    "recommendedBadge": "Recomanat per a tu",
+    "alertZone": "Si us plau, selecciona una zona.",
+    "alertGoal": "Si us plau, selecciona una preocupació principal.",
+    "alertState": "Si us plau, indica l'estat de la teva pell.",
+    "fallbackDesc": "La millor opció per analitzar la teva pell en detall i decidir juntes el camí a seguir."
+  },
+  "giftcardForm": {
+    "eyebrow": "Regala Benestar",
+    "title": "Configura la teva Targeta Regal",
+    "buyerTitle": "Dades del Comprador",
+    "buyerName": "Nom Complet *",
+    "buyerPhone": "Telèfon *",
+    "buyerEmail": "Email *",
+    "recipientTitle": "Dades del Destinatari",
+    "recipientName": "Nom del Destinatari *",
+    "shippingMethod": "Mètode d'Enviament *",
+    "pickup": "Recollida a Clínica (0,00€)",
+    "delivery": "Enviament a Domicili a Catalunya (4,90€)",
+    "street": "Carrer i número *",
+    "door": "Pis/Porta",
+    "zip": "Codi Postal *",
+    "city": "Població *",
+    "dedicationTitle": "Dedicatòria Personalitzada",
+    "dedicationLabel": "Missatge per a la targeta (Opcional, màx. 250 car.)",
+    "dedicationPlaceholder": "Escriu unes paraules per a aquesta persona especial...",
+    "giftChoiceTitle": "Elecció del Regal",
+    "specificTreatment": "Tractament Específic",
+    "openAmount": "Import Lliure",
+    "selectTreatment": "Selecciona el tractament *",
+    "selectTreatmentPlaceholder": "Selecciona un tractament...",
+    "selectAmount": "Selecciona l'import *",
+    "customAmountOption": "Import Personalitzat",
+    "customAmountLabel": "Import en € *",
+    "summaryTitle": "Resum de la teva comanda",
+    "subtotal": "Subtotal",
+    "shipping": "Enviament",
+    "total": "Total",
+    "privacyAccept": "He llegit i accepto la",
+    "privacyLink": "Política de Privacitat",
+    "submit": "Continuar al pagament",
+    "bizumTitle": "Pas Final: Pagament per Bizum",
+    "bizumText": "La teva targeta regal gairebé està a punt. Completa el pagament de forma segura per Bizum.",
+    "confirm": "Ja he pagat / Confirmar",
+    "cancel": "Cancel·lar",
+    "whatsappIntro": "Hola, vull sol·licitar una Targeta Regal:",
+    "summaryGift": "Regal:",
+    "summaryPickup": "Recollida a la Clínica",
+    "summaryDelivery": "Enviament a domicili",
+    "summaryTotal": "Total",
+    "confirmPay": "Confirmar i Realitzar Pagament",
+    "bizumPhone": "Telèfon Bizum:",
+    "bizumAmount": "Import a enviar:",
+    "bizumConcept": "Concepte obligatori:",
+    "whatsappBtn": "Enviar comprovant per WhatsApp",
+    "closeModal": "Tancar modal"
+  },
+  "cookies": {
+    "text": "Utilitzem cookies pròpies i de tercers per millorar la teva experiència. En continuar navegant, acceptes la nostra",
+    "privacy": "Política de Privacitat",
+    "accept": "Acceptar"
+  },
+  "whatsapp": "Contactar per WhatsApp",
+  "meta": {
+    "homeTitle": "C3linic - Dermoestètica Avançada",
+    "homeDescription": "Clínica de dermoestètica a Terrassa. Tractaments facials, corporals i capil·lars amb Christine Cano, infermera col·legiada."
+  }
+}

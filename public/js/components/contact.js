@@ -1,18 +1,21 @@
+import { t, getLang } from '../i18n.js?v=202608051425';
+
 export function renderContact(siteInfo, servicesData) {
     if (!siteInfo || !servicesData) return '';
 
-    // Leer parámetro de la URL
+    const privacyHref = getLang() === 'ca' ? '/privacidad-ca.html' : '/privacidad.html';
+
     const urlParams = typeof window !== 'undefined' ? new URLSearchParams(window.location.search) : new URLSearchParams();
     const selectedService = urlParams.get('servicio');
 
-    const visibleServices = servicesData.filter(cat => !cat.hidden && cat.category.toUpperCase() !== 'OCULTOS');
+    const visibleServices = servicesData.filter(cat => !cat.hidden);
 
     const serviceOptions = visibleServices.map(category => {
         const options = category.treatments
-            .filter(t => !t.hidden)
-            .map(t => {
-                const isSelected = selectedService === t.id ? 'selected' : '';
-                return `<option value="${t.id}" ${isSelected}>${t.title}</option>`;
+            .filter(tr => !tr.hidden)
+            .map(tr => {
+                const isSelected = selectedService === tr.id ? 'selected' : '';
+                return `<option value="${tr.id}" ${isSelected}>${tr.title}</option>`;
             })
             .join('');
         return `<optgroup label="${category.category}">${options}</optgroup>`;
@@ -22,15 +25,15 @@ export function renderContact(siteInfo, servicesData) {
         <section id="contacto">
             <div class="container">
                 <div class="section-title animate-on-scroll">
-                    <span>Reserva tu cita</span>
-                    <h2>Contacto</h2>
+                    <span>${t('contact.eyebrow')}</span>
+                    <h2>${t('contact.title')}</h2>
                 </div>
                 
                 <div class="contact-container animate-on-scroll">
                     <div class="contact-info">
                         <div class="contact-info-header">
-                            <h3>¿Hablamos?</h3>
-                            <p class="contact-info-description">Reserva tu cita para una valoración personalizada.</p>
+                            <h3>${t('contact.talkTitle')}</h3>
+                            <p class="contact-info-description">${t('contact.talkText')}</p>
                         </div>
                         
                         <div class="contact-details-list">
@@ -56,7 +59,7 @@ export function renderContact(siteInfo, servicesData) {
 
                         <div class="contact-map">
                             <iframe 
-                                title="Mapa de ubicación"
+                                title="${t('contact.mapTitle')}"
                                 src="${siteInfo.mapUrl}" 
                                 width="100%" 
                                 height="250" 
@@ -70,43 +73,43 @@ export function renderContact(siteInfo, servicesData) {
                     <div class="contact-form-wrapper">
                         <form id="contactForm" class="contact-form">
                             <div class="form-group">
-                                <label for="userName">Nombre Completo</label>
+                                <label for="userName">${t('contact.name')}</label>
                                 <input type="text" id="userName" name="user_name" class="form-control" required>
                             </div>
                             
                             <div class="form-group">
-                                <label for="userPhone">Teléfono (Opcional)</label>
+                                <label for="userPhone">${t('contact.phone')}</label>
                                 <input type="tel" id="userPhone" name="user_phone" class="form-control" placeholder="+34 600 000 000">
                             </div>
 
                             <div class="form-group">
-                                <label for="userEmail">Email (Opcional)</label>
+                                <label for="userEmail">${t('contact.email')}</label>
                                 <input type="email" id="userEmail" name="user_email" class="form-control" placeholder="nombre@ejemplo.com">
                             </div>
                             
                             <div class="form-group form-group-select">
-                                <label for="serviceInterest">Servicio de interés</label>
+                                <label for="serviceInterest">${t('contact.service')}</label>
                                 <select id="serviceInterest" name="service_interest" class="form-control" required>
-                                    <option value="">Seleccione un servicio...</option>
+                                    <option value="">${t('contact.selectService')}</option>
                                     ${serviceOptions}
-                                    <option value="consulta">Duda / Otra consulta</option>
+                                    <option value="consulta">${t('contact.otherQuery')}</option>
                                 </select>
                             </div>
                             
                             <div class="form-group">
-                                <label for="message">Mensaje (Opcional)</label>
+                                <label for="message">${t('contact.message')}</label>
                                 <textarea id="message" name="message" class="form-control" rows="3"></textarea>
                             </div>
 
                             <div class="form-group form-checkbox">
                                 <label>
                                     <input type="checkbox" required>
-                                    He leído y acepto la <a href="/privacidad.html" target="_blank" rel="noopener noreferrer">Política de Privacidad</a>
+                                    ${t('contact.privacyAccept')} <a href="${privacyHref}" target="_blank" rel="noopener noreferrer">${t('contact.privacyLink')}</a>
                                 </label>
                             </div>
                             
                             <button type="submit" class="btn btn-primary contact-form-submit">
-                                Solicitar Cita
+                                ${t('contact.submit')}
                             </button>
                         </form>
                     </div>

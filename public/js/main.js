@@ -1,4 +1,4 @@
-import { renderHeader } from './components/header.js?v=202608051425';
+import { renderHeader, initLangSwitcher } from './components/header.js?v=202608051425';
 import { renderHero } from './components/hero.js?v=202608051425';
 import { renderTestBanner } from './components/test-banner.js?v=202608051425';
 import { renderAbout } from './components/about.js?v=202608051425';
@@ -12,16 +12,15 @@ import { renderRecommender, initRecommenderLogic } from './components/recommende
 import { renderContact } from './components/contact.js?v=202608051425';
 import { renderFooter } from './components/footer.js?v=202608051425';
 import { renderPostCare, initPostCareTabs } from './components/postcare.js?v=202608051425';
-
-// Importamos la Lógica de Interacción
 import { initializeInteractions } from './interactions.js?v=202608051425';
+import { detectLang, loadUI, configUrl, t } from './i18n.js?v=202608051425';
 
-async function loadConfig() {
+async function loadConfig(lang) {
     try {
         const [general, content, services] = await Promise.all([
-            fetch('/config/general.json?v=202608051425').then(res => res.json()),
-            fetch('/config/content.json?v=202608051425').then(res => res.json()),
-            fetch('/config/services.json?v=202608051425').then(res => res.json())
+            fetch(configUrl('general.json', lang)).then(res => res.json()),
+            fetch(configUrl('content.json', lang)).then(res => res.json()),
+            fetch(configUrl('services.json', lang)).then(res => res.json())
         ]);
         return { ...general, ...content, services };
     } catch (error) {
@@ -30,19 +29,40 @@ async function loadConfig() {
     }
 }
 
+function applyMetaAndCookies() {
+    const title = t('meta.homeTitle');
+    if (title && (window.location.pathname === '/' || window.location.pathname === '/index.html')) {
+        document.title = title;
+    }
+    const desc = t('meta.homeDescription');
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc && desc) metaDesc.setAttribute('content', desc);
+
+    const cookieText = document.querySelector('#cookieBanner p');
+    if (cookieText) {
+        cookieText.innerHTML = `${t('cookies.text')} <a href="/privacidad.html">${t('cookies.privacy')}</a>.`;
+    }
+    const cookieBtn = document.querySelector('#acceptCookies');
+    if (cookieBtn) cookieBtn.textContent = t('cookies.accept');
+    const wa = document.querySelector('.whatsapp-float');
+    if (wa) wa.setAttribute('aria-label', t('whatsapp'));
+}
+
 async function initApp() {
-    const config = await loadConfig();
+    const lang = detectLang();
+    await loadUI(lang);
+
+    const config = await loadConfig(lang);
     if (!config) return;
 
     window.__SERVICES_CONFIG = config.services;
 
-    // 0. Render Header
     const headerElement = document.getElementById('site-header');
     if (headerElement) {
         headerElement.innerHTML = renderHeader();
+        initLangSwitcher();
     }
 
-    // 1. Renderizado Condicional por Ruta
     const appContainer = document.getElementById('app-content');
     if (appContainer) {
         const path = window.location.pathname;
@@ -72,27 +92,25 @@ async function initApp() {
         }
     }
 
-    // 2. Renderizado Footer (va fuera del app-content normalmente, o reemplaza el existente)
     const footerElement = document.querySelector('footer');
     if (footerElement) {
         footerElement.outerHTML = renderFooter(config.siteInfo, config.footer);
     }
 
-    // 3. Títulos y Metadatos
-    document.title = config.siteInfo.title;
+    if (config.siteInfo?.title) {
+        document.title = config.siteInfo.title;
+    }
 
-    // 4. Inicializar Lógica (Event Listeners, Menús, Scroll)
+    applyMetaAndCookies();
     initializeInteractions();
 
-    // 5. Ocultar Loader
     const loader = document.querySelector('.loading-screen');
     if (loader) {
         loader.style.opacity = '0';
         setTimeout(() => loader.style.display = 'none', 500);
     }
-    
+
     console.log("✅ C3LINIC App Iniciada Correctamente");
 }
 
-// Arrancamos cuando el DOM esté listo
 document.addEventListener('DOMContentLoaded', initApp);

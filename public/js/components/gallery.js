@@ -1,6 +1,8 @@
+import { t, getUI } from '../i18n.js?v=202608051425';
+
 /**
  * Galería / collage de fotos (ej. clínica).
- * Las imágenes se leen de config/content.json → gallery.images
+ * Las imágenes se leen de config → gallery.images
  * y se sirven desde img/fotos-clinica/
  */
 const GALLERY_BASE_PATH = 'img/fotos-clinica/';
@@ -9,22 +11,17 @@ export function renderGallery(galleryData) {
   if (!galleryData || !galleryData.images || galleryData.images.length === 0) return '';
 
   const images = galleryData.images;
-  const title = galleryData.title || 'Fotos';
+  const title = galleryData.title || t('gallery.eyebrow');
   const subtitle = galleryData.subtitle || '';
-
-  const seoAltTags = [
-    "Consulta médica dermoestética C3linic en Terrassa",
-    "Camilla de tratamiento dermoestético",
-    "Christine Cano enfermera dermoestética"
-  ];
+  const seoAltTags = getUI().gallery?.alts || [];
 
   const itemsHTML = [...images, ...images]
     .map((filename, index) => {
       const src = GALLERY_BASE_PATH + encodeURIComponent(filename);
       const originalIndex = index % images.length;
-      const altText = seoAltTags[originalIndex % seoAltTags.length];
+      const altText = seoAltTags[originalIndex % seoAltTags.length] || '';
       return `
-        <div class="gallery-item" role="button" tabindex="0" data-index="${originalIndex}" data-src="${src}" aria-label="Ver foto ${originalIndex + 1}">
+        <div class="gallery-item" role="button" tabindex="0" data-index="${originalIndex}" data-src="${src}" aria-label="${t('gallery.viewPhoto')} ${originalIndex + 1}">
           <img src="${src}" alt="${altText}" loading="lazy">
         </div>
       `;
@@ -35,7 +32,7 @@ export function renderGallery(galleryData) {
     <section id="fotos" class="gallery-section">
       <div class="container">
         <div class="section-title animate-on-scroll">
-          <span>Espacio</span>
+          <span>${t('gallery.eyebrow')}</span>
           <h2>${title}</h2>
           ${subtitle ? `<p>${subtitle}</p>` : ''}
         </div>
@@ -46,16 +43,16 @@ export function renderGallery(galleryData) {
         </div>
       </div>
       <div id="gallery-lightbox" class="gallery-lightbox" aria-hidden="true">
-        <button type="button" class="gallery-lightbox-close" aria-label="Cerrar">
+        <button type="button" class="gallery-lightbox-close" aria-label="${t('gallery.close')}">
           <i class="fas fa-times"></i>
         </button>
-        <button type="button" class="gallery-lightbox-prev" aria-label="Foto anterior">
+        <button type="button" class="gallery-lightbox-prev" aria-label="${t('gallery.prev')}">
           <i class="fas fa-chevron-left"></i>
         </button>
         <div class="gallery-lightbox-image-wrap">
           <img id="gallery-lightbox-img" src="" alt="">
         </div>
-        <button type="button" class="gallery-lightbox-next" aria-label="Siguiente foto">
+        <button type="button" class="gallery-lightbox-next" aria-label="${t('gallery.next')}">
           <i class="fas fa-chevron-right"></i>
         </button>
       </div>

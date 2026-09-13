@@ -1,5 +1,6 @@
 import { showToast } from './utils/toast.js?v=202608051425';
 import { buildTreatmentModalContent } from './components/services.js?v=202608051425';
+import { t } from './i18n.js?v=202608051425';
 
 // --- Navegación Móvil ---
 function initializeMobileNavigation() {
@@ -141,31 +142,31 @@ function initializeContactForm() {
         };
 
         if (!formData.nombre || !formData.telefono) {
-            showToast('Datos incompletos', 'Por favor, rellena nombre y teléfono.', 'error');
+            showToast(t('contact.toastIncompleteTitle'), t('contact.toastIncompleteText'), 'error');
             return;
         }
 
         const btn = newForm.querySelector('button[type="submit"]');
         const originalText = btn.innerText;
-        btn.innerText = 'Enviando...';
+        btn.innerText = t('contact.sending');
         btn.disabled = true;
 
         if (typeof sendEmail === 'function') {
             sendEmail(formData)
                 .then(() => {
-                    showToast('¡Enviado!', 'Te contactaremos pronto.', 'success');
+                    showToast(t('contact.toastSentTitle'), t('contact.toastSentText'), 'success');
                     newForm.reset();
                 })
                 .catch((err) => {
                     console.error(err);
-                    showToast('Error', 'Hubo un problema al enviar.', 'error');
+                    showToast(t('contact.toastErrorTitle'), t('contact.toastErrorText'), 'error');
                 })
                 .finally(() => {
                     btn.innerText = originalText;
                     btn.disabled = false;
                 });
         } else {
-            showToast('Demo', 'EmailJS no está listo.', 'info');
+            showToast(t('contact.toastDemoTitle'), t('contact.toastDemoText'), 'info');
             btn.innerText = originalText;
             btn.disabled = false;
         }
@@ -281,8 +282,8 @@ function initializeServicesTabsAndModal() {
       const display = card.querySelector('.pack-price-display');
       if (display) {
         display.innerHTML = pack === 'single'
-          ? `<strong>${total}€</strong> por esta sesión`
-          : `<strong>${total}€</strong> total`;
+          ? `<strong>${total}€</strong> ${t('services.perSession')}`
+          : `<strong>${total}€</strong> ${t('services.total')}`;
       }
     });
   });

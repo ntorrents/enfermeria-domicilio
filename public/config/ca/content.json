@@ -1,0 +1,57 @@
+{
+	"gallery": {
+		"title": "Fotos",
+		"subtitle": "La nostra clínica",
+		"images": ["1.jpeg", "2.jpeg", "3.jpeg", "4.jpeg", "5.jpeg", "6.jpeg", "7.jpeg"]
+	},
+	"hero": {
+		"title": "Realça la teva Bellesa Natural",
+		"subtitle": "Serveis dermoestètics professionals per cuidar la salut i la lluminositat de la teva pell.",
+		"primaryButton": "Veure Tractaments",
+		"secondaryButton": "Reservar Cita"
+	},
+	"aboutMe": {
+		"name": "Christine Cano",
+		"title": "Infermera Dermoestètica",
+		"collegiateNumber": "075396",
+		"intro": "Per a mi, cuidar la teva pell és cuidar de tu en la teva totalitat. Entenc que allò que projectem a l'exterior neix del nostre equilibri intern; per això, el meu enfocament no es queda a la superfície, sinó que és holístic.",
+		"education": [
+			"Diplomada en Infermeria (UAB)",
+			"Màster en Dermoestètica i Imatge Corporal (NUS Agency, Barcelona)"
+		],
+		"clinicAddress": "Terrassa, Barcelona",
+		"clinicNote": "Consulta privada"
+	},
+	"testimonials": [
+		{
+			"name": "Loïda",
+			"text": "Molt contenta, gràcies, Christine.\nExplicacions molt clares sobre el tractament rebut. Tracte molt proper. Bona professional.",
+			"rating": 5
+		},
+		{
+			"name": "Alba",
+			"text": "Christine és una professional increïble, estic molt contenta amb el resultat i pel tracte.\nLa recomano al cent per cent!",
+			"rating": 5
+		},
+		{
+			"name": "Pol",
+			"text": "Tot genial. Des del primer moment es va interessar per les meves rutines, hàbits i el que jo buscava per, en aquest cas, la meva cura i millora de la pell de la cara. Tracte molt professional abans, durant i després del tractament. 100% recomanable.",
+			"rating": 5
+		},
+		{
+			"name": "Silvia",
+			"text": "He anat a fer-me els llavis i no puc estar més feliç amb el resultat. El seu tracte és súper proper, em va anar explicant cada pas i, tot i que al principi tenia una mica de por per les punxades, va saber guanyar-se la meva confiança totalment. La recomano 100%!",
+			"rating": 5
+		},
+		{
+			"name": "Ainoa",
+			"text": "Súper satisfeta amb Christine i el seu servei! Entén perfectament el que busques, t'acompanya en tot el procediment i t'explica qualsevol dubte que tinguis sense inconvenient. Ja l'he recomanat a amigues meves i repetiria els seus serveis, molt contenta.",
+			"rating": 5
+		},
+		{
+			"name": "Lydia",
+			"text": "Vaig tenir una experiència meravellosa a C3linic i estic encantada amb el tractament rebut. Christine va ser increïblement professional, atenta i càlida durant tot el procés. Es va prendre el temps per explicar-me tot, em va fer sentir còmoda i es va assegurar que rebés la millor atenció possible. La seva atenció al detall i la seva genuïna amabilitat van ser realment excepcionals. Recomano àmpliament C3linic a qualsevol que busqui un tractament d'alta qualitat i un servei excepcional. Gràcies, Christine!",
+			"rating": 5
+		}
+	]
+}

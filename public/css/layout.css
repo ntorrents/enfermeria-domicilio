@@ -109,6 +109,42 @@
     color: var(--primary);
 }
 
+.lang-switcher {
+    display: inline-flex;
+    align-items: center;
+    gap: 0;
+    border: 1px solid rgba(var(--primary-rgb), 0.2);
+    border-radius: 999px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.lang-btn {
+    appearance: none;
+    border: 0;
+    background: transparent;
+    color: var(--text-main);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    padding: 0.35rem 0.65rem;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.lang-btn + .lang-btn {
+    border-left: 1px solid rgba(var(--primary-rgb), 0.15);
+}
+
+.lang-btn.active {
+    background: var(--primary);
+    color: #fff;
+}
+
+.lang-btn:not(.active):hover {
+    background: rgba(var(--primary-rgb), 0.08);
+}
+
 .btn-nav {
     padding: 0.6rem 1.5rem !important;
     background-color: var(--primary);

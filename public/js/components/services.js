@@ -1,3 +1,5 @@
+import { t, DETAIL_EXCLUDE_TITLES } from '../i18n.js?v=202608051425';
+
 /**
  * Tratamientos que tienen packs de sesiones (1, 3 y/o 5).
  * - Bioestimulación: ambos (solo 1 y 3, ver abajo)
@@ -91,20 +93,20 @@ export function renderServices(servicesData) {
     <section id="servicios" class="services-section-cards">
       <div class="container">
         <div class="section-title animate-on-scroll">
-          <span>Nuestras Especialidades</span>
-          <h2>Catálogo de Tratamientos</h2>
-          <p>Soluciones personalizadas para tu bienestar y belleza.</p>
+          <span>${t('services.eyebrow')}</span>
+          <h2>${t('services.title')}</h2>
+          <p>${t('services.subtitle')}</p>
         </div>
 
-        <div class="services-tabs-wrapper animate-on-scroll" aria-label="Categorías de tratamientos">
+        <div class="services-tabs-wrapper animate-on-scroll" aria-label="${t('services.tabsAria')}">
           <div class="services-tabs" role="tablist">
             ${tabsHTML}
           </div>
           <div class="services-search-container">
-            <button type="button" class="services-search-btn" aria-label="Buscar tratamiento">
+            <button type="button" class="services-search-btn" aria-label="${t('services.searchAria')}">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
             </button>
-            <input type="text" id="services-search-input" class="services-search-input" placeholder="Buscar..." aria-label="Buscar tratamientos">
+            <input type="text" id="services-search-input" class="services-search-input" placeholder="${t('services.searchPlaceholder')}" aria-label="${t('services.searchInputAria')}">
           </div>
         </div>
 
@@ -116,7 +118,7 @@ export function renderServices(servicesData) {
       <div id="treatment-modal" class="treatment-modal" role="dialog" aria-modal="true" aria-labelledby="treatment-modal-title" hidden>
         <div class="treatment-modal-overlay"></div>
         <div class="treatment-modal-dialog">
-          <button type="button" class="treatment-modal-close" aria-label="Cerrar">
+          <button type="button" class="treatment-modal-close" aria-label="${t('services.close')}">
             <i class="fas fa-times"></i>
           </button>
           <div id="treatment-modal-body" class="treatment-modal-body"></div>
@@ -146,7 +148,7 @@ function renderTreatmentCard(treatment) {
 
 	let priceBlock;
 	if (isComingSoon) {
-		priceBlock = '<span class="service-price-tag service-price-tag--soon">Próximamente</span>';
+		priceBlock = `<span class="service-price-tag service-price-tag--soon">${t('services.comingSoon')}</span>`;
 	} else if (typeof treatment.price === "string") {
 		priceBlock = `<span class="service-price-tag">${escapeHTML(treatment.price)}</span>`;
 	} else if (priceNum !== null) {
@@ -155,18 +157,16 @@ function renderTreatmentCard(treatment) {
 		priceBlock = "";
 	}
 
-	const description = escapeHTML(
-		treatment.description || "Descripción disponible próximamente.",
-	);
+	const description = escapeHTML(treatment.description || "");
 	const metaHTML = treatment.duration
 		? `<div class="card-meta"><span><i class="far fa-clock"></i> ${escapeHTML(treatment.duration)}</span></div>`
 		: "";
 
 	const verMasHTML = isComingSoon
-		? '<span class="btn btn-card disabled">Disponible pronto</span>'
-		: `<button type="button" class="btn btn-card btn-ver-mas" data-treatment-id="${escapeHTML(treatment.id)}">Ver más <i class="fas fa-arrow-right"></i></button>`;
+		? `<span class="btn btn-card disabled">${t('services.availableSoon')}</span>`
+		: `<button type="button" class="btn btn-card btn-ver-mas" data-treatment-id="${escapeHTML(treatment.id)}">${t('services.seeMore')} <i class="fas fa-arrow-right"></i></button>`;
 
-	const packBadge = hasPacks ? `<div class="pack-badge"><i class="fas fa-layer-group"></i> Packs disponibles</div>` : "";
+	const packBadge = hasPacks ? `<div class="pack-badge"><i class="fas fa-layer-group"></i> ${t('services.packsAvailable')}</div>` : "";
 
 	return `
     <article class="${cardClass} animate-on-scroll" data-treatment-id="${escapeHTML(treatment.id)}">
@@ -196,14 +196,13 @@ export function buildTreatmentModalContent(treatment) {
 
 	const d = treatment.detail;
 	let detailsListHTML = "";
-	const excludeTitles = ["Beneficios Clave", "Sesiones", "Resultados"];
 	if (d.details && d.details.length > 0) {
 		detailsListHTML = d.details
-			.filter((item) => !excludeTitles.includes(item.title))
+			.filter((item) => !DETAIL_EXCLUDE_TITLES.has(item.title))
 			.map((item) => {
 				let text = item.text;
 				if (item.icon && item.icon.includes("fa-euro-sign"))
-					text = `${treatment.price}€ por sesión.`;
+					text = `${treatment.price}€ ${t('services.perSessionDot')}`;
 				if (item.icon && item.icon.includes("fa-clock"))
 					text = treatment.duration;
 				return `
@@ -231,26 +230,26 @@ export function buildTreatmentModalContent(treatment) {
 
 		packsInfoHTML = `
       <div class="modal-pack-info">
-        <h3>Opciones de Sesiones y Packs</h3>
+        <h3>${t('services.packsTitle')}</h3>
         <ul class="modal-pack-list">
           <li>
             <div class="modal-pack-item-info">
-              <strong>1 Sesión</strong>
+              <strong>${t('services.session1')}</strong>
             </div>
             <div class="modal-pack-item-price">${single}€</div>
           </li>
           <li>
             <div class="modal-pack-item-info">
-              <strong>Pack 3 sesiones</strong>
-              <span>(3ª al 50%)</span>
+              <strong>${t('services.pack3Strong')}</strong>
+              <span>${t('services.pack3Note')}</span>
             </div>
             <div class="modal-pack-item-price">${pack3}€</div>
           </li>
           ${!onlyPack3 ? `
           <li>
             <div class="modal-pack-item-info">
-              <strong>Pack 5 sesiones</strong>
-              <span>(5ª gratis)</span>
+              <strong>${t('services.pack5Strong')}</strong>
+              <span>${t('services.pack5Note')}</span>
             </div>
             <div class="modal-pack-item-price">${pack5}€</div>
           </li>` : ""}
@@ -259,14 +258,13 @@ export function buildTreatmentModalContent(treatment) {
     `;
 	}
 
-    // If it's the specific service page link, modify according to requirement
     const reserveHref = `/contacto?servicio=${treatment.id}`;
 	return `
     <h2 id="treatment-modal-title" class="treatment-modal-title">${escapeHTML(treatment.title)}</h2>
     ${d.description ? `<p class="treatment-modal-description">${escapeHTML(d.description)}</p>` : ""}
     <div class="details-list">${detailsListHTML}</div>
     ${packsInfoHTML}
-    <a href="${reserveHref}" class="btn btn-primary btn-block">Reservar este tratamiento</a>
+    <a href="${reserveHref}" class="btn btn-primary btn-block">${t('services.reserve')}</a>
   `;
 }
 

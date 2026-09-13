@@ -1,0 +1,342 @@
+{
+  "langName": "Castellano",
+  "langShort": "ES",
+  "header": {
+    "services": "Servicios",
+    "treatments": "Tratamientos",
+    "giftCard": "Tarjeta Regalo",
+    "postCare": "Cuidados Post-Tratamiento",
+    "recommender": "✨ ¿Qué necesita tu piel?",
+    "contact": "Contacto",
+    "openMenu": "Abrir menú",
+    "switchTo": "Canviar a català"
+  },
+  "footer": {
+    "legal": "Aviso Legal",
+    "privacy": "Política de Privacidad",
+    "developedBy": "Desarrollado por"
+  },
+  "hero": {
+    "badge": "Dermoestética & Imagen Corporal",
+    "alt": "Dermoestética Christine Cano"
+  },
+  "about": {
+    "eyebrow": "Tu Especialista de Confianza",
+    "title": "Conoce a Christine",
+    "collegiate": "Colegiada Nº",
+    "educationTitle": "Mi Formación",
+    "cta": "Reservar una Cita"
+  },
+  "testBanner": {
+    "badge": "¡NOVEDAD!",
+    "title": "¿No sabes qué tratamiento es el ideal para ti?",
+    "text": "Responde a unas breves preguntas y recibe una recomendación personalizada según las necesidades únicas de tu piel.",
+    "cta": "Hacer el Test ahora"
+  },
+  "services": {
+    "eyebrow": "Nuestras Especialidades",
+    "title": "Catálogo de Tratamientos",
+    "subtitle": "Soluciones personalizadas para tu bienestar y belleza.",
+    "tabsAria": "Categorías de tratamientos",
+    "searchAria": "Buscar tratamiento",
+    "searchPlaceholder": "Buscar...",
+    "searchInputAria": "Buscar tratamientos",
+    "comingSoon": "Próximamente",
+    "availableSoon": "Disponible pronto",
+    "seeMore": "Ver más",
+    "close": "Cerrar",
+    "packsAvailable": "Packs disponibles",
+    "packsTitle": "Opciones de Sesiones y Packs",
+    "session1": "1 Sesión",
+    "pack3Strong": "Pack 3 sesiones",
+    "pack3Note": "(3ª al 50%)",
+    "pack5Strong": "Pack 5 sesiones",
+    "pack5Note": "(5ª gratis)",
+    "reserve": "Reservar este tratamiento",
+    "perSession": "por esta sesión",
+    "perSessionDot": "por sesión.",
+    "total": "total"
+  },
+  "testimonials": {
+    "eyebrow": "Lo que dicen mis pacientes",
+    "title": "Testimonios",
+    "onGoogle": "en Google",
+    "prev": "Anterior",
+    "next": "Siguiente"
+  },
+  "gallery": {
+    "eyebrow": "Espacio",
+    "viewPhoto": "Ver foto",
+    "close": "Cerrar",
+    "prev": "Foto anterior",
+    "next": "Siguiente foto",
+    "alts": [
+      "Consulta médica dermoestética C3linic en Terrassa",
+      "Camilla de tratamiento dermoestético",
+      "Christine Cano enfermera dermoestética"
+    ]
+  },
+  "giftcardHome": {
+    "badge": "Regala Bienestar",
+    "title": "La Experiencia C3LINIC",
+    "subtitle": "Más que un tratamiento, un momento de cuidado y desconexión.",
+    "desc": "Sorprende a esa persona especial con nuestra <strong>Tarjeta Regalo</strong>. Una elegante caja física que incluye una invitación personalizada para disfrutar de cualquiera de nuestros tratamientos dermoestéticos. El regalo perfecto para quienes valoran el cuidado personal, la salud de su piel y un servicio exclusivo.",
+    "feature1": "Estuche regalo físico con tarjeta dedicatoria personalizada",
+    "feature2": "Diagnóstico dermoestético inicial para adaptar el tratamiento a su piel",
+    "feature3": "Total flexibilidad: canjeable por el tratamiento deseado o importe abierto",
+    "cta": "Solicitar Tarjeta Regalo",
+    "alt1": "Caja Regalo Exterior",
+    "alt2": "Detalles de la tarjeta"
+  },
+  "faq": {
+    "eyebrow": "Resolvemos tus dudas",
+    "title": "Preguntas Frecuentes",
+    "items": [
+      {
+        "question": "¿Cuánto duran los tratamientos?",
+        "answer": "La duración varía según el tratamiento, pero generalmente nuestras sesiones oscilan entre los 30 y 60 minutos. En tu primera consulta te detallaremos el tiempo estimado para tu caso específico."
+      },
+      {
+        "question": "¿Cómo es la primera cita de valoración?",
+        "answer": "Es una cita gratuita y sin compromiso donde analizaremos tu tipo de piel, escucharemos tus preocupaciones y objetivos. A partir de ahí, diseñaremos un plan de tratamiento totalmente personalizado para ti."
+      },
+      {
+        "question": "¿Los tratamientos son dolorosos?",
+        "answer": "La mayoría de nuestros tratamientos son indoloros o causan molestias mínimas. Siempre priorizamos tu comodidad y, si el tratamiento lo requiere, aplicamos crema anestésica tópica para asegurar que la experiencia sea lo más placentera posible."
+      },
+      {
+        "question": "¿Qué cuidados básicos debo tener tras un tratamiento?",
+        "answer": "Aunque depende del procedimiento, por lo general recomendamos evitar la exposición directa al sol, usar siempre protector solar SPF 50+, no aplicar maquillaje las primeras 24 horas y mantener la piel bien hidratada."
+      }
+    ]
+  },
+  "contact": {
+    "eyebrow": "Reserva tu cita",
+    "title": "Contacto",
+    "talkTitle": "¿Hablamos?",
+    "talkText": "Reserva tu cita para una valoración personalizada.",
+    "mapTitle": "Mapa de ubicación",
+    "name": "Nombre Completo",
+    "phone": "Teléfono (Opcional)",
+    "email": "Email (Opcional)",
+    "service": "Servicio de interés",
+    "selectService": "Seleccione un servicio...",
+    "otherQuery": "Duda / Otra consulta",
+    "message": "Mensaje (Opcional)",
+    "privacyAccept": "He leído y acepto la",
+    "privacyLink": "Política de Privacidad",
+    "submit": "Solicitar Cita",
+    "toastIncompleteTitle": "Datos incompletos",
+    "toastIncompleteText": "Por favor, rellena nombre y teléfono.",
+    "sending": "Enviando...",
+    "toastSentTitle": "¡Enviado!",
+    "toastSentText": "Te contactaremos pronto.",
+    "toastErrorTitle": "Error",
+    "toastErrorText": "Hubo un problema al enviar.",
+    "toastDemoTitle": "Demo",
+    "toastDemoText": "EmailJS no está listo."
+  },
+  "postcare": {
+    "eyebrow": "Recomendaciones",
+    "title": "Cuidados en Casa",
+    "quote": "\"El éxito de cualquier tratamiento dermoestético no termina en la consulta; continúa en casa con tus cuidados diarios. He preparado estas indicaciones para asegurarnos de que los resultados sean óptimos y tu piel se recupere de forma ideal. ¡Sigue estos consejos y disfruta de tu nueva luminosidad!\"",
+    "authorRole": "Enfermera Dermoestética",
+    "tabFacial": "Facial & Peeling",
+    "tabInjectables": "Inyectables",
+    "tabBody": "Corporal",
+    "tabHair": "Capilar",
+    "facialTitle": "Cuidados para Facial & Peeling",
+    "facialItems": [
+      {
+        "icon": "fas fa-sun",
+        "title": "Protección Solar Estricta:",
+        "text": "Aplica FPS 50+ cada 2-3 horas y evita la exposición solar directa durante los próximos días."
+      },
+      {
+        "icon": "fas fa-tint",
+        "title": "Extra Hidratación:",
+        "text": "Tu piel puede sentirse tirante o seca. Usa cremas hidratantes reparadoras recomendadas."
+      },
+      {
+        "icon": "fas fa-ban",
+        "title": "Evitar Calor Extremo:",
+        "text": "No acudas a saunas, baños turcos ni realices ejercicio intenso que provoque mucha sudoración las primeras 48h."
+      },
+      {
+        "icon": "fas fa-hand-sparkles",
+        "title": "No Exfoliar:",
+        "text": "Evita el uso de exfoliantes, ácidos o retinoles hasta que la piel se haya recuperado completamente."
+      }
+    ],
+    "injectablesTitle": "Cuidados para Inyectables (Ácido Hialurónico, Polinucleótidos)",
+    "injectablesItems": [
+      {
+        "icon": "fas fa-bed",
+        "title": "Reposo Relativo:",
+        "text": "Evita el ejercicio físico intenso y agacharte bruscamente durante las primeras 24 horas."
+      },
+      {
+        "icon": "fas fa-hand-paper",
+        "title": "No Tocar ni Presionar:",
+        "text": "No masajees ni presiones la zona tratada para evitar desplazar el producto."
+      },
+      {
+        "icon": "fas fa-snowflake",
+        "title": "Frío Local:",
+        "text": "Si notas inflamación, puedes aplicar frío local indirecto (envuelto en un paño) durante intervalos cortos."
+      },
+      {
+        "icon": "fas fa-wine-glass-alt",
+        "title": "Evitar Alcohol:",
+        "text": "Es recomendable no consumir alcohol las primeras 24h para reducir el riesgo de hematomas."
+      }
+    ],
+    "bodyTitle": "Cuidados para Tratamientos Corporales",
+    "bodyItems": [
+      {
+        "icon": "fas fa-glass-water",
+        "title": "Aumentar la Ingesta de Agua:",
+        "text": "Bebe al menos 2 litros de agua al día para ayudar al drenaje linfático y eliminar toxinas."
+      },
+      {
+        "icon": "fas fa-walking",
+        "title": "Actividad Ligera:",
+        "text": "Caminar ayuda a activar la circulación y mejora los resultados de los tratamientos corporales."
+      },
+      {
+        "icon": "fas fa-pump-soap",
+        "title": "Hidratación Profunda:",
+        "text": "Mantén la piel del cuerpo muy bien hidratada con cremas reafirmantes o anticelulíticas si se te ha indicado."
+      },
+      {
+        "icon": "fas fa-bath",
+        "title": "Evitar Agua Muy Caliente:",
+        "text": "Duchas con agua templada y evitar baños muy calientes inmediatos."
+      }
+    ],
+    "hairTitle": "Cuidados para Tratamientos Capilares",
+    "hairItems": [
+      {
+        "icon": "fas fa-shower",
+        "title": "Lavado Suave:",
+        "text": "Evita lavar el cabello en las primeras 12-24 horas tras el tratamiento. Luego usa un champú suave."
+      },
+      {
+        "icon": "fas fa-spray-can",
+        "title": "Productos Recomendados:",
+        "text": "Utiliza únicamente los productos tópicos pautados en consulta."
+      },
+      {
+        "icon": "fas fa-ban",
+        "title": "Sin Tratamientos Agresivos:",
+        "text": "Evita tintes, decoloraciones o herramientas de calor extremo (planchas) durante los primeros días."
+      },
+      {
+        "icon": "fas fa-hard-hat",
+        "title": "Proteger del Sol y Roce:",
+        "text": "Usa sombreros holgados si vas a estar al sol y evita rascar el cuero cabelludo."
+      }
+    ]
+  },
+  "recommender": {
+    "eyebrow": "Test de Piel",
+    "title": "¿Qué necesita tu piel?",
+    "stepOf": "Paso",
+    "of": "de",
+    "startTitle": "Descubre tu tratamiento ideal",
+    "startText": "Responde a 3 breves preguntas sobre tu piel y tus objetivos, y te recomendaremos los tratamientos dermoestéticos que mejor se adaptan a tus necesidades.",
+    "startCta": "Comenzar Test",
+    "q1": "1. ¿Qué zona quieres tratar?",
+    "zoneFacial": "Facial",
+    "zoneBody": "Corporal",
+    "zoneHair": "Capilar",
+    "q2": "2. ¿Cuál es tu preocupación principal?",
+    "q3": "3. ¿Cómo definirías el estado de tu piel?",
+    "stateSensitive": "Sensible o reactiva",
+    "stateDry": "Seca / Apagada",
+    "stateMixed": "Mixta / Grasa",
+    "stateMature": "Madura / Flacidez",
+    "prev": "Anterior",
+    "next": "Siguiente",
+    "book": "Reservar cita",
+    "restart": "Volver a hacer el test",
+    "fallbackTitle": "1ª Consulta Informativa",
+    "loadingTitle": "Analizando tus respuestas...",
+    "loadingText": "Buscando los mejores tratamientos para ti",
+    "resultsHeading": "Tus Tratamientos Recomendados",
+    "resultsSub": "Basado en tus respuestas, estas son las mejores opciones para ti:",
+    "recommendedBadge": "Recomendado para ti",
+    "alertZone": "Por favor, selecciona una zona.",
+    "alertGoal": "Por favor, selecciona una preocupación principal.",
+    "alertState": "Por favor, indica el estado de tu piel.",
+    "fallbackDesc": "La mejor opción para analizar tu piel en detalle y decidir juntas el camino a seguir.",
+    "goals": {
+      "f_arrugas": "Líneas de expresión / Arrugas",
+      "f_manchas": "Manchas / Falta de luminosidad",
+      "f_marcas": "Marcas de acné / Textura",
+      "f_volumen": "Pérdida de volumen / Armonización",
+      "f_ojeras": "Ojeras / Mirada cansada",
+      "c_celulitis": "Celulitis / Grasa localizada",
+      "c_flacidez": "Flacidez / Recuperación",
+      "c_estrias": "Estrías / Cicatrices",
+      "h_caida": "Caída del cabello / Poco volumen"
+    }
+  },
+  "giftcardForm": {
+    "eyebrow": "Regala Bienestar",
+    "title": "Configura tu Tarjeta Regalo",
+    "buyerTitle": "Datos del Comprador",
+    "buyerName": "Nombre Completo *",
+    "buyerPhone": "Teléfono *",
+    "buyerEmail": "Email *",
+    "recipientTitle": "Datos del Destinatario",
+    "recipientName": "Nombre del Destinatario *",
+    "shippingMethod": "Método de Envío *",
+    "pickup": "Recogida en Clínica (0,00€)",
+    "delivery": "Envío a Domicilio en Cataluña (4,90€)",
+    "street": "Calle y número *",
+    "door": "Piso/Puerta",
+    "zip": "Código Postal *",
+    "city": "Población *",
+    "dedicationTitle": "Dedicatoria Personalizada",
+    "dedicationLabel": "Mensaje para la tarjeta (Opcional, max 250 car.)",
+    "dedicationPlaceholder": "Escribe unas palabras para esa persona especial...",
+    "giftChoiceTitle": "Elección del Regalo",
+    "specificTreatment": "Tratamiento Específico",
+    "openAmount": "Importe Libre",
+    "selectTreatment": "Selecciona el tratamiento *",
+    "selectTreatmentPlaceholder": "Seleccione un tratamiento...",
+    "selectAmount": "Selecciona el importe *",
+    "customAmountOption": "Importe Personalizado",
+    "customAmountLabel": "Importe en € *",
+    "summaryTitle": "Resumen de tu pedido",
+    "subtotal": "Subtotal",
+    "shipping": "Envío",
+    "total": "Total",
+    "privacyAccept": "He leído y acepto la",
+    "privacyLink": "Política de Privacidad",
+    "summaryGift": "Regalo:",
+    "summaryPickup": "Recogida en Clínica",
+    "summaryDelivery": "Envío a domicilio",
+    "summaryTotal": "Total",
+    "confirmPay": "Confirmar y Realizar Pago",
+    "bizumTitle": "Paso Final: Pago por Bizum",
+    "bizumText": "Tu tarjeta regalo casi está lista. Completa el pago de forma segura por Bizum.",
+    "bizumPhone": "Teléfono Bizum:",
+    "bizumAmount": "Importe a enviar:",
+    "bizumConcept": "Concepto obligatorio:",
+    "whatsappBtn": "Enviar comprobante por WhatsApp",
+    "closeModal": "Cerrar modal",
+    "whatsappIntro": "Hola, quiero solicitar una Tarjeta Regalo:"
+  },
+  "cookies": {
+    "text": "Utilizamos cookies propias y de terceros para mejorar tu experiencia. Al continuar navegando, aceptas nuestra",
+    "privacy": "Política de Privacidad",
+    "accept": "Aceptar"
+  },
+  "whatsapp": "Contactar por WhatsApp",
+  "meta": {
+    "homeTitle": "C3linic - Dermoestética Avanzada",
+    "homeDescription": "Clínica de dermoestética en Terrassa. Tratamientos faciales, corporales y capilares con Christine Cano, enfermera colegiada."
+  }
+}

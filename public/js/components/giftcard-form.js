@@ -1,12 +1,14 @@
+import { t, FREE_PRICE_VALUES } from '../i18n.js?v=202608051425';
+
 export function renderGiftCardForm(servicesData) {
     if (!servicesData) return '';
 
     // Filter valid treatments that have a price (numeric or string if we can parse it, but we know they are mostly numeric)
-    const visibleServices = servicesData.filter(cat => !cat.hidden && cat.category.toUpperCase() !== 'OCULTOS');
+    const visibleServices = servicesData.filter(cat => !cat.hidden);
     
     const treatmentOptions = visibleServices.map(category => {
         const options = category.treatments
-            .filter(t => !t.hidden && t.price && t.price !== "GRATIS")
+            .filter(t => !t.hidden && t.price && !FREE_PRICE_VALUES.has(String(t.price)))
             .map(t => `<option value="${t.id}" data-price="${t.price}">${t.title} - ${t.price}€</option>`)
             .join('');
         return options ? `<optgroup label="${category.category}">${options}</optgroup>` : '';
@@ -16,8 +18,8 @@ export function renderGiftCardForm(servicesData) {
         <section class="giftcard-page-section">
             <div class="container">
                 <div class="section-title animate-on-scroll">
-                    <span>Regala Bienestar</span>
-                    <h2>Configura tu Tarjeta Regalo</h2>
+                    <span>${t('giftcardForm.eyebrow')}</span>
+                    <h2>${t('giftcardForm.title')}</h2>
                 </div>
 
                 <div class="giftcard-layout">
@@ -26,10 +28,10 @@ export function renderGiftCardForm(servicesData) {
                         <!-- Galería de imágenes -->
                         <div class="giftcard-form-gallery-row animate-on-scroll">
                             <div class="gift-img-wrapper">
-                                <img src="/img/giftcard-1.jpeg" alt="Caja Regalo Exterior" loading="lazy">
+                                <img src="/img/giftcard-1.jpeg" alt="${t('giftcardHome.alt1')}" loading="lazy">
                             </div>
                             <div class="gift-img-wrapper">
-                                <img src="/img/giftcard-2.jpeg" alt="Detalles de la tarjeta" loading="lazy">
+                                <img src="/img/giftcard-2.jpeg" alt="${t('giftcardHome.alt2')}" loading="lazy">
                             </div>
                         </div>
                         
@@ -38,56 +40,56 @@ export function renderGiftCardForm(servicesData) {
                             <form id="giftcardForm">
                             <!-- BLOQUE 1: COMPRADOR -->
                             <div class="form-block">
-                                <h3 class="form-block-title"><i class="fas fa-user"></i> Datos del Comprador</h3>
+                                <h3 class="form-block-title"><i class="fas fa-user"></i> ${t('giftcardForm.buyerTitle')}</h3>
                                 <div class="form-row">
                                     <div class="form-group">
-                                        <label for="buyerName">Nombre Completo *</label>
+                                        <label for="buyerName">${t('giftcardForm.buyerName')}</label>
                                         <input type="text" id="buyerName" name="buyerName" class="form-control" required>
                                     </div>
                                     <div class="form-group">
-                                        <label for="buyerPhone">Teléfono *</label>
+                                        <label for="buyerPhone">${t('giftcardForm.buyerPhone')}</label>
                                         <input type="tel" id="buyerPhone" name="buyerPhone" class="form-control" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="buyerEmail">Email *</label>
+                                    <label for="buyerEmail">${t('giftcardForm.buyerEmail')}</label>
                                     <input type="email" id="buyerEmail" name="buyerEmail" class="form-control" required>
                                 </div>
                             </div>
 
                             <!-- BLOQUE 2: DESTINATARIO Y ENVÍO -->
                             <div class="form-block">
-                                <h3 class="form-block-title"><i class="fas fa-gift"></i> Datos del Destinatario</h3>
+                                <h3 class="form-block-title"><i class="fas fa-gift"></i> ${t('giftcardForm.recipientTitle')}</h3>
                                 <div class="form-group">
-                                    <label for="recipientName">Nombre del Destinatario *</label>
+                                    <label for="recipientName">${t('giftcardForm.recipientName')}</label>
                                     <input type="text" id="recipientName" name="recipientName" class="form-control" required>
                                 </div>
                                 
                                 <div class="form-group" style="margin-top: 1.5rem;">
-                                    <label>Método de Envío *</label>
+                                    <label>${t('giftcardForm.shippingMethod')}</label>
                                     <select id="shippingMethod" name="shippingMethod" class="form-control" aria-label="Método de envío" required>
-                                        <option value="pickup">Recogida en Clínica (0,00€)</option>
-                                        <option value="delivery">Envío a Domicilio en Cataluña (4,90€)</option>
+                                        <option value="pickup">${t('giftcardForm.pickup')}</option>
+                                        <option value="delivery">${t('giftcardForm.delivery')}</option>
                                     </select>
                                 </div>
 
                                 <div id="shippingAddressFields" style="display: none; margin-top: 1.5rem;">
                                     <div class="form-group">
-                                        <label for="addressStreet">Calle y número *</label>
+                                        <label for="addressStreet">${t('giftcardForm.street')}</label>
                                         <input type="text" id="addressStreet" name="addressStreet" class="form-control">
                                     </div>
                                     <div class="form-row">
                                         <div class="form-group">
-                                            <label for="addressDoor">Piso/Puerta</label>
+                                            <label for="addressDoor">${t('giftcardForm.door')}</label>
                                             <input type="text" id="addressDoor" name="addressDoor" class="form-control">
                                         </div>
                                         <div class="form-group">
-                                            <label for="addressZip">Código Postal *</label>
+                                            <label for="addressZip">${t('giftcardForm.zip')}</label>
                                             <input type="text" id="addressZip" name="addressZip" class="form-control">
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label for="addressCity">Población *</label>
+                                        <label for="addressCity">${t('giftcardForm.city')}</label>
                                         <input type="text" id="addressCity" name="addressCity" class="form-control">
                                     </div>
                                 </div>
@@ -95,56 +97,56 @@ export function renderGiftCardForm(servicesData) {
 
                             <!-- BLOQUE 3: DEDICATORIA -->
                             <div class="form-block">
-                                <h3 class="form-block-title"><i class="fas fa-pen-fancy"></i> Dedicatoria Personalizada</h3>
+                                <h3 class="form-block-title"><i class="fas fa-pen-fancy"></i> ${t('giftcardForm.dedicationTitle')}</h3>
                                 <div class="form-group">
-                                    <label for="giftMessage">Mensaje para la tarjeta (Opcional, max 250 car.)</label>
-                                    <textarea id="giftMessage" name="giftMessage" class="form-control" rows="3" maxlength="250" placeholder="Escribe unas palabras para esa persona especial..."></textarea>
+                                    <label for="giftMessage">${t('giftcardForm.dedicationLabel')}</label>
+                                    <textarea id="giftMessage" name="giftMessage" class="form-control" rows="3" maxlength="250" placeholder="${t('giftcardForm.dedicationPlaceholder')}"></textarea>
                                 </div>
                             </div>
 
                             <!-- BLOQUE 4: ELECCIÓN DEL REGALO -->
                             <div class="form-block">
-                                <h3 class="form-block-title"><i class="fas fa-sparkles"></i> Elección del Regalo</h3>
+                                <h3 class="form-block-title"><i class="fas fa-sparkles"></i> ${t('giftcardForm.giftChoiceTitle')}</h3>
                                 
                                 <div class="radio-cards-container">
                                     <label class="radio-card">
                                         <input type="radio" name="giftType" value="treatment" checked>
                                         <div class="radio-card-content">
                                             <i class="fas fa-spa"></i>
-                                            <span>Tratamiento Específico</span>
+                                            <span>${t('giftcardForm.specificTreatment')}</span>
                                         </div>
                                     </label>
                                     <label class="radio-card">
                                         <input type="radio" name="giftType" value="amount">
                                         <div class="radio-card-content">
                                             <i class="fas fa-euro-sign"></i>
-                                            <span>Importe Libre</span>
+                                            <span>${t('giftcardForm.openAmount')}</span>
                                         </div>
                                     </label>
                                 </div>
 
                                 <!-- Select de Tratamientos -->
                                 <div id="treatmentSelection" class="form-group">
-                                    <label for="selectedTreatment">Selecciona el tratamiento *</label>
+                                    <label for="selectedTreatment">${t('giftcardForm.selectTreatment')}</label>
                                     <select id="selectedTreatment" name="selectedTreatment" class="form-control">
-                                        <option value="">Seleccione un tratamiento...</option>
+                                        <option value="">${t('giftcardForm.selectTreatmentPlaceholder')}</option>
                                         ${treatmentOptions}
                                     </select>
                                 </div>
 
                                 <!-- Select de Importe Libre -->
                                 <div id="amountSelection" class="form-group" style="display: none;">
-                                    <label for="selectedAmount">Selecciona el importe *</label>
+                                    <label for="selectedAmount">${t('giftcardForm.selectAmount')}</label>
                                     <select id="selectedAmount" name="selectedAmount" class="form-control">
                                         <option value="50">50 €</option>
                                         <option value="100">100 €</option>
                                         <option value="150">150 €</option>
                                         <option value="200">200 €</option>
-                                        <option value="custom">Importe Personalizado</option>
+                                        <option value="custom">${t('giftcardForm.customAmountOption')}</option>
                                     </select>
                                     
                                     <div id="customAmountInputWrapper" style="display: none; margin-top: 1rem;">
-                                        <label for="customAmount">Importe en € *</label>
+                                        <label for="customAmount">${t('giftcardForm.customAmountLabel')}</label>
                                         <input type="number" id="customAmount" name="customAmount" class="form-control" min="20" step="5">
                                     </div>
                                 </div>
@@ -155,25 +157,25 @@ export function renderGiftCardForm(servicesData) {
 
                     <!-- Resumen (Sidebar) -->
                     <div class="giftcard-summary animate-on-scroll">
-                        <h3 class="summary-title">Resumen de tu pedido</h3>
+                        <h3 class="summary-title">${t('giftcardForm.summaryTitle')}</h3>
                         
                         <div class="summary-line">
-                            <span id="summaryGiftLabel">Regalo:</span>
+                            <span id="summaryGiftLabel">${t('giftcardForm.summaryGift')}</span>
                             <span id="summaryGiftPrice">0,00 €</span>
                         </div>
                         
                         <div class="summary-line">
-                            <span id="summaryShippingLabel">Recogida en Clínica</span>
+                            <span id="summaryShippingLabel">${t('giftcardForm.summaryPickup')}</span>
                             <span id="summaryShippingPrice">0,00 €</span>
                         </div>
 
                         <div class="summary-line total">
-                            <span>Total</span>
+                            <span>${t('giftcardForm.summaryTotal')}</span>
                             <span id="summaryTotal">0,00 €</span>
                         </div>
 
                         <button type="submit" form="giftcardForm" class="btn btn-primary btn-confirm">
-                            Confirmar y Realizar Pago <i class="fas fa-lock"></i>
+                            ${t('giftcardForm.confirmPay')} <i class="fas fa-lock"></i>
                         </button>
                     </div>
                 </div>
@@ -183,30 +185,30 @@ export function renderGiftCardForm(servicesData) {
         <!-- Bizum Modal -->
         <div id="bizumModal" class="bizum-modal-overlay">
             <div class="bizum-modal">
-                <button class="bizum-modal-close" aria-label="Cerrar modal">&times;</button>
+                <button class="bizum-modal-close" aria-label="${t('giftcardForm.closeModal')}">&times;</button>
                 <div class="bizum-icon">
                     <i class="fas fa-mobile-alt"></i>
                 </div>
-                <h3>Paso Final: Pago por Bizum</h3>
-                <p>Tu tarjeta regalo casi está lista. Completa el pago de forma segura por Bizum.</p>
+                <h3>${t('giftcardForm.bizumTitle')}</h3>
+                <p>${t('giftcardForm.bizumText')}</p>
                 
                 <div class="bizum-details">
                     <div class="bizum-detail-row">
-                        <span>Teléfono Bizum:</span>
+                        <span>${t('giftcardForm.bizumPhone')}</span>
                         <strong>+34 658 491 612</strong>
                     </div>
                     <div class="bizum-detail-row">
-                        <span>Importe a enviar:</span>
+                        <span>${t('giftcardForm.bizumAmount')}</span>
                         <strong id="bizumTotalAmount">0,00 €</strong>
                     </div>
                     <div class="bizum-detail-row">
-                        <span>Concepto obligatorio:</span>
+                        <span>${t('giftcardForm.bizumConcept')}</span>
                         <strong id="bizumConceptText">Regalo #REGALO-XXXX - [Nombre]</strong>
                     </div>
                 </div>
 
                 <button id="btnWhatsAppConfirm" class="btn btn-whatsapp">
-                    Enviar comprobante por WhatsApp <i class="fab fa-whatsapp"></i>
+                    ${t('giftcardForm.whatsappBtn')} <i class="fab fa-whatsapp"></i>
                 </button>
             </div>
         </div>

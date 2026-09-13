@@ -1,0 +1,816 @@
+[
+    {
+        "category": "Facial",
+        "treatments": [
+            {
+                "id": "microneedling-facial",
+                "icon": "fas fa-droplet",
+                "title": "Microneedling facial (dermapen)",
+                "description": "Tècnica d'inducció de col·lagen que millora la textura de la pell, redueix marques d'acne i suavitza línies d'expressió.",
+                "comingSoon": false,
+                "price": 65,
+                "duration": "45 min",
+                "detail": {
+                    "image": "https://via.placeholder.com/800x400.png/F7F5F0/74543F?text=Microneedling+Facial",
+                    "description": "El Dermapen crea microcanals controlats a la pell per activar la reparació natural i la producció de col·lagen i elastina. Indicat per millorar la textura, suavitzar arrugues fines, atenuar cicatrius d'acne i unificar el to. La pell guanya fermesa i lluminositat de forma progressiva.",
+                    "details": [
+                        {
+                            "icon": "fas fa-star",
+                            "title": "Beneficis Clau",
+                            "text": "Redueix arrugues, minimitza marques d'acne, millora la fermesa i unifica el to."
+                        },
+                        {
+                            "icon": "fas fa-euro-sign",
+                            "title": "Preu"
+                        },
+                        {
+                            "icon": "far fa-clock",
+                            "title": "Durada"
+                        },
+                        {
+                            "icon": "fas fa-calendar-alt",
+                            "title": "Sessions",
+                            "text": "Idealment un cop al mes."
+                        },
+                        {
+                            "icon": "fas fa-eye",
+                            "title": "Resultats",
+                            "text": "Lluminositat des de la primera sessió. Millora de textura des de la tercera setmana."
+                        },
+                        {
+                            "icon": "fas fa-shield-alt",
+                            "title": "Cures",
+                            "text": "Usar protecció solar SPF 50+. Evitar l'exposició directa al sol."
+                        }
+                    ]
+                }
+            },
+            {
+                "id": "mesoterapia-polinucleotidos",
+                "icon": "fas fa-eye",
+                "title": "Polinucleòtids en ojeras",
+                "description": "Renova la zona del contorn dels ulls mitjançant un procés de regeneració cel·lular avançat. Aquest protocol utilitza polinucleòtids (PDRN) per bioestimular la pell des de l'interior, retornant la vitalitat i la fermesa a la teva mirada de forma natural.",
+                "comingSoon": false,
+                "price": 110,
+                "duration": "45 min",
+                "detail": {
+                    "image": "https://via.placeholder.com/800x400.png/F7F5F0/74543F?text=Mesoterapia+Capilar",
+                    "description": "Dermis més densa: Incrementa el gruix de la pell de l'ullera en un 15%, ideal per a zones fines o marcades.\n Fermesa i elasticitat: Millora el to cutani estimulant la síntesi pròpia de col·lagen sense generar fibrosis.\n Mirada descansada: Activa el metabolisme cel·lular per reparar el teixit i eliminar els signes de fatiga.",
+                    "details": [
+                        {
+                            "icon": "fas fa-star",
+                            "title": "Beneficis Clau",
+                            "text": "Frena la caiguda, enforteix la fibra, estimula el creixement i augmenta la densitat."
+                        },
+                        {
+                            "icon": "fas fa-euro-sign",
+                            "title": "Preu"
+                        },
+                        {
+                            "icon": "far fa-clock",
+                            "title": "Durada"
+                        },
+                        {
+                            "icon": "fas fa-calendar-alt",
+                            "title": "Sessions",
+                            "text": "Tractament de xoc setmanal (4-6 setmanes) i manteniment."
+                        },
+                        {
+                            "icon": "fas fa-eye",
+                            "title": "Resultats",
+                            "text": "Reducció de caiguda en les primeres setmanes. Densitat a partir del 2n mes."
+                        },
+                        {
+                            "icon": "fas fa-shield-alt",
+                            "title": "Cures",
+                            "text": "Evitar el maquillatge i l'exposició solar directa durant 24h."
+                        }
+                    ]
+                }
+            },
+            {
+                "id": "mesoterapia-facial",
+                "icon": "fas fa-face-smile",
+                "title": "Mesoteràpia facial",
+                "description": "Renova i hidrata la pell en profunditat amb àcid hialurònic, aminoàcids i antioxidants per a un rostre més lluminós i rejovenit.",
+                "comingSoon": false,
+                "price": 120,
+                "duration": "45 min",
+                "detail": {
+                    "image": "https://via.placeholder.com/800x400.png/F7F5F0/74543F?text=Mesoterapia+Facial",
+                    "description": "Microinjeccions d'àcid hialurònic no reticulat i vitamines que hidraten en profunditat, milloren l'elasticitat i estimulen el col·lagen. Proporciona un efecte glow immediat i una pell més tensa i lluminosa.",
+                    "details": [
+                        {
+                            "icon": "fas fa-star",
+                            "title": "Beneficis Clau",
+                            "text": "Hidratació profunda, millora d'elasticitat i fermesa, pell radiant."
+                        },
+                        {
+                            "icon": "fas fa-euro-sign",
+                            "title": "Preu"
+                        },
+                        {
+                            "icon": "far fa-clock",
+                            "title": "Durada"
+                        },
+                        {
+                            "icon": "fas fa-calendar-alt",
+                            "title": "Sessions",
+                            "text": "Protocol inicial de 3 a 5 sessions i manteniment."
+                        },
+                        {
+                            "icon": "fas fa-eye",
+                            "title": "Resultats",
+                            "text": "Efecte 'glow' immediat. La fermesa es consolida amb les sessions."
+                        },
+                        {
+                            "icon": "fas fa-shield-alt",
+                            "title": "Cures",
+                            "text": "Evitar el maquillatge i l'exposició solar directa durant 24h."
+                        }
+                    ]
+                }
+            },
+            {
+                "id": "bioestimulacion-total",
+                "icon": "fas fa-wand-magic-sparkles",
+                "title": "Bioestimulador de col·lagen-elastina i àcid hialurònic",
+                "description": "Bioestimulador de col·lagen i elastina, a més de tenir efectes reparadors, hidratants i antioxidants per a la pell.",
+                "comingSoon": false,
+                "price": 220,
+                "duration": "45 min",
+                "detail": {
+                    "image": "https://via.placeholder.com/800x400.png/F7F5F0/74543F?text=Bioestimulacion+Total",
+                    "description": "Còctel d'àcid hialurònic, vitamines i aminoàcids que s'infiltra en profunditat per restaurar l'estructura cutània. Estimula col·lagen i elastina, combat la flaccidesa i la deshidratació i retorna la lluminositat. Rejoveniment facial integral.",
+                    "details": [
+                        {
+                            "icon": "fas fa-star",
+                            "title": "Beneficis Clau",
+                            "text": "Augmenta la fermesa i l'elasticitat, hidrata en profunditat i revitalitza la pell."
+                        },
+                        {
+                            "icon": "fas fa-euro-sign",
+                            "title": "Preu"
+                        },
+                        {
+                            "icon": "far fa-clock",
+                            "title": "Durada"
+                        },
+                        {
+                            "icon": "fas fa-calendar-alt",
+                            "title": "Sessions",
+                            "text": "Protocol inicial de 3 sessions i manteniment cada 6 mesos."
+                        },
+                        {
+                            "icon": "fas fa-eye",
+                            "title": "Resultats",
+                            "text": "Hidratació immediata. Fermesa de forma gradual."
+                        },
+                        {
+                            "icon": "fas fa-shield-alt",
+                            "title": "Cures",
+                            "text": "Recuperació ràpida. Aplicar protecció solar. No saunes. No piscina. No exercici intens en 24h"
+                        }
+                    ]
+                }
+            },
+            {
+                "id": "peeling-exfoliante-lifting",
+                "icon": "fas fa-wand-magic",
+                "title": "Peeling exfoliant i lifting",
+                "description": "Fórmula innovadora amb efecte lifting que exfolia la pell, unifica el to i aporta una gran lluminositat.",
+                "comingSoon": false,
+                "price": 60,
+                "duration": "45 min",
+                "detail": {
+                    "image": "https://via.placeholder.com/800x400.png/F7F5F0/74543F?text=Peeling+Lifting",
+                    "description": "Peeling que combina exfoliació profunda amb efecte tensor immediat. Elimina cèl·lules mortes, unifica el to, atenua taques i arrugues fines i redefineix l'oval facial. Pell lluminosa des de la primera sessió.",
+                    "details": [
+                        {
+                            "icon": "fas fa-star",
+                            "title": "Beneficis Clau",
+                            "text": "Efecte lifting immediat, exfoliació profunda i gran lluminositat."
+                        },
+                        {
+                            "icon": "fas fa-euro-sign",
+                            "title": "Preu"
+                        },
+                        {
+                            "icon": "far fa-clock",
+                            "title": "Durada"
+                        },
+                        {
+                            "icon": "fas fa-calendar-alt",
+                            "title": "Sessions",
+                            "text": "Ideal com a tractament flash o en cicle de 3-4 sessions."
+                        },
+                        {
+                            "icon": "fas fa-eye",
+                            "title": "Resultats",
+                            "text": "Tensor i lluminositat visibles des de la primera sessió."
+                        },
+                        {
+                            "icon": "fas fa-shield-alt",
+                            "title": "Cures",
+                            "text": "Correcta i constant protecció solar després del tractament."
+                        }
+                    ]
+                }
+            },
+            {
+                "id": "peeling-estrias-cicatrices",
+                "icon": "fas fa-wand-sparkles",
+                "title": "Peeling químic per a estríes i cicatrius",
+                "description": "Exfolia i revitalitza la pell per unificar el to i millorar la textura d'estríes i cicatrius eficaçment.",
+                "comingSoon": false,
+                "price": 70,
+                "duration": "45 min",
+                "detail": {
+                    "image": "https://via.placeholder.com/800x400.png/F7F5F0/74543F?text=Peeling+para+Estrias",
+                    "description": "Peeling químic formulat per a estríes i cicatrius. Exfolia les capes superficials, estimula la renovació cel·lular i la formació de col·lagen, millorant la textura i el color de les marques de forma progressiva.",
+                    "details": [
+                        {
+                            "icon": "fas fa-star",
+                            "title": "Beneficis Clau",
+                            "text": "Millora la textura i el color d'estríes i cicatrius, i unifica el to."
+                        },
+                        {
+                            "icon": "fas fa-euro-sign",
+                            "title": "Preu"
+                        },
+                        {
+                            "icon": "far fa-clock",
+                            "title": "Durada"
+                        },
+                        {
+                            "icon": "fas fa-calendar-alt",
+                            "title": "Sessions",
+                            "text": "Cicle de 4 a 8 sessions, cada 2-3 setmanes."
+                        },
+                        {
+                            "icon": "fas fa-eye",
+                            "title": "Resultats",
+                            "text": "Progressius. Pell més llisa i to atenuat amb cada sessió."
+                        },
+                        {
+                            "icon": "fas fa-shield-alt",
+                            "title": "Cures",
+                            "text": "La pell es descamarà. L'ús de protecció solar SPF 50+ és fonamental."
+                        }
+                    ]
+                }
+            },
+            {
+                "id": "peeling-antimanchas",
+                "icon": "fas fa-wand-sparkles",
+                "title": "Peeling antitaca",
+                "description": "Renova i revitalitza la teva pell per combatre les taques cutànies. Un tractament suau i altament eficaç que retorna la lluminositat i la uniformitat al rostre des de la primera sessió.",
+                "comingSoon": false,
+                "price": 60,
+                "duration": "45 min",
+                "detail": {
+                    "image": "https://via.placeholder.com/800x400.png/F7F5F0/74543F?text=Peeling+para+Estrias",
+                    "description": "Peeling específic per a taques cutànies: renova la pell, unifica el to i retorna la lluminositat. Suau i eficaç, amb resultats visibles des de les primeres sessions. Protecció solar posterior essencial.",
+                    "details": [
+                        {
+                            "icon": "fas fa-euro-sign",
+                            "title": "Preu"
+                        },
+                        {
+                            "icon": "far fa-clock",
+                            "title": "Durada"
+                        },
+                        {
+                            "icon": "fas fa-shield-alt",
+                            "title": "Cures",
+                            "text": "La pell pot descamar-se. L'ús de protecció solar SPF 50+ és fonamental."
+                        }
+                    ]
+                }
+            },
+            {
+                "id": "rutina-personalizada",
+                "icon": "fas fa-leaf",
+                "title": "Rutina personalitzada",
+                "description": "Anàlisi de pell i hàbits per dissenyar una rutina de cura facial a mida i aconseguir resultats visibles i duradors.",
+                "comingSoon": false,
+                "price": 45,
+                "duration": "60 min",
+                "detail": {
+                    "image": "https://via.placeholder.com/800x400.png/F7F5F0/74543F?text=Rutina+Personalizada",
+                    "description": "Diagnòstic de la teva pell i estil de vida per dissenyar una rutina cosmètica a mida: productes, ordre d'aplicació i hàbits. Aprendràs a cuidar la teva pell de forma eficaç i a optimitzar la teva inversió.",
+                    "details": [
+                        {
+                            "icon": "fas fa-star",
+                            "title": "Beneficis Clau",
+                            "text": "Aprendràs a cuidar la teva pell, optimitzaràs la teva inversió i aconseguiràs resultats."
+                        },
+                        {
+                            "icon": "fas fa-euro-sign",
+                            "title": "Preu"
+                        },
+                        {
+                            "icon": "far fa-clock",
+                            "title": "Durada"
+                        },
+                        {
+                            "icon": "fas fa-box-open",
+                            "title": "Què Inclou",
+                            "text": "Anàlisi de pell, revisió de rutina i disseny d'una de nova."
+                        },
+                        {
+                            "icon": "fas fa-mobile-alt",
+                            "title": "Modalitat",
+                            "text": "La consulta pot ser presencial o telemàtica."
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    {
+        "category": "Àcid Hialurònic",
+        "treatments": [
+            {
+                "id": "relleno-labios",
+                "icon": "fas fa-syringe",
+                "title": "Augment i harmonització de llavis",
+                "description": "Augmenta el volum, defineix la forma i corregeix asimetries respectant la naturalesa dels teus llavis.",
+                "comingSoon": false,
+                "price": 290,
+                "duration": "45 min",
+                "detail": {
+                    "image": "https://via.placeholder.com/800x400.png/F7F5F0/74543F?text=Relleno+de+Labios",
+                    "description": "Farciment amb àcid hialurònic per augmentar el volum, perfilar el contorn, definir l'arc de Cupido i corregir asimetries. Resultat natural, hidratació en profunditat i llavis més definits i harmònics.",
+                    "details": [
+                        {
+                            "icon": "fas fa-star",
+                            "title": "Beneficis Clau",
+                            "text": "Augment de volum, perfilat, correcció d'asimetries i hidratació."
+                        },
+                        {
+                            "icon": "fas fa-euro-sign",
+                            "title": "Preu"
+                        },
+                        {
+                            "icon": "far fa-clock",
+                            "title": "Durada"
+                        },
+                        {
+                            "icon": "fas fa-calendar-alt",
+                            "title": "Durada Resultat",
+                            "text": "Entre 6 i 12 mesos."
+                        },
+                        {
+                            "icon": "fas fa-eye",
+                            "title": "Resultats",
+                            "text": "Immediats, amb resultat definitiu estabilitzat en uns dies."
+                        },
+                        {
+                            "icon": "fas fa-shield-alt",
+                            "title": "Cures",
+                            "text": "Evitar la calor i no massatjar la zona els primers dies."
+                        }
+                    ]
+                }
+            },
+            {
+                "id": "relleno-menton-mandibula",
+                "icon": "fas fa-face-smile-beam",
+                "title": "Projecció de mentó",
+                "description": "Millora la projecció del mentó i harmonitza els trets per a un rostre més equilibrat.",
+                "comingSoon": false,
+                "price": 290,
+                "duration": "30 min",
+                "detail": {
+                    "image": "https://via.placeholder.com/800x400.png/F7F5F0/74543F?text=Relleno+de+Menton",
+                    "description": "Àcid hialurònic per marcar la mandíbula i projectar el mentó sense cirurgia. Defineix el terç inferior del rostre, realça els angles i equilibra el perfil per a un oval facial més harmònic.",
+                    "details": [
+                        {
+                            "icon": "fas fa-star",
+                            "title": "Beneficis Clau",
+                            "text": "Defineix l'arc mandibular, projecta el mentó i harmonitza el perfil sense cirurgia."
+                        },
+                        {
+                            "icon": "fas fa-euro-sign",
+                            "title": "Preu"
+                        },
+                        {
+                            "icon": "far fa-clock",
+                            "title": "Durada"
+                        },
+                        {
+                            "icon": "fas fa-calendar-alt",
+                            "title": "Durada Resultat",
+                            "text": "De 12 a 18 mesos aproximadament."
+                        },
+                        {
+                            "icon": "fas fa-eye",
+                            "title": "Resultats",
+                            "text": "Immediats. S'aprecia la nova definició en finalitzar la sessió."
+                        },
+                        {
+                            "icon": "fas fa-shield-alt",
+                            "title": "Cures",
+                            "text": "Lleu inflamació. Evitar pressionar la zona tractada."
+                        }
+                    ]
+                }
+            },
+            {
+                "id": "relleno-pomulos",
+                "icon": "fas fa-face-smile-beam",
+                "title": "Ancoratge de pòmuls",
+                "description": "Restaura el volum perdut, eleva les faccions i defineix el rostre amb un efecte lifting natural.",
+                "comingSoon": false,
+                "price": 290,
+                "duration": "45 min",
+                "detail": {
+                    "image": "https://via.placeholder.com/800x400.png/F7F5F0/74543F?text=Relleno+de+Menton",
+                    "description": "Farciment amb àcid hialurònic per restaurar volum als pòmuls, elevar les faccions i aconseguir un efecte lifting natural. Defineix el rostre i aporta lluminositat sense cirurgia.",
+                    "details": [
+                        {
+                            "icon": "fas fa-euro-sign",
+                            "title": "Preu"
+                        },
+                        {
+                            "icon": "far fa-clock",
+                            "title": "Durada"
+                        },
+                        {
+                            "icon": "fas fa-calendar-alt",
+                            "title": "Durada Resultat",
+                            "text": "Entre 12 i 18 mesos."
+                        },
+                        {
+                            "icon": "fas fa-shield-alt",
+                            "title": "Cures",
+                            "text": "Lleu inflamació. Evitar pressionar la zona tractada."
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    {
+        "category": "Corporal",
+        "treatments": [
+            {
+                "id": "mesoterapia-corporal",
+                "icon": "fas fa-person-running",
+                "title": "Mesoteràpia corporal anticel·lulític",
+                "description": "Combat la cel·lulitis i el greix localitzat, millorant el contorn corporal i l'aspecte de la pell.",
+                "comingSoon": false,
+                "price": 120,
+                "duration": "45 min",
+                "detail": {
+                    "image": "https://via.placeholder.com/800x400.png/F7F5F0/74543F?text=Mesoterapia+Corporal",
+                    "description": "Microinjeccions amb actius lipolítics, drenants i reafirmants a abdomen, flancs, cuixes i cartutxeres. Actua sobre el teixit adipós i la circulació per millorar el contorn i l'aspecte de la pell de taronja.",
+                    "details": [
+                        {
+                            "icon": "fas fa-star",
+                            "title": "Beneficis Clau",
+                            "text": "Redueix la cel·lulitis i el greix localitzat, millora la circulació i reafirma la pell."
+                        },
+                        {
+                            "icon": "fas fa-euro-sign",
+                            "title": "Preu"
+                        },
+                        {
+                            "icon": "far fa-clock",
+                            "title": "Durada"
+                        },
+                        {
+                            "icon": "fas fa-calendar-alt",
+                            "title": "Sessions",
+                            "text": "Mínim de 6 a 10 sessions, 1-2 per setmana."
+                        },
+                        {
+                            "icon": "fas fa-eye",
+                            "title": "Resultats",
+                            "text": "Millora de textura des de les primeres sessions. Reducció de contorn progressiva."
+                        },
+                        {
+                            "icon": "fas fa-shield-alt",
+                            "title": "Cures",
+                            "text": "Beure abundant aigua i combinar amb un estil de vida saludable."
+                        }
+                    ]
+                }
+            },
+            {
+                "id": "diatermia-postparto",
+                "icon": "fas fa-person-dress",
+                "title": "Recuperació abdominal postpart",
+                "description": "Restaura el teu abdomen després de l'embaràs. Combat la flaccidesa, millora el to muscular i redueix el volum retingut.",
+                "comingSoon": false,
+                "price": 65,
+                "duration": "45 min",
+                "detail": {
+                    "image": "https://via.placeholder.com/800x400.png/F7F5F0/74543F?text=Recuperacion+Postparto",
+                    "description": "Diatèrmia abdominal específica per al postpart: calor profunda que estimula col·lagen i elastina, reafirma la pell, afavoreix el drenatge de líquids i l'oxigenació del teixit. Ajuda a recuperar la zona abdominal de forma natural i confortable.",
+                    "details": [
+                        {
+                            "icon": "fas fa-star",
+                            "title": "Beneficis Clau",
+                            "text": "Tensat cutani, drenatge de líquids, desinflamació i recuperació del teixit cel·lular."
+                        },
+                        {
+                            "icon": "fas fa-euro-sign",
+                            "title": "Preu"
+                        },
+                        {
+                            "icon": "far fa-clock",
+                            "title": "Durada"
+                        },
+                        {
+                            "icon": "fas fa-calendar-alt",
+                            "title": "Sessions",
+                            "text": "Cicle inicial recomanat de 6 a 10 sessions, 1 o 2 per setmana."
+                        },
+                        {
+                            "icon": "fas fa-eye",
+                            "title": "Resultats",
+                            "text": "Desinflamació ràpida i millora gradual de la fermesa i la qualitat de la pell."
+                        },
+                        {
+                            "icon": "fas fa-shield-alt",
+                            "title": "Cures",
+                            "text": "Beure abundant aigua per afavorir el drenatge i combinar amb hàbits saludables."
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    {
+        "category": "Capilar",
+        "treatments": [
+            {
+                "id": "mesoterapia-capilar",
+                "icon": "fas fa-user",
+                "title": "Mesoteràpia capil·lar",
+                "description": "Tractament avançat per a la caiguda del cabell. Enforteix la fibra capil·lar, estimula el creixement i augmenta el volum.",
+                "comingSoon": false,
+                "price": 160,
+                "duration": "30 min",
+                "detail": {
+                    "image": "https://via.placeholder.com/800x400.png/F7F5F0/74543F?text=Mesoterapia+Capilar",
+                    "description": "Microinjeccions al cuir cabellut amb un còctel de vitamines, minerals i aminoàcids que nodreixen el fol·licle, milloren la circulació i enforteixen la fibra capil·lar. Indicat per frenar la caiguda i afavorir un cabell més dens i amb més volum.",
+                    "details": [
+                        {
+                            "icon": "fas fa-star",
+                            "title": "Beneficis Clau",
+                            "text": "Frena la caiguda, enforteix la fibra, estimula el creixement i augmenta la densitat."
+                        },
+                        {
+                            "icon": "fas fa-euro-sign",
+                            "title": "Preu"
+                        },
+                        {
+                            "icon": "far fa-clock",
+                            "title": "Durada"
+                        },
+                        {
+                            "icon": "fas fa-calendar-alt",
+                            "title": "Sessions",
+                            "text": "Tractament de xoc setmanal (4-6 setmanes) i manteniment."
+                        },
+                        {
+                            "icon": "fas fa-eye",
+                            "title": "Resultats",
+                            "text": "Reducció de caiguda en les primeres setmanes. Densitat a partir del 2n mes."
+                        },
+                        {
+                            "icon": "fas fa-shield-alt",
+                            "title": "Cures",
+                            "text": "No rentar el cabell fins passades 24 hores."
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    {
+        "category": "Ocults",
+        "hidden": true,
+        "treatments": [
+            {
+                "id": "consulta-gratuita",
+                "icon": "fas fa-comments",
+                "title": "1a consulta informativa",
+                "description": "Dubtes sobre quin tractament és per a tu? Vine a conèixer-nos, avaluem la teva pell i t'expliquem opcions sense cap compromís.",
+                "price": "GRATUÏT",
+                "duration": "60 min",
+                "detail": {
+                    "image": "https://via.placeholder.com/800x400.png/F7F5F0/74543F?text=Consulta+Informativa",
+                    "description": "En aquesta sessió d'una hora valorem el teu tipus de pell, les teves preocupacions i els teus objectius. T'expliquem quins tractaments encaixen amb tu i com funcionen, sense compromís. És el punt de partida ideal per decidir amb tranquil·litat.",
+                    "details": [
+                        {
+                            "icon": "fas fa-check",
+                            "title": "Sense cost",
+                            "text": "Totalment gratuïta."
+                        },
+                        {
+                            "icon": "fas fa-user-md",
+                            "title": "Diagnòstic",
+                            "text": "Valoració professional del teu cas."
+                        },
+                        {
+                            "icon": "fas fa-hand-holding-heart",
+                            "title": "Sense compromís",
+                            "text": "No estàs obligada a reservar res després."
+                        }
+                    ]
+                },
+                "hidden": true
+            },
+            {
+                "id": "microneedling-corporal",
+                "icon": "fas fa-person",
+                "title": "Microneedling corporal (dermapen)",
+                "description": "Tractament corporal que estimula el col·lagen per reduir estríes, cicatrius i flaccidesa.",
+                "comingSoon": false,
+                "price": 75,
+                "duration": "45 min",
+                "detail": {
+                    "image": "https://via.placeholder.com/800x400.png/F7F5F0/74543F?text=Microneedling+Corporal",
+                    "description": "La mateixa tecnologia que el facial aplicada a zones corporals: abdomen, cuixes, glutis. Afavoreix la regeneració de la dermis i millora l'aparença d'estríes, cicatrius i flaccidesa. La pell es torna més llisa i ferma amb un protocol adequat.",
+                    "details": [
+                        {
+                            "icon": "fas fa-star",
+                            "title": "Beneficis Clau",
+                            "text": "Redueix estríes i cicatrius, millora la fermesa i combat la flaccidesa."
+                        },
+                        {
+                            "icon": "fas fa-euro-sign",
+                            "title": "Preu"
+                        },
+                        {
+                            "icon": "far fa-clock",
+                            "title": "Durada"
+                        },
+                        {
+                            "icon": "fas fa-calendar-alt",
+                            "title": "Sessions",
+                            "text": "Cicle de 4 a 6 sessions, cada 4-6 setmanes."
+                        },
+                        {
+                            "icon": "fas fa-eye",
+                            "title": "Resultats",
+                            "text": "Progressius. La millora de textura es nota després de la primera sessió."
+                        },
+                        {
+                            "icon": "fas fa-shield-alt",
+                            "title": "Cures",
+                            "text": "Mantenir la pell hidratada i protegida del sol."
+                        }
+                    ]
+                },
+                "hidden": true
+            },
+            {
+                "id": "diatermia-cicatrices-fibrosis",
+                "icon": "fas fa-band-aid",
+                "title": "Tractament de cicatrius i fibrosis",
+                "description": "Accelera la regeneració natural de la teva pell per suavitzar cicatrius, reduir la fibrosis i recuperar l'elasticitat perduda.",
+                "comingSoon": false,
+                "price": 60,
+                "duration": "45 min",
+                "detail": {
+                    "image": "https://via.placeholder.com/800x400.png/F7F5F0/74543F?text=Cicatrices+y+Fibrosis",
+                    "description": "La diatèrmia d'alta freqüència aplicada a cicatrius i fibrosis afavoreix la regeneració del teixit, redueix queloides i tirantor i millora l'elasticitat i el to. Indicada per a cicatrius postquirúrgiques, cesària o ferides antigues. Tractament indolori i relaxant.",
+                    "details": [
+                        {
+                            "icon": "fas fa-star",
+                            "title": "Beneficis Clau",
+                            "text": "Suavitza cicatrius, redueix fibrosis i queloides, i elimina la sensació de tirantor."
+                        },
+                        {
+                            "icon": "fas fa-euro-sign",
+                            "title": "Preu"
+                        },
+                        {
+                            "icon": "far fa-clock",
+                            "title": "Durada"
+                        },
+                        {
+                            "icon": "fas fa-calendar-alt",
+                            "title": "Sessions",
+                            "text": "Depèn de l'antiguitat de la cicatriu. Recomanat cicle de 5 a 8 sessions."
+                        },
+                        {
+                            "icon": "fas fa-eye",
+                            "title": "Resultats",
+                            "text": "Progressius. Millora del teixit i reducció de molèsties des de les primeres sessions."
+                        },
+                        {
+                            "icon": "fas fa-shield-alt",
+                            "title": "Cures",
+                            "text": "Mantenir la zona ben hidratada i protegida de l'exposició solar."
+                        }
+                    ]
+                },
+                "hidden": true
+            },
+            {
+                "id": "maderoterapia-drenaje-linfatico",
+                "icon": "fas fa-spa",
+                "title": "Maderoteràpia corporal i drenatge limfàtic",
+                "description": "Redefineix la teva silueta de forma natural i efectiva. Combina maderoteràpia amb drenatge limfàtic manual per a remodelació corporal i benestar integral.",
+                "comingSoon": false,
+                "price": 50,
+                "duration": "30 min",
+                "detail": {
+                    "image": "https://via.placeholder.com/800x400.png/F7F5F0/74543F?text=Maderoterapia+y+Drenaje+Linfatico",
+                    "description": "A c3linic combinem la saviesa de la tècnica mil·lenària de la maderoteràpia amb la precisió clínica del drenatge limfàtic manual. Aquest tractament dual no només busca resultats estètics visibles, sinó que promou l'equilibri intern del teu organisme. Utilitzem instruments de fusta anatómicament dissenyats per exercir una pressió controlada sobre les diferents zones del cos. Aquesta fricció activa la circulació sanguínia i trenca els cúmuls grassos localitzats. Finalitzem la sessió amb tècniques de drenatge limfàtic que ajuden el teu cos a eliminar les toxines i líquids mobilitzats, potenciant l'efecte reductor i desinflamatori.",
+                    "details": [
+                        {
+                            "icon": "fas fa-star",
+                            "title": "Beneficis principals",
+                            "text": "Remodelació corporal, acció anticel·lulítica, detoxificació profunda, tonificació i fermesa, i benestar integral."
+                        },
+                        {
+                            "icon": "fas fa-circle-dot",
+                            "title": "Acció anticel·lulítica",
+                            "text": "Allisa la textura de la pell i millora l'aspecte de la pell de taronja."
+                        },
+                        {
+                            "icon": "fas fa-droplet",
+                            "title": "Detoxificació profunda",
+                            "text": "Estimula el sistema limfàtic per a una eliminació eficaç de líquids retinguts."
+                        },
+                        {
+                            "icon": "fas fa-hand-sparkles",
+                            "title": "Tonificació i fermesa",
+                            "text": "Reactiva la producció d'elastina i col·lagen."
+                        },
+                        {
+                            "icon": "fas fa-heart",
+                            "title": "Benestar integral",
+                            "text": "Alleuja tensions musculars i redueix l'estrès gràcies al massatge profund."
+                        },
+                        {
+                            "icon": "fas fa-euro-sign",
+                            "title": "Preu"
+                        },
+                        {
+                            "icon": "far fa-clock",
+                            "title": "Durada"
+                        },
+                        {
+                            "icon": "fas fa-calendar-alt",
+                            "title": "Sessions",
+                            "text": "Disponible sessió solta, pack de 3 sessions (3a al 50%) o pack de 5 sessions (5a gratis)."
+                        }
+                    ]
+                },
+                "hidden": true
+            },
+            {
+                "id": "eliminar-verrugas",
+                "icon": "fas fa-star-of-life",
+                "title": "Eliminar berrugues i punts de robí",
+                "description": "Eliminació segura, ràpida i precisa de lesions cutànies benignes com berrugues i punts de robí, sense deixar cicatriu.",
+                "comingSoon": true,
+                "price": 40,
+                "duration": "30 min",
+                "detail": {
+                    "image": "https://via.placeholder.com/800x400.png/F7F5F0/74543F?text=Eliminar+Verrugas",
+                    "description": "Electrocoagulació de precisió per eliminar berrugues, punts de robí i fibromes de forma segura. Procediment mínimament invasiu, amb baix risc de sagnat i sense deixar cicatriu visible.",
+                    "details": [
+                        {
+                            "icon": "fas fa-star",
+                            "title": "Beneficis Clau",
+                            "text": "Eliminació precisa i definitiva sense cicatriu."
+                        },
+                        {
+                            "icon": "fas fa-euro-sign",
+                            "title": "Preu"
+                        },
+                        {
+                            "icon": "far fa-clock",
+                            "title": "Durada"
+                        },
+                        {
+                            "icon": "fas fa-calendar-alt",
+                            "title": "Sessions",
+                            "text": "Normalment una única sessió és suficient."
+                        },
+                        {
+                            "icon": "fas fa-eye",
+                            "title": "Resultats",
+                            "text": "Immediat. La lesió s'elimina al moment."
+                        },
+                        {
+                            "icon": "fas fa-shield-alt",
+                            "title": "Cures",
+                            "text": "Es forma una petita crosta que cau sola en 5-10 dies."
+                        }
+                    ]
+                },
+                "hidden": true
+            }
+        ]
+    }
+]

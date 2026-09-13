@@ -13,6 +13,14 @@
     </script>
 
     <meta charset="UTF-8" />
+    <script>
+      try {
+        var l = localStorage.getItem('c3linic_lang');
+        if (l === 'ca' || l === 'es') document.documentElement.lang = l;
+        else if ((navigator.language || '').toLowerCase().indexOf('ca') === 0) document.documentElement.lang = 'ca';
+      } catch (e) {}
+    </script>
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Cuidados Post-Tratamiento - C3linic</title>
@@ -33,8 +41,7 @@
         rel="stylesheet" />
     
 
-    <link rel="icon" type="image/png"
-        href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==" />
+    <link rel="icon" type="image/svg+xml" href="/img/Logo%20C3%20svg.svg" />
 
     
     

@@ -1,3 +1,5 @@
+import { t } from '../i18n.js?v=202608051425';
+
 export function renderAbout(aboutData) {
     if (!aboutData) return '';
 
@@ -9,8 +11,8 @@ export function renderAbout(aboutData) {
         <section id="sobre-mi" class="about-section">
             <div class="container">
                 <div class="section-title animate-on-scroll">
-                    <span>Tu Especialista de Confianza</span>
-                    <h2>Conoce a Christine</h2>
+                    <span>${t('about.eyebrow')}</span>
+                    <h2>${t('about.title')}</h2>
                 </div>
                 
                 <div class="about-layout">
@@ -30,7 +32,7 @@ export function renderAbout(aboutData) {
                         <div class="about-header">
                             <h3>${aboutData.name}</h3>
                             <p class="about-subtitle">
-                                ${aboutData.title} (Colegiada Nº ${aboutData.collegiateNumber})
+                                ${aboutData.title} (${t('about.collegiate')} ${aboutData.collegiateNumber})
                             </p>
                         </div>
                         
@@ -39,7 +41,7 @@ export function renderAbout(aboutData) {
                         </div>
                         
                         <div class="about-credentials">
-                            <h4>Mi Formación</h4>
+                            <h4>${t('about.educationTitle')}</h4>
                             <ul>
                                 ${educationHTML}
                             </ul>
@@ -56,7 +58,7 @@ export function renderAbout(aboutData) {
                              </div>
                         </div>
                         
-                        <a href="/contacto" class="btn btn-primary">Reservar una Cita</a>
+                        <a href="/contacto" class="btn btn-primary">${t('about.cta')}</a>
                     </div>
                 </div>
             </div>

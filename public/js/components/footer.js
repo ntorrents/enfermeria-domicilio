@@ -1,5 +1,11 @@
+import { t, getLang } from '../i18n.js?v=202608051425';
+
 export function renderFooter(siteInfo, footerData) {
     if (!siteInfo || !footerData) return '';
+
+    const isCa = getLang() === 'ca';
+    const legalHref = isCa ? '/legal-ca.html' : '/legal.html';
+    const privacyHref = isCa ? '/privacidad-ca.html' : '/privacidad.html';
 
     return `
         <footer class="footer">
@@ -16,13 +22,13 @@ export function renderFooter(siteInfo, footerData) {
                     <p class="footer-description">${footerData.description}</p>
                 </div>
                 <div class="footer-links-legal">
-                    <a href="legal.html">Aviso Legal</a> | 
-                    <a href="privacidad.html">Política de Privacidad</a>
+                    <a href="${legalHref}">${t('footer.legal')}</a> | 
+                    <a href="${privacyHref}">${t('footer.privacy')}</a>
                 </div>
                 <div class="footer-bottom">
                     <p>${footerData.copyright}</p>
                     <p style="margin-top: 0.8rem; font-size: 0.75rem; color: var(--text-muted); opacity: 0.8;">
-                        Desarrollado por <a href="https://www.baseclinica.com" target="_blank" rel="noopener noreferrer" style="color: var(--text-muted); font-weight: 500; text-decoration: underline; text-underline-offset: 3px;"><i class="fas fa-laptop-medical" style="margin-right: 4px; font-size: 0.7rem;"></i>Base Clinica</a>
+                        ${t('footer.developedBy')} <a href="https://www.baseclinica.com" target="_blank" rel="noopener noreferrer" style="color: var(--text-muted); font-weight: 500; text-decoration: underline; text-underline-offset: 3px;"><i class="fas fa-laptop-medical" style="margin-right: 4px; font-size: 0.7rem;"></i>Base Clinica</a>
                     </p>
                 </div>
             </div>

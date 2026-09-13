@@ -1,13 +1,13 @@
-// Exportamos solo la función renderHero
+import { t } from '../i18n.js?v=202608051425';
+
 export function renderHero(heroData) {
-    // Validamos que existan datos para evitar errores
     if (!heroData) return '';
 
     return `
         <section id="inicio" class="hero">
             <div class="container hero-content">
                 <div class="hero-text">
-                    <span class="badge">Dermoestética & Imagen Corporal</span>
+                    <span class="badge">${t('hero.badge')}</span>
                     <h1>${heroData.title}</h1>
                     <p>${heroData.subtitle}</p>
                     <div class="hero-actions">
@@ -24,7 +24,7 @@ export function renderHero(heroData) {
                     <div class="hero-image-wrapper">
                         <img 
                             src="/img/christine/christine-portada.webp" 
-                            alt="Dermoestética Christine Cano" 
+                            alt="${t('hero.alt')}" 
                             class="hero-img-main" 
                             width="450" height="550" 
                             loading="eager" 

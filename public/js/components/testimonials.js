@@ -1,32 +1,32 @@
+import { t } from '../i18n.js?v=202608051425';
+
 export function renderTestimonials(testimonialsData) {
     if (!testimonialsData || testimonialsData.length === 0) return '';
 
-    // Generamos las tarjetas originales
-    const originalCardsHTML = testimonialsData.map(t => {
-        const textClass = t.text.length > 180 ? 'testimonial-text testimonial-text--long' : 'testimonial-text';
+    const originalCardsHTML = testimonialsData.map(item => {
+        const textClass = item.text.length > 180 ? 'testimonial-text testimonial-text--long' : 'testimonial-text';
         return `
         <div class="testimonial-card">
             <div class="testimonial-stars">
-                ${'<i class="fas fa-star"></i>'.repeat(t.rating)}
+                ${'<i class="fas fa-star"></i>'.repeat(item.rating)}
             </div>
-            <p class="${textClass}">"${t.text}"</p>
+            <p class="${textClass}">"${item.text}"</p>
             <div class="testimonial-author">
-                <div class="author-avatar">${t.name.charAt(0)}</div>
-                <span>${t.name}</span>
+                <div class="author-avatar">${item.name.charAt(0)}</div>
+                <span>${item.name}</span>
             </div>
         </div>
         `;
     }).join('');
 
-    // Duplicamos el contenido para el efecto de bucle infinito (marquee)
     const cardsHTML = originalCardsHTML + originalCardsHTML;
 
     return `
         <section id="testimonios" class="testimonials-section">
             <div class="container">
                 <div class="section-title animate-on-scroll">
-                    <span>Lo que dicen mis pacientes</span>
-                    <h2>Testimonios</h2>
+                    <span>${t('testimonials.eyebrow')}</span>
+                    <h2>${t('testimonials.title')}</h2>
                     <div class="google-reviews-badge">
                         <svg viewBox="0 0 24 24" width="24" height="24" class="google-icon">
                             <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
@@ -38,17 +38,17 @@ export function renderTestimonials(testimonialsData) {
                             <div class="google-reviews-stars">
                                 <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                             </div>
-                            <span><strong>5 / 5</strong> en Google</span>
+                            <span><strong>5 / 5</strong> ${t('testimonials.onGoogle')}</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="testimonials-marquee-wrapper" style="position: relative;">
-                    <button class="mobile-slider-btn prev" onclick="const t=document.querySelector('.testimonials-marquee-track'); t.scrollBy({left: -t.clientWidth, behavior: 'smooth'})" aria-label="Anterior"><i class="fas fa-chevron-left"></i></button>
+                    <button class="mobile-slider-btn prev" onclick="const el=document.querySelector('.testimonials-marquee-track'); el.scrollBy({left: -el.clientWidth, behavior: 'smooth'})" aria-label="${t('testimonials.prev')}"><i class="fas fa-chevron-left"></i></button>
                     <div class="testimonials-marquee-track">
                         ${cardsHTML}
                     </div>
-                    <button class="mobile-slider-btn next" onclick="const t=document.querySelector('.testimonials-marquee-track'); t.scrollBy({left: t.clientWidth, behavior: 'smooth'})" aria-label="Siguiente"><i class="fas fa-chevron-right"></i></button>
+                    <button class="mobile-slider-btn next" onclick="const el=document.querySelector('.testimonials-marquee-track'); el.scrollBy({left: el.clientWidth, behavior: 'smooth'})" aria-label="${t('testimonials.next')}"><i class="fas fa-chevron-right"></i></button>
                 </div>
             </div>
         </section>
