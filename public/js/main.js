@@ -1,19 +1,19 @@
-import { renderHeader, initLangSwitcher } from './components/header.js?v=202609131710';
-import { renderHero } from './components/hero.js?v=202609131710';
-import { renderTestBanner } from './components/test-banner.js?v=202609131710';
-import { renderAbout } from './components/about.js?v=202609131710';
-import { renderServices } from './components/services.js?v=202609131710';
-import { renderTestimonials } from './components/testimonials.js?v=202609131710';
-import { renderGallery } from './components/gallery.js?v=202609131710';
-import { renderGiftCard } from './components/giftcard.js?v=202609131710';
-import { renderFAQ } from './components/faq.js?v=202609131710';
-import { renderGiftCardForm, initGiftCardFormLogic } from './components/giftcard-form.js?v=202609131710';
-import { renderRecommender, initRecommenderLogic } from './components/recommender.js?v=202609131710';
-import { renderContact } from './components/contact.js?v=202609131710';
-import { renderFooter } from './components/footer.js?v=202609131710';
-import { renderPostCare, initPostCareTabs } from './components/postcare.js?v=202609131710';
-import { initializeInteractions } from './interactions.js?v=202609131710';
-import { detectLang, loadUI, configUrl, t } from './i18n.js?v=202609131710';
+import { renderHeader, initLangSwitcher } from './components/header.js?v=202609131730';
+import { renderHero } from './components/hero.js?v=202609131730';
+import { renderTestBanner } from './components/test-banner.js?v=202609131730';
+import { renderAbout } from './components/about.js?v=202609131730';
+import { renderServices } from './components/services.js?v=202609131730';
+import { renderTestimonials } from './components/testimonials.js?v=202609131730';
+import { renderGallery } from './components/gallery.js?v=202609131730';
+import { renderGiftCard } from './components/giftcard.js?v=202609131730';
+import { renderFAQ } from './components/faq.js?v=202609131730';
+import { renderGiftCardForm, initGiftCardFormLogic } from './components/giftcard-form.js?v=202609131730';
+import { renderRecommender, initRecommenderLogic } from './components/recommender.js?v=202609131730';
+import { renderContact } from './components/contact.js?v=202609131730';
+import { renderFooter } from './components/footer.js?v=202609131730';
+import { renderPostCare, initPostCareTabs } from './components/postcare.js?v=202609131730';
+import { initializeInteractions } from './interactions.js?v=202609131730';
+import { detectLang, loadUI, configUrl, t } from './i18n.js?v=202609131730';
 
 async function loadConfig(lang) {
     try {

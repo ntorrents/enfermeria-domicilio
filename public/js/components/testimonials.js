@@ -1,4 +1,4 @@
-import { t } from '../i18n.js?v=202609131710';
+import { t } from '../i18n.js?v=202609131730';
 
 export function renderTestimonials(testimonialsData) {
     if (!testimonialsData || testimonialsData.length === 0) return '';

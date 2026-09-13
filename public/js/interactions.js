@@ -1,6 +1,6 @@
-import { showToast } from './utils/toast.js?v=202609131710';
-import { buildTreatmentModalContent } from './components/services.js?v=202609131710';
-import { t } from './i18n.js?v=202609131710';
+import { showToast } from './utils/toast.js?v=202609131730';
+import { buildTreatmentModalContent } from './components/services.js?v=202609131730';
+import { t } from './i18n.js?v=202609131730';
 
 // --- Navegación Móvil ---
 function initializeMobileNavigation() {
@@ -10,25 +10,39 @@ function initializeMobileNavigation() {
     if (navToggle && navMenu) {
         const newToggle = navToggle.cloneNode(true);
         navToggle.parentNode.replaceChild(newToggle, navToggle);
-        
+
+        const setMenuOpen = (open) => {
+            navMenu.classList.toggle('active', open);
+            newToggle.classList.toggle('active', open);
+            document.body.classList.toggle('menu-open', open);
+            newToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+            newToggle.setAttribute(
+                'aria-label',
+                open ? t('header.closeMenu') : t('header.openMenu')
+            );
+        };
+
+        newToggle.setAttribute('aria-expanded', 'false');
+        newToggle.setAttribute('aria-controls', 'site-nav-menu');
+        navMenu.id = navMenu.id || 'site-nav-menu';
+
         newToggle.addEventListener('click', (e) => {
             e.stopPropagation();
-            navMenu.classList.toggle('active');
-            newToggle.classList.toggle('active');
+            setMenuOpen(!navMenu.classList.contains('active'));
         });
 
         document.querySelectorAll('.nav-menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                navMenu.classList.remove('active');
-                newToggle.classList.remove('active');
-            });
+            link.addEventListener('click', () => setMenuOpen(false));
         });
 
         document.addEventListener('click', (e) => {
             if (!navMenu.contains(e.target) && !newToggle.contains(e.target)) {
-                navMenu.classList.remove('active');
-                newToggle.classList.remove('active');
+                setMenuOpen(false);
             }
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') setMenuOpen(false);
         });
     }
 }

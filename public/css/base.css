@@ -455,10 +455,32 @@ section {
 
 /* --- RESPONSIVE GENERAL --- */
 @media (max-width: 768px) {
-    h1 { font-size: 2.5rem !important; }
-    h2 { font-size: 2rem; }
+    section {
+        padding: 3.75rem 0;
+    }
+
+    .container {
+        padding: 0 1.25rem;
+    }
+
+    h1 { font-size: 2.35rem !important; }
+    h2 { font-size: 1.85rem; }
 
     .section-title {
-        margin-bottom: 2.25rem;
+        margin-bottom: 2rem;
+        text-align: left;
+    }
+
+    .section-title h2 {
+        font-size: clamp(1.85rem, 7vw, 2.35rem);
+    }
+
+    .btn {
+        width: auto;
+        min-height: 2.85rem;
+    }
+
+    .btn-block {
+        width: 100%;
     }
 }

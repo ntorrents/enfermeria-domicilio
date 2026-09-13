@@ -1,4 +1,4 @@
-import { t, getLang, setLang } from '../i18n.js?v=202609131710';
+import { t, getLang, setLang } from '../i18n.js?v=202609131730';
 
 export function renderHeader() {
     const lang = getLang();
@@ -13,7 +13,7 @@ export function renderHeader() {
                     <span class="brand-wordmark">C<b>3</b>LINIC</span>
                 </a>
             </div>
-            <ul class="nav-menu">
+            <ul class="nav-menu" id="site-nav-menu">
                 <li class="nav-item has-dropdown">
                     <a href="/#servicios" class="nav-link">${t('header.services')}</a>
                     <ul class="dropdown-menu">
@@ -23,7 +23,7 @@ export function renderHeader() {
                     </ul>
                 </li>
                 <li class="nav-item"><a href="/recomendador" class="nav-link">${recommenderLabel}</a></li>
-                <li class="nav-item">
+                <li class="nav-item nav-item-cta">
                     <a href="/contacto" class="btn btn-secondary btn-sm nav-btn">${t('header.contact')}</a>
                 </li>
                 <li class="nav-item lang-switcher-item">
@@ -34,7 +34,7 @@ export function renderHeader() {
                     </div>
                 </li>
             </ul>
-            <div class="nav-toggle" role="button" tabindex="0" aria-label="${t('header.openMenu')}">
+            <div class="nav-toggle" role="button" tabindex="0" aria-label="${t('header.openMenu')}" aria-expanded="false" aria-controls="site-nav-menu">
                 <span></span><span></span><span></span>
             </div>
         </nav>
