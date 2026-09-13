@@ -20,7 +20,7 @@
 - **Cuándo se ejecuta**: En el **build de Vercel** (ver `buildCommand` en `vercel.json`).
 - **Qué hace**:
   - Obtiene `BUILD_ID` de `VERCEL_GIT_COMMIT_SHA` (en Vercel) o, si no existe, de `VERCEL_GIT_COMMIT_REF` o de un timestamp.
-  - Recorre los HTML en `public/`: `index.html`, `404.html`, `legal.html`, `privacidad.html`, `treatment-detail.html`.
+  - Recorre los HTML en `public/` (home, legales, 404 y subpáginas: contacto, cuidados, recomendador, tarjeta-regalo).
   - En cada archivo, sustituye/añade `?v=BUILD_ID` en:
     - `href` de CSS locales (`./css/*.css`)
     - `src` de JS locales (`./js/*.js`, `./emailjs-config.js`)

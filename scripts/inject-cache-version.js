@@ -8,7 +8,18 @@ const fs = require('fs');
 const path = require('path');
 
 const PUBLIC_DIR = path.join(__dirname, '..', 'public');
-const HTML_FILES = ['index.html', '404.html', 'legal.html', 'privacidad.html', 'treatment-detail.html'];
+const HTML_FILES = [
+  'index.html',
+  '404.html',
+  'legal.html',
+  'privacidad.html',
+  'legal-ca.html',
+  'privacidad-ca.html',
+  'contacto/index.html',
+  'cuidados-post-tratamiento/index.html',
+  'recomendador/index.html',
+  'tarjeta-regalo/index.html',
+];
 
 // BUILD_ID: único por deploy. Vercel inyecta VERCEL_GIT_COMMIT_SHA; si no, timestamp.
 const BUILD_ID =

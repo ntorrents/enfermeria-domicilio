@@ -56,5 +56,17 @@
       ]
     }
   ],
-  "cleanUrls": false
+  "cleanUrls": false,
+  "redirects": [
+    {
+      "source": "/treatment-detail.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/treatment-detail",
+      "destination": "/",
+      "permanent": true
+    }
+  ]
 }
