@@ -1,4 +1,4 @@
-import { t, getUI } from '../i18n.js?v=202609131730';
+import { t, getUI } from '../i18n.js?v=202609271545';
 
 export function renderFAQ() {
     const faqs = getUI().faq?.items || [];

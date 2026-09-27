@@ -6,9 +6,10 @@ Landing page profesional para C3linic, centro de dermoestética avanzada dirigid
 ## 🏗️ Edición de Contenido
 El contenido está totalmente separado del diseño. Para modificar textos, servicios o configuraciones, **solo debes editar los archivos JSON** que se encuentran en la carpeta `/config`:
 
-* `config/general.json`: Información de contacto, redes sociales, horarios y configuración de integraciones (ej. EmailJS).
+* `config/general.json`: Información de contacto, redes sociales y horarios.
 * `config/content.json`: Textos de las secciones principales de la web (Hero, Sobre mí, FAQ, Footer, etc.).
 * `config/services.json`: Catálogo completo de tratamientos faciales y corporales, filtros, precios y tarjetas regalo.
+* El formulario de contacto usa **Web3Forms** (`public/js/web3forms.js`).
 
 ## 📁 Estructura Principal de Archivos
 

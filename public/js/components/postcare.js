@@ -1,4 +1,4 @@
-import { t, getUI } from '../i18n.js?v=202609131730';
+import { t, getUI } from '../i18n.js?v=202609271545';
 
 function renderItems(items) {
     return (items || []).map(item => `

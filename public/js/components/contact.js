@@ -1,4 +1,4 @@
-import { t, getLang } from '../i18n.js?v=202609131730';
+import { t, getLang } from '../i18n.js?v=202609271545';
 
 export function renderContact(siteInfo, servicesData) {
     if (!siteInfo || !servicesData) return '';
@@ -100,6 +100,9 @@ export function renderContact(siteInfo, servicesData) {
                                 <label for="message">${t('contact.message')}</label>
                                 <textarea id="message" name="message" class="form-control" rows="3"></textarea>
                             </div>
+
+                            <!-- Honeypot Web3Forms (oculto) -->
+                            <input type="checkbox" name="botcheck" class="contact-botcheck" tabindex="-1" autocomplete="off">
 
                             <div class="form-group form-checkbox">
                                 <label>

@@ -176,6 +176,15 @@
     text-underline-offset: 2px;
 }
 
+.contact-botcheck {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    pointer-events: none;
+}
+
 @media (max-width: 968px) {
     .contact-container {
         grid-template-columns: 1fr;

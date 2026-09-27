@@ -1,6 +1,7 @@
-import { showToast } from './utils/toast.js?v=202609131730';
-import { buildTreatmentModalContent } from './components/services.js?v=202609131730';
-import { t } from './i18n.js?v=202609131730';
+import { showToast } from './utils/toast.js?v=202609271545';
+import { buildTreatmentModalContent } from './components/services.js?v=202609271545';
+import { t } from './i18n.js?v=202609271545';
+import { sendContactForm } from './web3forms.js?v=202609271545';
 
 // --- Navegación Móvil ---
 function initializeMobileNavigation() {
@@ -164,8 +165,16 @@ function initializeContactForm() {
             telefono: newForm.querySelector('[name="user_phone"]')?.value,
             email: newForm.querySelector('[name="user_email"]')?.value || 'No indicado',
             servicio: newForm.querySelector('select')?.value,
-            mensaje: newForm.querySelector('textarea')?.value
+            mensaje: newForm.querySelector('textarea')?.value,
+            botcheck: newForm.querySelector('[name="botcheck"]')?.checked ? '1' : '',
         };
+
+        if (formData.botcheck) {
+            // Bot detectado: fingimos éxito sin enviar
+            showToast(t('contact.toastSentTitle'), t('contact.toastSentText'), 'success');
+            newForm.reset();
+            return;
+        }
 
         if (!formData.nombre || !formData.telefono) {
             showToast(t('contact.toastIncompleteTitle'), t('contact.toastIncompleteText'), 'error');
@@ -177,25 +186,19 @@ function initializeContactForm() {
         btn.innerText = t('contact.sending');
         btn.disabled = true;
 
-        if (typeof sendEmail === 'function') {
-            sendEmail(formData)
-                .then(() => {
-                    showToast(t('contact.toastSentTitle'), t('contact.toastSentText'), 'success');
-                    newForm.reset();
-                })
-                .catch((err) => {
-                    console.error(err);
-                    showToast(t('contact.toastErrorTitle'), t('contact.toastErrorText'), 'error');
-                })
-                .finally(() => {
-                    btn.innerText = originalText;
-                    btn.disabled = false;
-                });
-        } else {
-            showToast(t('contact.toastDemoTitle'), t('contact.toastDemoText'), 'info');
-            btn.innerText = originalText;
-            btn.disabled = false;
-        }
+        sendContactForm(formData)
+            .then(() => {
+                showToast(t('contact.toastSentTitle'), t('contact.toastSentText'), 'success');
+                newForm.reset();
+            })
+            .catch((err) => {
+                console.error(err);
+                showToast(t('contact.toastErrorTitle'), t('contact.toastErrorText'), 'error');
+            })
+            .finally(() => {
+                btn.innerText = originalText;
+                btn.disabled = false;
+            });
     });
 }
 

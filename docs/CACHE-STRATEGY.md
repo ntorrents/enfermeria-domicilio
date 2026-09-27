@@ -23,7 +23,7 @@
   - Recorre los HTML en `public/` (home, legales, 404 y subpáginas: contacto, cuidados, recomendador, tarjeta-regalo).
   - En cada archivo, sustituye/añade `?v=BUILD_ID` en:
     - `href` de CSS locales (`./css/*.css`)
-    - `src` de JS locales (`./js/*.js`, `./emailjs-config.js`)
+    - `src` de JS locales (`./js/*.js`)
     - `href`/`src` de imágenes locales (`./img/...`, `img/...`)
     - `srcset` de `<picture>` (cada URL de imagen).
 - **Salida**: Los mismos HTML sobrescritos en `public/` con las URLs ya versionadas. El deploy sirve esos HTML.

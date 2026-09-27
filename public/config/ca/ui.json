@@ -135,7 +135,7 @@
     "toastErrorTitle": "Error",
     "toastErrorText": "Hi ha hagut un problema en enviar.",
     "toastDemoTitle": "Demo",
-    "toastDemoText": "EmailJS no està a punt."
+    "toastDemoText": "El formulari no està a punt."
   },
   "postcare": {
     "eyebrow": "Recomanacions",

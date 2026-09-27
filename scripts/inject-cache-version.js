@@ -38,7 +38,7 @@ function injectVersion(html) {
 
   // JS locales: ./js/foo.js o ./emailjs-config.js
   out = out.replace(
-    /(src)=["'](\.\/)?(js\/[^"']+?|emailjs-config\.js)(\?v=[^"']*)?["']/gi,
+    /(src)=["'](\.\/)?(js\/[^"']+?)(\?v=[^"']*)?["']/gi,
     (_, attr, slash, rest) => `${attr}="${slash || ''}${rest}?v=${BUILD_ID}"`
   );
 
