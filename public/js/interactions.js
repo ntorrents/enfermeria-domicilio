@@ -1,7 +1,7 @@
-import { showToast } from './utils/toast.js?v=202609271545';
-import { buildTreatmentModalContent } from './components/services.js?v=202609271545';
-import { t } from './i18n.js?v=202609271545';
-import { sendContactForm } from './web3forms.js?v=202609271545';
+import { showToast } from './utils/toast.js?v=202609271555';
+import { buildTreatmentModalContent } from './components/services.js?v=202609271555';
+import { t } from './i18n.js?v=202609271555';
+import { sendContactForm } from './web3forms.js?v=202609271555';
 
 // --- Navegación Móvil ---
 function initializeMobileNavigation() {
@@ -163,20 +163,18 @@ function initializeContactForm() {
         const formData = {
             nombre: newForm.querySelector('[name="user_name"]')?.value,
             telefono: newForm.querySelector('[name="user_phone"]')?.value,
-            email: newForm.querySelector('[name="user_email"]')?.value || 'No indicado',
+            email: newForm.querySelector('[name="user_email"]')?.value || '',
             servicio: newForm.querySelector('select')?.value,
             mensaje: newForm.querySelector('textarea')?.value,
-            botcheck: newForm.querySelector('[name="botcheck"]')?.checked ? '1' : '',
         };
 
-        if (formData.botcheck) {
-            // Bot detectado: fingimos éxito sin enviar
-            showToast(t('contact.toastSentTitle'), t('contact.toastSentText'), 'success');
-            newForm.reset();
+        // Honeypot: si un bot lo rellena, no enviamos (sin fingir éxito)
+        const botcheck = newForm.querySelector('[name="botcheck"]')?.value;
+        if (botcheck) {
             return;
         }
 
-        if (!formData.nombre || !formData.telefono) {
+        if (!formData.nombre || !formData.telefono || !formData.email) {
             showToast(t('contact.toastIncompleteTitle'), t('contact.toastIncompleteText'), 'error');
             return;
         }

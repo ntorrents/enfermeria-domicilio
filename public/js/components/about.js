@@ -1,4 +1,4 @@
-import { t } from '../i18n.js?v=202609271545';
+import { t } from '../i18n.js?v=202609271555';
 
 export function renderAbout(aboutData) {
     if (!aboutData) return '';

@@ -1,4 +1,4 @@
-import { t, getLang } from '../i18n.js?v=202609271545';
+import { t, getLang } from '../i18n.js?v=202609271555';
 
 export function renderContact(siteInfo, servicesData) {
     if (!siteInfo || !servicesData) return '';
@@ -84,7 +84,7 @@ export function renderContact(siteInfo, servicesData) {
 
                             <div class="form-group">
                                 <label for="userEmail">${t('contact.email')}</label>
-                                <input type="email" id="userEmail" name="user_email" class="form-control" placeholder="nombre@ejemplo.com">
+                                <input type="email" id="userEmail" name="user_email" class="form-control" placeholder="nombre@ejemplo.com" required>
                             </div>
                             
                             <div class="form-group form-group-select">
@@ -101,8 +101,11 @@ export function renderContact(siteInfo, servicesData) {
                                 <textarea id="message" name="message" class="form-control" rows="3"></textarea>
                             </div>
 
-                            <!-- Honeypot Web3Forms (oculto) -->
-                            <input type="checkbox" name="botcheck" class="contact-botcheck" tabindex="-1" autocomplete="off">
+                            <!-- Honeypot Web3Forms: input de texto oculto (no checkbox: los managers lo marcan a veces) -->
+                            <div class="contact-botcheck" aria-hidden="true">
+                                <label for="botcheck">Leave empty</label>
+                                <input type="text" id="botcheck" name="botcheck" tabindex="-1" autocomplete="off">
+                            </div>
 
                             <div class="form-group form-checkbox">
                                 <label>

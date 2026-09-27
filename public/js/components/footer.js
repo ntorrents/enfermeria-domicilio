@@ -1,4 +1,4 @@
-import { t, getLang } from '../i18n.js?v=202609271545';
+import { t, getLang } from '../i18n.js?v=202609271555';
 
 export function renderFooter(siteInfo, footerData) {
     if (!siteInfo || !footerData) return '';

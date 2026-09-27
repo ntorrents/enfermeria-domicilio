@@ -1,4 +1,4 @@
-import { t, DETAIL_EXCLUDE_TITLES } from '../i18n.js?v=202609271545';
+import { t, DETAIL_EXCLUDE_TITLES } from '../i18n.js?v=202609271555';
 
 /**
  * Tratamientos que tienen packs de sesiones (1, 3 y/o 5).

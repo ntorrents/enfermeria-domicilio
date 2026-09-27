@@ -1,4 +1,4 @@
-import { t, getUI } from '../i18n.js?v=202609271545';
+import { t, getUI } from '../i18n.js?v=202609271555';
 
 /**
  * Galería / collage de fotos (ej. clínica).
